@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Feb 2017 01:18:41 +0900</pubDate>
-    <lastBuildDate>Fri, 03 Feb 2017 01:18:41 +0900</lastBuildDate>
+    <pubDate>Fri, 03 Feb 2017 09:46:56 +0900</pubDate>
+    <lastBuildDate>Fri, 03 Feb 2017 09:46:56 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -18,11 +18,6 @@
 &lt;/ul&gt;
 
 &lt;p&gt;レポートなどの更新情報を知りたい方は&lt;a href=&quot;https://jser.info/rss/&quot;&gt;RSS&lt;/a&gt;や&lt;a href=&quot;https://twitter.com/jser_info&quot;&gt;Twitter@jser_info&lt;/a&gt;をフォローしてみてください。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/jser_info&quot; class=&quot;twitter-follow-button&quot; data-show-count=&quot;false&quot; data-size=&quot;large&quot;&gt;Follow @jser_info&lt;/a&gt;&lt;br&gt;
-&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?&amp;#39;http&amp;#39;:&amp;#39;https&amp;#39;;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+&amp;#39;://platform.twitter.com/widgets.js&amp;#39;;fjs.parentNode.insertBefore(js,fjs);}}(document, &amp;#39;script&amp;#39;, &amp;#39;twitter-wjs&amp;#39;);&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#39;http://cloud.feedly.com/#subscription%2Ffeed%2Fhttps://jser.info/rss/&#39; target=&#39;blank&#39;&gt;&lt;img id=&#39;feedlyFollow&#39; src=&#39;https://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png&#39; alt=&#39;follow us in feedly&#39; width=&#39;71&#39; height=&#39;28&#39;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;bundler-#1&quot;&gt;&lt;a href=&quot;https://github.com/jser/report/issues/1&quot; title=&quot;Next Bundler #1&quot;&gt;Bundler #1&lt;/a&gt;&lt;/h1&gt;
 
