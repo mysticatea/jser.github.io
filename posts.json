@@ -1875,17 +1875,17 @@
 "category":"JSer",
 "tags":["AMD","jquery"]
 },{
+"title":"2012-06-18のJS: Sentimental Version",
+"url":"https://jser.info/post/25286638502",
+"date":"2012-06-18T20:29:00+09:00",
+"content":"JSer.info #75 - いわゆる幻のバージョン",
+"category":"JSer",
+"tags":["example"]
+},{
 "title":"2012-06-17のJS: Opera 12、AngularJS 1.0、JavaScript IDE",
 "url":"https://jser.info/post/25286638506",
 "date":"2012-06-17T20:29:00+09:00",
 "content":"JSer.info #74 - いわゆるテンプレートエンジンライブラリの一種のAngularJ...",
-"category":"JSer",
-"tags":["Opera","ide"]
-},{
-"title":"2012-06-15のJS: Sentimental Version",
-"url":"https://jser.info/post/25286638502",
-"date":"2012-06-15T20:29:00+09:00",
-"content":"JSer.info #75 - いわゆる幻のバージョン",
 "category":"JSer",
 "tags":["Opera","ide"]
 },{
