@@ -5,9 +5,335 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 04 Feb 2017 19:28:37 +0900</pubDate>
-    <lastBuildDate>Sat, 04 Feb 2017 19:28:37 +0900</lastBuildDate>
+    <pubDate>Sun, 05 Feb 2017 19:35:19 +0900</pubDate>
+    <lastBuildDate>Sun, 05 Feb 2017 19:35:19 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-02-05のJS: AVA 0.18.0、Mithril 1.0、ES modulesとwebpackのモジュール</title>
+        <description>&lt;p&gt;JSer.info #317 - テスティングフレームワークのAVA 0.18.0がリリースされました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/avajs/ava/releases/tag/v0.18.0&quot; title=&quot;Release 0.18.0 · avajs/ava&quot;&gt;Release 0.18.0 · avajs/ava&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Node.js 0.10と0.12のサポート終了、&lt;a href=&quot;https://github.com/avajs/ava#snapshot-testing&quot; title=&quot;Snapshot testing&quot;&gt;Snapshot testing&lt;/a&gt;(JSX)用の&lt;code&gt;t.snapshot&lt;/code&gt;の追加などが行われています。&lt;/p&gt;
+
+&lt;p&gt;今いまま&lt;a href=&quot;https://github.com/power-assert-js/power-assert&quot; title=&quot;power-assert&quot;&gt;power-assert&lt;/a&gt;を同梱することで、テストが落ちたときの表示をビジュアライズ表示していました。&lt;/p&gt;
+
+&lt;p&gt;0.18.0からは&lt;a href=&quot;https://github.com/avajs/ava#magic-assert&quot; title=&quot;Magic assert&quot;&gt;Magic assert&lt;/a&gt;を追加し、MochaやJestのような&lt;code&gt;actual&lt;/code&gt;と&lt;code&gt;expect&lt;/code&gt;で異なる部分をdiff表示できるようになっています。&lt;br&gt;
+(Jestの&lt;a href=&quot;https://github.com/facebook/jest/tree/master/packages/pretty-format&quot; title=&quot;pretty-format&quot;&gt;pretty-format&lt;/a&gt;をforkしたものを利用)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/170270/22558318/d782e9a4-e99f-11e6-889e-62fd4ad36e66.png&quot; alt=&quot;Magic assert&quot;&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;JavaScript フレームワークの&lt;a href=&quot;http://mithril.js.org/&quot; title=&quot;Mithril&quot;&gt;Mithril 1.0、ES modulesとwebpackのモジュール&lt;/a&gt; 1.0がリリースされました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lhorie/mithril.js/blob/rewrite/docs/change-log.md&quot; title=&quot;mithril.js/change-log.md at rewrite · lhorie/mithril.js&quot;&gt;mithril.js/change-log.md at rewrite · lhorie/mithril.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上のマイグレーションガイド兼リリースノートを見ると、様々な変更が行われています。&lt;/p&gt;
+
+&lt;p&gt;ライフサイクルメソッドの追加、コンポーネントは渡す際に&lt;code&gt;m()&lt;/code&gt;でwrapが必須に、&lt;code&gt;m.sync&lt;/code&gt;の削除、同期的なredrawの削除などが行われています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lhorie/mithril.js/blob/rewrite/docs/lifecycle-methods.md&quot; title=&quot;mithril.js/lifecycle-methods.md at rewrite · lhorie/mithril.js&quot;&gt;mithril.js/lifecycle-methods.md at rewrite · lhorie/mithril.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;シグネチャが変更されている部分も多いため、上のマイグレーションガイドを見ると良いです。&lt;br&gt;
+また、マイグレーションツールも公開されているので併せて利用すると良さそうです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tivac/mithril-codemods&quot; title=&quot;tivac/mithril-codemods: jscodeshift-powered mithril@0.2.x to mithril@1.x transformations&quot;&gt;tivac/mithril-codemods: jscodeshift-powered mithril@0.2.x to mithril@1.x transformations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.hospodarets.com/native-ecmascript-modules-new-features&quot; title=&quot;Native ECMAScript modules: the new features and differences from Webpack modules&quot;&gt;Native ECMAScript modules: the new features and differences from Webpack modules&lt;/a&gt;という記事では、ECMAScript modulesとwebpackが扱うモジュールとの違いについて書かれています。&lt;/p&gt;
+
+&lt;p&gt;MSEdgeやWebKitなど実際にECMAScript modulesが動く環境もでてきています。&lt;br&gt;
+また、モジュールにおける&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;要素の属性周りについてもかかれているので読んでみると面白いかもしれません。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;お知らせ&quot;&gt;お知らせ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jser.info/2017/01/15/jser-info-6years/&quot; title=&quot;JSer.info 6周年記念イベント&quot;&gt;JSer.info 6周年記念イベント&lt;/a&gt;でもお話していた、&lt;a href=&quot;https://github.com/jser/report&quot; title=&quot;jser/report&quot;&gt;jser/report&lt;/a&gt;の１回目を公開しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jser.info/2017/01/31/bundler-testing-framework-report/&quot; title=&quot;JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状 - JSer.info&quot;&gt;JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状 - JSer.info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;まだどのような方向でやるのか、どのようなテーマがいいのか、コストをどうやって小さくするのかなど課題が多いです。&lt;br&gt;
+何かご意見がありましたら、Twitterのハッシュタグ&lt;a href=&quot;https://twitter.com/hashtag/jserinfo?f=tweets&amp;amp;vertical=default&amp;amp;src=hash&quot; title=&quot;#jserinfo&quot;&gt;#jserinfo&lt;/a&gt;や&lt;a href=&quot;https://twitter.com/jser_info&quot; title=&quot;@jser_info&quot;&gt;@jser_info&lt;/a&gt;にmentionしたり、&lt;a href=&quot;https://github.com/jser/report&quot; title=&quot;jser/report&quot;&gt;jser/report&lt;/a&gt;にIssueを立ててください。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;node-v7.5.0-(current)-|-node.js&quot;&gt;Node v7.5.0 (Current) | Node.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v7.5.0/&quot; title=&quot;Node v7.5.0 (Current) | Node.js&quot;&gt;nodejs.org/en/blog/release/v7.5.0/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Node v7.5.0リリース。&lt;br&gt;
+npmのアップデート、&lt;code&gt;NODE_NO_WARNINGS&lt;/code&gt;の環境変数(&lt;code&gt;--no-warnings&lt;/code&gt;と同等)を追加など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-0.18.0-·-avajs/ava&quot;&gt;Release 0.18.0 · avajs/ava&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/avajs/ava/releases/tag/v0.18.0&quot; title=&quot;Release 0.18.0 · avajs/ava&quot;&gt;github.com/avajs/ava/releases/tag/v0.18.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+AVA 0.18.0リリース。&lt;br&gt;
+Node.js 0.10と0.12のサポート終了、Snapshot testing(JSX)、Magic assertの追加など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;announcing-typescript-2.2-rc-|-typescript&quot;&gt;Announcing TypeScript 2.2 RC | TypeScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/typescript/2017/02/02/announcing-typescript-2-2-rc/&quot; title=&quot;Announcing TypeScript 2.2 RC | TypeScript&quot;&gt;blogs.msdn.microsoft.com/typescript/2017/02/02/announcing-typescript-2-2-rc/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+TypeScript 2.2 RCリリース。&lt;br&gt;
+プリミティブ型以外を表現する&lt;code&gt;object&lt;/code&gt; typeの追加、class expressionを使ったmixinの表現をサポート、JSXのreact-nativeのサポートなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Microsoft/TypeScript/wiki/Roadmap#22-february-2017&quot; title=&quot;Roadmap · Microsoft/TypeScript Wiki&quot;&gt;Roadmap · Microsoft/TypeScript Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;chromium-blog:-chrome-57-beta:-css-grid-layout,-improved-add-to-home-screen,-media-session-api&quot;&gt;Chromium Blog: Chrome 57 Beta: CSS Grid Layout, Improved Add to Home screen, Media Session API&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.chromium.org/2017/02/chrome-57-beta-css-grid-layout-improved.html&quot; title=&quot;Chromium Blog: Chrome 57 Beta: CSS Grid Layout, Improved Add to Home screen, Media Session API&quot;&gt;blog.chromium.org/2017/02/chrome-57-beta-css-grid-layout-improved.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Chrome 57 Betaリリース。&lt;br&gt;
+CSS Grid、&lt;em&gt;Media Session API&lt;/em&gt;、&lt;code&gt;String#padStart&lt;/code&gt;のサポート。&lt;br&gt;
+&lt;code&gt;setTimeout()&lt;/code&gt;が条件によりthrottleされるように、、XSS Auditor(フィルター)がデフォルトでmode blockとなるように&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/WICG/interventions/issues/9&quot; title=&quot;&amp;amp;amp;#34;Out of view&amp;amp;amp;#34; cross-origin iframes align/clamp setTimeout/setInterval to 1 second · Issue #9 · WICG/interventions&quot;&gt;&amp;#34;Out of view&amp;#34; cross-origin iframes align/clamp setTimeout/setInterval to 1 second · Issue #9 · WICG/interventions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;mithril.js/change-log.md-at-rewrite-·-lhorie/mithril.js&quot;&gt;mithril.js/change-log.md at rewrite · lhorie/mithril.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lhorie/mithril.js/blob/rewrite/docs/change-log.md&quot; title=&quot;mithril.js/change-log.md at rewrite · lhorie/mithril.js&quot;&gt;github.com/lhorie/mithril.js/blob/rewrite/docs/change-log.md&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Mithril 1.0リリース。&lt;br&gt;
+ライフサイクルメソッドの追加、コンポーネントは渡す際に&lt;code&gt;m()&lt;/code&gt;でwrapが必須に、&lt;code&gt;m.sync&lt;/code&gt;の削除、同期的なredrawの削除など多くの変更がされている。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lhorie/mithril.js/issues/1090&quot; title=&quot;Rewrite Status · Issue #1090 · lhorie/mithril.js&quot;&gt;Rewrite Status · Issue #1090 · lhorie/mithril.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mithril.js.org/&quot; title=&quot;Introduction - Mithril.js&quot;&gt;Introduction - Mithril.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;native-ecmascript-modules:-the-new-features-and-differences-from-webpack-modules&quot;&gt;Native ECMAScript modules: the new features and differences from Webpack modules&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.hospodarets.com/native-ecmascript-modules-new-features&quot; title=&quot;Native ECMAScript modules: the new features and differences from Webpack modules&quot;&gt;blog.hospodarets.com/native-ecmascript-modules-new-features&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webpack&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+webpackなどのモジュールとネイティブのES moduleの違いについてまとめられた記事。 モジュールパス、CORS、&lt;code&gt;script&lt;/code&gt;要素の属性、エラー判定、ES moduleの挙動、feature detectionの方法、fallback、&lt;code&gt;script&lt;/code&gt;要素の&lt;code&gt;type&lt;/code&gt;の取得についてなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;a-beginners-guide-to-webpack-2-and-module-bundling&quot;&gt;A Beginners Guide to Webpack 2 and Module Bundling&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.sitepoint.com/beginners-guide-to-webpack-2-and-module-bundling/&quot; title=&quot;A Beginners Guide to Webpack 2 and Module Bundling&quot;&gt;www.sitepoint.com/beginners-guide-to-webpack-2-and-module-bundling/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webpack&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+webpackの基本的な使い方についての解説。&lt;br&gt;
+moduleの扱い方、loader、plugin、コード分割、dev server、Hot reloadingについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;next-on-next.js&quot;&gt;Next on Next.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jsmantra.com/next-on-next-js-1a134505f346&quot; title=&quot;Next on Next.js&quot;&gt;jsmantra.com/next-on-next-js-1a134505f346&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;サーバー&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Reactを使ったフレームワークであるNext.js 2βについて。&lt;br&gt;
+ルーティング、コード分割、webpack 2のサポート、webpackやbabelの設定のカスタマイズなどの変更点について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;css-grid-–-table-layout-is-back.-be-there-and-be-square.- | -web- | -google-developers&quot;&gt;CSS Grid – Table layout is back. Be there and be square.  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/01/css-grid&quot; title=&quot;CSS Grid – Table layout is back. Be there and be square.  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/01/css-grid&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+CSS Gridの概要解説記事&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;how-to-set-up-e2e-browser-testing-for-your-github-project&quot;&gt;How to set up E2E browser testing for your GitHub project&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/how-to-set-up-e2e-browser-testing-for-your-github-project-89c24e15a84&quot; title=&quot;How to set up E2E browser testing for your GitHub project&quot;&gt;hackernoon.com/how-to-set-up-e2e-browser-testing-for-your-github-project-89c24e15a84&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;E2E&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+TestCafeを使ってのE2Eテストの設定方法について。 PageObjectパターン、Travis CIやSauce Labsとの連携について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;api-deprecations-and-removals-in-chrome-57- | -web- | -google-developers&quot;&gt;API Deprecations and Removals in Chrome 57  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/02/chrome-57-deprecations&quot; title=&quot;API Deprecations and Removals in Chrome 57  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/02/chrome-57-deprecations&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Chrome 57での非推奨/削除されるAPIについて。 Vendor-prefix付きの&lt;code&gt;cancelAnimationFrame&lt;/code&gt;、&lt;code&gt;IndexedDB&lt;/code&gt;、&lt;code&gt;AudioContext&lt;/code&gt;の削除。 &lt;code&gt;BluetoothDevice.uuids&lt;/code&gt;、&lt;code&gt;&amp;lt;keygen&amp;gt;&lt;/code&gt;、&lt;code&gt;OfflineAudioContext&lt;/code&gt;の削除など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;es6-feature-detection.js&quot;&gt;es6-feature-detection.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/DaBs/89ccc2ffd1d435efdacff05248514f38&quot; title=&quot;es6-feature-detection.js&quot;&gt;gist.github.com/DaBs/89ccc2ffd1d435efdacff05248514f38&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+実行環境がES2015を大体サポートしているかを判定する数行のスニペットコード。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;blinkon-7-information---google-ドキュメント&quot;&gt;BlinkOn 7 Information - Google ドキュメント&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/document/d/1jlpsfv0kXCveOEX5l75aATgRXbcAvwyse4Tn6jVprWs/edit#&quot; title=&quot;BlinkOn 7 Information - Google ドキュメント&quot;&gt;docs.google.com/document/d/1jlpsfv0kXCveOEX5l75aATgRXbcAvwyse4Tn6jVprWs/edit#&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;イベント&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+GoogleのBlinkOn7のイベントまとめ。&lt;br&gt;
+スライドがまとめられている&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;how-to-use-npm-scripts-as-your-build-tool---course-by-@elijahmanor-@eggheadio&quot;&gt;How to Use npm Scripts as Your Build Tool - Course by @elijahmanor @eggheadio&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://egghead.io/courses/how-to-use-npm-scripts-as-your-build-tool&quot; title=&quot;How to Use npm Scripts as Your Build Tool - Course by @elijahmanor @eggheadio&quot;&gt;egghead.io/courses/how-to-use-npm-scripts-as-your-build-tool&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+npm scriptsを使いビルドを行う話についてのスクリーンキャスト&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;jsmpeg-–-decode-it-like-it&amp;#39;s-1999&quot;&gt;JSMpeg – Decode it like it&amp;#39;s 1999&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsmpeg.com/&quot; title=&quot;JSMpeg – Decode it like it&amp;#39;s 1999&quot;&gt;jsmpeg.com/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+MPEG1/MP2をJavaScriptでデコードするライブラリ。&lt;br&gt;
+WebSocketsを使った動画のストリーム配信をする目的で作られている。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;introduction-·-gitbook&quot;&gt;Introduction · GitBook&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://vuex.vuejs.org/ja/&quot; title=&quot;Introduction · GitBook&quot;&gt;vuex.vuejs.org/ja/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;翻訳&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Vuexのドキュメント翻訳&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;web-platform-tests-dashboard&quot;&gt;Web Platform Tests Dashboard&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wptdashboard.appspot.com/&quot; title=&quot;Web Platform Tests Dashboard&quot;&gt;wptdashboard.appspot.com/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebPlatformAPI&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+&lt;a href=&quot;https://github.com/w3c/web-platform-tests&quot; title=&quot;w3c/web-platform-tests: Test Suites for Web Platform specifications—including WHATWG, W3C and others&quot;&gt;w3c/web-platform-tests: Test Suites for Web Platform specifications—including WHATWG, W3C and others&lt;/a&gt;をブラウザ別で実行した結果がまとめられているページ&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1s2Dick89wvJsuNJb4ia3pPt84NtMv8rZr0E_GFXJLrk/edit#slide&amp;amp;#x3D;id.p&quot; title=&quot;Web Platform Tests in Blink and Beyond - Google スライド&quot;&gt;Web Platform Tests in Blink and Beyond - Google スライド&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;webvr-rocks-•-your-guide-to-virtual-reality-in-the-browser.&quot;&gt;WebVR Rocks • Your guide to Virtual Reality in the browser.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webvr.rocks/&quot; title=&quot;WebVR Rocks • Your guide to Virtual Reality in the browser.&quot;&gt;webvr.rocks/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;web &lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;VR&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+WebVRについてブラウザ別のサポート状況をまとめたサイト&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;oliver-moran/jimp:-an-image-processing-library-written-entirely-in-javascript-for-node,-with-zero-external-or-native-dependencies.&quot;&gt;oliver-moran/jimp: An image processing library written entirely in JavaScript for Node, with zero external or native dependencies.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/oliver-moran/jimp&quot; title=&quot;oliver-moran/jimp: An image processing library written entirely in JavaScript for Node, with zero external or native dependencies.&quot;&gt;github.com/oliver-moran/jimp&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+依存がない画像処理ライブラリ。&lt;br&gt;
+画像のリサイズや加工などができる。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;egoist/sao:-futuristic-scaffolding-tool.&quot;&gt;egoist/sao: Futuristic scaffolding tool.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/egoist/sao&quot; title=&quot;egoist/sao: Futuristic scaffolding tool.&quot;&gt;github.com/egoist/sao&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;github&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;console&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Gitリポジトリやnpmパッケージなどを元にしてプロジェクトを生成出来るscaffoldingツール&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ide/mux:-creates-a-promise-that-waits-for-the-promises-in-nested-data-structures-and-resolves-to-data-structures-of-the-same-form.-it-recursively-traverses-the-input-data-structure-and-multiplexes-its-promises.&quot;&gt;ide/mux: Creates a promise that waits for the promises in nested data structures and resolves to data structures of the same form. It recursively traverses the input data structure and multiplexes its promises.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ide/mux&quot; title=&quot;ide/mux: Creates a promise that waits for the promises in nested data structures and resolves to data structures of the same form. It recursively traverses the input data structure and multiplexes its promises.&quot;&gt;github.com/ide/mux&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Promises&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Array、Map、Setなどが持つプロパティのPromiseを解決し、その結果を同じ構造で返せるライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;announcing-&amp;quot;learning-aurelia&amp;quot;-from-packt-publishing&quot;&gt;Announcing &amp;quot;Learning Aurelia&amp;quot; from Packt Publishing&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.aurelia.io/2017/02/01/announcing-learning-aurelia-from-packt-publishing/&quot; title=&quot;Announcing &amp;quot;Learning Aurelia&amp;quot; from Packt Publishing&quot;&gt;blog.aurelia.io/2017/02/01/announcing-learning-aurelia-from-packt-publishing/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Aureliaの書籍について&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.packtpub.com/web-development/learning-aurelia&quot; title=&quot;Learning Aurelia | PACKT Books&quot;&gt;Learning Aurelia | PACKT Books&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;exploring-es2016-and-es2017&quot;&gt;Exploring ES2016 and ES2017&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://exploringjs.com/es2016-es2017.html&quot; title=&quot;Exploring ES2016 and ES2017&quot;&gt;exploringjs.com/es2016-es2017.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+ECMAScript 2016と2017についての書籍。&lt;br&gt;
+ExploringJSの続編&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://leanpub.com/exploring-es2016-es2017&quot; title=&quot;Exploring ES2016 and… by Axel Rauschmayer \[PDF/iPad/Kindle\]&quot;&gt;Exploring ES2016 and… by Axel Rauschmayer [PDF/iPad/Kindle]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Sun, 05 Feb 2017 18:37:59 +0900</pubDate>
+        <link>https://jser.info/2017/02/05/ava-0.18.0-mithril-1.0-es-moduleswebpack/</link>
+        <guid isPermaLink="true">https://jser.info/2017/02/05/ava-0.18.0-mithril-1.0-es-moduleswebpack/</guid>
+        
+        <category>AVA</category>
+        
+        <category>Testing</category>
+        
+        <category>modules</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状</title>
@@ -3890,128 +4216,6 @@ Pythonのsimplestatisticsのport。&lt;/p&gt;
         <category>ja</category>
         
         <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017年1月15日(日)に JSer.info 6周年 &amp;&amp; 300回目記念イベント を開催します</title>
-        <description>&lt;p&gt;2017年1月15日(日)にJSer.infoの6周年記念イベントをやります。&lt;br&gt;
-(&lt;a href=&quot;https://jser.info/2016/10/10/300posts/&quot; title=&quot;300回目&quot;&gt;300回目&lt;/a&gt;記念はやってなかったのでついでです)&lt;/p&gt;
-
-&lt;p&gt;次のイベントページから参加を申し込むことができます。&lt;br&gt;
-申し込み開始は、2016/12/15(木) 21:00からです(抽選)。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://jser.connpass.com/event/46997/&quot; title=&quot;JSer.info 6周年と300回記念イベント - connpass&quot;&gt;JSer.info 6周年と300回記念イベント - connpass&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;発表枠&quot;&gt;発表枠&lt;/h3&gt;
-
-&lt;p&gt;5-20分程度の発表をしてくれる人を募集しています。&lt;br&gt;
-テーマはJavaScriptであれば問題ありません。&lt;/p&gt;
-
-&lt;p&gt;発表枠で申し込んだ方は、発表時間やテーマなどを次のIssueなどで伝えてください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/jser/jser.info/issues/89&quot;&gt;JSer.info 6周年 &amp;amp;&amp;amp; 300回目記念イベント @ 1月15日(日) · Issue #89 · jser/jser.info&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Q&amp;amp;A&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Q. 30分以上の発表がしたい&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jser/jser.info/issues/89&quot;&gt;応相談&lt;/a&gt;。他の発表枠次第ですが可能です。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Q. どのくらいのレベルの参加者を想定した内容にすればいいの?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;基本的に全力でやってもらえればいいです。&lt;br&gt;
-自分が勝手に補足を入れるので遠慮は不要です。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Q. どんなテーマならいいの?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;JavaScriptであればいい気がします。&lt;br&gt;
-参考までに前回のイベントでの発表内容は次のページにまとまっています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://jser.info/2016/01/16/jser-5years/&quot;&gt;JSer.info 5周年記念イベントを開催しました - JSer.info&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://jser.info/2014/11/02/jser200/&quot;&gt;JSer.info 200回記念イベントを開催しました - JSer.info&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;JSer.infoに載っていそうなテーマ(JavaScriptやウェブ)からかけ離れてなければ良いです。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Q. 初心者向けの内容でもいいの?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;問題ありません。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Q. 商業的な宣伝をメインにしたトーク&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ダメ&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Q. LTしたい&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ご自由にどうぞ。&lt;br&gt;
-JavaScript Discussion後に懇談会を行う予定です。&lt;br&gt;
-そのタイミングで自由にできます。&lt;/p&gt;
-
-&lt;h3 id=&quot;書記枠&quot;&gt;書記枠&lt;/h3&gt;
-
-&lt;p&gt;「書記枠」という変な枠もあります。&lt;/p&gt;
-
-&lt;p&gt;自分がいつもやっているような&lt;a href=&quot;http://efcl.info/tags/?q=%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&quot;&gt;アウトラインメモ&lt;/a&gt;を&lt;a href=&quot;http://etherpad.org/&quot; title=&quot;Etherpad&quot;&gt;Etherpad&lt;/a&gt;などを使って書くのを手伝ってくれる人の枠です。&lt;br&gt;
-(司会業やってないときは自分もやります)&lt;/p&gt;
-
-&lt;p&gt;当日リアルタイムで見れるようにして、文書ベースのデータがあると議論/質疑がしやすくなるかを試したいので、「書記枠」を用意しました。&lt;/p&gt;
-
-&lt;p&gt;「書記枠」で申し込んでも、ずっと書いてないといけないわけでもないので、基本的にイベントの参加を優先していいです。&lt;/p&gt;
-
-&lt;h3 id=&quot;javascript-discussion&quot;&gt;JavaScript Discussion&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jser.info/2016/01/16/jser-5years/&quot; title=&quot;JSer.info 5周年記念イベント&quot;&gt;JSer.info 5周年記念イベント&lt;/a&gt;に来たことがある人はわかると思いますが、質問を集めたDiscussionボードを見ながら議論するコーナーです。&lt;/p&gt;
-
-&lt;p&gt;次の場所に質問、聞きたいこと、話したいこと、主張を書き込むことができます。&lt;br&gt;
-当日も時間を取りますが、事前に書いてもらっても問題ありません。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://app.sli.do/event/bkry5ojl/ask&quot; title=&quot;JSer.info 6周年 - JavaScript Discussion&quot;&gt;JSer.info 6周年 - JavaScript Discussion&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;去年のDiscussionボードの様子:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://app.sli.do/event/0egbwyxz/ask&quot;&gt;&lt;img src=&quot;https://monosnap.com/file/z2VC0MmCQKox5DjQXlvOpNaYQjVhum.png&quot; alt=&quot;JavaScript Discussion(JavaScriptの良い所/悪い所/気になる事)&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;他にも、この人と話しあいたいとかあったらお知らせください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://jser.connpass.com/event/46997/&quot; title=&quot;JSer.info 6周年と300回記念イベント - connpass&quot;&gt;JSer.info 6周年と300回記念イベント - connpass&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/jser/jser.info/issues/89&quot; title=&quot;JSer.info 6周年 &amp;amp;amp;&amp;amp;amp; 300回目記念イベント @ 1月15日(日) · Issue #89 · jser/jser.info&quot;&gt;JSer.info 6周年 &amp;amp;&amp;amp; 300回目記念イベント @ 1月15日(日) · Issue #89 · jser/jser.info&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 13 Dec 2016 09:26:00 +0900</pubDate>
-        <link>https://jser.info/2016/12/13/announcement-jser-info-6years-event/</link>
-        <guid isPermaLink="true">https://jser.info/2016/12/13/announcement-jser-info-6years-event/</guid>
-        
-        <category>イベント</category>
-        
-        <category>JSer</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>雑記</category>
         
       </item>
     
