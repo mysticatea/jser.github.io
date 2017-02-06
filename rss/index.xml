@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 05 Feb 2017 20:17:35 +0900</pubDate>
-    <lastBuildDate>Sun, 05 Feb 2017 20:17:35 +0900</lastBuildDate>
+    <pubDate>Mon, 06 Feb 2017 16:36:40 +0900</pubDate>
+    <lastBuildDate>Mon, 06 Feb 2017 16:36:40 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -19,7 +19,7 @@
 
 &lt;p&gt;Node.js 0.10と0.12のサポート終了、&lt;a href=&quot;https://github.com/avajs/ava#snapshot-testing&quot; title=&quot;Snapshot testing&quot;&gt;Snapshot testing&lt;/a&gt;(JSX)用の&lt;code&gt;t.snapshot&lt;/code&gt;の追加などが行われています。&lt;/p&gt;
 
-&lt;p&gt;今いまま&lt;a href=&quot;https://github.com/power-assert-js/power-assert&quot; title=&quot;power-assert&quot;&gt;power-assert&lt;/a&gt;を同梱することで、テストが落ちたときの表示をビジュアライズ表示していました。&lt;/p&gt;
+&lt;p&gt;今までは&lt;a href=&quot;https://github.com/power-assert-js/power-assert&quot; title=&quot;power-assert&quot;&gt;power-assert&lt;/a&gt;を同梱することで、テストが落ちたときの表示をビジュアライズ表示していました。&lt;/p&gt;
 
 &lt;p&gt;0.18.0からは&lt;a href=&quot;https://github.com/avajs/ava#magic-assert&quot; title=&quot;Magic assert&quot;&gt;Magic assert&lt;/a&gt;を追加し、MochaやJestのような&lt;code&gt;actual&lt;/code&gt;と&lt;code&gt;expect&lt;/code&gt;で異なる部分をdiff表示できるようになっています。(Jestの&lt;a href=&quot;https://github.com/facebook/jest/tree/master/packages/pretty-format&quot; title=&quot;pretty-format&quot;&gt;pretty-format&lt;/a&gt;をforkしたものを利用しています。)&lt;/p&gt;
 
