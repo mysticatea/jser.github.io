@@ -1,4 +1,11 @@
 [{
+"title":"2017-02-05 JS: AVA 0.18.0, Mithril 1.0, ES modules과 webpack의 모듈",
+"url":"https://jser.info/ko/2017/02/05/ava-0.18.0-mithril-1.0-es-moduleswebpack/",
+"date":"2017-02-05T18:37:59+09:00",
+"content":"JSer.info #317 - 테스팅 프레임워크 AVA 0.18.0이 릴리즈됐습니다....",
+"category":"JSer",
+"tags":["AVA","Testing","modules"]
+},{
 "title":"2017-01-30 JS: Safari 10.1, Firefox51.0, 점진적으로 타입을 작성하며 리팩터링",
 "url":"https://jser.info/ko/2017/01/30/safari-10.1-firefox51.0-type-refactoring/",
 "date":"2017-01-30T23:30:24+09:00",
