@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Feb 2017 12:25:54 +0900</pubDate>
-    <lastBuildDate>Tue, 14 Feb 2017 12:25:54 +0900</lastBuildDate>
+    <pubDate>Tue, 14 Feb 2017 12:26:28 +0900</pubDate>
+    <lastBuildDate>Tue, 14 Feb 2017 12:26:28 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -30,16 +30,15 @@
 &lt;/blockquote&gt;
 
 &lt;p&gt;V8においてES2015以降の実装は進んでいましたが、その実装がES5に比べて最適化が進んでいませんでした。&lt;br&gt;
-そのためネイティブのES2015+よりも、それをES5相当へ変換した場合に実行速度が良くなるケースもあります。(パース速度などは別ですが)&lt;/p&gt;
-
-&lt;p&gt;次のページでそのようなケースがあることについて書かれています。&lt;/p&gt;
+そのためネイティブのES2015+よりも、それをES5相当へ変換した場合に実行速度が良くなるケースもあります。&lt;br&gt;
+次のページでそのようなケースがあることについて書かれています。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://fhinkel.github.io/six-speed/&quot;&gt;fhinkel.github.io/six-speed/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://qiita.com/mohayonao/items/34e66fd37a66830cf941&quot; title=&quot;Babel った方が速い - Qiita&quot;&gt;Babel った方が速い - Qiita&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;V8ではネイティブなES2015+の実行速度を改善していくプランを立てていて、今回その一部が入った形になると思います。&lt;/p&gt;
+&lt;p&gt;V8ではネイティブなES2015+の実行速度を改善していくプランを立てていて、今回その一部が入った形です。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1EA9EbfnydAmmU_lM8R_uEMQ-U_v4l9zulePSBkeYWmY/edit#heading=h.x1cv1fi5g42q&quot;&gt;ES2015 and beyond performance plan&lt;/a&gt;&lt;/li&gt;
