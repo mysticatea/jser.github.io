@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Feb 2017 12:27:32 +0900</pubDate>
-    <lastBuildDate>Tue, 14 Feb 2017 12:27:32 +0900</lastBuildDate>
+    <pubDate>Tue, 14 Feb 2017 12:37:03 +0900</pubDate>
+    <lastBuildDate>Tue, 14 Feb 2017 12:37:03 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -74,7 +74,7 @@
 &lt;p&gt;&lt;a href=&quot;http://v8project.blogspot.com/2017/02/v8-release-57.html&quot; title=&quot;V8 JavaScript Engine: V8 Release 5.7&quot;&gt;v8project.blogspot.com/2017/02/v8-release-57.html&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebAssembly&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
 V8 5.7リリース。&lt;br&gt;
-async/awaitやES2015のパフォーマンス改善、&lt;del&gt;&lt;code&gt;String#padStart&lt;/code&gt;&lt;/del&gt;、&lt;code&gt;Intl.DateTimeFormat#formatToParts&lt;/code&gt;のサポート。&lt;br&gt;
+async/awaitやES2015のパフォーマンス改善、&lt;code&gt;String#padStart&lt;/code&gt;、&lt;code&gt;Intl.DateTimeFormat#formatToParts&lt;/code&gt;のサポート。&lt;br&gt;
 wasmがデフォルトで有効化など&lt;/p&gt;
 
 &lt;hr&gt;
