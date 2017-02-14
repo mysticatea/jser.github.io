@@ -5,12 +5,12 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Feb 2017 12:26:28 +0900</pubDate>
-    <lastBuildDate>Tue, 14 Feb 2017 12:26:28 +0900</lastBuildDate>
+    <pubDate>Tue, 14 Feb 2017 12:27:32 +0900</pubDate>
+    <lastBuildDate>Tue, 14 Feb 2017 12:27:32 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>2017-02-14のJS: V8 5.7とES2015+パフォーマンス、npm入門、TypeScript</title>
+        <title>2017-02-14のJS: V8 5.7とES2015+のパフォーマンス、npm入門、TypeScriptガイドライン</title>
         <description>&lt;p&gt;JSer.info #318 - V8 version 5.7がリリースされました&lt;/p&gt;
 
 &lt;ul&gt;
