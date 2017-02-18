@@ -1,4 +1,11 @@
 [{
+"title":"2017-02-14 JS: V8 5.7와 ES2015+의 성능, npm입문, TypeScript 가이드라인",
+"url":"https://jser.info/ko/2017/02/14/v8-5.7es2015-npm-typescript/",
+"date":"2017-02-14T11:02:33+09:00",
+"content":"JSer.info #318 - V8 version 5.7이 릴리즈됐습니다.V8 Jav...",
+"category":"JSer",
+"tags":["V8","ES2015","npm","TypeScript"]
+},{
 "title":"2017-02-05 JS: AVA 0.18.0, Mithril 1.0, ES modules과 webpack의 모듈",
 "url":"https://jser.info/ko/2017/02/05/ava-0.18.0-mithril-1.0-es-moduleswebpack/",
 "date":"2017-02-05T18:37:59+09:00",
