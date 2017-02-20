@@ -1,4 +1,11 @@
 [{
+"title":"2017-02-20のJS: Babel 6.23.0、React Context、HTMLリファレンス",
+"url":"https://jser.info/2017/02/20/babel-6.23.0-react-context-html/",
+"date":"2017-02-20T09:31:04+09:00",
+"content":"JSer.info #319 - Babel 6.23.0がリリースされました。6.23.0 ...",
+"category":"JSer",
+"tags":["Babel","React","HTML"]
+},{
 "title":"2017-02-14のJS: V8 5.7とES2015+のパフォーマンス、npm入門、TypeScriptガイドライン",
 "url":"https://jser.info/2017/02/14/v8-5.7es2015-npm-typescript/",
 "date":"2017-02-14T11:02:33+09:00",
