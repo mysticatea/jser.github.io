@@ -1,4 +1,11 @@
 [{
+"title":"2017-02-24のJS: Node v7.6.0、CoffeeScript 2.0α、Vue v2.2.0",
+"url":"https://jser.info/2017/02/25/node-v7.6.0-coffeescript-2.0a-vue-v2.2.0/",
+"date":"2017-02-25T02:16:03+09:00",
+"content":"JSer.info #320 - Node v7.6.0がリリースされました。node/CHA...",
+"category":"JSer",
+"tags":["Node.js","CoffeeScript","Vue"]
+},{
 "title":"2017-02-20のJS: Babel 6.23.0、React Context、HTMLリファレンス",
 "url":"https://jser.info/2017/02/20/babel-6.23.0-react-context-html/",
 "date":"2017-02-20T09:31:04+09:00",
