@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 28 Feb 2017 14:09:37 +0900</pubDate>
-    <lastBuildDate>Tue, 28 Feb 2017 14:09:37 +0900</lastBuildDate>
+    <pubDate>Tue, 28 Feb 2017 17:07:08 +0900</pubDate>
+    <lastBuildDate>Tue, 28 Feb 2017 17:07:08 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -56,7 +56,7 @@ for...of、Tagged template literals、Async/awitの対応などが行われて�
 （一部暗黙的だった挙動が修正されているため、そこへ依存しているコードは修正が必要です）&lt;/p&gt;
 
 &lt;p&gt;サーバサイドレンダリング向けに&lt;code&gt;template&lt;/code&gt;オプションの追加、ライフサイクルhook中のエラーを&lt;code&gt;errorHandler&lt;/code&gt;や&lt;code&gt;renderError&lt;/code&gt;でエラーがキャッチできるように。&lt;br&gt;
-React Context的な値を差し込める&lt;code&gt;provive&lt;/code&gt;と&lt;code&gt;inject&lt;/code&gt;のDI機構の追加されています。&lt;/p&gt;
+React Context的な値を差し込める&lt;code&gt;provide&lt;/code&gt;と&lt;code&gt;inject&lt;/code&gt;のDI機構の追加されています。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://vuejs.org/v2/api/#provide-inject&quot; title=&quot;Vue.js&quot;&gt;provide / inject - Vue.js&lt;/a&gt;&lt;/li&gt;
@@ -199,7 +199,7 @@ AOTコンパイルしたViewのコード量を削減、コードベースがType
 Vue.js v2.2.0リリース。&lt;br&gt;
 テンプレートで閉じタグがない場合にエラーを投げるように、PropsやComputedプロパティはインスタンスではなくprototypeへ定義されるように。&lt;br&gt;
 サーバサイドレンダリング向けに&lt;code&gt;template&lt;/code&gt;オプションの追加、&lt;code&gt;errorHandler&lt;/code&gt;や&lt;code&gt;renderError&lt;/code&gt;でエラーがキャッチできるように。&lt;br&gt;
-React Context的な値を差し込める&lt;code&gt;provive&lt;/code&gt;と&lt;code&gt;inject&lt;/code&gt;のDI機構の追加など&lt;/p&gt;
+React Context的な値を差し込める&lt;code&gt;provide&lt;/code&gt;と&lt;code&gt;inject&lt;/code&gt;のDI機構の追加など&lt;/p&gt;
 
 &lt;hr&gt;
 
