@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Mar 2017 16:08:26 +0900</pubDate>
-    <lastBuildDate>Wed, 01 Mar 2017 16:08:26 +0900</lastBuildDate>
+    <pubDate>Wed, 01 Mar 2017 16:10:25 +0900</pubDate>
+    <lastBuildDate>Wed, 01 Mar 2017 16:10:25 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -174,7 +174,7 @@ ESTree互換モードを提供するプラグインの追加、Flowでpritimitiv
 &lt;p&gt;&lt;a href=&quot;https://github.com/facebook/flow/releases/tag/v0.40.0&quot; title=&quot;Release v0.40.0 · facebook/flow&quot;&gt;github.com/facebook/flow/releases/tag/v0.40.0&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;flowtype&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
 Flow v0.40.0リリース。&lt;br&gt;
-&lt;code&gt;this&lt;/code&gt;や&lt;code&gt;super&lt;/code&gt;をデフォルト非キスに利用できるように、built-in libraryの更新、union type周りの最適化など&lt;/p&gt;
+&lt;code&gt;this&lt;/code&gt;や&lt;code&gt;super&lt;/code&gt;をデフォルト引数に利用できるように、built-in libraryの更新、union type周りの最適化など&lt;/p&gt;
 
 &lt;hr&gt;
 
