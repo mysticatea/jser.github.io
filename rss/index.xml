@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Mar 2017 16:10:25 +0900</pubDate>
-    <lastBuildDate>Wed, 01 Mar 2017 16:10:25 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Mar 2017 00:49:22 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Mar 2017 00:49:22 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -342,9 +342,9 @@ CSSの設定についての書籍&lt;/p&gt;
 
 &lt;hr&gt;
 </description>
-        <pubDate>Sat, 25 Feb 2017 02:16:03 +0900</pubDate>
-        <link>https://jser.info/2017/02/25/node-v7.6.0-coffeescript-2.0a-vue-v2.2.0/</link>
-        <guid isPermaLink="true">https://jser.info/2017/02/25/node-v7.6.0-coffeescript-2.0a-vue-v2.2.0/</guid>
+        <pubDate>Mon, 27 Feb 2017 21:16:03 +0900</pubDate>
+        <link>https://jser.info/2017/02/27/node-v7.6.0-coffeescript-2.0a-vue-v2.2.0/</link>
+        <guid isPermaLink="true">https://jser.info/2017/02/27/node-v7.6.0-coffeescript-2.0a-vue-v2.2.0/</guid>
         
         <category>Node.js</category>
         
