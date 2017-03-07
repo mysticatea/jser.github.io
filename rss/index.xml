@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Mar 2017 10:48:36 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Mar 2017 10:48:36 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Mar 2017 11:28:22 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Mar 2017 11:28:22 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -397,7 +397,7 @@ splatsはspreadへコンパイルされるように、Tagged Template literal、
 &lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/typescript/2017/02/22/announcing-typescript-2-2/&quot; title=&quot;Announcing TypeScript 2.2 | TypeScript&quot;&gt;blogs.msdn.microsoft.com/typescript/2017/02/22/announcing-typescript-2-2/&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
 TypeScript 2.2リリース。&lt;br&gt;
-languaget serviceの改善、&lt;code&gt;object&lt;/code&gt; typeの追加、string index、mixin class、&lt;code&gt;new.target&lt;/code&gt;のサポートなど&lt;/p&gt;
+language serviceの改善、&lt;code&gt;object&lt;/code&gt; typeの追加、string index、mixin class、&lt;code&gt;new.target&lt;/code&gt;のサポートなど&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/Microsoft/TypeScript/wiki/Roadmap#22-february-2017&quot; title=&quot;Roadmap · Microsoft/TypeScript Wiki&quot;&gt;Roadmap · Microsoft/TypeScript Wiki&lt;/a&gt;&lt;/li&gt;
