@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Mar 2017 11:28:22 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Mar 2017 11:28:22 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Mar 2017 11:28:56 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Mar 2017 11:28:56 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -29,7 +29,7 @@
 
 &lt;hr&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://blog.bugsnag.com/converting-a-large-react-codebase-from-coffeescript-to-es6/&quot; title=&quot;Bugsnag Blog - Converting a large React Codebase from Coffeescript to ES6&quot;&gt;Bugsnag Blog - Converting a large React Codebase from Coffeescript to ES6&lt;/a&gt;という記事では、CoffeeScript + React(CJSX)からJavaScript + Reactの環境へ移行した手法について書かれています。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.bugsnag.com/converting-a-large-react-codebase-from-coffeescript-to-es6/&quot; title=&quot;Bugsnag Blog - Converting a large React Codebase from Coffeescript to ES6&quot;&gt;Bugsnag Blog - Converting a large React Codebase from Coffeescript to ES6&lt;/a&gt;という記事では、CoffeeScript + React(cjsx)からJavaScript + Reactの環境へ移行した手法について書かれています。&lt;/p&gt;
 
 &lt;p&gt;CoffeeScriptをJavaScriptへ変換する&lt;a href=&quot;https://github.com/decaffeinate/decaffeinate&quot; title=&quot;decaffeinate&quot;&gt;decaffeinate&lt;/a&gt;はcjsx(CoffeeScriptにJSXを書けるもの)をサポートしていません。&lt;/p&gt;
 
