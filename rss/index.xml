@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Mar 2017 00:49:22 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Mar 2017 00:49:22 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Mar 2017 09:52:00 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Mar 2017 09:52:00 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -30,7 +30,7 @@ V8 5.5ではasync/awaitがデフォルトで有効化されているため、Nod
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;npm install coffeescript@next
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;CoffeeScript 2.0.0はES2015以降の対応が中心です。&lt;br&gt;
-for...of、Tagged template literals、Async/awitの対応などが行われています。&lt;br&gt;
+for...of、Tagged template literals、Async/awaitの対応などが行われています。&lt;br&gt;
 また、classがES2015 classesへコンパイルできるように仕様追従、デフォルトパラメータで&lt;code&gt;null&lt;/code&gt;を引数に渡した時の挙動をES2015仕様に追従など破壊的な変更も含まれています。&lt;/p&gt;
 
 &lt;p&gt;詳しくはリリースノートを参照してください。&lt;/p&gt;
