@@ -1,4 +1,11 @@
 [{
+"title":"2017-03-14のJS: Firefox 52.0、Polymer 2.0 RC、コンポーネントのリファクタリング戦略",
+"url":"https://jser.info/2017/03/14/firefox-52.0-polymer-2.0-rc-component-refactoring/",
+"date":"2017-03-14T09:40:19+09:00",
+"content":"JSer.info #322 - Firefox 52.0がリリースされました。WebAsse...",
+"category":"JSer",
+"tags":["Firefox","Polymer","React","Component","refactoring"]
+},{
 "title":"2017-03-07のJS: Marko 4.0、CoffeeScript+ReactからJavaScriptへ",
 "url":"https://jser.info/2017/03/07/marko-4.0-coffeescript-react-javascript/",
 "date":"2017-03-07T10:11:32+09:00",

@@ -5,9 +5,330 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Mar 2017 11:28:56 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Mar 2017 11:28:56 +0900</lastBuildDate>
+    <pubDate>Tue, 14 Mar 2017 10:21:48 +0900</pubDate>
+    <lastBuildDate>Tue, 14 Mar 2017 10:21:48 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-03-14のJS: Firefox 52.0、Polymer 2.0 RC、コンポーネントのリファクタリング戦略</title>
+        <description>&lt;p&gt;JSer.info #322 - &lt;a href=&quot;https://www.mozilla.jp/firefox/52.0/releasenotes/&quot; title=&quot;Firefox 52.0&quot;&gt;Firefox 52.0&lt;/a&gt;がリリースされました。&lt;/p&gt;
+
+&lt;p&gt;WebAssemblyのデフォルト有効化、CSS Gridや&lt;code&gt;rel=&amp;quot;noopener&amp;quot;&lt;/code&gt;、async/awaitのサポート、Unicode code pointを識別子として利用できるようになるなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozilla.jp/firefox/52.0/releasenotes/&quot;&gt;Firefox 52.0 リリースノート&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/Firefox/Releases/52&quot;&gt;Firefox 52 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/ja/versions/52/&quot;&gt;Firefox 52 サイト互換性情報 | Firefox サイト互換性情報&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hyper-text.org/archives/2017/03/firefox_52_release.shtml&quot;&gt;Firefox 52 が正式リリース、WebAssembly、CSS Grid Layout の実装、レスポンシブデザインモードの拡充など盛りだくさん | WWW WATCH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;FirefoxのECMAScriptのサポート状況については下記の記事でまとめられています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.mozilla.org/javascript/2017/02/22/ecmascript-2016plus-in-firefox/&quot; title=&quot;ECMAScript 2016+ in Firefox | JavaScript&quot;&gt;ECMAScript 2016+ in Firefox | JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.polymer-project.org/blog/2017-03-08-2-0-rc&quot; title=&quot;Polymer 2.0 Release Candidate&quot;&gt;Polymer 2.0 Release Candidate&lt;/a&gt;が公開されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7027/introducing-custom-elements/&quot; title=&quot;Custom Element&quot;&gt;Custom Element v1&lt;/a&gt;や&lt;a href=&quot;https://hayato.io/2016/shadowdomv1/&quot; title=&quot;Shadow DOM v1&quot;&gt;Shadow DOM v1&lt;/a&gt;の仕様に追従した変更がされています。&lt;br&gt;
+ES2015 classesの対応、ライフサイクルの変更、&lt;code&gt;is&lt;/code&gt;属性サポートの廃止、データ変更検知の仕組みの変更などが含まれています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/2.0/docs/about_20&quot; title=&quot;About Polymer 2.0 - Polymer Project&quot;&gt;About Polymer 2.0 - Polymer Project&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1.xから2.0へのマイグレーションガイドも公開されているのであわせてみると良さそうです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/2.0/docs/upgrade&quot; title=&quot;Polymer 2.0 upgrade guide - Polymer Project&quot;&gt;Polymer 2.0 upgrade guide - Polymer Project&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/airbnb-engineering/moving-airbnb-search-to-react-b85b815e166c&quot;&gt;Moving Airbnb Search to React – Airbnb Engineering &amp;amp; Data Science – Medium&lt;/a&gt;という記事では、Airbnbの検索ページが&lt;a href=&quot;https://github.com/flightjs/flight&quot; title=&quot;Flight&quot;&gt;Flight&lt;/a&gt;から&lt;a href=&quot;https://github.com/facebook/react&quot; title=&quot;React&quot;&gt;React&lt;/a&gt;へ移行した際の話が書かれています。&lt;/p&gt;
+
+&lt;p&gt;テストがなく、読むのにも時間がかかるコードベースを新しくReactで書き直すリファクタリングの戦略について書かれています。&lt;/p&gt;
+
+&lt;p&gt;移行する際に、FlightのeventsをReactのPropsに繋ぐ仕組みを作成したり、&lt;br&gt;
+リファクタリングによる(パフォーマンスの)リグレッションをどうやって検知し抑えるかという点について書かれています。&lt;/p&gt;
+
+&lt;p&gt;Airbnbには&lt;a href=&quot;http://nerds.airbnb.com/experiment-reporting-framework/&quot;&gt;Experiment Reporting Framework&lt;/a&gt;という内製のパフォーマンスメトリクスを取得するツールがあり、このレポートを見ながらリファクタリングを行った話が紹介されています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-notes-for-safari-technology-preview 25-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 25 | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7432/release-notes-for-safari-technology-preview-25/&quot; title=&quot;Release Notes for Safari Technology Preview 25 | WebKit&quot;&gt;webkit.org/blog/7432/release-notes-for-safari-technology-preview-25/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Safari Technology Preview Release 25リリース。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;apollo-client-1.0-is-coming&quot;&gt;Apollo Client 1.0 is coming&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev-blog.apollodata.com/apollo-client-1-0-is-coming-23b74b13fbbb&quot; title=&quot;Apollo Client 1.0 is coming&quot;&gt;dev-blog.apollodata.com/apollo-client-1-0-is-coming-23b74b13fbbb&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;GraphQL&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+GraphQLクライアントのApollo Client 1.0リリース&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;firefox-52.0-リリースノート&quot;&gt;Firefox 52.0 リリースノート&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.mozilla.jp/firefox/52.0/releasenotes/&quot; title=&quot;Firefox 52.0 リリースノート&quot;&gt;www.mozilla.jp/firefox/52.0/releasenotes/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Firefox 52.0リリース。&lt;br&gt;
+wasmのデフォルト有効化、CSS Gridのサポート、&lt;code&gt;rel=&amp;quot;noopener&amp;quot;&lt;/code&gt;のサポート、async/await、Unicode code pointを識別子として利用できるようになるなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/Firefox/Releases/52&quot; title=&quot;Firefox 52 for developers - Mozilla | MDN&quot;&gt;Firefox 52 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/ja/versions/52/&quot; title=&quot;Firefox 52 サイト互換性情報 | Firefox サイト互換性情報&quot;&gt;Firefox 52 サイト互換性情報 | Firefox サイト互換性情報&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hyper-text.org/archives/2017/03/firefox_52_release.shtml&quot; title=&quot;Firefox 52 が正式リリース、WebAssembly、CSS Grid Layout の実装、レスポンシブデザインモードの拡充など盛りだくさん | WWW WATCH&quot;&gt;Firefox 52 が正式リリース、WebAssembly、CSS Grid Layout の実装、レスポンシブデザインモードの拡充など盛りだくさん | WWW WATCH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;qunit/history.md-at-2.2.0-·-qunitjs/qunit&quot;&gt;qunit/History.md at 2.2.0 · qunitjs/qunit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/qunitjs/qunit/blob/2.2.0/History.md&quot; title=&quot;qunit/History.md at 2.2.0 · qunitjs/qunit&quot;&gt;github.com/qunitjs/qunit/blob/2.2.0/History.md&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+QUnit 2.2.0リリース。&lt;br&gt;
+1つ以上のテストがFailのときはPassし、Todoのみが残った時はFaillする&lt;code&gt;QUnit.todo&lt;/code&gt;の追加、通った順序を記録し検証する&lt;code&gt;assert.step()&lt;/code&gt;と&lt;code&gt;assert.verifySteps&lt;/code&gt;を追加など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-inferno-1.4.0-·-infernojs/inferno&quot;&gt;Release Inferno 1.4.0 · infernojs/inferno&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/infernojs/inferno/releases/tag/1.4.0&quot; title=&quot;Release Inferno 1.4.0 · infernojs/inferno&quot;&gt;github.com/infernojs/inferno/releases/tag/1.4.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Inferno v1.4.0リリース。&lt;br&gt;
+SVGのサポートを修正、optimize-jsの対応など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;welcome-2.0-release-candidate!---polymer-project&quot;&gt;Welcome 2.0 Release Candidate! - Polymer Project&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.polymer-project.org/blog/2017-03-08-2-0-rc&quot; title=&quot;Welcome 2.0 Release Candidate! - Polymer Project&quot;&gt;www.polymer-project.org/blog/2017-03-08-2-0-rc&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebComponents&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Polymer 2.0.0 RCリリース。&lt;br&gt;
+Custom Elements v1、Shadow DOM v1の仕様に追従した変更が含まれてる。&lt;br&gt;
+ES2015 classesの対応、ライフサイクルの変更、&lt;code&gt;is&lt;/code&gt;属性サポートの廃止、データ変更検知の仕組みの変更など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/2.0/docs/about_20&quot; title=&quot;About Polymer 2.0 - Polymer Project&quot;&gt;About Polymer 2.0 - Polymer Project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/2.0/docs/upgrade&quot; title=&quot;Polymer 2.0 upgrade guide - Polymer Project&quot;&gt;Polymer 2.0 upgrade guide - Polymer Project&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;inroducing-almin-0.10.0:-typescript,-flowtype,-logger-|-web-scratch&quot;&gt;Inroducing Almin 0.10.0: TypeScript, FlowType, Logger | Web Scratch&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://efcl.info/2017/03/08/almim0.10/&quot; title=&quot;Inroducing Almin 0.10.0: TypeScript, FlowType, Logger | Web Scratch&quot;&gt;efcl.info/2017/03/08/almim0.10/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;flowtype&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+FluxライブラリのAlmin 0.10.0リリース。&lt;br&gt;
+コードベースをTypeScript化、FlowTypeのサポート改善、開発用のロガーの改善など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/almin/almin/releases/tag/0.10.0&quot; title=&quot;Release 0.10.0 · almin/almin&quot;&gt;Release 0.10.0 · almin/almin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;mobxを使ったアーキテクチャについて---console.lealog();&quot;&gt;MobXを使ったアーキテクチャについて - console.lealog();&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lealog.hateblo.jp/entry/2017/03/08/114017&quot; title=&quot;MobXを使ったアーキテクチャについて - console.lealog();&quot;&gt;lealog.hateblo.jp/entry/2017/03/08/114017&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+State管理ライブラリであるMobXについて。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mobxjs/mobx&quot; title=&quot;mobxjs/mobx: Simple, scalable state management.&quot;&gt;mobxjs/mobx: Simple, scalable state management.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;native-ecmascript-modules:-nomodule-attribute-for-the-migration&quot;&gt;Native ECMAScript modules: nomodule attribute for the migration&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.hospodarets.com/native-ecmascript-modules-nomodule&quot; title=&quot;Native ECMAScript modules: nomodule attribute for the migration&quot;&gt;blog.hospodarets.com/native-ecmascript-modules-nomodule&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+scriptタグの&lt;code&gt;nomodule&lt;/code&gt;属性について&lt;br&gt;
+モジュールをサポートしてない環境でのみ実行されるscript要素で、fallbackを行う方法について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;a-complete-guide-to-css-grid-|-codrops-css-reference&quot;&gt;A Complete Guide to CSS Grid | Codrops CSS Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tympanus.net/codrops/css_reference/grid/&quot; title=&quot;A Complete Guide to CSS Grid | Codrops CSS Reference&quot;&gt;tympanus.net/codrops/css_reference/grid/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+CSS Gridについての詳しい解説&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;moving-airbnb-search-to-react-–-airbnb-engineering-&amp;amp;-data-science-–-medium&quot;&gt;Moving Airbnb Search to React – Airbnb Engineering &amp;amp; Data Science – Medium&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/airbnb-engineering/moving-airbnb-search-to-react-b85b815e166c&quot; title=&quot;Moving Airbnb Search to React – Airbnb Engineering &amp;amp; Data Science – Medium&quot;&gt;medium.com/airbnb-engineering/moving-airbnb-search-to-react-b85b815e166c&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Airbnb SearchがTwitter’s FlightからReactに移行した話。&lt;br&gt;
+何を指標にしてリファクタリングを行うかについて。&lt;br&gt;
+内製のパフォーマンス計測し検証しながら移行するアプローチについて&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://nerds.airbnb.com/experiment-reporting-framework/&quot; title=&quot;Experiment Reporting Framework - Airbnb Engineering&quot;&gt;Experiment Reporting Framework - Airbnb Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;薄いフレームワーク指向の-web-クライアントサイドプログラミング---hatena-developer-blog&quot;&gt;薄いフレームワーク指向の Web クライアントサイドプログラミング - Hatena Developer Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://developer.hatenastaff.com/entry/2017/03/10/190229&quot; title=&quot;薄いフレームワーク指向の Web クライアントサイドプログラミング - Hatena Developer Blog&quot;&gt;developer.hatenastaff.com/entry/2017/03/10/190229&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;設計&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+MVPアーキテクチャパターンを使ったフレームワークを使わないアプリケーション設計について。&lt;br&gt;
+View/Presenter/Modelに役割を分担したクラスを扱う方法について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;introduction-to-web-audio-api-|-css-tricks&quot;&gt;Introduction to Web Audio API | CSS-Tricks&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://css-tricks.com/introduction-web-audio-api/&quot; title=&quot;Introduction to Web Audio API | CSS-Tricks&quot;&gt;css-tricks.com/introduction-web-audio-api/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;audio&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;web&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Web Audio APIについてのチュートリアル。 どのようなAPI体系であるか、OscillatorNodeを使っての解説、Web Audio APIにおける時間の扱いなどについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;14-must-know-chrome-dev-tools-tricks---youtube&quot;&gt;14 Must Know Chrome Dev Tools Tricks - YouTube&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v&amp;amp;#x3D;xkzDaKwinA8&quot; title=&quot;14 Must Know Chrome Dev Tools Tricks - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;xkzDaKwinA8&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Console APIについてのスクリーンキャスト&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;wai-ariaの考え方と使い方を整理しよう&quot;&gt;WAI-ARIAの考え方と使い方を整理しよう&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/nozomisawada969/waiaria-72900338&quot; title=&quot;WAI-ARIAの考え方と使い方を整理しよう&quot;&gt;www.slideshare.net/nozomisawada969/waiaria-72900338&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WAI-ARIA&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;accessibility&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+WAI-ARIAについてのスライド。&lt;br&gt;
+&lt;code&gt;aria-*&lt;/code&gt;属性、role属性の使い分けや意味合いについて。&lt;br&gt;
+ランドマーク、文書構造、ウィジェット、ライブ領域、tabindex属性などについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;angular-4がやってくる！？-新機能ダイジェスト&quot;&gt;Angular 4がやってくる！？ 新機能ダイジェスト&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/masahikoasai/20160306-angular-4&quot; title=&quot;Angular 4がやってくる！？ 新機能ダイジェスト&quot;&gt;www.slideshare.net/masahikoasai/20160306-angular-4&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;AngularJS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Angularのアップデートライフサイクルについてのスライド。&lt;br&gt;
+Angular 2.xからsemverに準拠したアップデートとなり、4.xへのメジャーアップデートどのような点が変わるのかについて。&lt;br&gt;
+機能追加やアップデート方法について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;point-|-a-flexible-css-framework-for-building-modern-responsive-web-apps&quot;&gt;Point | A flexible CSS Framework for building modern responsive web apps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.getpoint.io/&quot; title=&quot;Point | A flexible CSS Framework for building modern responsive web apps&quot;&gt;www.getpoint.io/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+Flexboxを使ったモバイルファーストなCSSフレームワーク&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;brave/muon:-build-browsers-and-browser-like-applications-with-html,-css,-and-javascript&quot;&gt;brave/muon: Build browsers and browser like applications with HTML, CSS, and JavaScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/brave/muon&quot; title=&quot;brave/muon: Build browsers and browser like applications with HTML, CSS, and JavaScript&quot;&gt;github.com/brave/muon&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Electron&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;security&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+BraveのElectron fork。&lt;br&gt;
+Chromiumのソースを直接使うように、Chrome extensionsのサポート、renderer processからNode.jsを完全に除去するのが目的&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;hyperapp/hyperapp:-1kb-javascript-library-for-building-frontend-applications.&quot;&gt;hyperapp/hyperapp: 1kb JavaScript library for building frontend applications.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/hyperapp/hyperapp&quot; title=&quot;hyperapp/hyperapp: 1kb JavaScript library for building frontend applications.&quot;&gt;github.com/hyperapp/hyperapp&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+JSX/Hyperxを使ったDOM記述、Router、State管理をまとめて扱えるライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;staltz/html-looks-like:-assert-that-an-html-string-looks-approximately-the-same-as-another-html&quot;&gt;staltz/html-looks-like: Assert that an HTML string looks approximately the same as another HTML&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/staltz/html-looks-like&quot; title=&quot;staltz/html-looks-like: Assert that an HTML string looks approximately the same as another HTML&quot;&gt;github.com/staltz/html-looks-like&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;HTML&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+HTML文字列同士を大まかに比較できるテストライブラリ。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;bafs/gutenberg:-modern-framework-to-print-the-web-correctly.&quot;&gt;BafS/Gutenberg: Modern framework to print the web correctly.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/BafS/Gutenberg&quot; title=&quot;BafS/Gutenberg: Modern framework to print the web correctly.&quot;&gt;github.com/BafS/Gutenberg&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+印刷向けのCSSライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;sazerac&quot;&gt;Sazerac&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://sazeracjs.com/&quot; title=&quot;Sazerac&quot;&gt;sazeracjs.com/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+データにフォーカスしたassertion/テストライブラリ。&lt;br&gt;
+Jasmine、Jest、Mochaと一緒に動作する。&lt;br&gt;
+データごとのテストケースを作るような&lt;em&gt;パラメタライズドテスト&lt;/em&gt;を行える。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;electronではじめるアプリ開発　～javascript/html/cssでデスクトップアプリを作ろう：書籍案内｜技術評論社&quot;&gt;Electronではじめるアプリ開発　～JavaScript/HTML/CSSでデスクトップアプリを作ろう：書籍案内｜技術評論社&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gihyo.jp/book/2017/978-4-7741-8819-5&quot; title=&quot;Electronではじめるアプリ開発　～JavaScript/HTML/CSSでデスクトップアプリを作ろう：書籍案内｜技術評論社&quot;&gt;gihyo.jp/book/2017/978-4-7741-8819-5&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Electron&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
+2017年3月28日発売&lt;br&gt;
+Electronについての書籍&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Tue, 14 Mar 2017 09:40:19 +0900</pubDate>
+        <link>https://jser.info/2017/03/14/firefox-52.0-polymer-2.0-rc-component-refactoring/</link>
+        <guid isPermaLink="true">https://jser.info/2017/03/14/firefox-52.0-polymer-2.0-rc-component-refactoring/</guid>
+        
+        <category>Firefox</category>
+        
+        <category>Polymer</category>
+        
+        <category>React</category>
+        
+        <category>Component</category>
+        
+        <category>refactoring</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-03-07のJS: Marko 4.0、CoffeeScript+ReactからJavaScriptへ</title>
@@ -2545,1511 +2866,6 @@ JSONでシナリオを作成して、スクリーンショットの画像比較�
         <category>ja</category>
         
         <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>JSer.info 6周年記念イベントを開催しました</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://jser.connpass.com/event/46997/&quot; title=&quot;JSer.info 6周年と300回記念イベント&quot;&gt;JSer.info 6周年と300回記念イベント&lt;/a&gt;を開催しました。&lt;/p&gt;
-
-&lt;p&gt;参加して頂いた皆さん、発表して頂いた皆さんありがとうございます。&lt;/p&gt;
-
-&lt;h3 id=&quot;発表内容&quot;&gt;発表内容&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/jser_info_6years.html&quot;&gt;JSer.info 6周年イベント&lt;/a&gt; - &lt;a href=&quot;https://twitter.com/azu_re&quot;&gt;@azu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&quot;&gt;JSer.infoの作り方&lt;/a&gt; - &lt;a href=&quot;https://twitter.com/azu_re&quot;&gt;@azu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1N0waGxmspbLyRf6a6hG5oXk77z69YirgW21_Cegxnq0/edit#slide=id.p&quot;&gt;ECMA-402を知ってますか？&lt;/a&gt; - &lt;a href=&quot;https://twitter.com/makoto_kato&quot;&gt;@makoto_kato&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/potato4d/2017nian-falsejavascriptto-hurontoendofalsele-simikata-number-jserinfo&quot;&gt;2017年のJavaScriptと フロントエンドの楽しみかた #jserinfo // Speaker Deck&lt;/a&gt; - &lt;a href=&quot;https://twitter.com/potato4d&quot;&gt;@potato4d&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1rwmyRW99N4ZAPM5gyDGjgv0yvJXVATUom6rNxAZrYvQ/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000#slide=id.g1aed898fe2_0_156&quot;&gt;A piece of potential of Cognitive Services&lt;/a&gt; - &lt;a href=&quot;https://twitter.com/ovrmrw&quot;&gt;@ovrmrw&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://slides.youchan.org/JSerInfo6th&quot;&gt;Opalのすすめ&lt;/a&gt; - &lt;a href=&quot;https://twitter.com/youchan&quot;&gt;@youchan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/rlaxogns/how-amp-work&quot;&gt;HOW AMP WORKS&lt;/a&gt; - &lt;a href=&quot;https://github.com/kishu&quot; title=&quot;kishu&quot;&gt;@kishu&lt;/a&gt; 翻訳: &lt;a href=&quot;https://twitter.com/purewish&quot; title=&quot;@purewish&quot;&gt;@purewish&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;with Many LT&lt;/p&gt;
-
-&lt;p&gt;以下、&lt;a href=&quot;https://paper.dropbox.com/doc/JSer.info-6-4ko0NvdzqpYj5Rt6TvdJi&quot; title=&quot;JSer.info 6周年記念イベント - Paper&quot;&gt;JSer.info 6周年記念イベント - Paper&lt;/a&gt;に書かれた議事録です。&lt;/p&gt;
-
-&lt;p&gt;議事録を取って頂いた&lt;a href=&quot;https://twitter.com/suzuki&quot; title=&quot;@suzuki&quot;&gt;@suzuki&lt;/a&gt;さんありがとうございます。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id=&quot;jser.infoについて---azu&quot;&gt;JSer.infoについて - azu&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;スライド: &lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/jser_info_6years.html&quot;&gt;JSer.info 6周年イベント&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;JSer.info、明日で6周年
-
-&lt;ul&gt;
-&lt;li&gt;1000記事/年くらい紹介&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;紹介記事の傾向
-
-&lt;ul&gt;
-&lt;li&gt;JSONファイルで管理&lt;/li&gt;
-&lt;li&gt;jser/stat-js に入れている&lt;/li&gt;
-&lt;li&gt;MIT ライセンス&lt;/li&gt;
-&lt;li&gt;このスライド用にダッシュボード作った&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Dashboard のデータ
-
-&lt;ul&gt;
-&lt;li&gt;ドメイン別&lt;/li&gt;
-&lt;li&gt;GitHub が多い&lt;/li&gt;
-&lt;li&gt;リリースノートが書かれる&lt;/li&gt;
-&lt;li&gt;ブログ系ドメインが変わってきた
-
-&lt;ul&gt;
-&lt;li&gt;はてなダイアリー&lt;/li&gt;
-&lt;li&gt;下がってきた&lt;/li&gt;
-&lt;li&gt;はてなブログ&lt;/li&gt;
-&lt;li&gt;最近は Medium / Qiita が増えてきた&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Qiita / Medium
-
-&lt;ul&gt;
-&lt;li&gt;Qiita: 日本語圏&lt;/li&gt;
-&lt;li&gt;Medium: それ以外の言語圏&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;自ドメインに書いている人が減りつつある
-
-&lt;ul&gt;
-&lt;li&gt;プラットフォームのほうがコメントなど貰いやすい&lt;/li&gt;
-&lt;li&gt;人だけでなくタグでも追えるのがプラットフォーム&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;プラットフォーム以外
-
-&lt;ul&gt;
-&lt;li&gt;SNS、SBM、Echo JS&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;情報を投げる場所
-
-&lt;ul&gt;
-&lt;li&gt;jser/ping&lt;/li&gt;
-&lt;li&gt;URL、説明文などをPOSTできる&lt;/li&gt;
-&lt;li&gt;投げると勝手に GitHub Issue が立つ&lt;/li&gt;
-&lt;li&gt;pull request を投げるものも作ったが誰も使ってくれなかったので、よりカジュアルなものに&lt;/li&gt;
-&lt;li&gt;自分用でも使っている&lt;/li&gt;
-&lt;li&gt;lambda でサーバレス（かっこいいな）&lt;/li&gt;
-&lt;li&gt;投稿フロー&lt;/li&gt;
-&lt;li&gt;投稿タイミング、ある程度数が貯まったらボットが通知&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;韓国語版
-
-&lt;ul&gt;
-&lt;li&gt;今日は韓国からゲスト参加&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ECMAScript Diary
-
-&lt;ul&gt;
-&lt;li&gt;個人の日記&lt;/li&gt;
-&lt;li&gt;ECMAScript のみを扱っている&lt;/li&gt;
-&lt;li&gt;おそらく唯一の専門サイト&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;今後
-
-&lt;ul&gt;
-&lt;li&gt;週一の記事以外にトピックベースの記事を書いてみたい&lt;/li&gt;
-&lt;li&gt;時間コストはかけたくない&lt;/li&gt;
-&lt;li&gt;仕組み化が課題
-#### Q&amp;amp;A&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Q. pull request少ないのは本当に少ないのか？&lt;/li&gt;
-&lt;li&gt;A. 修正はそこそこ。記事の投稿はほとんどなかった。ちょっと面倒臭いフローだった&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id=&quot;jser.infoの作り方---azu&quot;&gt;JSer.infoの作り方 - azu&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;スライド: &lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&quot;&gt;JSer.infoの作り方&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;去年のまとめ
-
-&lt;ul&gt;
-&lt;li&gt;JavaScript 情報ってなんだっけ？&lt;/li&gt;
-&lt;li&gt;コミュニティの問題&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;JSer.infoの目的
-
-&lt;ul&gt;
-&lt;li&gt;整理して発信&lt;/li&gt;
-&lt;li&gt;紹介でなく知ってもらう&lt;/li&gt;
-&lt;li&gt;継続的&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ゴール
-
-&lt;ul&gt;
-&lt;li&gt;興味ある人に知ってもらう&lt;/li&gt;
-&lt;li&gt;現状を正確に伝える&lt;/li&gt;
-&lt;li&gt;更新コストを低く&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ワークフロー&lt;/li&gt;
-&lt;li&gt;目的を満たすために
-
-&lt;ul&gt;
-&lt;li&gt;誤った情報を知らせるのは嫌だ&lt;/li&gt;
-&lt;li&gt;文字は人によって感じ方が違う&lt;/li&gt;
-&lt;li&gt;誤解を生まないように&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;みる、調べる
-
-&lt;ul&gt;
-&lt;li&gt;JS 以外でも同じやり方が可能&lt;/li&gt;
-&lt;li&gt;見る&lt;/li&gt;
-&lt;li&gt;見る、気づく
-
-&lt;ul&gt;
-&lt;li&gt;いろいろなところを見る&lt;/li&gt;
-&lt;li&gt;自分が見るところを集約&lt;/li&gt;
-&lt;li&gt;情報不足、情報過多はうまくいかない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;GitHub
-
-&lt;ul&gt;
-&lt;li&gt;開発基盤、重要&lt;/li&gt;
-&lt;li&gt;ECMAScript の仕様策定も GitHub &lt;/li&gt;
-&lt;li&gt;GitHub Notification が崩壊w&lt;/li&gt;
-&lt;li&gt;リポジトリを Watch&lt;/li&gt;
-&lt;li&gt;Star はもっと気軽にやっている
-
-&lt;ul&gt;
-&lt;li&gt;starWatcher&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;GitHub を Twitter で見る&lt;/li&gt;
-&lt;li&gt;AWS Lamda で Activity を bot で Twitter へ流す&lt;/li&gt;
-&lt;li&gt;見逃したくない情報は何度も流れるようにしている&lt;/li&gt;
-&lt;li&gt;Twitter + RSS + Pocket とか&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;RSS
-
-&lt;ul&gt;
-&lt;li&gt;LDRを使っている&lt;/li&gt;
-&lt;li&gt;3213 feeds&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;まとめ
-
-&lt;ul&gt;
-&lt;li&gt;見る&lt;/li&gt;
-&lt;li&gt;自分が見るところへ集約&lt;/li&gt;
-&lt;li&gt;多すぎる情報を整理する&lt;/li&gt;
-&lt;li&gt;調べる&lt;/li&gt;
-&lt;li&gt;ググる
-
-&lt;ul&gt;
-&lt;li&gt;えいごで検索&lt;/li&gt;
-&lt;li&gt;日付で絞る&lt;/li&gt;
-&lt;li&gt;URL で検索&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;GitHub検索
-
-&lt;ul&gt;
-&lt;li&gt;検索演算子を活用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;関連検索
-
-&lt;ul&gt;
-&lt;li&gt;その情報が新しいか、正しいか&lt;/li&gt;
-&lt;li&gt;URLで検索して、引用しているサイトを見る&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;感情判定の例
-
-&lt;ul&gt;
-&lt;li&gt;”感情 判定”で検索、、、&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;GitHubでもリンクを探る
-
-&lt;ul&gt;
-&lt;li&gt;古いライブラリの代替などだとREADMEに書かれていたり&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;専門の検索エンジン
-
-&lt;ul&gt;
-&lt;li&gt;Libraries.io&lt;/li&gt;
-&lt;li&gt;npm trends&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;どこで専門サイトを見つける？
-
-&lt;ul&gt;
-&lt;li&gt;awesome&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;人は知りすぎると動けなくなる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;行動
-
-&lt;ul&gt;
-&lt;li&gt;検証&lt;/li&gt;
-&lt;li&gt;本当なのか？&lt;/li&gt;
-&lt;li&gt;なぜ検証が必要か？
-
-&lt;ul&gt;
-&lt;li&gt;必ずしも直感は正しくない&lt;/li&gt;
-&lt;li&gt;作者の説明が正しいとは限らない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;どうやって検証
-
-&lt;ul&gt;
-&lt;li&gt;コードを読む&lt;/li&gt;
-&lt;li&gt;パフォーマンス系は動かさないと分からない&lt;/li&gt;
-&lt;li&gt;特定のエッジケースでn倍速いとか。&lt;/li&gt;
-&lt;li&gt;clone して動かすsnippetを用意&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;変更点を見つける
-
-&lt;ul&gt;
-&lt;li&gt;ChangeLog, リリースノートを見る&lt;/li&gt;
-&lt;li&gt;Issue/p-r を見る&lt;/li&gt;
-&lt;li&gt;commit を見る&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;全ては検証できない
-
-&lt;ul&gt;
-&lt;li&gt;時間、コスト的問題&lt;/li&gt;
-&lt;li&gt;不確実性があれば掲載をスルー&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;説明&lt;/li&gt;
-&lt;li&gt;postem（Electronクライアント）を作った、それを使って投稿&lt;/li&gt;
-&lt;li&gt;説明文
-
-&lt;ul&gt;
-&lt;li&gt;言葉は人によって解釈が違う&lt;/li&gt;
-&lt;li&gt;JSer.infoで気にしていること&lt;/li&gt;
-&lt;li&gt;整理・正確・現状・中立・関連性・客観的&lt;/li&gt;
-&lt;li&gt;使いたくない言葉もある&lt;/li&gt;
-&lt;li&gt;煽る系&lt;/li&gt;
-&lt;li&gt;意図的に避けている&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;JSAwards
-
-&lt;ul&gt;
-&lt;li&gt;中止になった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;JSer.infoで使う言葉
-
-&lt;ul&gt;
-&lt;li&gt;特徴、目的&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;CODE OF CONDUCT
-
-&lt;ul&gt;
-&lt;li&gt;その場所をどうやって扱って欲しいかを表明する&lt;/li&gt;
-&lt;li&gt;jser.info/CODEOFCONDUCT.md&lt;/li&gt;
-&lt;li&gt;基本的に中立的な立場を表明している&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;このイベントもCoCを定義している&lt;/li&gt;
-&lt;li&gt;言葉の難しさ&lt;/li&gt;
-&lt;li&gt;正しいことを言っても正しく伝わるとは限らない
-
-&lt;ul&gt;
-&lt;li&gt;正しいことを言う != 正しく伝える&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;言葉とツール&lt;/li&gt;
-&lt;li&gt;機械的に弾く&lt;/li&gt;
-&lt;li&gt;textlint というツール
-
-&lt;ul&gt;
-&lt;li&gt;毎回説明文をチェック&lt;/li&gt;
-&lt;li&gt;引っかかれば修正もしくは掲載を諦める&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;単語感情極性対応表
-
-&lt;ul&gt;
-&lt;li&gt;0に近いほど中立&lt;/li&gt;
-&lt;li&gt;記事ごとに出してみた&lt;/li&gt;
-&lt;li&gt;-0.216 くらいだった&lt;/li&gt;
-&lt;li&gt;どんな言語でもネガティブなほうがポジティブより多い傾向&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;まとめ&lt;/li&gt;
-&lt;li&gt;説明は場所・対象により正しさが異なる&lt;/li&gt;
-&lt;li&gt;正しい事実を簡単に説明するのが難しい&lt;/li&gt;
-&lt;li&gt;機械的チェック&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;共有
-
-&lt;ul&gt;
-&lt;li&gt;一定数貯まったらbotが通知&lt;/li&gt;
-&lt;li&gt;JSer.infoのアーカイブからピックアップして公開&lt;/li&gt;
-&lt;li&gt;継続性&lt;/li&gt;
-&lt;li&gt;更新コストを小さく&lt;/li&gt;
-&lt;li&gt;ゴールができるだけ短く連続的に
-
-&lt;ul&gt;
-&lt;li&gt;JSer.infoは週一くらいでPOSTするゴール&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;長すぎるゴールの問題&lt;/li&gt;
-&lt;li&gt;解決が難しくなる&lt;/li&gt;
-&lt;li&gt;不確実性のコーン&lt;/li&gt;
-&lt;li&gt;直感と予想は一致しない&lt;/li&gt;
-&lt;li&gt;一度やめると再開が難しい
-
-&lt;ul&gt;
-&lt;li&gt;短ければ再開も簡単&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;小さく作って小さく更新&lt;/li&gt;
-&lt;li&gt;一日で1週間分の更新は難しい
-
-&lt;ul&gt;
-&lt;li&gt;細かく&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;毎日作業&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;イテレーションのコスト
-
-&lt;ul&gt;
-&lt;li&gt;無コストではないけど、コストは小さく&lt;/li&gt;
-&lt;li&gt;ワークフローは一方通行に&lt;/li&gt;
-&lt;li&gt;Flux の図と同じ（w）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;あなたもJSer.infoを作ってみませんか？
-
-&lt;ul&gt;
-&lt;li&gt;jser/ping&lt;/li&gt;
-&lt;li&gt;jser/report&lt;/li&gt;
-&lt;li&gt;jser/jser.github.io&lt;/li&gt;
-&lt;li&gt;jser/jser.info - Gitter&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;まとめ
-
-&lt;ul&gt;
-&lt;li&gt;その場の知識はそこまで重要ではない&lt;/li&gt;
-&lt;li&gt;行動が大事&lt;/li&gt;
-&lt;li&gt;直感が正しくないときに確認する方法を持つ&lt;/li&gt;
-&lt;li&gt;動くスコープを決める&lt;/li&gt;
-&lt;li&gt;1週間で終わる目標&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;q&amp;amp;a&quot;&gt;Q&amp;amp;A&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Q. 毎週たくさん記事を紹介していて、週によってテーマがあるなと感じる時がある。そういうのはネタ帳に貯めているのか？&lt;/li&gt;
-&lt;li&gt;A. あまり貯めてはいない。関連が思いついたら関連に追加するくらい。同時に似たようなものが流れることも多い。&lt;/li&gt;
-&lt;li&gt;Q. 今週はテーマもストックもない、で困ることはある？&lt;/li&gt;
-&lt;li&gt;A. あまりない&lt;/li&gt;
-&lt;li&gt;Q. PDCAみたいなふりかえりはやってない？&lt;/li&gt;
-&lt;li&gt;A. 特にやってない。なんとなく雰囲気でやっているくらい。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id=&quot;ecma-402を知ってますか？---@makoto_kato&quot;&gt;ECMA-402を知ってますか？ - &lt;a href=&quot;https://twitter.com/makoto_kato&quot;&gt;@makoto_kato&lt;/a&gt;&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;スライド: &lt;a href=&quot;https://docs.google.com/presentation/d/1N0waGxmspbLyRf6a6hG5oXk77z69YirgW21_Cegxnq0/edit#slide=id.p&quot;&gt;ECMA-402 - Google スライド&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;自己紹介
-
-&lt;ul&gt;
-&lt;li&gt;プラットフォームエンジニア&lt;/li&gt;
-&lt;li&gt;Firefoxのバグとか、担当する&lt;/li&gt;
-&lt;li&gt;日本語でOK&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ECMA-402?
-
-&lt;ul&gt;
-&lt;li&gt;ECMAScript Internationalization API&lt;/li&gt;
-&lt;li&gt;Intl.DateTimeFormat&lt;/li&gt;
-&lt;li&gt;Intl.NumberFormat&lt;/li&gt;
-&lt;li&gt;Intl.Collator&lt;/li&gt;
-&lt;li&gt;Number.prototype.toLocaleString&lt;/li&gt;
-&lt;li&gt;String.prototype.localeCompare
-
-&lt;ul&gt;
-&lt;li&gt;文字列の比較は言語によって異なる&lt;/li&gt;
-&lt;li&gt;accent記号での違い&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;日本語の年号を表示する、などもできる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Editors for ECMA-402
-
-&lt;ul&gt;
-&lt;li&gt;1st, 2nd, 3rd で全て Editor が違う&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/rwaldron&quot;&gt;https://github.com/rwaldron&lt;/a&gt; (TC39)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/caridy&quot;&gt;https://github.com/caridy&lt;/a&gt; (TC39)&lt;/li&gt;
-&lt;li&gt;ブラウザベンダの人たちではない&lt;/li&gt;
-&lt;li&gt;実はブラウザベンダのサポートが弱い&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Intl.DateTimeFormat
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Intl.DateTimeFormat(&amp;quot;en_US&amp;quot;, …)&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Intl.DateTimeFormat(&amp;quot;zh-TW&amp;quot;, …)&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Intl.DateTimeFormat(&amp;quot;ja-JP-u-ca-japanese&amp;quot;, …)&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;→ &lt;code&gt;平成&lt;/code&gt; なども返ってくる&lt;/li&gt;
-&lt;li&gt;→ 年号が変わったときもブラウザ側が実装してくれる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Intl.NumberFormat
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Intl.NumberFormat(&amp;quot;de&amp;quot;, …)&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;→ &lt;code&gt;10.000,00€&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Intl.NumberFormat(&amp;quot;ja-JP&amp;quot;, …)&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\10,000&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;通過記号の位置など勝手にやってくれる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Intl.Collator
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Intl.Collator(&amp;#39;de&amp;#39;, …)&lt;/code&gt; &lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;対応状況
-
-&lt;ul&gt;
-&lt;li&gt;ほとんどのブラウザに入っている&lt;/li&gt;
-&lt;li&gt;Safari 10も入ってるので大体のブラウザで使える&lt;/li&gt;
-&lt;li&gt;Android Firefox（？）&lt;/li&gt;
-&lt;li&gt;ファイルサイズが増える&lt;/li&gt;
-&lt;li&gt;強硬に反対されている&lt;/li&gt;
-&lt;li&gt;ICUライブラリ&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://site.icu-project.org/&quot;&gt;http://site.icu-project.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;IBMが作成
-
-&lt;ul&gt;
-&lt;li&gt;去年に unicord.org 配下になった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;通貨、など全て各言語に対応&lt;/li&gt;
-&lt;li&gt;Chakra, V8 などによって実装が少しぶれているところがある&lt;/li&gt;
-&lt;li&gt;Chakra
-
-&lt;ul&gt;
-&lt;li&gt;Windows API&lt;/li&gt;
-&lt;li&gt;今後、ICUを使っていくことになりそうとのこと&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;V8
-
-&lt;ul&gt;
-&lt;li&gt;ICU&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ECMA-402 NEXT
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tc39/ecma402&quot;&gt;https://github.com/tc39/ecma402&lt;/a&gt; にまとまっている&lt;/li&gt;
-&lt;li&gt;次のバージョンに入れようというもの&lt;/li&gt;
-&lt;li&gt;Zibi Braniecki
-
-&lt;ul&gt;
-&lt;li&gt;I20N の owner&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Rafael Xavier&lt;/li&gt;
-&lt;li&gt;Stage 4&lt;/li&gt;
-&lt;li&gt;Intl.DateTimeFormat.prototype.formatToParts&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tc39/ecma402/issues/30&quot;&gt;https://github.com/tc39/ecma402/issues/30&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;JSON 配列で返る&lt;/li&gt;
-&lt;li&gt;V8とSpidermoneky&lt;/li&gt;
-&lt;li&gt;ブラウザに入っている&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Stage 3&lt;/li&gt;
-&lt;li&gt;Intl.NumberFormat.prototype.formatToParts
-
-&lt;ul&gt;
-&lt;li&gt;SpiderMonkey&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Intl.PluralRules
-
-&lt;ul&gt;
-&lt;li&gt;SpiderMonkey&lt;/li&gt;
-&lt;li&gt;複数形&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;IntelPluralRules(&amp;quot;en-US&amp;quot;).select(1)&lt;/code&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;quot;one&amp;quot;&lt;/code&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;IntelPluralRules(&amp;quot;en-US&amp;quot;).select(2)&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;quot;other&amp;quot;&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;デモ中&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ICUで提供されている機能をJSに持ってこようという話がある&lt;/li&gt;
-&lt;li&gt;多数の Issue が上がっている&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tc39/ecma402/issues&quot;&gt;https://github.com/tc39/ecma402/issues&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;q&amp;amp;a&quot;&gt;Q&amp;amp;A&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Q. ICU がファイルがでかくて入れるのに躊躇するとは、ブラウザ？OS？&lt;/li&gt;
-&lt;li&gt;A. ブラウザ。Chrome / Firefox はOSバージョンに依存していないものは、ここが響く。古いOSだと依存バージョンが入っていないので、ブラウザ側にいれる必要がある&lt;/li&gt;
-&lt;li&gt;Q. 今の仕様だと普通の人が使うには辛そうなインターフェイス。これは意図的にそうしているのか？そこまで考慮されていないだけなのか？&lt;/li&gt;
-&lt;li&gt;A. そこまで考えられてないだけだと思われる。元々フレームワークとかアプリのレイヤーから少し離れてる人が書いていたため&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id=&quot;2017年のjavascriptとフロントエンドの楽しみ方---@potato4d&quot;&gt;2017年のJavaScriptとフロントエンドの楽しみ方 - &lt;a href=&quot;https://twitter.com/potato4d&quot;&gt;@potato4d&lt;/a&gt;&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;スライド: &lt;a href=&quot;https://speakerdeck.com/potato4d/2017nian-falsejavascriptto-hurontoendofalsele-simikata-number-jserinfo&quot;&gt;2017年のJavaScriptと フロントエンドの楽しみかた #jserinfo // Speaker Deck&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;自己紹介
-
-&lt;ul&gt;
-&lt;li&gt;春から東京&lt;/li&gt;
-&lt;li&gt;Vue.js周りが中心&lt;/li&gt;
-&lt;li&gt;Electonでツール作成&lt;/li&gt;
-&lt;li&gt;漢は黙ってjQuery&lt;/li&gt;
-&lt;li&gt;（正しさハラスメントの人？）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;2016年のJSの変化
-
-&lt;ul&gt;
-&lt;li&gt;ES周り&lt;/li&gt;
-&lt;li&gt;2015→2016
-
-&lt;ul&gt;
-&lt;li&gt;async/await 周りが盛り上がり&lt;/li&gt;
-&lt;li&gt;SafariがES2015&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;パッケージ
-
-&lt;ul&gt;
-&lt;li&gt;npm / yarn&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;フレームワーク
-
-&lt;ul&gt;
-&lt;li&gt;Angular2&lt;/li&gt;
-&lt;li&gt;Vueシェア増加&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;SPA・モダンフレームワークを使うのが当たり前になった&lt;/li&gt;
-&lt;li&gt;React / Angular のどちらかあるいは両方使える人が増えた&lt;/li&gt;
-&lt;li&gt;珍しくなくなった&lt;/li&gt;
-&lt;li&gt;2016年は浸透の1年&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;進化から浸透
-
-&lt;ul&gt;
-&lt;li&gt;その先は進出&lt;/li&gt;
-&lt;li&gt;レイヤー間を越境する2017年&lt;/li&gt;
-&lt;li&gt;JSといえばフロントエンドと言われるがそこだけではないはず&lt;/li&gt;
-&lt;li&gt;バックエンドとしてのJS&lt;/li&gt;
-&lt;li&gt;フロントエンドにおけるPWA… （追いつけず）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;バックエンドとしてのJS
-
-&lt;ul&gt;
-&lt;li&gt;Express + Serverless&lt;/li&gt;
-&lt;li&gt;Serverless Framework&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://serverless.com/&quot;&gt;https://serverless.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;いい感じにサーバレスなバックエンドを構成できるフレームワーク
-
-&lt;ul&gt;
-&lt;li&gt;AWS Lambdaをよしなに使ってくれる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Serverless への期待
-
-&lt;ul&gt;
-&lt;li&gt;サーバ管理の必要性の薄さ&lt;/li&gt;
-&lt;li&gt;サーバサイドのコードは書きたいがインフラ管理までしたくない&lt;/li&gt;
-&lt;li&gt;PaaS的な&lt;/li&gt;
-&lt;li&gt;クラウド環境においてJSのみで記述できる&lt;/li&gt;
-&lt;li&gt;ロマンを感じさせる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;新たに開拓されそうなレイヤ
-
-&lt;ul&gt;
-&lt;li&gt;PWAとハイブリッドアプリ&lt;/li&gt;
-&lt;li&gt;PWA&lt;/li&gt;
-&lt;li&gt;Progressive Web Apps
-
-&lt;ul&gt;
-&lt;li&gt;オフライン、ワーカー&lt;/li&gt;
-&lt;li&gt;Webにアプリのようなリッチな体験を&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;SPAは技術的観点が大きい、PWAはUXに関わる&lt;/li&gt;
-&lt;li&gt;Web自体に増えるAPI&lt;/li&gt;
-&lt;li&gt;PWAとAPIの組み合わせ
-
-&lt;ul&gt;
-&lt;li&gt;ベンダごとの差異&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;デスクトップ向けのオフライン周り
-
-&lt;ul&gt;
-&lt;li&gt;少し改善されつつあるが、まだまだ難しい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ハイブリッドアプリの再来の可能性&lt;/li&gt;
-&lt;li&gt;Cordova方式から変わっていくトレンド&lt;/li&gt;
-&lt;li&gt;「WebviewでHTMLが動くからすごい」からの脱却&lt;/li&gt;
-&lt;li&gt;React Nativeなどネイティブ方面&lt;/li&gt;
-&lt;li&gt;まとめ&lt;/li&gt;
-&lt;li&gt;ハイブリッドアプリの勢力が強くなる可能性は大きくあると予想&lt;/li&gt;
-&lt;li&gt;WeexをWatchしていきたい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;余談
-
-&lt;ul&gt;
-&lt;li&gt;Web アセンブリ&lt;/li&gt;
-&lt;li&gt;Python → Go の事例&lt;/li&gt;
-&lt;li&gt;テクノロジの境界線が薄くなってきている&lt;/li&gt;
-&lt;li&gt;好きな技術を好きな領域で使える未来
-
-&lt;ul&gt;
-&lt;li&gt;ex. サーバレス、Python を Go に&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;レイヤーの越境を楽しむのが良いのではないか？&lt;/li&gt;
-&lt;li&gt;フロントエンドカンファレンス（3/18開催）&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://kfug.jp/frontconf2017/&quot;&gt;http://kfug.jp/frontconf2017/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;関西&lt;/li&gt;
-&lt;li&gt;興味あれば是非！&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id=&quot;a-piece-of-potential-of-cognitive-services---@ovrmrw&quot;&gt;A piece of potential of Cognitive Services - &lt;a href=&quot;https://twitter.com/ovrmrw&quot;&gt;@ovrmrw&lt;/a&gt;&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;スライド: &lt;a href=&quot;https://docs.google.com/presentation/d/1rwmyRW99N4ZAPM5gyDGjgv0yvJXVATUom6rNxAZrYvQ/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000#slide=id.g1aed898fe2_0_156&quot;&gt;A piece of potential of Cognitive Services - Google スライド&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cognitive Service
-
-&lt;ul&gt;
-&lt;li&gt;Watson など機械学習サービスを使ってどのようなものができるのか？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;自己紹介
-
-&lt;ul&gt;
-&lt;li&gt;なんて事のないただの人w&lt;/li&gt;
-&lt;li&gt;Angular Japan UG のスタッフ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;GitHub repo
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ovrmrw/angular-realtime-translation-presentation&quot;&gt;https://github.com/ovrmrw/angular-realtime-translation-presentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ovrmrw/cognitive-server-starter&quot;&gt;https://github.com/ovrmrw/cognitive-server-starter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;今日はアプリの紹介をしていく
-
-&lt;ul&gt;
-&lt;li&gt;デモ&lt;/li&gt;
-&lt;li&gt;英語で話すとニコ動的なコメントが英語＋日本語で流れる&lt;/li&gt;
-&lt;li&gt;このアプリをどのように構成されているのかの話&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Angular (front-end)
-
-&lt;ul&gt;
-&lt;li&gt;ニコニコ動画風のコメント&lt;/li&gt;
-&lt;li&gt;Angular animation apiで実装&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Hapi (server-side)
-
-&lt;ul&gt;
-&lt;li&gt;Cognitive Serversとコネクションする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Watson
-
-&lt;ul&gt;
-&lt;li&gt;Speech to Text API&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ibm.com/smarterplanet/jp/ja/ibmwatson/developercloud/speech-to-text.html&quot;&gt;http://www.ibm.com/smarterplanet/jp/ja/ibmwatson/developercloud/speech-to-text.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;音声データをテキストデータとしてリアルタイムで返ってくる&lt;/li&gt;
-&lt;li&gt;スタート・ストップボタンを押してない&lt;/li&gt;
-&lt;li&gt;リアルタイムレコーディング&lt;/li&gt;
-&lt;li&gt;2つのマイクを使っている&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Google Cloud Translator
-
-&lt;ul&gt;
-&lt;li&gt;Hapi 経由でこちらにも接続&lt;/li&gt;
-&lt;li&gt;Watson で返ってきた英文を Cloud Translator に投げて翻訳&lt;/li&gt;
-&lt;li&gt;Angularで翻訳前/翻訳語を Google Slide にオーバーレイ表示する&lt;/li&gt;
-&lt;li&gt;少しディレイする&lt;/li&gt;
-&lt;li&gt;日本語で話して英語に翻訳も&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;サービスの値段について
-
-&lt;ul&gt;
-&lt;li&gt;Watson&lt;/li&gt;
-&lt;li&gt;最初の1000分/月は無料
-
-&lt;ul&gt;
-&lt;li&gt;Googleは60分 / MS は 120分&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;超過分は $0.02/分&lt;/li&gt;
-&lt;li&gt;発表時間20分 = 月の無料枠0.2%&lt;/li&gt;
-&lt;li&gt;Google Cloud Translator&lt;/li&gt;
-&lt;li&gt;100万文字毎に $20（無料枠はない）&lt;/li&gt;
-&lt;li&gt;Microsoft Cognitive Serivices&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.microsoft.com/cognitive-services/en-us/&quot;&gt;https://www.microsoft.com/cognitive-services/en-us/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;200万文字/月は無料
-
-&lt;ul&gt;
-&lt;li&gt;それ以上行くと打ち止め&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;なぜこれを作ったのか？
-
-&lt;ul&gt;
-&lt;li&gt;東京Node学園などで感じたことが元になっている&lt;/li&gt;
-&lt;li&gt;両側の話&lt;/li&gt;
-&lt;li&gt;登壇・通訳
-
-&lt;ul&gt;
-&lt;li&gt;リズムが良くない&lt;/li&gt;
-&lt;li&gt;話したい事の半分くらいになってしまう&lt;/li&gt;
-&lt;li&gt;自分でも半分くらいしかわからないことも&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;日本人が日本語で発表
-
-&lt;ul&gt;
-&lt;li&gt;日本語ネイティブではない参加者にも分かるように&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;技術的には比較的簡単&lt;/li&gt;
-&lt;li&gt;気づいたこと&lt;/li&gt;
-&lt;li&gt;Google Slides は iframe にするといい
-
-&lt;ul&gt;
-&lt;li&gt;フルスクリーンだとオーバーレイ表示がうまくいかない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;q&amp;amp;a&quot;&gt;Q&amp;amp;A&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Q. 字を流している技術は？&lt;/li&gt;
-&lt;li&gt;A. Angular Animation API を使っている。20秒かけて左9000pxに向けて流している。そこで止まる。よほど長い文字でなければ大丈夫。配列に追加している。20秒後には左に行ったものは消している。Fluxみたいなストアが動いていて、20秒経過したら削除。メモリにも優しい。&lt;/li&gt;
-&lt;li&gt;Q. どれくらい英語の練習をしたのか？&lt;/li&gt;
-&lt;li&gt;A. JSer.infoを普通に参加者で応募。抽選で落選。発表枠が空いてた。そこから。Watsonに合わせて自分の発音をチューニング。結構発音が厳しい。&lt;/li&gt;
-&lt;li&gt;Q. 上に表示はWatson？&lt;/li&gt;
-&lt;li&gt;A. グレーのは認識中のもの。0.5秒くらいでfinal、watsonが区切る。白い文字はWatson。緑色がGoogle 翻訳のもの&lt;/li&gt;
-&lt;li&gt;Q. mic is active の部分は？&lt;/li&gt;
-&lt;li&gt;A. watson へ送っているところ。これは自前で書いている。&lt;/li&gt;
-&lt;li&gt; 右下のスライドURLを変えると、そのスライドで発表可能&lt;/li&gt;
-&lt;li&gt;Q. 韓国語をサポートする予定は？&lt;/li&gt;
-&lt;li&gt;A. Watson / Google翻訳は韓国語に対応しているので&lt;/li&gt;
-&lt;li&gt;Q. アプリケーションは公開されている？&lt;/li&gt;
-&lt;li&gt;A. GitHub にある（スライド中にURLがある・スライドは後ほど公開）
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ovrmrw/angular-realtime-translation-presentation&quot;&gt;https://github.com/ovrmrw/angular-realtime-translation-presentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ovrmrw/cognitive-server-starter&quot;&gt;https://github.com/ovrmrw/cognitive-server-starter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Q. Hapi を使った理由は？&lt;/li&gt;
-&lt;li&gt;A. Express がよくわからないから。Hapi に慣れているから。デモはサーバに上げずにローカルで動かしている。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id=&quot;opalのすすめ---@youchan&quot;&gt;Opalのすすめ - &lt;a href=&quot;https://twitter.com/youchan&quot;&gt;@youchan&lt;/a&gt;&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;スライド: &lt;a href=&quot;http://slides.youchan.org/JSerInfo6th&quot;&gt;JSerInfo6th&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;自己紹介
-
-&lt;ul&gt;
-&lt;li&gt;OpalのVirtualDOMなど作っている&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/youchan/hyalite&quot;&gt;https://github.com/youchan/hyalite&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Ruby方面から来ました
-
-&lt;ul&gt;
-&lt;li&gt;Q. サーバサイドを書いている・Rubyで書いている人&lt;/li&gt;
-&lt;li&gt;A. そこそこいますね&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Opal アドベンドカレンダー
-
-&lt;ul&gt;
-&lt;li&gt;2016年書いてます&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Opal とか
-
-&lt;ul&gt;
-&lt;li&gt;Ruby → JS のトランスパイラ&lt;/li&gt;
-&lt;li&gt;Nodeなくても動く&lt;/li&gt;
-&lt;li&gt;Rubyコアライブラリを同梱&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;JSインテグレーション
-
-&lt;ul&gt;
-&lt;li&gt;バッククォートで囲むと JS として埋め込まれる&lt;/li&gt;
-&lt;li&gt;ローカル変数はそのまま参照できる&lt;/li&gt;
-&lt;li&gt;NativeモジュールでWrapperが書ける&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;なぜOpal
-
-&lt;ul&gt;
-&lt;li&gt;Rubyが大好きだから&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Ruby の強力な機能
-
-&lt;ul&gt;
-&lt;li&gt;Classベースのオブジェクト指向&lt;/li&gt;
-&lt;li&gt;組み込みライブラリ&lt;/li&gt;
-&lt;li&gt;API豊富
-
-&lt;ul&gt;
-&lt;li&gt;外部ライブラリ入れなくてお&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;メタプログラミング&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Classベースのオブジェクト指向
-
-&lt;ul&gt;
-&lt;li&gt;mix-in でprototypeベースのようにも使える&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;include Enumerable&lt;/code&gt; &lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;組み込みライブラリ
-
-&lt;ul&gt;
-&lt;li&gt;Array, Hash, Rangeは便利&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;+&lt;/code&gt; で配列の結合&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-&lt;/code&gt; で配列の一部除外&lt;/li&gt;
-&lt;li&gt;入れ子の配列を &lt;code&gt;.flatten&lt;/code&gt; でフラットに&lt;/li&gt;
-&lt;li&gt;破壊的、非破壊的メソッドを &lt;code&gt;!&lt;/code&gt; で見分けられる&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;map!()&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Hash.merge()&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;(1..3).to_a&lt;/code&gt;  , &lt;code&gt;(1…3).to_a&lt;/code&gt; &lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;強力なメタプログラミングのサポート
-
-&lt;ul&gt;
-&lt;li&gt;オープンクラス、動的なメソッド定義&lt;/li&gt;
-&lt;li&gt;ゴーストメソッド&lt;/li&gt;
-&lt;li&gt;言語内DSL&lt;/li&gt;
-&lt;li&gt;Rake: Makeの Ruby 版&lt;/li&gt;
-&lt;li&gt;Vagrant, Chef, etc.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;オープンクラス、動的なメソッド定義
-
-&lt;ul&gt;
-&lt;li&gt;クラスベースであってもJSのように動的なメソッド定義ができる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ゴーストメソッド
-
-&lt;ul&gt;
-&lt;li&gt;メソッドが見つからなかった時に発動&lt;/li&gt;
-&lt;li&gt;動的なメソッド名で動かしたい時&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Opalを活かしたフレームワーク
-
-&lt;ul&gt;
-&lt;li&gt;Hyalite&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/youchan/hyalite&quot;&gt;https://github.com/youchan/hyalite&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Menilite&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/youchan/menilite&quot;&gt;https://github.com/youchan/menilite&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Hyalite
-
-&lt;ul&gt;
-&lt;li&gt;発表スライドもこれで&lt;/li&gt;
-&lt;li&gt;React を書いている人はわかりやすいのでは、とのこと&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Isomorphoic Programming
-
-&lt;ul&gt;
-&lt;li&gt;Rubyでサーバサイド、ならばフロントもRubyで書けるといいよね&lt;/li&gt;
-&lt;li&gt;そこでMenilite&lt;/li&gt;
-&lt;li&gt;サーバサイドのモデルをクライアントからも使える&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;if_server&lt;/code&gt; で分岐できる&lt;/li&gt;
-&lt;li&gt;ActiveRecordインテグレーション&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;まとめ
-
-&lt;ul&gt;
-&lt;li&gt;OpalはRuby→JSのトランスパイラ&lt;/li&gt;
-&lt;li&gt;Rubyの強力な機能について説明&lt;/li&gt;
-&lt;li&gt;Opalの日本語コミュニティ&lt;/li&gt;
-&lt;li&gt;Slackにあるので参加してくれると嬉しい
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://opalrb-jp-slack.herokuapp.com/&quot;&gt;https://opalrb-jp-slack.herokuapp.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;how-amp-works-(ampについて)---@kishu&quot;&gt;HOW AMP WORKS (AMPについて) - @Kishu&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;自己紹介
-
-&lt;ul&gt;
-&lt;li&gt;Navarでフロントエンド担当&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;AMP
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ampproject.org/&quot;&gt;Accelerated Mobile Pages Project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ウェブページを早くレンダリングするための技術&lt;/li&gt;
-&lt;li&gt;By Google&lt;/li&gt;
-&lt;li&gt;パフォーマンス向上のために行って来た Google のノウハウが詰まっている&lt;/li&gt;
-&lt;li&gt;Web ページ用の機能がそのまま使える&lt;/li&gt;
-&lt;li&gt;HTML5, JS, CSS3, Cache&lt;/li&gt;
-&lt;li&gt;Google の CDN にキャッシュされる&lt;/li&gt;
-&lt;li&gt;AMP HTML&lt;/li&gt;
-&lt;li&gt;拡張可能な HTML
-
-&lt;ul&gt;
-&lt;li&gt;拡張タグ&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;amp-carousel&amp;gt;&lt;/code&gt; &lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;amp.js&lt;/li&gt;
-&lt;li&gt;ページで使うリソースのライフサイクル、レンダリング速度に関するライブラリ&lt;/li&gt;
-&lt;li&gt;AMP では外部 JS が使えない
-
-&lt;ul&gt;
-&lt;li&gt;カスタムJSは sandbox の iframe で使える&lt;/li&gt;
-&lt;li&gt;あるいは自分でカスタム amp component&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;AMP STYLE = CSS&lt;/li&gt;
-&lt;li&gt;外部のスタイル、インラインスタイルは許可しない&lt;/li&gt;
-&lt;li&gt;最大50KB&lt;/li&gt;
-&lt;li&gt;パターン&lt;/li&gt;
-&lt;li&gt;HTML と AMP をペア&lt;/li&gt;
-&lt;li&gt;スタンドアローン AMP&lt;/li&gt;
-&lt;li&gt;まとめ&lt;/li&gt;
-&lt;li&gt;AMPを使えば、Googleが高速レンダリングを保証&lt;/li&gt;
-&lt;li&gt;ロードを感じさせない速度&lt;/li&gt;
-&lt;li&gt;AMPを使えば、カリカリにチューニングしなくても速度が出せる&lt;/li&gt;
-&lt;li&gt;AMPコンポーネント&lt;/li&gt;
-&lt;li&gt;基本コンポーネントと拡張コンポーネント&lt;/li&gt;
-&lt;li&gt;基本コンポーネントは、HTMLを代替しているイメージ&lt;/li&gt;
-&lt;li&gt;拡張コンポーネント
-
-&lt;ul&gt;
-&lt;li&gt;JSを書かずにAMPタグのみで実装可能&lt;/li&gt;
-&lt;li&gt;カルーセル&lt;/li&gt;
-&lt;li&gt;ライトボックス&lt;/li&gt;
-&lt;li&gt;サイドバー&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Bench-marking
-
-&lt;ul&gt;
-&lt;li&gt;Navar TVで試した&lt;/li&gt;
-&lt;li&gt;イメージと動画が多いサイト&lt;/li&gt;
-&lt;li&gt;ベンチマークIssue&lt;/li&gt;
-&lt;li&gt;動画
-
-&lt;ul&gt;
-&lt;li&gt;動作する（https必須）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;JS
-
-&lt;ul&gt;
-&lt;li&gt;カスタムJSは使えない&lt;/li&gt;
-&lt;li&gt;“top”でスクロールなども使えず&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;CSS&lt;/li&gt;
-&lt;li&gt;AMP でのタイムライン&lt;/li&gt;
-&lt;li&gt;1秒速くなった&lt;/li&gt;
-&lt;li&gt;AMP でのネットワーク&lt;/li&gt;
-&lt;li&gt;AMP 未適応
-
-&lt;ul&gt;
-&lt;li&gt;全てのリソース（48個）を一気にリクエスト&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;AMP 適応
-
-&lt;ul&gt;
-&lt;li&gt;最初に26個のリクエスト、他は順次読み込む&lt;/li&gt;
-&lt;li&gt;表示されるものを先にリクエスト・ダウンロード&lt;/li&gt;
-&lt;li&gt;スクロールして表示されそうになるときに遅延ロード&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;How AMP works?
-
-&lt;ul&gt;
-&lt;li&gt;非同期スクリプトのみ許可&lt;/li&gt;
-&lt;li&gt;全てのリソースサイズを指定&lt;/li&gt;
-&lt;li&gt;拡張コンポーネントをレンダリングを遮断せずに実行可能&lt;/li&gt;
-&lt;li&gt;3rd Party JSをパースから除外(基本的に使えない)&lt;/li&gt;
-&lt;li&gt;CSSは内部スタイルシートのみ許可&lt;/li&gt;
-&lt;li&gt;Webフォントを効率的にダウンロード&lt;/li&gt;
-&lt;li&gt;真っ先にダウンロード&lt;/li&gt;
-&lt;li&gt;レイアウト性能が上がる&lt;/li&gt;
-&lt;li&gt;スタイル再計算の最小化&lt;/li&gt;
-&lt;li&gt;GPU加速アニメーションのみ表示&lt;/li&gt;
-&lt;li&gt;リソースのロード順番を制御&lt;/li&gt;
-&lt;li&gt;重要なリソースからダウンロード&lt;/li&gt;
-&lt;li&gt;ページの即時ロード&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;AMP Inside
-
-&lt;ul&gt;
-&lt;li&gt;カスタムエレメント&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;registerElement()&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;AMP Component = HTML Custom Elements&lt;/li&gt;
-&lt;li&gt;新しいHTMLタイプを定義してライフサイクルを制御&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/custom-elements/&quot;&gt;https://www.w3.org/TR/custom-elements/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;W3C標準の機能&lt;/li&gt;
-&lt;li&gt;AMPライフサイクルはこれを拡張
-
-&lt;ul&gt;
-&lt;li&gt;ダウンロード、レンダリング視点の制御が可能になる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;FSM (Finite-State Machine)&lt;/li&gt;
-&lt;li&gt;条件により一つの状態を持つ&lt;/li&gt;
-&lt;li&gt;条件が変わると別の状態に変わる&lt;/li&gt;
-&lt;li&gt;状態が変わるとそれに伴うアクションを実行する&lt;/li&gt;
-&lt;li&gt;doPass = discoverWork + work&lt;/li&gt;
-&lt;li&gt;discoverWork&lt;/li&gt;
-&lt;li&gt;AMPサイズ関連のパース&lt;/li&gt;
-&lt;li&gt;レイアウトのJobスケジューリングなど&lt;/li&gt;
-&lt;li&gt;work&lt;/li&gt;
-&lt;li&gt;Jobの優先順位を計算、Jobを選択、レイアウト開始&lt;/li&gt;
-&lt;li&gt;Single Pass Process&lt;/li&gt;
-&lt;li&gt;優先順位が高いJobはそのまま作業、低いのは、キューに&lt;/li&gt;
-&lt;li&gt;AMP Promise&lt;/li&gt;
-&lt;li&gt;不要なイベントハンドルの処理を無くせる&lt;/li&gt;
-&lt;li&gt;インターフェイスの統一ができる&lt;/li&gt;
-&lt;li&gt;Optimization Reflow / Repaint&lt;/li&gt;
-&lt;li&gt;Width / Height の変更があると該当のエレメントの再計算&lt;/li&gt;
-&lt;li&gt;レンダーキューに入れて必要な時に一気に実行
-
-&lt;ul&gt;
-&lt;li&gt;最適化して高速化が可能&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;element.clientHeight&lt;/code&gt;  などで Reflow 発生&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;element.style.height = (h1 *2) + &amp;#39;px&amp;#39;&lt;/code&gt;  などで Job 発生&lt;/li&gt;
-&lt;li&gt;Class Vsync&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mutate()&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;measure()&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;runScheduledTasks()&lt;/code&gt; &lt;/li&gt;
-&lt;li&gt;egjs&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/naver/egjs&quot;&gt;https://github.com/naver/egjs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Navar で公開しているUIコンポーネントライブラリ&lt;/li&gt;
-&lt;li&gt;パフォーマンス重視&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;javascript-discussion&quot;&gt;JavaScript Discussion&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://app.sli.do/event/bkry5ojl/ask&quot;&gt;JSer.info 6周年 - JavaScript Discussion&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;テーマ: productionでのJS/CSSなどのcompile timeが長くて辛い(yarn + webpack)。毎回deployに5分ぐらいかかってる。何とかならないか?
-
-&lt;ul&gt;
-&lt;li&gt;アクビでもして待て&lt;/li&gt;
-&lt;li&gt;Babelが遅いのは把握&lt;/li&gt;
-&lt;li&gt;make で -j8 で分離して回避&lt;/li&gt;
-&lt;li&gt;デプロイがどこからどこまでかはあるが、&lt;/li&gt;
-&lt;li&gt;push して本番に出るまでが5分ならそこまで遅くないのでは？&lt;/li&gt;
-&lt;li&gt;デプロイ時に瞬間にテストをする人が多い？&lt;/li&gt;
-&lt;li&gt;push 時にテスト実行&lt;/li&gt;
-&lt;li&gt;デプロイ時は本番サーバに出すだけ&lt;/li&gt;
-&lt;li&gt;デプロイプロセスにビルドとテストが入っている人は？&lt;/li&gt;
-&lt;li&gt;ビルドだけの人は？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: Angular2は成功しそうですか?、どうやって予想していますか?
-
-&lt;ul&gt;
-&lt;li&gt;何を持っての成功か？&lt;/li&gt;
-&lt;li&gt;Angular1より使われるか？
-
-&lt;ul&gt;
-&lt;li&gt;結構しんどい。 1 は相当使われている。超えるには相当時間がかかる。時間がかかるが成功はすると思う。&lt;/li&gt;
-&lt;li&gt;Angular2とは言わないで、とコミュニティでは言っている&lt;/li&gt;
-&lt;li&gt;Angularと呼んでほしい&lt;/li&gt;
-&lt;li&gt;3 はスキップ、次は 4 になる&lt;/li&gt;
-&lt;li&gt;「Angularのバージョン4を使っている」という表現にしてほしい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: jQueryは辞めようみたいにいう声よく聞きますけど、ぶっちゃけまだまだ使ってますよね？
-
-&lt;ul&gt;
-&lt;li&gt;まだ使っている人は？&lt;/li&gt;
-&lt;li&gt;会場の半分くらいはいる&lt;/li&gt;
-&lt;li&gt;クライアントに指定されている&lt;/li&gt;
-&lt;li&gt;「semantic-ui を使ってください」という指定
-
-&lt;ul&gt;
-&lt;li&gt;jQuery 依存&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Bootstrap は 4 で jQuery 辞めるという話&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: azuさんのJS愛はどこからやってきたのですか？
-
-&lt;ul&gt;
-&lt;li&gt;趣味なので&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: ESModuleの最新情報を教えてください。
-
-&lt;ul&gt;
-&lt;li&gt;相変わらず進んでなさそう？&lt;/li&gt;
-&lt;li&gt;Safari が ship した&lt;/li&gt;
-&lt;li&gt;テックプレビューには出ている&lt;/li&gt;
-&lt;li&gt;今のところバグは出てなさそう&lt;/li&gt;
-&lt;li&gt;パフォーマンスは http2 などが必要になりそう&lt;/li&gt;
-&lt;li&gt;ダイレクトインポート&lt;/li&gt;
-&lt;li&gt;stage 3 なので入れてもいいのでは？ &lt;/li&gt;
-&lt;li&gt;loader の仕様は？&lt;/li&gt;
-&lt;li&gt;無視でw&lt;/li&gt;
-&lt;li&gt;ブラウザ側の実装は進んでいる&lt;/li&gt;
-&lt;li&gt;全ブラウザで進んでいる&lt;/li&gt;
-&lt;li&gt;CORS のスペックが厳しい&lt;/li&gt;
-&lt;li&gt;Node はまだ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: SSRのアプローチって率直に言って「正解」だと思いますか？
-
-&lt;ul&gt;
-&lt;li&gt;SSRをやっている人は？&lt;/li&gt;
-&lt;li&gt;会場では数人？&lt;/li&gt;
-&lt;li&gt;正解かはわからないが速い&lt;/li&gt;
-&lt;li&gt;会場がこんなに少ないとは思わなかった&lt;/li&gt;
-&lt;li&gt;正解だと思う。&lt;/li&gt;
-&lt;li&gt;ユーザーメリットある&lt;/li&gt;
-&lt;li&gt;体感速度が上がる&lt;/li&gt;
-&lt;li&gt;問題点は実装が難しい
-
-&lt;ul&gt;
-&lt;li&gt;ライブラリで解決されるのでは？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;単純なサーバサイドレンダリングだと&lt;/li&gt;
-&lt;li&gt;サーバがやることを最小&lt;/li&gt;
-&lt;li&gt;初回レンダリングのみサーバサイド
-
-&lt;ul&gt;
-&lt;li&gt;フロントに寄せていくという意味だと良い&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ファーストビューの見えるところだけサーバサイドレンダリング
-
-&lt;ul&gt;
-&lt;li&gt;これをやり始めるとサーバサイドの複雑性が増してしまうのでは？&lt;/li&gt;
-&lt;li&gt;リクルートでの事例&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: 韓国ではMarkup開発者とJavaScript開発者が分かれている場合が多いですが、日本はどうですか。
-
-&lt;ul&gt;
-&lt;li&gt;分業されている人は？&lt;/li&gt;
-&lt;li&gt;会場ではあまりいない&lt;/li&gt;
-&lt;li&gt;2013年の頃の会社だといた&lt;/li&gt;
-&lt;li&gt;減っている気がする&lt;/li&gt;
-&lt;li&gt;マークアップとは CSS ？&lt;/li&gt;
-&lt;li&gt;かつてコーダーと呼ばれていた人？&lt;/li&gt;
-&lt;li&gt;CSS と HTML をやっている人&lt;/li&gt;
-&lt;li&gt;会場に来ているのはあまり分かれていない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: Isomorphic programmingってどうですか?meteorとか流行ってるんでしょうか?
-
-&lt;ul&gt;
-&lt;li&gt;あまり言わなくなった？&lt;/li&gt;
-&lt;li&gt;名前は変わっているが、やろうとしていることは変わっていない&lt;/li&gt;
-&lt;li&gt;meteor はダメだったのでは？&lt;/li&gt;
-&lt;li&gt;Vue.js の作者が Meteor にいたけど、独立したとか&lt;/li&gt;
-&lt;li&gt;Meteor 詳しい人は？&lt;/li&gt;
-&lt;li&gt;会場にはいなかった&lt;/li&gt;
-&lt;li&gt;Node Core が URL を入れてくれたのが良かった&lt;/li&gt;
-&lt;li&gt;Node 標準が頑張ってくれるといいのにな&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: コンパイルして、デプロイして公開の流れはどうされていますか？サーバサイドとの共存や使っているツール、サービスなど
-
-&lt;ul&gt;
-&lt;li&gt;GitHub に push → ビルドとテスト&lt;/li&gt;
-&lt;li&gt;Jenkins&lt;/li&gt;
-&lt;li&gt;デプロイ時は tar ball
-
-&lt;ul&gt;
-&lt;li&gt;deploy は 30sec くらい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Jenkins でコンパイルの生成物をどこかに入れる&lt;/li&gt;
-&lt;li&gt;Circle CI + S3 でやっている人はいますか？
-
-&lt;ul&gt;
-&lt;li&gt;Travis でやってる。生成物は S3 へアップ&lt;/li&gt;
-&lt;li&gt;特殊な URL 経由で、JS だけ S3 にアップされたものを読み込むという仕込み&lt;/li&gt;
-&lt;li&gt;それで本番サーバで確認する&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: Aurelia は最近どうなのでしょうか？
-
-&lt;ul&gt;
-&lt;li&gt;元 Angular の人、いまは MS へ&lt;/li&gt;
-&lt;li&gt;最近どうかの知識はない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: Promiseのcancelがキャンセルされた経緯
-
-&lt;ul&gt;
-&lt;li&gt;正確な経緯は外に出ていない&lt;/li&gt;
-&lt;li&gt;それしか解決できない API がイマイチだ、など&lt;/li&gt;
-&lt;li&gt;社内政治の結果？&lt;/li&gt;
-&lt;li&gt;Dominic「もう疲れたよ」&lt;/li&gt;
-&lt;li&gt;Fetch のキャンセルをどうするか？という話に戻った&lt;/li&gt;
-&lt;li&gt;1/23 にミーティングがある&lt;/li&gt;
-&lt;li&gt;その結果何かが変わるかも&lt;/li&gt;
-&lt;li&gt;呟いとくので興味があれば参加してみては&lt;/li&gt;
-&lt;li&gt;属人性問題？&lt;/li&gt;
-&lt;li&gt;特定の人に依存しちゃっている？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: 2017年で起るであろう、Webトレンド教えてください
-
-&lt;ul&gt;
-&lt;li&gt;ありません！&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: 社内でJSerを増やすためにはどうすればよいでしょうか？ （他言語をメインでやっている人は、JS界隈のトレンド変化が早く、「僕は消耗したくない！5年後10年後ならやってもいいよ！」と言われます）
-
-&lt;ul&gt;
-&lt;li&gt;かつてやっていたこと&lt;/li&gt;
-&lt;li&gt;JS 書く人を募集&lt;/li&gt;
-&lt;li&gt;採用するしかないんじゃないかな&lt;/li&gt;
-&lt;li&gt;書きたい人は書いているのでは？&lt;/li&gt;
-&lt;li&gt;雇用を増やしましょう&lt;/li&gt;
-&lt;li&gt;会社でフロントエンドウイークリーランチ&lt;/li&gt;
-&lt;li&gt;興味ある人たちで読む
-
-&lt;ul&gt;
-&lt;li&gt;「興味ある人」に絞り込まれている問題はある&lt;/li&gt;
-&lt;li&gt;フロントエンドを触るけど&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;マンスリー版もやりたいな、と思っている&lt;/li&gt;
-&lt;li&gt;単発・期間限定で企画をすることがある&lt;/li&gt;
-&lt;li&gt;JS に触れてない人を巻き込むという方法&lt;/li&gt;
-&lt;li&gt;「3年間毎日 JS の人が欲しい」と言い続けた結果、来なかったのでやめた&lt;/li&gt;
-&lt;li&gt;JSer.infoを毎週読むという活動をしている&lt;/li&gt;
-&lt;li&gt;ちょこちょこ参加者は増えた&lt;/li&gt;
-&lt;li&gt;雑な情報を吹き込むくらいはできている&lt;/li&gt;
-&lt;li&gt;お金と継続的な活動をしましょう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: フレームワークを選択する時主にどんな部分を重要に思いますか。
-
-&lt;ul&gt;
-&lt;li&gt;ライブラリのバージョンが枯れているかは重要ではなかった&lt;/li&gt;
-&lt;li&gt;解決したいモチベーションが何なのか？&lt;/li&gt;
-&lt;li&gt;何を解決したいかのメリットが自分たちとあっているか？&lt;/li&gt;
-&lt;li&gt;ユーザーベース、パトロン系が大きいところを考慮
-
-&lt;ul&gt;
-&lt;li&gt;ex. VirtualDOM なら React (Facebook)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;人数少ない・バイトがいる・人員が限られている例&lt;/li&gt;
-&lt;li&gt;協業ベースができる技術を選択
-
-&lt;ul&gt;
-&lt;li&gt;デザイナーだけどコードかける人&lt;/li&gt;
-&lt;li&gt;関わる人数がどれだけ増やせるか&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;学習コストをかけていられない
-
-&lt;ul&gt;
-&lt;li&gt;軽ければ軽いほどいい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Backbone から React へ移行時の例&lt;/li&gt;
-&lt;li&gt;部分的に置き換えていけるか？を考慮&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: SPA してる人って OGP とかどうしてるんですか
-
-&lt;ul&gt;
-&lt;li&gt;OGP = Facebook のヘッダ情報&lt;/li&gt;
-&lt;li&gt;blog の例&lt;/li&gt;
-&lt;li&gt;Angular で blog&lt;/li&gt;
-&lt;li&gt;Facebook, Twitter でキレイに表示されるために&lt;/li&gt;
-&lt;li&gt;SSR を組むのは面倒くさかった&lt;/li&gt;
-&lt;li&gt;prerender.io というサービスを使った
-
-&lt;ul&gt;
-&lt;li&gt;ミドルウェアは OSS &lt;/li&gt;
-&lt;li&gt;キャッシュサーバは無料もしくは有料&lt;/li&gt;
-&lt;li&gt;HTML を phantom-js でレンダリング&lt;/li&gt;
-&lt;li&gt;それをキャッシュ&lt;/li&gt;
-&lt;li&gt;キャッシュをクロールに読ませる&lt;/li&gt;
-&lt;li&gt;そのようにサーバ設定をする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;レンダリングしたものを返すのが定説っぽい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: React Storybook って使っている人ますか？ぶっちゃけどうですか？
-
-&lt;ul&gt;
-&lt;li&gt;React Storybook = スタイルガイドのようなもの&lt;/li&gt;
-&lt;li&gt;コンポーネントをビルドして使っていた&lt;/li&gt;
-&lt;li&gt;それが面倒だった&lt;/li&gt;
-&lt;li&gt;Storybook を使うとコンポーネントだけ実装していけば良い（ちと聞き取れず、不明）&lt;/li&gt;
-&lt;li&gt;残念だったこと
-
-&lt;ul&gt;
-&lt;li&gt;コミュニケーションコストを下げたかったが、うまくいかなかった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Abema TV は使っていた？&lt;/li&gt;
-&lt;li&gt;パラメータはみれて、プレビューは便利&lt;/li&gt;
-&lt;li&gt;どれだけ頑張るか、による&lt;/li&gt;
-&lt;li&gt;協業時のスタイルガイドとして使う&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: Yarnをproductionで使ってますか?
-
-&lt;ul&gt;
-&lt;li&gt;使っている人？&lt;/li&gt;
-&lt;li&gt;4人くらい&lt;/li&gt;
-&lt;li&gt;npm シュリンクラップ使っている人？&lt;/li&gt;
-&lt;li&gt;ちょいちょい？&lt;/li&gt;
-&lt;li&gt;npm 5 でちゃんと治すところあり&lt;/li&gt;
-&lt;li&gt;npm4 だとまだ不十分？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: create-react-appで自分のHP作ったんですが、GooglePageSpeedでチェックしたところ結構点数低いです。 これどうにかして点数上げられないですか？モバイル66点、パソコンが85点です。ちなみにGithubでホストしています。
-
-&lt;ul&gt;
-&lt;li&gt;開発途中？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: Webpackから開放されるときは来ますか？ES modulesが主要ブラウザ・Node.jsでサポートされたとき？
-
-&lt;ul&gt;
-&lt;li&gt;使っている人？&lt;/li&gt;
-&lt;li&gt;3-4割&lt;/li&gt;
-&lt;li&gt;browserify を使っている人?
-
-&lt;ul&gt;
-&lt;li&gt;1-2割&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;loader だけじゃないことを Webpack でやっている&lt;/li&gt;
-&lt;li&gt;だから解放されない&lt;/li&gt;
-&lt;li&gt;Webpack で .js 以外の処理をしている人は？&lt;/li&gt;
-&lt;li&gt;会場 1-2 割くらい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: SPAはこの先当分の間続くと思いますか？
-
-&lt;ul&gt;
-&lt;li&gt;そちらにメリットがあるなら続くのでは？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: PWA流行ってなくないですか？
-
-&lt;ul&gt;
-&lt;li&gt;そちらにメリットがあるなら続くのでは？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: wasm が普及して JS が置き換えられる未来は来るのか、ということを皆さんどう思ってるのか気になります
-
-&lt;ul&gt;
-&lt;li&gt;JS には複雑・簡単なアプリの両翼がある&lt;/li&gt;
-&lt;li&gt;簡単な、では JS が残る&lt;/li&gt;
-&lt;li&gt;複雑な、だと、、ゲームでどうなるかによる
-
-&lt;ul&gt;
-&lt;li&gt;1年で解決する問題ではなさそう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;wasm で書くのは10年後とかになるのでは？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: 海外のJSコミュニティと関わるにはどうすればよいでしょうか
-
-&lt;ul&gt;
-&lt;li&gt;commit する、とか&lt;/li&gt;
-&lt;li&gt;開発者の代わりに返答してあげる、とか&lt;/li&gt;
-&lt;li&gt;海外のカンファレンスへ行ったことある人は？&lt;/li&gt;
-&lt;li&gt;JS の例ではなかったが、思い切ってエイヤで行けば関われるのでは？&lt;/li&gt;
-&lt;li&gt;韓国での話は？&lt;/li&gt;
-&lt;li&gt;コントリビュートしようと思っているが、うまく行ってない&lt;/li&gt;
-&lt;li&gt;サムソン
-
-&lt;ul&gt;
-&lt;li&gt;jQueryのコントリビューターを採用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Navar
-
-&lt;ul&gt;
-&lt;li&gt;webkit のフルタイムコミッタを採用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;会社や周りの環境も大事&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: プロジェクト横断のUIコンポーネント、Reactで組んじゃっていいのかな？いまWeb Componentsで組むのも。。
-
-&lt;ul&gt;
-&lt;li&gt;Rollup （？）の作者が同じようなことを言っている&lt;/li&gt;
-&lt;li&gt;Onsen JS (Onsen UI ?) の仕組みが参考になるかも&lt;/li&gt;
-&lt;li&gt;React / Angular の特定技術にフォーカスした人は？&lt;/li&gt;
-&lt;li&gt;Firefox のカスタムエレメンツ&lt;/li&gt;
-&lt;li&gt;v1 で止まっている？&lt;/li&gt;
-&lt;li&gt;Shadow DOM
-
-&lt;ul&gt;
-&lt;li&gt;プライオリティは高くない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;1社しか実装しないものは微妙&lt;/li&gt;
-&lt;li&gt;Webkit がちゃんとした後で動くのでは？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: 最近のフロントエンドがとまってみえるひとの数 ?
-
-&lt;ul&gt;
-&lt;li&gt;いない？&lt;/li&gt;
-&lt;li&gt;&lt;img class=&#39;emoji&#39; title=&#39;:sushi:&#39; alt=&#39;:sushi:&#39; src=&#39;https://assets.github.com/images/icons/emoji/unicode/1f363.png&#39; height=&#39;20&#39; width=&#39;20&#39; align=&#39;absmiddle&#39; /&gt; が止まって見える？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: Proxy APIきてほしい
-
-&lt;ul&gt;
-&lt;li&gt;来なかった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: HTML ImportsはMozillaではどうなりました？
-
-&lt;ul&gt;
-&lt;li&gt;なかったことで。。。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: serversideをnode.js(tsも可)で書いている人ってどれくらいいるのでしょうか？
-
-&lt;ul&gt;
-&lt;li&gt;書いている人？&lt;/li&gt;
-&lt;li&gt;5人くらい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: 次のフレームワークプロレスはいつ起こると思いますか？
-
-&lt;ul&gt;
-&lt;li&gt;テーマ: react native や native script をガッツリ触ってる人はいますか？&lt;/li&gt;
-&lt;li&gt;使っている人？&lt;/li&gt;
-&lt;li&gt;React Native をプロダクション投入&lt;/li&gt;
-&lt;li&gt;React Native ミートアップあるよ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テーマ: 自社で管理しているWebサイトのリニューアルがあり、 これを機にES6を導入したいと思っています。 トランスパイラはTypeScriptとBabelが候補で個人的には型を厳格に取り扱えるTSが良いと思っています。メリデメと他の候補があれば教えてほしいです。
-
-&lt;ul&gt;
-&lt;li&gt;比較にならないのでは？&lt;/li&gt;
-&lt;li&gt;好きな方を使えば良いのでは？&lt;/li&gt;
-&lt;li&gt;Babelを使うことがどういうことか&lt;/li&gt;
-&lt;li&gt;ES6で書ける&lt;/li&gt;
-&lt;li&gt;Flow を使っている人？&lt;/li&gt;
-&lt;li&gt;TypeScript ではなくこちらを選んだ理由&lt;/li&gt;
-&lt;li&gt;React を使っていた
-
-&lt;ul&gt;
-&lt;li&gt;他者が使ってて良さそうと思ったから&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ES5 → ES6&lt;/li&gt;
-&lt;li&gt;Flow がまだ実装進んでなかった&lt;/li&gt;
-&lt;li&gt;TypeScript のほうが進んでいた
-
-&lt;ul&gt;
-&lt;li&gt;IDE サポートも進んでいた&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;型ありから型ありに移行するなら、まぁいいかという印象
-
-&lt;ul&gt;
-&lt;li&gt;型なしからの乗り換えよりははるかにマシ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Sun, 15 Jan 2017 20:36:00 +0900</pubDate>
-        <link>https://jser.info/2017/01/15/jser-info-6years/</link>
-        <guid isPermaLink="true">https://jser.info/2017/01/15/jser-info-6years/</guid>
-        
-        <category>イベント</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>雑記</category>
         
       </item>
     
