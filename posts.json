@@ -1,4 +1,11 @@
 [{
+"title":"2017-03-19のJS: jQuery 3.2.0、Sinon.JS 2.0、testdouble.js 2.0、React/Redux/CRUD",
+"url":"https://jser.info/2017/03/19/jquery-3.2.0-sinon.js-2.0-testdouble.js-2.0-reactreduxcrud/",
+"date":"2017-03-19T20:36:53+09:00",
+"content":"JSer.info #323 - jQuery 3.2.0がリリースされました。jQuery ...",
+"category":"JSer",
+"tags":["jQuery","testing","library","react","redux","CRUD"]
+},{
 "title":"2017-03-14のJS: Firefox 52.0、Polymer 2.0 RC、コンポーネントのリファクタリング戦略",
 "url":"https://jser.info/2017/03/14/firefox-52.0-polymer-2.0-rc-component-refactoring/",
 "date":"2017-03-14T09:40:19+09:00",
