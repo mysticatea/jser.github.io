@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 19 Mar 2017 21:21:20 +0900</pubDate>
-    <lastBuildDate>Sun, 19 Mar 2017 21:21:20 +0900</lastBuildDate>
+    <pubDate>Sun, 19 Mar 2017 21:30:35 +0900</pubDate>
+    <lastBuildDate>Sun, 19 Mar 2017 21:30:35 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -55,7 +55,7 @@
 
 &lt;p&gt;&lt;code&gt;td.object&lt;/code&gt;ではES2015 Proxyを使って存在しないプロパティなどのアクセスもキャッチ出来るようになり、&lt;code&gt;thenCallback&lt;/code&gt;などで非同期stubのサポート、&lt;code&gt;td.verify&lt;/code&gt;の改善などが行われています。&lt;/p&gt;
 
-&lt;p&gt;機能的や構文的なSinon.jsとの比較は次の記事にまとめられています。&lt;/p&gt;
+&lt;p&gt;機能や構文的なSinon.jsとの比較は次の記事にまとめられています。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://blog.testdouble.com/posts/2016-03-13-testdouble-vs-sinon.html&quot; title=&quot;Test Double | Our Thinking | testdouble.js vs. sinon.js&quot;&gt;Test Double | Our Thinking | testdouble.js vs. sinon.js&lt;/a&gt;&lt;/li&gt;
