@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 19 Mar 2017 21:15:32 +0900</pubDate>
-    <lastBuildDate>Sun, 19 Mar 2017 21:15:32 +0900</lastBuildDate>
+    <pubDate>Sun, 19 Mar 2017 21:21:20 +0900</pubDate>
+    <lastBuildDate>Sun, 19 Mar 2017 21:21:20 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -43,7 +43,7 @@
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/sinonjs.png&quot; alt=&quot;sinon.js logo&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;ロゴやサイトも新しくなり&lt;a href=&quot;http://azu.github.io/slide/2017/t_wada_sushi/OpenCollective.html&quot; title=&quot;Open Collective&quot;&gt;Open Collective&lt;/a&gt;でスポンサーなどの募集も開始されています。&lt;/p&gt;
+&lt;p&gt;ロゴや&lt;a href=&quot;http://sinonjs.org/&quot;&gt;サイト&lt;/a&gt;も新しくなり&lt;a href=&quot;http://azu.github.io/slide/2017/t_wada_sushi/OpenCollective.html&quot; title=&quot;Open Collective&quot;&gt;Open Collective&lt;/a&gt;でスポンサーなどの募集も開始されています。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://opencollective.com/sinon&quot; title=&quot;sinon is on Open Collective&quot;&gt;sinon is on Open Collective&lt;/a&gt;&lt;/li&gt;
