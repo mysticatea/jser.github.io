@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 19 Mar 2017 21:30:35 +0900</pubDate>
-    <lastBuildDate>Sun, 19 Mar 2017 21:30:35 +0900</lastBuildDate>
+    <pubDate>Tue, 21 Mar 2017 17:04:25 +0900</pubDate>
+    <lastBuildDate>Tue, 21 Mar 2017 17:04:25 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -27,6 +27,8 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/jquery/jquery/issues/3571&quot; title=&quot;Regression: width() &amp;amp;amp; height() return 0 for all inline elements · Issue #3571 · jquery/jquery&quot;&gt;Regression: width() &amp;amp; height() return 0 for all inline elements · Issue #3571 · jquery/jquery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jquery/jquery/issues/3193&quot; title=&quot;different result of width() and height() since jQuery 3.0 · Issue #3193 · jquery/jquery&quot;&gt;different result of width() and height() since jQuery 3.0 · Issue #3193 · jquery/jquery&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;追記: &lt;a href=&quot;http://blog.jquery.com/2017/03/20/jquery-3-2-1-now-available/&quot; title=&quot;jQuery 3.2.1 Is Now Available, With Some Hotfixes | Official jQuery Blog&quot;&gt;jQuery 3.2.1&lt;/a&gt;がリリースされました。&lt;/p&gt;
 
 &lt;hr&gt;
 
