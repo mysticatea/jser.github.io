@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 21 Mar 2017 17:04:25 +0900</pubDate>
-    <lastBuildDate>Tue, 21 Mar 2017 17:04:25 +0900</lastBuildDate>
+    <pubDate>Wed, 22 Mar 2017 15:02:21 +0900</pubDate>
+    <lastBuildDate>Wed, 22 Mar 2017 15:02:21 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -288,7 +288,7 @@ webpackを使ったファイルサイズの削減やビルドの設定、開発�
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/thejameskyle/react-loadable&quot; title=&quot;thejameskyle/react-loadable: A higher order component for loading components with promises.&quot;&gt;github.com/thejameskyle/react-loadable&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-初期表示までにのローディングを扱う高階関数のReactコンポーネント。 Promiseが解決されるまでのローディングやエラー表示を行う&lt;/p&gt;
+初期表示までのローディングを扱う高階関数のReactコンポーネント。 Promiseが解決されるまでのローディングやエラー表示を行う&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/@thejameskyle/react-loadable-2674c59de178&quot; title=&quot;Introducing React Loadable – Medium&quot;&gt;Introducing React Loadable – Medium&lt;/a&gt;&lt;/li&gt;
