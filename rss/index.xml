@@ -5,9 +5,346 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 22 Mar 2017 15:02:21 +0900</pubDate>
-    <lastBuildDate>Wed, 22 Mar 2017 15:02:21 +0900</lastBuildDate>
+    <pubDate>Mon, 27 Mar 2017 20:14:30 +0900</pubDate>
+    <lastBuildDate>Mon, 27 Mar 2017 20:14:30 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-03-27のJS: Angular v4.0.0、CSS Custom Properties、npm Organization</title>
+        <description>&lt;p&gt;JSer.info #324 - Angular v4.0.0がリリースされました&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://angularjs.blogspot.jp/2017/03/angular-400-now-available.html&quot; title=&quot;Angular: Angular 4.0.0 Now Available&quot;&gt;Angular: Angular 4.0.0 Now Available&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular/blob/4.0.0/CHANGELOG.md&quot; title=&quot;angular/CHANGELOG.md at 4.0.0 · angular/angular&quot;&gt;angular/CHANGELOG.md at 4.0.0 · angular/angular&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以前から発表されていたsemverに則ったメジャーバージョンです。&lt;br&gt;
+また、Angularは Time-based Release Cycles も採用しているため、半年に一度新しいメジャーバージョンを公開していく予定となっています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://angularjs.blogspot.jp/2016/10/versioning-and-releasing-angular.html&quot; title=&quot;Angular: Versioning and Releasing Angular&quot;&gt;Angular: Versioning and Releasing Angular&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Animationパッケージのコアからの分離、コンパイル後のViewのコード量の削減、TypeScript 2.1/2.2対応、テンプレートのSource Map対応などがふくまれています。&lt;br&gt;
+また、&lt;a href=&quot;https://github.com/angular/angular-cli&quot; title=&quot;Angular CLI&quot;&gt;Angular CLI&lt;/a&gt;も合わせて1.0.0となっています。&lt;/p&gt;
+
+&lt;p&gt;次のサイトでは、指定したバージョンからのマイグレーションガイドが参照できます。。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://angular-update-guide.firebaseapp.com/&quot; title=&quot;Angular Update Guide&quot;&gt;Angular Update Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/03/24/css-custom-properties/#S6xrLxcFIVhEFkwf.97&quot; title=&quot;CSS Custom Properties in Microsoft Edge - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;CSS Custom Properties in Microsoft Edge - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/a&gt;という記事では、MSEdgeがCSS Custom Propertiesにしたため、CSS Custom Propertiesについて解説されています。&lt;/p&gt;
+
+&lt;p&gt;CSS Custom Propertyの使い方、&lt;code&gt;@support&lt;/code&gt;を使ったfeature detect、JavaScriptからの操作方法など。&lt;br&gt;
+IEを除く主要ブラウザではサポートされているので、一度ネイティブのCSS Custom Propertiesの使い方を見てみると良いかもしれません。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://caniuse.com/#feat=css-variables&quot; title=&quot;Can I use... Support tables for HTML5, CSS3, etc&quot;&gt;CSS Variables (Custom Properties) - Can I use...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;npmのOrganization(&lt;code&gt;npm team&lt;/code&gt;)機能がオープンソース向けに無料で利用できるようになりました。&lt;br&gt;
+GitHubのOrganizationのように、そのTeamへ人を追加することができます。&lt;br&gt;
+これにより複数人で同じScoped Packagesを参照しやすくなりました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.npmjs.org/post/158718200065/announcing-free-orgs&quot; title=&quot;The npm Blog — announcing free Orgs&quot;&gt;The npm Blog — announcing free Orgs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今までも、&lt;code&gt;@azu/hello&lt;/code&gt;のような自分のアカウントに紐づくScoped Pacakgesは無料で扱うことができましたが、&lt;br&gt;
+今回はOrganizationもPublicな範囲では、無料で利用できるようになっています。&lt;/p&gt;
+
+&lt;p&gt;Privateなパッケージは今まで通り&lt;a href=&quot;https://www.npmjs.com/pricing&quot;&gt;$7 / month&lt;/a&gt;からで利用できます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/misc/scope&quot;&gt;scope | npm Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://efcl.info/2015/04/30/npm-namespace/&quot;&gt;npmで名前空間を持ったモジュールを公開する方法(scoped modules) | Web Scratch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;既存のアカウントをOrganizationへ変換することもできるので、フレームワークのようなものを特定のScoped Packagesとしてまとめるのに役立ちそうです。&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;ja&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;# npmで既存ユーザーのOrgsへの変換手順&lt;br&gt;&lt;br&gt;1. 変換したいユーザーで &lt;a href=&quot;https://t.co/4ntGHilKvU&quot;&gt;https://t.co/4ntGHilKvU&lt;/a&gt; の&amp;quot;Upgrade&amp;quot; ボタンを押す&lt;br&gt;2. Orgsに紐づく新しいユーザー名を入力(既存無理)&lt;br&gt;3. Orgsが作れたら、所属させたい人をTeamに追加する &lt;a href=&quot;https://t.co/Vi0GBCW3ew&quot;&gt;pic.twitter.com/Vi0GBCW3ew&lt;/a&gt;&lt;/p&gt;&amp;mdash; azu (@azu_re) &lt;a href=&quot;https://twitter.com/azu_re/status/844794235886886914&quot;&gt;2017年3月23日&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;moment/changelog.md-at-2.18.0-·-moment/moment&quot;&gt;moment/CHANGELOG.md at 2.18.0 · moment/moment&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/moment/moment/blob/2.18.0/CHANGELOG.md&quot; title=&quot;moment/CHANGELOG.md at 2.18.0 · moment/moment&quot;&gt;github.com/moment/moment/blob/2.18.0/CHANGELOG.md&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;moment 2.18.0リリース・&lt;br&gt;
+RFC 2822のパースをサポート、1-24時表示を行う&lt;code&gt;k&lt;/code&gt;と&lt;code&gt;kk&lt;/code&gt;フォーマットのサポート、CJK time formatの改善など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/ichernev/78920c5a1e419fb28c6e4546d1b7235c&quot; title=&quot;moment 2.18.0 changelog&quot;&gt;moment 2.18.0 changelog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.suikawiki.org/n/RFC%202822%E3%81%AE%E6%97%A5%E4%BB%98%E5%BD%A2%E5%BC%8F&quot; title=&quot;RFC 2822の日付形式&quot;&gt;RFC 2822の日付形式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/moment/moment/pull/3608&quot; title=&quot;\[locale\] ja, zh-\*, ko: Standardize CJK time formats by jasonkb · Pull Request #3608 · moment/moment&quot;&gt;[locale] ja, zh-*, ko: Standardize CJK time formats by jasonkb · Pull Request #3608 · moment/moment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ember.js---ember-2.12-and-2.13-beta-released&quot;&gt;Ember.js - Ember 2.12 and 2.13 Beta Released&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://emberjs.com/blog/2017/03/19/ember-2-12-released.html&quot; title=&quot;Ember.js - Ember 2.12 and 2.13 Beta Released&quot;&gt;emberjs.com/blog/2017/03/19/ember-2-12-released.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Ember 2.12と2.13βリリース。&lt;br&gt;
+&lt;code&gt;factoryFor&lt;/code&gt; APIの追加、&lt;code&gt;Ember.K&lt;/code&gt;が非推奨へになるなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-5.25.0---announce---discuss.codemirror&quot;&gt;Release 5.25.0 - Announce - discuss.CodeMirror&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://discuss.codemirror.net/t/release-5-25-0/1175&quot; title=&quot;Release 5.25.0 - Announce - discuss.CodeMirror&quot;&gt;discuss.codemirror.net/t/release-5-25-0/1175&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;editor&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;CodeMirror 5.25.0リリース。&lt;br&gt;
+最初のコミットから10周年のリリース。&lt;br&gt;
+&lt;code&gt;contentEditable&lt;/code&gt;周りの修正、&lt;code&gt;lint&lt;/code&gt; addonがPromiseをサポートするなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;announcing-scala.js-0.6.15---scala.js&quot;&gt;Announcing Scala.js 0.6.15 - Scala.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.scala-js.org/news/2017/03/21/announcing-scalajs-0.6.15/&quot; title=&quot;Announcing Scala.js 0.6.15 - Scala.js&quot;&gt;www.scala-js.org/news/2017/03/21/announcing-scalajs-0.6.15/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;scala&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Scala.js 0.6.15リリース。&lt;br&gt;
+&lt;code&gt;@JSExportStatic&lt;/code&gt;の追加、&lt;code&gt;@JSExportTopLevel&lt;/code&gt;をfieldに対しても利用できるように、Symbolを表現する&lt;code&gt;js.Symbol&lt;/code&gt;などの追加、&lt;br&gt;
+マイグレーションツールとしてscalafixも公開されている。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://scalacenter.github.io/scalafix/&quot; title=&quot;scalafix - a Scala rewrite tool&quot;&gt;scalafix - a Scala rewrite tool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;chromium-blog:-chrome-58-beta:-indexeddb-2.0,-an-improvement-to-iframe-navigation,-and-immersive-full-screen-for-pwas&quot;&gt;Chromium Blog: Chrome 58 Beta: IndexedDB 2.0, an improvement to iframe navigation, and immersive full screen for PWAs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.chromium.org/2017/03/chrome-58-beta-indexeddb-20_21.html&quot; title=&quot;Chromium Blog: Chrome 58 Beta: IndexedDB 2.0, an improvement to iframe navigation, and immersive full screen for PWAs&quot;&gt;blog.chromium.org/2017/03/chrome-58-beta-indexeddb-20_21.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome 58 Betaリリース。&lt;br&gt;
+IndexedDB 2.0、iframe sandboxで&lt;code&gt;allow-top-navigation-by-user-activation&lt;/code&gt;をサポート、&lt;code&gt;display: flow-root&lt;/code&gt;のサポートなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-notes-for-safari-technology-preview-26-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 26 | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7474/release-notes-for-safari-technology-preview-26/&quot; title=&quot;Release Notes for Safari Technology Preview 26 | WebKit&quot;&gt;webkit.org/blog/7474/release-notes-for-safari-technology-preview-26/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Safari Technology Preview Release 26リリース。&lt;br&gt;
+WebGPUの試験的サポート、&lt;code&gt;history.scrollRestoration&lt;/code&gt;のサポート、CSS &lt;code&gt;stroke-width&lt;/code&gt;プロパティのサポートなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;angular:-angular-4.0.0-now-available&quot;&gt;Angular: Angular 4.0.0 Now Available&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://angularjs.blogspot.com/2017/03/angular-400-now-available.html&quot; title=&quot;Angular: Angular 4.0.0 Now Available&quot;&gt;angularjs.blogspot.com/2017/03/angular-400-now-available.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;AngularJS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Angular 4リリース。&lt;br&gt;
+バージョンを合わせるためにv3を飛ばしてv4へ。&lt;br&gt;
+AOTコンパイルによるViewのコード量の削減、TypeScript 2.1/2.2対応、テンプレートのSource Map対応など。&lt;br&gt;
+Angular CLIも合わせて1.0.0を公開。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular/blob/4.0.0/CHANGELOG.md&quot; title=&quot;angular/CHANGELOG.md at 4.0.0 · angular/angular&quot;&gt;angular/CHANGELOG.md at 4.0.0 · angular/angular&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular-cli/wiki/stories-1.0-update&quot; title=&quot;stories 1.0 update · angular/angular-cli Wiki&quot;&gt;stories 1.0 update · angular/angular-cli Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;cyclow&quot;&gt;Cyclow&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cyclow.js.org/&quot; title=&quot;Cyclow&quot;&gt;cyclow.js.org/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Cycle.jsライクなコンポーネントフレームワーク&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;mnot’s-blog:-the-state-of-browser-caching,-revisited&quot;&gt;mnot’s blog: The State of Browser Caching, Revisited&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.mnot.net/blog/2017/03/16/browser-caching&quot; title=&quot;mnot’s blog: The State of Browser Caching, Revisited&quot;&gt;www.mnot.net/blog/2017/03/16/browser-caching&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;各ブラウザのHTTPリクエスト/レスポンスとキャッシュの実装についての調査。&lt;br&gt;
+Status Code別のキャッシュ、&lt;code&gt;Cache-Control&lt;/code&gt; header、&lt;code&gt;Vary&lt;/code&gt; headerについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;learn-redux-by-coding-a-mini-redux-–-jakob-lind&quot;&gt;Learn Redux by coding a Mini-Redux – Jakob Lind&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.jakoblind.no/2017/03/13/learn-redux-by-coding-a-mini-redux/&quot; title=&quot;Learn Redux by coding a Mini-Redux – Jakob Lind&quot;&gt;blog.jakoblind.no/2017/03/13/learn-redux-by-coding-a-mini-redux/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;小さなReduxを作ってReduxについて学ぶ記事。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://azu.gitbooks.io/javascript-plugin-architecture/content/ja/Redux/&quot; title=&quot;Redux · JavaScript Plugin Architecture&quot;&gt;Redux · JavaScript Plugin Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;es6-features---10-use-cases-for-proxy&quot;&gt;ES6 Features - 10 Use Cases for Proxy&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dealwithjs.io/es6-features-10-use-cases-for-proxy/&quot; title=&quot;ES6 Features - 10 Use Cases for Proxy&quot;&gt;dealwithjs.io/es6-features-10-use-cases-for-proxy/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proxy&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ES Proxyのユースケース紹介。&lt;br&gt;
+デフォルト値、private、enum、observer、cache、&lt;code&gt;in&lt;/code&gt;演算子、シングルトン、バリデーションとrevocable proxy、Python likeなSubscriptionなど。&lt;br&gt;
+またProxyをした際のパフォーマンスについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;css-custom-properties-in-microsoft-edge---microsoft-edge-dev-blogmicrosoft-edge-dev-blog&quot;&gt;CSS Custom Properties in Microsoft Edge - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/03/24/css-custom-properties/&quot; title=&quot;CSS Custom Properties in Microsoft Edge - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;blogs.windows.com/msedgedev/2017/03/24/css-custom-properties/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;MSEdge&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;MSEdgeがCSS Custom Propertyをサポート。&lt;br&gt;
+CSS Custom Propertyの使い方、&lt;code&gt;@support&lt;/code&gt;を使ったfeature detect、JavaScriptからの操作方法について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;common-async/await-design-patterns-in-node.js-|-www.thecodebarbarian.com&quot;&gt;Common Async/Await Design Patterns in Node.js | www.thecodebarbarian.com&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://thecodebarbarian.com/common-async-await-design-patterns-in-node.js.html&quot; title=&quot;Common Async/Await Design Patterns in Node.js | www.thecodebarbarian.com&quot;&gt;thecodebarbarian.com/common-async-await-design-patterns-in-node.js.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Async/Awaitのパターンについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;angular-diスキ-//-speaker-deck&quot;&gt;Angular DIスキ // Speaker Deck&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/kozake/angular-disuki&quot; title=&quot;Angular DIスキ // Speaker Deck&quot;&gt;speakerdeck.com/kozake/angular-disuki&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;AngularJS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Angular 2.xのDIの仕組みについてのスライド&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;the-npm-blog-—-announcing-free-orgs&quot;&gt;The npm Blog — announcing free Orgs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.npmjs.org/post/158718200065/announcing-free-orgs&quot; title=&quot;The npm Blog — announcing free Orgs&quot;&gt;blog.npmjs.org/post/158718200065/announcing-free-orgs&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webservice&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;npm orgでfree organizationが作成できるように。&lt;br&gt;
+既存ユーザーをorganizationを変換することもできる。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;myshov/history-of-javascript:-project-&amp;quot;history-of-javascript&amp;quot;&quot;&gt;myshov/history-of-javascript: Project &amp;quot;History of JavaScript&amp;quot;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/myshov/history-of-javascript&quot; title=&quot;myshov/history-of-javascript: Project \&amp;quot;History of JavaScript\&amp;quot;&quot;&gt;github.com/myshov/history-of-javascript&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;歴史&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptの歴史を振り返る連載&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;pubkey/rxdb:-client-side-database-for-browsers,-nodejs,-electron,-cordova,-react-native-and-every-other-javascript-runtime&quot;&gt;pubkey/rxdb: Client-Side Database for Browsers, NodeJS, electron, cordova, react-native and every other javascript-runtime&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pubkey/rxdb&quot; title=&quot;pubkey/rxdb: Client-Side Database for Browsers, NodeJS, electron, cordova, react-native and every other javascript-runtime&quot;&gt;github.com/pubkey/rxdb&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ブラウザ、Node.js、Electron、cordova、react-nativeで動作するクライアントサイドデータベースライブラリ。&lt;br&gt;
+JSON Schemaベースで、mongo likeなクエリを利用でき、rxjsと連携することができる。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;minireset.css:-a-tiny-modern-css-reset&quot;&gt;minireset.css: a tiny modern CSS reset&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jgthms.com/minireset.css/&quot; title=&quot;minireset.css: a tiny modern CSS reset&quot;&gt;jgthms.com/minireset.css/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;小さなreset.cssライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;simple-counter:-different-implementations...&quot;&gt;Simple counter: different implementations...&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/srdjan/1d10cbd42a2d695f696dee6b47fdc5e0&quot; title=&quot;Simple counter: different implementations...&quot;&gt;gist.github.com/srdjan/1d10cbd42a2d695f696dee6b47fdc5e0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;いろんな言語、フレームワークでのカウンターの実装のコレクション&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;googlechrome/ui-element-samples:-a-collection-of-prototyped-ui-elements&quot;&gt;GoogleChrome/ui-element-samples: A collection of prototyped UI elements&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/GoogleChrome/ui-element-samples&quot; title=&quot;GoogleChrome/ui-element-samples: A collection of prototyped UI elements&quot;&gt;github.com/GoogleChrome/ui-element-samples&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;example&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;いろんなWebPlatform APIを使ったUIのサンプル集&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/03/performant-expand-and-collapse&quot; title=&quot;Building performant expand &amp;amp;amp;amp; collapse animations  |  Web  |  Google Developers&quot;&gt;Building performant expand &amp;amp; collapse animations  |  Web  |  Google Developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;a-journey-to-functional-javascript:-part-1-–-fundamentals-–-grzegorz-ziółkowski&quot;&gt;A journey to functional JavaScript: Part 1 – fundamentals – Grzegorz Ziółkowski&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gziolo.pl/2017/03/24/refactoring-to-functional-javascript-part-1-fundamentals/&quot; title=&quot;A journey to functional JavaScript: Part 1 – fundamentals – Grzegorz Ziółkowski&quot;&gt;gziolo.pl/2017/03/24/refactoring-to-functional-javascript-part-1-fundamentals/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;関数型プログラミング&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptでの関数型プログラミングについての記事シリーズ。&lt;br&gt;
+関数型プログラミングに出てくる用語について&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Mon, 27 Mar 2017 19:41:11 +0900</pubDate>
+        <link>https://jser.info/2017/03/27/angular-v4.0.0-css-custom-properties-npm-organization/</link>
+        <guid isPermaLink="true">https://jser.info/2017/03/27/angular-v4.0.0-css-custom-properties-npm-organization/</guid>
+        
+        <category>Angular</category>
+        
+        <category>CSS</category>
+        
+        <category>npm</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-03-19のJS: jQuery 3.2.0、Sinon.JS 2.0、testdouble.js 2.0、React/Redux/CRUD</title>
@@ -2644,299 +2981,6 @@ React + Redux、Angular 2やEmberを題材にしている。&lt;/p&gt;
         <category>TypeScript</category>
         
         <category>Flow</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-01-24のJS: webpack 2正式リリース、JavaScriptの開発環境設定、2016 JS Stars</title>
-        <description>&lt;p&gt;JSer.info #315 - webpack 2.xの正式版としてwebpack v2.2.0がリリースされました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/webpack/webpack/releases/tag/v2.2.0&quot; title=&quot;Release v2.2.0 · webpack/webpack&quot;&gt;Release v2.2.0 · webpack/webpack&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/webpack/webpack-2-2-the-final-release-76c3d43bf144&quot; title=&quot;🎉 webpack 2.2: The Final Release 🎉 – webpack – Medium&quot;&gt;🎉 webpack 2.2: The Final Release 🎉 – webpack – Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webpack.js.org/&quot; title=&quot;webpack&quot;&gt;公式サイト&lt;/a&gt;も2.xに対応したものとなっています。&lt;br&gt;
-設定ファイル周りの細かい変更が多いですが、v1からv2への移行ガイドも公開されているので合わせて見ると良いです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/guides/migrating/&quot; title=&quot;Migrating from v1 to v2&quot;&gt;Migrating from v1 to v2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;また、webpack 2では、TreeShakingと呼ばれる機能が追加されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://yosuke-furukawa.hatenablog.com/entry/2017/01/24/110152&quot; title=&quot;Demystifying webpack2 tree shaking - from scratch&quot;&gt;Demystifying webpack2 tree shaking - from scratch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;今後の機能追加や改善については、投票ツールを通じて決定していくようです。&lt;br&gt;
-(投票の重み付けに利用されている&lt;a href=&quot;http://azu.github.io/slide/2017/t_wada_sushi/OpenCollective.html&quot; title=&quot;Open Collective&quot;&gt;Open Collectiveについてのスライド&lt;/a&gt;を書いたので、併せてみるといいかもしれません)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/vote/&quot;&gt;https://webpack.js.org/vote/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;投票のサイトを見ると今のところ次の開発候補としてはScope Hoisting(Rollupインスパイアな最適化)、Typescript周りの改善などが上がっているようです。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.satotaichi.info/modern-javascript_201701/&quot;&gt;Modern JavaScript概観、そしてElectronへ&lt;/a&gt;という記事では、JavaScriptの開発環境設定について書かれています。&lt;/p&gt;
-
-&lt;p&gt;型、Babelのエコシステム、Lint、テスト、UIフレームワーク、CSS、アーキテクチャ、ビルドなど幅広い内容を扱っています。&lt;br&gt;
-また、どのような選択肢からなぜそのツール/ライブラリを選んだのかという点について詳しく書かれています。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://risingstars2016.js.org/&quot; title=&quot;2016 JavaScript Rising Stars&quot;&gt;2016 JavaScript Rising Stars&lt;/a&gt;というサイトでは、2016年においてGitHub Starの増加率でランキングした結果がまとめられています。&lt;/p&gt;
-
-&lt;p&gt;それぞれのリポジトリ(ライブラリやツールなど)に対する説明が書かれているので、一度見てみると良いかもしれません。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-v2.2.0-·-webpack/webpack&quot;&gt;Release v2.2.0 · webpack/webpack&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/webpack/webpack/releases/tag/v2.2.0&quot; title=&quot;Release v2.2.0 · webpack/webpack&quot;&gt;github.com/webpack/webpack/releases/tag/v2.2.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webpack&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;webpack 2.2.0正式版リリース。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/guides/migrating/&quot; title=&quot;Migrating from v1 to v2&quot;&gt;Migrating from v1 to v2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/webpack/webpack-2-2-the-final-release-76c3d43bf144#.ibgliase6&quot; title=&quot;🎉 webpack 2.2: The Final Release 🎉 – webpack – Medium&quot;&gt;🎉 webpack 2.2: The Final Release 🎉 – webpack – Medium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;testcafe-v0.12.0-released-|-testcafe&quot;&gt;TestCafe v0.12.0 Released | TestCafe&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://devexpress.github.io/testcafe/blog/testcafe-v0-12-0-released.html&quot; title=&quot;TestCafe v0.12.0 Released | TestCafe&quot;&gt;devexpress.github.io/testcafe/blog/testcafe-v0-12-0-released.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;E2E&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;TestCafe v0.12.0リリース。&lt;br&gt;
-ベーシック認証/NTLM認証のサポート、CIでの動作改善、テストのスキップ、&lt;code&gt;test.before&lt;/code&gt;と&lt;code&gt;test.after&lt;/code&gt;の追加、ESLintプラグインの追加など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;modern-javascript概観、そしてelectronへ&quot;&gt;Modern JavaScript概観、そしてElectronへ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.satotaichi.info/modern-javascript_201701/&quot; title=&quot;Modern JavaScript概観、そしてElectronへ&quot;&gt;blog.satotaichi.info/modern-javascript_201701/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Electron&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;babel&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScriptの環境設定をめぐる試行について。&lt;br&gt;
-TypeScriptやFlowなどの型システム、Babelのエコシステム、Lint、テストフレームワーク、UIフレームワーク、CSS、アーキテクチャ、ビルドなど。&lt;br&gt;
-幅広いツール/ライブラリの中で、どのような考えで何を選んだかについて書かれている。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;アメブロ2016-~-isomorphic-javascriptの詳しい話-|-cyberagent-developers-blog-|-サイバーエージェント-デベロッパーズブログ&quot;&gt;アメブロ2016 ~ Isomorphic JavaScriptの詳しい話 | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.cyberagent.co.jp/blog/archives/3513/&quot; title=&quot;アメブロ2016 ~ Isomorphic JavaScriptの詳しい話 | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ&quot;&gt;developers.cyberagent.co.jp/blog/archives/3513/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;isomorphic&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;クライアントサイドとサーバサイドのどちらでも動くIsomorphicなJavaScriptを書くために気をつける点について。&lt;br&gt;
-Reactコンポーネント、Fetch、スタイルシート、環境変数、ルーティング、表示領域の扱い，パフォーマンス計測についてなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;making-transpiled-es-modules-more-spec-compliant&quot;&gt;Making transpiled ES modules more spec-compliant&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.2ality.com/2017/01/babel-esm-spec-mode.html&quot; title=&quot;Making transpiled ES modules more spec-compliant&quot;&gt;www.2ality.com/2017/01/babel-esm-spec-mode.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;ES Modulesの仕様と現在のTranspilerの挙動について。&lt;br&gt;
-ECMAScriptとNode.jsのモジュールのInteroperabilityについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;module-bundling-and-webpack-in-simple-terms&quot;&gt;Module Bundling and Webpack in Simple Terms&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://arianv.com/post/Module-Bundling-and-Webpack-in-Simple-Terms/&quot; title=&quot;Module Bundling and Webpack in Simple Terms&quot;&gt;arianv.com/post/Module-Bundling-and-Webpack-in-Simple-Terms/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webpack&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;webpackがどのようにモジュールをbundleしているかを丁寧に解説した記事&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;typescript-2.1:-mapped-types-|-marius-schulz&quot;&gt;TypeScript 2.1: Mapped Types | Marius Schulz&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.mariusschulz.com/2017/01/20/typescript-2-1-mapped-types&quot; title=&quot;TypeScript 2.1: Mapped Types | Marius Schulz&quot;&gt;blog.mariusschulz.com/2017/01/20/typescript-2-1-mapped-types&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;TypeScript 2.1で入ったMapped Typesについて。&lt;br&gt;
-&lt;code&gt;Object.freeze&lt;/code&gt;などを例にMapped Typesの使い方を解説している&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;dragons-when-upgrading-from-angular-2.1.x-to-2.4.x-–-medium&quot;&gt;Dragons when upgrading from Angular 2.1.x to 2.4.x – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@abookone/dragons-when-upgrading-from-angular-2-1-x-to-2-4-x-530de5a763cb&quot; title=&quot;Dragons when upgrading from Angular 2.1.x to 2.4.x – Medium&quot;&gt;medium.com/@abookone/dragons-when-upgrading-from-angular-2-1-x-to-2-4-x-530de5a763cb&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;AngularJS&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Angular 2.1から2.4へのアップデートにおけるハマりどころについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;vue-+-vuex-—-getting-started-–-medium&quot;&gt;Vue + Vuex — Getting started – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@bradfmd/vue-vuex-getting-started-f78c03d9f65&quot; title=&quot;Vue + Vuex — Getting started – Medium&quot;&gt;medium.com/@bradfmd/vue-vuex-getting-started-f78c03d9f65&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Vuexについての導入チュートリアル&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;server-side-rendering-shootout-with-marko,-preact,-rax,-react-and-vue&quot;&gt;Server-side Rendering Shootout with Marko, Preact, Rax, React and Vue&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/server-side-rendering-shootout-with-marko-preact-rax-react-and-vue-25e1ae17800f&quot; title=&quot;Server-side Rendering Shootout with Marko, Preact, Rax, React and Vue&quot;&gt;hackernoon.com/server-side-rendering-shootout-with-marko-preact-rax-react-and-vue-25e1ae17800f&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;template&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;UIライブラリ/テンプレートエンジンであるMarkoのサーバサイドレンダリングの高速化手法について。&lt;br&gt;
-Marko v4ではブラウザとサーバで出力方式を変えている。&lt;br&gt;
-クライアントサイドではVirtual DOMを使い、サーバサイドでは文字列結合をベースとした出力を使い分けている。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://gist.github.com/mlrawlings/8b67bee58df45709e232f689b873e1d1&quot; title=&quot;Marko v4 Multiple Compilation Targets&quot;&gt;Marko v4 Multiple Compilation Targets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/taobaofed/server-side-rendering-comparison/pull/11&quot; title=&quot;feat: add marko by mlrawlings · Pull Request #11 · taobaofed/server-side-rendering-comparison&quot;&gt;feat: add marko by mlrawlings · Pull Request #11 · taobaofed/server-side-rendering-comparison&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/marko-js/marko/blob/master/ROADMAP.md&quot; title=&quot;marko/ROADMAP.md at master · marko-js/marko&quot;&gt;marko/ROADMAP.md at master · marko-js/marko&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;3-new-css-features-to-learn-in-2017&quot;&gt;3 New CSS Features to Learn in 2017&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://bitsofco.de/3-new-css-features-to-learn-in-2017/&quot; title=&quot;3 New CSS Features to Learn in 2017&quot;&gt;bitsofco.de/3-new-css-features-to-learn-in-2017/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;最近のブラウザで利用できる新しいCSSの機能について。&lt;br&gt;
-Feature Queries、Grid Layout、CSS Variables&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;es2016-/-es2017の最新動向を追ってみた---qiita&quot;&gt;ES2016 / ES2017の最新動向を追ってみた - Qiita&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://qiita.com/yuyake0084/items/3c901f37ed7333d4da16&quot; title=&quot;ES2016 / ES2017の最新動向を追ってみた - Qiita&quot;&gt;qiita.com/yuyake0084/items/3c901f37ed7333d4da16&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;ES2016、2017で追加された構文や機能について&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;introduction-to-webassembly-—-rasmus-andersson&quot;&gt;Introduction to WebAssembly — Rasmus Andersson&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://rsms.me/wasm-intro&quot; title=&quot;Introduction to WebAssembly — Rasmus Andersson&quot;&gt;rsms.me/wasm-intro&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebAssembly&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;WebAssemblyの中身を見ていく話。&lt;br&gt;
-セマンティクス、type section、メモリアドレス、JavaScriptのAPIについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;functional-programing-in-javascript-|-lifelong-learning&quot;&gt;Functional Programing in Javascript | Lifelong Learning&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://vmayakumar.wordpress.com/2017/01/17/functional-programing-in-javascript/&quot; title=&quot;Functional Programing in Javascript | Lifelong Learning&quot;&gt;vmayakumar.wordpress.com/2017/01/17/functional-programing-in-javascript/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;関数型プログラミング&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScriptでの関数型プログラミングについて。&lt;br&gt;
-Adequate/mostly-adequate-guideを元にしている&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/MostlyAdequate/mostly-adequate-guide&quot; title=&quot;MostlyAdequate/mostly-adequate-guide: Mostly adequate guide to FP (in javascript)&quot;&gt;MostlyAdequate/mostly-adequate-guide: Mostly adequate guide to FP (in javascript)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;2016-javascript-rising-stars&quot;&gt;2016 JavaScript Rising Stars&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://risingstars2016.js.org/&quot; title=&quot;2016 JavaScript Rising Stars&quot;&gt;risingstars2016.js.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;github&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;2016年にGitHubのstarの増加率でランキングをつけた結果について。&lt;br&gt;
-それぞれのライブラリやツールについても簡単に解説されている&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;voca:-the-javascript-string-library&quot;&gt;Voca: The JavaScript string library&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://vocajs.com/&quot; title=&quot;Voca: The JavaScript string library&quot;&gt;vocajs.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;文字列操作系のUtils集ライブラリ&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;lorenzofox3/zora:-a-less-than-200-lines-of-code-javascript-test-harness-for-nodejs-and-the-browser&quot;&gt;lorenzofox3/zora: A less than 200 lines of code javascript test harness for nodejs and the browser&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/lorenzofox3/zora&quot; title=&quot;lorenzofox3/zora: A less than 200 lines of code javascript test harness for nodejs and the browser&quot;&gt;github.com/lorenzofox3/zora&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Generatorを使った小さなテストフレームワーク&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;alibaba/rax:-a-universal-react-compatible-render-engine.&quot;&gt;alibaba/rax: A universal React-compatible render engine.&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/alibaba/rax&quot; title=&quot;alibaba/rax: A universal React-compatible render engine.&quot;&gt;github.com/alibaba/rax&lt;/a&gt;&lt;/p&gt;
-
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;ReactライクなAPIを持つUniversalなViewライブラリ。&lt;br&gt;
-ブラウザだけではなく、アプリ(Weex)やサーバでも動作させることが目的。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/alibaba/rax/blob/master/docs/difference-with-react.md&quot; title=&quot;rax/difference-with-react.md at master · alibaba/rax&quot;&gt;rax/difference-with-react.md at master · alibaba/rax&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://weex-project.io/&quot; title=&quot;Weex&quot;&gt;Weex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/alibaba/rax/issues/81&quot; title=&quot;(question) Inferno/Preact comparison · Issue #81 · alibaba/rax&quot;&gt;(question) Inferno/Preact comparison · Issue #81 · alibaba/rax&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Tue, 24 Jan 2017 10:33:00 +0900</pubDate>
-        <link>https://jser.info/2017/01/24/webpack-2-javascript-2016-js-star/</link>
-        <guid isPermaLink="true">https://jser.info/2017/01/24/webpack-2-javascript-2016-js-star/</guid>
-        
-        <category>webpack</category>
-        
-        <category>JavaScript</category>
         
         
         <category>_i18n</category>
