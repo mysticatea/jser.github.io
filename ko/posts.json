@@ -1,4 +1,11 @@
 [{
+"title":"2017-03-19 JS: jQuery 3.2.0, Sinon.JS 2.0, testdouble.js 2.0, React/Redux/CRUD",
+"url":"https://jser.info/ko/2017/03/19/jquery-3.2.0-sinon.js-2.0-testdouble.js-2.0-reactreduxcrud/",
+"date":"2017-03-19T20:36:53+09:00",
+"content":"JSer.info #323 - jQuery 3.2.0이 릴리즈됐습니다.jQuery 3...",
+"category":"JSer",
+"tags":["jQuery","testing","library","react","redux","CRUD"]
+},{
 "title":"2017-02-14 JS: V8 5.7와 ES2015+의 성능, npm입문, TypeScript 가이드라인",
 "url":"https://jser.info/ko/2017/02/14/v8-5.7es2015-npm-typescript/",
 "date":"2017-02-14T11:02:33+09:00",
