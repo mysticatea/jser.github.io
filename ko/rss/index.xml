@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/ko/</link>
     <atom:link href="https://jser.info/ko/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 30 Mar 2017 14:17:16 +0900</pubDate>
-    <lastBuildDate>Thu, 30 Mar 2017 14:17:16 +0900</lastBuildDate>
+    <pubDate>Thu, 30 Mar 2017 15:44:02 +0900</pubDate>
+    <lastBuildDate>Thu, 30 Mar 2017 15:44:02 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -69,6 +69,14 @@ GitHub의 Organization 처럼, 해당 Team에 사람을 추가할 수 있습니�
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;ja&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;# npm에서 기존 계정을 Orgs로 변환하는 순서&lt;br&gt;&lt;br&gt;1. 변환하고 싶은 유저로 로그인 뒤 &lt;a href=&quot;https://t.co/4ntGHilKvU&quot;&gt;https://t.co/4ntGHilKvU&lt;/a&gt;에서 &amp;quot;Upgrade&amp;quot; 버튼을 선택&lt;br&gt;2. Orgs으로 사용될 새로운 유저 명을 입력(기존 명은 불가능)&lt;br&gt;3. Orgs을 만들었으면 소속 시키고 싶은 사람을 Team에 추가&lt;a href=&quot;https://t.co/Vi0GBCW3ew&quot;&gt;pic.twitter.com/Vi0GBCW3ew&lt;/a&gt;&lt;/p&gt;&amp;mdash; azu (@azu_re) &lt;a href=&quot;https://twitter.com/azu_re/status/844794235886886914&quot;&gt;2017年3月23日&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;(트위터 번역)npm에서 기존 계정을 Orgs로 변환하는 순서&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;변환하고 싶은 유저로 로그인 뒤 &lt;a href=&quot;https://t.co/4ntGHilKvU&quot;&gt;https://t.co/4ntGHilKvU&lt;/a&gt;에서 &amp;quot;Upgrade&amp;quot; 버튼을 선택&lt;/li&gt;
+&lt;li&gt;Orgs으로 사용될 새로운 유저 명을 입력(기존명은 불가)&lt;/li&gt;
+&lt;li&gt;Orgs을 만들었으면 소속 시키고 싶은 사람을 Team에 추가&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;hr&gt;
 
