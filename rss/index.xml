@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 04 Apr 2017 09:52:36 +0900</pubDate>
-    <lastBuildDate>Tue, 04 Apr 2017 09:52:36 +0900</lastBuildDate>
+    <pubDate>Tue, 04 Apr 2017 10:04:43 +0900</pubDate>
+    <lastBuildDate>Tue, 04 Apr 2017 10:04:43 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -39,6 +39,12 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ecma-international.org/memento/Ecma_meeting_calendar.htm&quot; title=&quot;Ecma meeting calendar&quot;&gt;Ecma meeting calendar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ES2017で入る仕様については次の記事でまとめられています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://2ality.com/2016/02/ecmascript-2017.html&quot; title=&quot;ECMAScript 2017: the final feature set&quot;&gt;ECMAScript 2017: the final feature set&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;ES2017の仕様はフリーズされたため、&lt;a href=&quot;https://github.com/tc39/ecma262&quot; title=&quot;tc39/ecma262&quot;&gt;tc39/ecma262&lt;/a&gt;のmasterブランチは&lt;a href=&quot;https://github.com/tc39/ecma262/commit/8340bf9a8427ea81bb0d1459471afbcc91d18add&quot; title=&quot;Editorial: master is now ES2018 draft · tc39/ecma262@8340bf9&quot;&gt;ES2018 draft&lt;/a&gt;となっています。&lt;/p&gt;
