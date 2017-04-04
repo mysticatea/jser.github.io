@@ -5,9 +5,348 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 30 Mar 2017 15:44:02 +0900</pubDate>
-    <lastBuildDate>Thu, 30 Mar 2017 15:44:02 +0900</lastBuildDate>
+    <pubDate>Tue, 04 Apr 2017 09:50:10 +0900</pubDate>
+    <lastBuildDate>Tue, 04 Apr 2017 09:50:10 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-04-04のJS: Safari 10.1、ECMAScript 2017-2018、Reactのパフォーマンス計測/改善</title>
+        <description>&lt;p&gt;JSer.info #325 - Safari 10.1が正式にリリースされました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://webkit.org/blog/7477/new-web-features-in-safari-10-1/&quot; title=&quot;New Web Features in Safari 10.1 | WebKit&quot;&gt;New Web Features in Safari 10.1 | WebKit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fetch API、CSS Grid、ES2016+、IndexedDB 2.0、Custom Elements、Gamepad、Pointer Lock、Input Events、&lt;code&gt;download&lt;/code&gt;属性、HTML Media Captureなどかなり色々な機能が実装されています。&lt;/p&gt;
+
+&lt;p&gt;過去に関連する解説記事も書かれているのであわせてみるとよさそうです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/&quot; title=&quot;CSS Grid Layout: A New Layout Module for the Web | WebKit&quot;&gt;CSS Grid Layout: A New Layout Module for the Web | WebKit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webkit.org/blog/7027/introducing-custom-elements/&quot; title=&quot;Introducing Custom Elements | WebKit&quot;&gt;Introducing Custom Elements | WebKit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ES2017 was officially approved by the committee to be sent to the ECMA General Assembly for approval.&lt;br&gt;&lt;br&gt;
+-- &lt;a href=&quot;https://github.com/rwaldron/tc39-notes/pull/64#issuecomment-291270151&quot; title=&quot;March 2017 meeting notes by leobalter · Pull Request #64 · rwaldron/tc39-notes&quot;&gt;March 2017 meeting notes by leobalter · Pull Request #64 · rwaldron/tc39-notes&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ECMAScript 2017の仕様が固まり、TC39(ECMAScriptの仕様を決める技術委員会)の中で承認され、ECMA &lt;a href=&quot;https://www.ecma-international.org/memento/GA.htm&quot; title=&quot;General Assembly&quot;&gt;General Assembly&lt;/a&gt;に提出されました。&lt;/p&gt;
+
+&lt;p&gt;後は、2017年6月27日に行われる次の&lt;a href=&quot;https://www.ecma-international.org/memento/Ecma_meeting_calendar.htm&quot; title=&quot;GA 113th meeting&quot;&gt;GA 113th meeting&lt;/a&gt;において承認されれば、公式のECMAScript 2017がリリースされます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ecma-international.org/memento/Ecma_meeting_calendar.htm&quot; title=&quot;Ecma meeting calendar&quot;&gt;Ecma meeting calendar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ES2017の仕様はフリーズされたため、&lt;a href=&quot;https://github.com/tc39/ecma262&quot; title=&quot;tc39/ecma262&quot;&gt;tc39/ecma262&lt;/a&gt;のmasterブランチは&lt;a href=&quot;https://github.com/tc39/ecma262/commit/8340bf9a8427ea81bb0d1459471afbcc91d18add&quot; title=&quot;Editorial: master is now ES2018 draft · tc39/ecma262@8340bf9&quot;&gt;ES2018 draft&lt;/a&gt;となっています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;ECMAScriptのISO標準版である&lt;a href=&quot;http://www.iso.org/iso/catalogue_detail.htm?csnumber=55755&quot;&gt;ISO/IEC 16262&lt;/a&gt;は、&lt;a href=&quot;https://www.ecma-international.org/publications/standards/Ecma-414.htm&quot; title=&quot;ECMAScript Specification Suite&quot;&gt;ECMA-414 ECMAScript Specification Suite&lt;/a&gt;という仕様が代わりに提案されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://efcl.info/2017/02/27/ecma-414/&quot; title=&quot;ECMA-414 ECMAScript Specification Suiteについて | Web Scratch&quot;&gt;ECMA-414 ECMAScript Specification Suiteについて | Web Scratch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;ES2018以降に入るかもしれないECMAScriptのProposalのステータスについては下記にまとめてあります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ecmascript-daily.github.io/ecmascript/2017/04/04/ecmascript-proposals-status&quot; title=&quot;ECMAScript proposal updates @ 2017-03 | ECMAScript Daily&quot;&gt;ECMAScript proposal updates @ 2017-03 | ECMAScript Daily&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;先月時点のステータス変更のまとめ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tc39/proposals&quot; title=&quot;tc39/proposals: Tracking ECMAScript Proposals&quot;&gt;tc39/proposals: Tracking ECMAScript Proposals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;先月のミーティングでは、正規表現周りの改善Proposalが4つもStage 3へとなりました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ponyfoo.com/articles/regular-expressions-post-es6&quot; title=&quot;Regular Expressions in a post-ES6 world&quot;&gt;Regular Expressions in a post-ES6 world&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html&quot; title=&quot;React is Slow, React is Fast: Optimizing React Apps in Practice&quot;&gt;React is Slow, React is Fast: Optimizing React Apps in Practice&lt;/a&gt;という記事ではReactアプリケーションのパフォーマンス計測や改善のアプローチについて書かれています。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;?react_perf&lt;/code&gt;を使ったコンポーネントプロファイルのとり方と行った計測と改善のアプローチについてがそれぞれ書かれています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;normalize.css/changelog.md-at-master-·-necolas/normalize.css&quot;&gt;normalize.css/CHANGELOG.md at master · necolas/normalize.css&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/necolas/normalize.css/blob/master/CHANGELOG.md&quot; title=&quot;normalize.css/CHANGELOG.md at master · necolas/normalize.css&quot;&gt;github.com/necolas/normalize.css/blob/master/CHANGELOG.md&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;normalize.css 6.0.0リリース。&lt;br&gt;
+HTML要素やform要素への&lt;code&gt;font-family&lt;/code&gt;、&lt;code&gt;line-height&lt;/code&gt;などのopinionated rulesを削除&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;tc39:-ecma-402-updates-|-rafael-xavier&quot;&gt;TC39: Ecma-402 updates | Rafael Xavier&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rafael.xavier.blog.br/2017/03/23/tc39-ecma-402-updates/&quot; title=&quot;TC39: Ecma-402 updates | Rafael Xavier&quot;&gt;rafael.xavier.blog.br/2017/03/23/tc39-ecma-402-updates/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;i18n&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proposal&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Ecma-402(ECMAScript i18n API)のProposalやステータスについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-2.3.0-·-qunitjs/qunit&quot;&gt;Release 2.3.0 · qunitjs/qunit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/qunitjs/qunit/releases/tag/2.3.0&quot; title=&quot;Release 2.3.0 · qunitjs/qunit&quot;&gt;github.com/qunitjs/qunit/releases/tag/2.3.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;QUnit 2.3.0リリース。&lt;br&gt;
+QUnit CLIの追加、CLIからQUnitを実行でき、reporterなどを指定できる。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/qunitjs/qunit/pull/1115&quot; title=&quot;CLI: Introduce QUnit CLI by trentmwillis · Pull Request #1115 · qunitjs/qunit&quot;&gt;CLI: Introduce QUnit CLI by trentmwillis · Pull Request #1115 · qunitjs/qunit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/qunitjs/qunit/issues/1024&quot; title=&quot;Introduce CLI tool · Issue #1024 · qunitjs/qunit&quot;&gt;Introduce CLI tool · Issue #1024 · qunitjs/qunit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;new-web-features-in-safari-10.1-|-webkit&quot;&gt;New Web Features in Safari 10.1 | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7477/new-web-features-in-safari-10-1/&quot; title=&quot;New Web Features in Safari 10.1 | WebKit&quot;&gt;webkit.org/blog/7477/new-web-features-in-safari-10-1/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Safari 10.0リリース。&lt;br&gt;
+Fetch API、CSS Grid、ES2016+、IndexedDB 2.0、Custom Elements、Gamepad、Pointer Lock、Input Events、&lt;code&gt;download&lt;/code&gt;属性、HTML Media Captureなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;node-v7.8.0-(current)-|-node.js&quot;&gt;Node v7.8.0 (Current) | Node.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v7.8.0/&quot; title=&quot;Node v7.8.0 (Current) | Node.js&quot;&gt;nodejs.org/en/blog/release/v7.8.0/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.js 7.8.0リリース。&lt;br&gt;
+npm 4.2.0へアップデート、async functionの修正のバックポートなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;testcafe-v0.14.0-released-|-testcafe&quot;&gt;TestCafe v0.14.0 Released | TestCafe&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://devexpress.github.io/testcafe/blog/testcafe-v0-14-0-released.html&quot; title=&quot;TestCafe v0.14.0 Released | TestCafe&quot;&gt;devexpress.github.io/testcafe/blog/testcafe-v0-14-0-released.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;E2E&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;TestCafe v0.14.0リリース。&lt;br&gt;
+&lt;code&gt;Role&lt;/code&gt;でログイン情報を決めることができるように、BrowserStackサポート、&lt;code&gt;t.debug()&lt;/code&gt;で&lt;code&gt;debugger;&lt;/code&gt;的なデバッグができるように、&lt;code&gt;file://&lt;/code&gt;に対してもテストできるように、&lt;code&gt;Selector&lt;/code&gt;にカスタムメソッドを定義できるようになるなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;flow:-a-static-type-checker-for-javascript&quot;&gt;Flow: A Static Type Checker for JavaScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://flow.org/en/&quot; title=&quot;Flow: A Static Type Checker for JavaScript&quot;&gt;flow.org/en/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;flowtype&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Flowの公式サイトがリニューアル公開された&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-almin.js-0.11-·-almin/almin&quot;&gt;Release Almin.js 0.11 · almin/almin&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/almin/almin/releases/tag/0.11.0&quot; title=&quot;Release Almin.js 0.11 · almin/almin&quot;&gt;github.com/almin/almin/releases/tag/0.11.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Flux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Almin 0.11リリース。&lt;br&gt;
+Functional UseCaseのサポート、APIドキュメントの更新、Reactバインディングの追加など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;announcing-free-microsoft-edge-testing-in-partnership-with-browserstack---microsoft-edge-dev-blogmicrosoft-edge-dev-blog&quot;&gt;Announcing free Microsoft Edge testing in partnership with BrowserStack - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/03/30/free-edge-testing-browserstack/&quot; title=&quot;Announcing free Microsoft Edge testing in partnership with BrowserStack - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;blogs.windows.com/msedgedev/2017/03/30/free-edge-testing-browserstack/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;MSEdge&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webservice&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;BrowserStackでテスト目的のMSEdgeが無料で利用できるように&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.browserstack.com/test-on-microsoft-edge-browser#live-cloud&quot; title=&quot;Free Edge Testing on Windows 10&quot;&gt;Free Edge Testing on Windows 10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;zeit-–-next.js-2.0&quot;&gt;ZEIT – Next.js 2.0&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zeit.co/blog/next2&quot; title=&quot;ZEIT – Next.js 2.0&quot;&gt;zeit.co/blog/next2&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;サーバー&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Reactを使ったフレームワークであるNext.js 2.0リリース。&lt;br&gt;
+動的なルーティングができるように、&lt;code&gt;next/css&lt;/code&gt;は非推奨となり代わりに&lt;code&gt;styled-jsx&lt;/code&gt;を導入、&lt;code&gt;&amp;lt;Link&amp;gt;&lt;/code&gt;の&lt;code&gt;prefetch&lt;/code&gt;サポート、サンプルの追加、&lt;code&gt;babel&lt;/code&gt;の設定などを行えるようになるなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zeit/styled-jsx&quot; title=&quot;zeit/styled-jsx: Full CSS support for JSX without compromises&quot;&gt;zeit/styled-jsx: Full CSS support for JSX without compromises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zeit/next.js/wiki/Migrating-from-next-css&quot; title=&quot;Migrating from next css · zeit/next.js Wiki&quot;&gt;Migrating from next css · zeit/next.js Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;v8-javascript-engine:-help-us-test-the-future-of-v8!&quot;&gt;V8 JavaScript Engine: Help us test the future of V8!&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://v8project.blogspot.com/2017/02/help-us-test-future-of-v8.html&quot; title=&quot;V8 JavaScript Engine: Help us test the future of V8!&quot;&gt;v8project.blogspot.com/2017/02/help-us-test-future-of-v8.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;V8の新しいコンパイラーパイプラインであるIgnition interpreterとTurbofan compilerを有効化する方法について。&lt;br&gt;
+またバグを見つけた時の報告先について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;writing-better-javascript-with-flow-—-sitepoint&quot;&gt;Writing Better JavaScript with Flow — SitePoint&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.sitepoint.com/writing-better-javascript-with-flow/&quot; title=&quot;Writing Better JavaScript with Flow — SitePoint&quot;&gt;www.sitepoint.com/writing-better-javascript-with-flow/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;flowtype&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Flowの基本的な使い方についての解説記事。&lt;br&gt;
+型の付け方、ライブラリの型、型アノテーションの取り除き方について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;react-is-slow,-react-is-fast:-optimizing-react-apps-in-practice&quot;&gt;React is Slow, React is Fast: Optimizing React Apps in Practice&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html&quot; title=&quot;React is Slow, React is Fast: Optimizing React Apps in Practice&quot;&gt;marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Reactのパフォーマンス計測と改善について。&lt;br&gt;
+&lt;code&gt;?react_perf&lt;/code&gt;を使いコンポーネントプロファイル、&lt;code&gt;why-did-you-update&lt;/code&gt;でのコンポーネントの更新時間の計測。&lt;br&gt;
+shouldComponentUpdateでの無駄な更新を排除することでの改善、RecomposeやReselect、React/JSXの使い方での改善について&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/garbles/why-did-you-update&quot; title=&quot;garbles/why-did-you-update: Puts your console on blast when React is making unnecessary updates.&quot;&gt;garbles/why-did-you-update: Puts your console on blast when React is making unnecessary updates.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;svelte-ナメてたけど結構スゴい---qiita&quot;&gt;Svelte ナメてたけど結構スゴい - Qiita&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://qiita.com/jgs/items/2d985894ea07f48b74fb&quot; title=&quot;Svelte ナメてたけど結構スゴい - Qiita&quot;&gt;qiita.com/jgs/items/2d985894ea07f48b74fb&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;HTML/CSS/JSをセットで書いたコンポーネントをJavaScript+小さなランタイムに変換するUIフレームワークであるSvelteについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;regular-expressions-in-a-post-es6-world&quot;&gt;Regular Expressions in a post-ES6 world&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ponyfoo.com/articles/regular-expressions-post-es6&quot; title=&quot;Regular Expressions in a post-ES6 world&quot;&gt;ponyfoo.com/articles/regular-expressions-post-es6&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proposal&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ES2015以降の正規表現の追加された仕様とProposalの仕様について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;vue.js-tutorial:-a-prerendered,-seo-friendly-example-[live-demo]---snipcart&quot;&gt;Vue.js Tutorial: A Prerendered, SEO-Friendly Example [Live Demo] - Snipcart&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://snipcart.com/blog/vuejs-tutorial-seo-example&quot; title=&quot;Vue.js Tutorial: A Prerendered, SEO-Friendly Example \[Live Demo\] - Snipcart&quot;&gt;snipcart.com/blog/vuejs-tutorial-seo-example&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Vue.jsのチュートリアル。 PrerenderSpaPluginを使うことで、静的なHTMLを吐けるようにするところまでを行う話&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ecmascript-proposal-updates-@-2017-03-|-ecmascript-daily&quot;&gt;ECMAScript proposal updates @ 2017-03 | ECMAScript Daily&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ecmascript-daily.github.io/ecmascript/2017/04/04/ecmascript-proposals-status&quot; title=&quot;ECMAScript proposal updates @ 2017-03 | ECMAScript Daily&quot;&gt;ecmascript-daily.github.io/ecmascript/2017/04/04/ecmascript-proposals-status&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proposal&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ECMAScript Proposalの最新の変更まとめ。&lt;br&gt;
+正規表現系のProposalがStage 3になった。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;君はyarn.lockをコミットしているか？&quot;&gt;君はyarn.lockをコミットしているか？&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/teppeis/do-you-commit-yarnlock&quot; title=&quot;君はyarn.lockをコミットしているか？&quot;&gt;www.slideshare.net/teppeis/do-you-commit-yarnlock&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ライブラリでyarn.lockをコミットすることによるdevDepsの固定のメリットについて。&lt;br&gt;
+devDepsの方がBreaking Changeは起きやすいため固定することによるメリットがあるという話&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;vue.js-tutorial:-a-prerendered,-seo-friendly-example-[live-demo]---snipcart&quot;&gt;Vue.js Tutorial: A Prerendered, SEO-Friendly Example [Live Demo] - Snipcart&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://snipcart.com/blog/vuejs-tutorial-seo-example&quot; title=&quot;Vue.js Tutorial: A Prerendered, SEO-Friendly Example \[Live Demo\] - Snipcart&quot;&gt;snipcart.com/blog/vuejs-tutorial-seo-example&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Vue.jsのチュートリアル。&lt;br&gt;
+PrerenderSpaPluginを使うことで、静的なHTMLを吐けるようにするところまでを行う話&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;sdgluck/mewt:-immutability-in-under-one-kilobyte&quot;&gt;sdgluck/mewt: Immutability in under one kilobyte&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sdgluck/mewt&quot; title=&quot;sdgluck/mewt: Immutability in under one kilobyte&quot;&gt;github.com/sdgluck/mewt&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Proxyを使ったシンプルなImmtableラッパーライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;はじめに-|-reset-cssフレンズ&quot;&gt;はじめに | Reset CSSフレンズ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://friends.o2p.jp/&quot; title=&quot;はじめに | Reset CSSフレンズ&quot;&gt;friends.o2p.jp/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ebook&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ユーザーエージェントによるCSSの特徴を上書きしていくReset CSSやnormalize.cssなどがどのようなスタイルを当てているかについての解説&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Tue, 04 Apr 2017 09:17:15 +0900</pubDate>
+        <link>https://jser.info/2017/04/04/safari-10.1-ecmascript-2017-2018-react/</link>
+        <guid isPermaLink="true">https://jser.info/2017/04/04/safari-10.1-ecmascript-2017-2018-react/</guid>
+        
+        <category>Safari</category>
+        
+        <category>ECMAScript</category>
+        
+        <category>ES2017</category>
+        
+        <category>ES2018</category>
+        
+        <category>React</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-03-27のJS: Angular v4.0.0、CSS Custom Properties、npm Organization</title>
@@ -2737,257 +3076,6 @@ IssueやPull Requestのレビューをしてくれる人やMochaへのテスト�
         <category>ja</category>
         
         <category>report</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-01-30のJS: Safari 10.1 pre、Firefox51.0、徐々に型を付けてのリファクタリング</title>
-        <description>&lt;p&gt;JSer.info #316 - &lt;a href=&quot;https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_1.html&quot; title=&quot;Safari 10.1&quot;&gt;Safari 10.1&lt;/a&gt;がプレリリースされました。&lt;/p&gt;
-
-&lt;p&gt;Fetch API、IndexedDB 2.0、Custom Elements、Pointer Lock/Gamepad API、ES2016,2017のサポートなど。&lt;br&gt;
-また&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;要素の&lt;code&gt;download&lt;/code&gt;属性、CSS Gridなどのサポートが含まれています。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/51.0/releasenotes/&quot; title=&quot;Firefox — Notes (51.0) — Mozilla&quot;&gt;Firefox 51.0&lt;/a&gt;がリリースされました。&lt;/p&gt;
-
-&lt;p&gt;WebGL 2、IndexedDB 2、XHRの仕様追従、FLAC形式のサポートなどが行われています。&lt;br&gt;
-また、&lt;code&gt;DOMImplementation.hasFeature()&lt;/code&gt;は常に&lt;code&gt;true&lt;/code&gt;を返すように、非標準な&lt;code&gt;for each in&lt;/code&gt;に警告が出るようになるなど。&lt;/p&gt;
-
-&lt;p&gt;詳しくは次のサイトを見てください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/Firefox/Releases/51&quot; title=&quot;Firefox 51 for developers - Mozilla | MDN&quot;&gt;Firefox 51 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/en-CA/versions/51/&quot; title=&quot;Firefox 51 Site Compatibility | Firefox Site Compatibility&quot;&gt;Firefox 51 Site Compatibility | Firefox Site Compatibility&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.reaktor.com/blog/refactoring-30000-lines-js-types/&quot; title=&quot;Refactoring 30000 lines of JS with types - Reaktor.com&quot;&gt;Refactoring 30000 lines of JS with types - Reaktor.com&lt;/a&gt;という記事では3万行のJavaScriptをどのようにリファクタリングしていったかについて書かれています。&lt;/p&gt;
-
-&lt;p&gt;アプローチとして型をつけていきながらリファクタリングをしていく際にFlowTypeやTypeScriptを使ったときの問題点やそれぞれのツールではどのような方法が用意されているかについて。&lt;br&gt;
-Flowではweak modeを使った方法やTypeScriptでは&lt;code&gt;.js&lt;/code&gt;を&lt;code&gt;.ts&lt;/code&gt;に変更するところからなど、どのように徐々に型をつける戦略がとれるかといった話。&lt;br&gt;
-最終的にTypeScriptを利用し、その際に遭遇したエラーなどについても書かれています。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;safari-10.1&quot;&gt;Safari 10.1&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_1.html&quot; title=&quot;Safari 10.1&quot;&gt;developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_1.html&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Safari 10.1 プレリリース。&lt;br&gt;
-Fetch API、IndexedDB 2.0、Custom Elements、Pointer Lock/Gamepad API、ES2016,2017のサポートなど。&lt;br&gt;
-また&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;要素の&lt;code&gt;download&lt;/code&gt;属性,&lt;br&gt;
-CSS Gridなどのサポート&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;firefox-—-notes-(51.0)-—-mozilla&quot;&gt;Firefox — Notes (51.0) — Mozilla&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/51.0/releasenotes/&quot; title=&quot;Firefox — Notes (51.0) — Mozilla&quot;&gt;www.mozilla.org/en-US/firefox/51.0/releasenotes/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Firefox 51.0リリース。&lt;br&gt;
-WebGL 2、IndexedDB 2、XHRの仕様追従、FLAC形式のサポート、&lt;code&gt;DOMImplementation.hasFeature()&lt;/code&gt;は常に&lt;code&gt;true&lt;/code&gt;を返すように、非標準なAPIを削除など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/Firefox/Releases/51&quot; title=&quot;Firefox 51 for developers - Mozilla | MDN&quot;&gt;Firefox 51 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/en-CA/versions/51/&quot; title=&quot;Firefox 51 Site Compatibility | Firefox Site Compatibility&quot;&gt;Firefox 51 Site Compatibility | Firefox Site Compatibility&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;node-browserify/changelog.markdown-at-master-·-substack/node-browserify&quot;&gt;node-browserify/changelog.markdown at master · substack/node-browserify&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/substack/node-browserify/blob/master/changelog.markdown&quot; title=&quot;node-browserify/changelog.markdown at master · substack/node-browserify&quot;&gt;github.com/substack/node-browserify/blob/master/changelog.markdown&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browserify&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Browserify 14.0.0リリース。&lt;br&gt;
-bufferのpolyfillがアップグレードされ、IE10以下のサポートが終了。&lt;br&gt;
-bufferパッケージがTypedArrayを利用しているため。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/substack/node-browserify/pull/1678&quot; title=&quot;Update &amp;amp;amp;#39;buffer&amp;amp;amp;#39; to v5.x by feross · Pull Request #1678 · substack/node-browserify&quot;&gt;Update &amp;amp;#39;buffer&amp;amp;#39; to v5.x by feross · Pull Request #1678 · substack/node-browserify&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-notes-for-safari-technology-preview-22-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 22 | WebKit&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7354/release-notes-for-safari-technology-preview-22/&quot; title=&quot;Release Notes for Safari Technology Preview 22 | WebKit&quot;&gt;webkit.org/blog/7354/release-notes-for-safari-technology-preview-22/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Safari Technology Preview Release 22リリース。&lt;br&gt;
-&lt;code&gt;scroll-snap-type:proximity&lt;/code&gt;のサポート、&lt;code&gt;innerText&lt;/code&gt;の仕様追従、&lt;code&gt;URLSearchParams&lt;/code&gt;がiterableとなるなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;video.js-6.0.0-rc.0:-the-first-release-candidate-|-video.js-blog&quot;&gt;Video.js 6.0.0-RC.0: The first Release Candidate | Video.js Blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/&quot; title=&quot;Video.js 6.0.0-RC.0: The first Release Candidate | Video.js Blog&quot;&gt;blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-video.js v6.0 RCリリース。&lt;br&gt;
-FlashをCoreから取り除き、Reactインスパイアなプラグインアーキテクチャの追加、accessiblityの改善など&lt;br&gt;
-- &lt;a href=&quot;http://blog.videojs.com/the-end-of-html-first/&quot; title=&quot;The End of &amp;amp;amp;#34;HTML-First&amp;amp;amp;#34; | Video.js Blog&quot;&gt;The End of &amp;amp;#34;HTML-First&amp;amp;#34; | Video.js Blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;refactoring-30000-lines-of-js-with-types---reaktor.com&quot;&gt;Refactoring 30000 lines of JS with types - Reaktor.com&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.reaktor.com/blog/refactoring-30000-lines-js-types/&quot; title=&quot;Refactoring 30000 lines of JS with types - Reaktor.com&quot;&gt;www.reaktor.com/blog/refactoring-30000-lines-js-types/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;リファクタリング&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-3万行のJavaScriptをリファクタリングしたアプローチについて。&lt;br&gt;
-逐次的な型付のアプローチについて。&lt;br&gt;
-Flowのweek modeとコメントでの型付けを使った方法と問題点。&lt;br&gt;
-TypeScriptを使った名前空間オブジェクトへのアプローチとメリット/デメリット。&lt;br&gt;
-最終的にTypeScriptを使ったがそのときに遭遇した問題について&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;making-touch-scrolling-fast-by-default- | -web- | -google-developers&quot;&gt;Making touch scrolling fast by default  |  Web  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/01/scrolling-intervention&quot; title=&quot;Making touch scrolling fast by default  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/01/scrolling-intervention&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;event&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Chrome 56からtouch eventをlistenすると&lt;br&gt;
-&lt;code&gt;{passive: true}&lt;/code&gt;がデフォルトとなる。&lt;br&gt;
-デフォルトでは&lt;code&gt;touchstart&lt;/code&gt;の中で&lt;code&gt;event.preventDefault()&lt;/code&gt;を呼ぶと無視され警告がコンソールに表示される。&lt;br&gt;
-- &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Event/defaultPrevented&quot; title=&quot;Event.defaultPrevented - Web APIs | MDN&quot;&gt;Event.defaultPrevented - Web APIs | MDN&lt;/a&gt;&lt;br&gt;
-- &lt;a href=&quot;https://www.chromestatus.com/features/5093566007214080&quot; title=&quot;Chrome Platform Status&quot;&gt;Chrome Platform Status&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;testing-react-applications-with-jest&quot;&gt;Testing React Applications with Jest&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://auth0.com/blog/testing-react-applications-with-jest/&quot; title=&quot;Testing React Applications with Jest&quot;&gt;auth0.com/blog/testing-react-applications-with-jest/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Jestを使ったReactのテストについての解説。&lt;br&gt;
-インストールからテストの書き方、モックなどについて書かれている。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;es-proposal:-shared-memory-and-atomics&quot;&gt;ES proposal: Shared memory and atomics&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.2ality.com/2017/01/shared-array-buffer.html&quot; title=&quot;ES proposal: Shared memory and atomics&quot;&gt;www.2ality.com/2017/01/shared-array-buffer.html&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proposal&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;spec&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-ES2017に入ることが決まったShared memory and atomicsについての解説。&lt;br&gt;
-Shared Array BuffersでWorker(agent)とデータを共有することができる。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;implement-a-javascript-reactive-programming-library-—-part-1-–-medium&quot;&gt;Implement a JavaScript reactive programming library — part 1 – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@bohou/implement-a-javascript-reactive-programming-library-part-1-f564ac6ad789&quot; title=&quot;Implement a JavaScript reactive programming library — part 1 – Medium&quot;&gt;medium.com/@bohou/implement-a-javascript-reactive-programming-library-part-1-f564ac6ad789&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-ReactiveなJavaScriptライブラリを実装する連載記事。&lt;br&gt;
-- &lt;a href=&quot;https://github.com/bhou/bouton.js&quot; title=&quot;bhou/bouton.js: A framework to build your asynchronous reactive library.&quot;&gt;bhou/bouton.js: A framework to build your asynchronous reactive library.&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;watch-out-for-undefined-state&quot;&gt;Watch Out for Undefined State&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://daveceddia.com/watch-out-for-undefined-state/&quot; title=&quot;Watch Out for Undefined State&quot;&gt;daveceddia.com/watch-out-for-undefined-state/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Reactコンポーネントでコンポーネント内のstateに依存しているものを、propsへ移動するリファクタリングの例。&lt;br&gt;
-コンポーネントのデフォルトstateはundefinedであるという話&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;the-promise-of-a-burger-party---mariko-kosaka&quot;&gt;The Promise of a Burger Party - Mariko Kosaka&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kosamari.com/notes/the-promise-of-a-burger-party&quot; title=&quot;The Promise of a Burger Party - Mariko Kosaka&quot;&gt;kosamari.com/notes/the-promise-of-a-burger-party&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Promises&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;図&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Promiseをバーガーショップを例にして解説している記事。&lt;br&gt;
-図解をしながらPromiseのresolveとrejectの動きについて書かれている&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;detecting-text-in-an-image-on-the-web-in-real-time---tales-of-a-developer-advocate-by-paul-kinlan&quot;&gt;Detecting text in an image on the web in real-time - Tales of a Developer Advocate by Paul Kinlan&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://paul.kinlan.me/detecting-text-in-an-image/&quot; title=&quot;Detecting text in an image on the web in real-time - Tales of a Developer Advocate by Paul Kinlan&quot;&gt;paul.kinlan.me/detecting-text-in-an-image/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebPlatformAPI&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-画像認識、顔認識、バーコード認識、画像からテキスト認識するブラウザAPIについて&lt;br&gt;
-- &lt;a href=&quot;https://wicg.github.io/shape-detection-api/&quot; title=&quot;Accelerated Shape Detection in Images&quot;&gt;Accelerated Shape Detection in Images&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;understanding-the-critical-rendering-path&quot;&gt;Understanding the Critical Rendering Path&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://bitsofco.de/understanding-the-critical-rendering-path/&quot; title=&quot;Understanding the Critical Rendering Path&quot;&gt;bitsofco.de/understanding-the-critical-rendering-path/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-クリティカルレンダリングパスとは何かという解説。&lt;br&gt;
-ブラウザがどのようなフローでレンダリングまでを行うか。&lt;br&gt;
-また、開発者ツールを使ってレンダリングフローで起きているイベントを見ていく話。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;ecmascript-proposal-updates-@-2017-01-|-ecmascript-daily&quot;&gt;ECMAScript proposal updates @ 2017-01 | ECMAScript Daily&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ecmascript-daily.github.io/ecmascript/2017/01/30/ecmascript-proposals-status&quot; title=&quot;ECMAScript proposal updates @ 2017-01 | ECMAScript Daily&quot;&gt;ecmascript-daily.github.io/ecmascript/2017/01/30/ecmascript-proposals-status&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proposal&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-2017年1月時点でのECMAScriptのProposalのStageまとめ。 2017年1月のミーティングで5つのProposalが追加され、Shared memory and atomicsはES2017に入った。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;optimizing-the-performance-of-your-react-application&quot;&gt;Optimizing the Performance of Your React Application&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://auth0.com/blog/optimizing-react/&quot; title=&quot;Optimizing the Performance of Your React Application&quot;&gt;auth0.com/blog/optimizing-react/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-&lt;code&gt;react-addons-perf&lt;/code&gt;を使いReactコンポーネントのパフォーマンス計測を行う話。&lt;br&gt;
-また&lt;code&gt;React.PureComponent&lt;/code&gt;を使い&lt;code&gt;shouldComponentUpdate&lt;/code&gt;の判定がきちんと行われるようにしてパフォーマンス改善するという話。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;knq/chromedp:-package-chromedp-is-a-faster,-simpler-way-to-drive-browsers-(chrome,-edge,-safari,-android,-etc)-without-external-dependencies-(ie,-selenium,-phantomjs,-etc).&quot;&gt;knq/chromedp: Package chromedp is a faster, simpler way to drive browsers (Chrome, Edge, Safari, Android, etc) without external dependencies (ie, Selenium, PhantomJS, etc).&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/knq/chromedp&quot; title=&quot;knq/chromedp: Package chromedp is a faster, simpler way to drive browsers (Chrome, Edge, Safari, Android, etc) without external dependencies (ie, Selenium, PhantomJS, etc).&quot;&gt;github.com/knq/chromedp&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;golang&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-ChromeDebugging Protocolを使ったブラウザ操作ツール&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;manning-|-isomorphic-development-with-javascript&quot;&gt;Manning | Isomorphic Development with JavaScript&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.manning.com/books/isomorphic-development-with-javascript&quot; title=&quot;Manning | Isomorphic Development with JavaScript&quot;&gt;www.manning.com/books/isomorphic-development-with-javascript&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;isomorphic&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;br&gt;
-Isomorphic JavaScriptについての書籍。&lt;br&gt;
-ブラウザとNode.jsで共有しながら、ウェブアプリケーションを作る話。&lt;br&gt;
-React + Redux、Angular 2やEmberを題材にしている。&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Mon, 30 Jan 2017 23:30:24 +0900</pubDate>
-        <link>https://jser.info/2017/01/30/safari-10.1-firefox51.0-type-refactoring/</link>
-        <guid isPermaLink="true">https://jser.info/2017/01/30/safari-10.1-firefox51.0-type-refactoring/</guid>
-        
-        <category>Firefox</category>
-        
-        <category>Safari</category>
-        
-        <category>TypeScript</category>
-        
-        <category>Flow</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
         
       </item>
     

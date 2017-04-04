@@ -1,4 +1,11 @@
 [{
+"title":"2017-04-04のJS: Safari 10.1、ECMAScript 2017-2018、Reactのパフォーマンス計測/改善",
+"url":"https://jser.info/2017/04/04/safari-10.1-ecmascript-2017-2018-react/",
+"date":"2017-04-04T09:17:15+09:00",
+"content":"JSer.info #325 - Safari 10.1が正式にリリースされました。New W...",
+"category":"JSer",
+"tags":["Safari","ECMAScript","ES2017","ES2018","React"]
+},{
 "title":"2017-03-27のJS: Angular v4.0.0、CSS Custom Properties、npm Organization",
 "url":"https://jser.info/2017/03/27/angular-v4.0.0-css-custom-properties-npm-organization/",
 "date":"2017-03-27T19:41:11+09:00",
