@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 04 Apr 2017 09:50:51 +0900</pubDate>
-    <lastBuildDate>Tue, 04 Apr 2017 09:50:51 +0900</lastBuildDate>
+    <pubDate>Tue, 04 Apr 2017 09:52:36 +0900</pubDate>
+    <lastBuildDate>Tue, 04 Apr 2017 09:52:36 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -66,7 +66,8 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/tc39/proposals&quot; title=&quot;tc39/proposals: Tracking ECMAScript Proposals&quot;&gt;tc39/proposals: Tracking ECMAScript Proposals&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;先月のミーティングでは、正規表現周りの改善Proposalが4つもStage 3へとなりました。&lt;/p&gt;
+&lt;p&gt;先月のミーティングでは、正規表現周りの改善Proposalが4つもStage 3へとなりました。&lt;br&gt;
+正規表現のProposalに興味がある人は次の記事を見ると良さそうです。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://ponyfoo.com/articles/regular-expressions-post-es6&quot; title=&quot;Regular Expressions in a post-ES6 world&quot;&gt;Regular Expressions in a post-ES6 world&lt;/a&gt;&lt;/li&gt;
