@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 04 Apr 2017 09:50:10 +0900</pubDate>
-    <lastBuildDate>Tue, 04 Apr 2017 09:50:10 +0900</lastBuildDate>
+    <pubDate>Tue, 04 Apr 2017 09:50:51 +0900</pubDate>
+    <lastBuildDate>Tue, 04 Apr 2017 09:50:51 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -35,7 +35,7 @@
 
 &lt;p&gt;ECMAScript 2017の仕様が固まり、TC39(ECMAScriptの仕様を決める技術委員会)の中で承認され、ECMA &lt;a href=&quot;https://www.ecma-international.org/memento/GA.htm&quot; title=&quot;General Assembly&quot;&gt;General Assembly&lt;/a&gt;に提出されました。&lt;/p&gt;
 
-&lt;p&gt;後は、2017年6月27日に行われる次の&lt;a href=&quot;https://www.ecma-international.org/memento/Ecma_meeting_calendar.htm&quot; title=&quot;GA 113th meeting&quot;&gt;GA 113th meeting&lt;/a&gt;において承認されれば、公式のECMAScript 2017がリリースされます。&lt;/p&gt;
+&lt;p&gt;後は、2017年6月27日に行われる次の&lt;a href=&quot;https://www.ecma-international.org/memento/Ecma_meeting_calendar.htm&quot; title=&quot;GA 113th meeting&quot;&gt;GA 113th meeting&lt;/a&gt;において承認されれば、正式にECMAScript 2017がリリースされます。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ecma-international.org/memento/Ecma_meeting_calendar.htm&quot; title=&quot;Ecma meeting calendar&quot;&gt;Ecma meeting calendar&lt;/a&gt;&lt;/li&gt;
