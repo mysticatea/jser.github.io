@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 04 Apr 2017 10:04:43 +0900</pubDate>
-    <lastBuildDate>Tue, 04 Apr 2017 10:04:43 +0900</lastBuildDate>
+    <pubDate>Thu, 06 Apr 2017 10:10:38 +0900</pubDate>
+    <lastBuildDate>Thu, 06 Apr 2017 10:10:38 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -130,7 +130,7 @@ QUnit CLIの追加、CLIからQUnitを実行でき、reporterなどを指定で�
 &lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7477/new-web-features-in-safari-10-1/&quot; title=&quot;New Web Features in Safari 10.1 | WebKit&quot;&gt;webkit.org/blog/7477/new-web-features-in-safari-10-1/&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;Safari 10.0リリース。&lt;br&gt;
+&lt;p&gt;Safari 10.1リリース。&lt;br&gt;
 Fetch API、CSS Grid、ES2016+、IndexedDB 2.0、Custom Elements、Gamepad、Pointer Lock、Input Events、&lt;code&gt;download&lt;/code&gt;属性、HTML Media Captureなど&lt;/p&gt;
 
 &lt;hr&gt;
