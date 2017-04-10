@@ -5,9 +5,378 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 06 Apr 2017 12:36:50 +0900</pubDate>
-    <lastBuildDate>Thu, 06 Apr 2017 12:36:50 +0900</lastBuildDate>
+    <pubDate>Mon, 10 Apr 2017 22:38:09 +0900</pubDate>
+    <lastBuildDate>Mon, 10 Apr 2017 22:38:09 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-04-10のJS: React 15.5.0、ESLint 4.0.0α、Glimmer</title>
+        <description>&lt;p&gt;JSer.info #326 - React 15.5.0がリリースされました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html&quot; title=&quot;React v15.5.0 - React Blog&quot;&gt;React v15.5.0 - React Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;minorリリースですが、16.0に向けて色々な機能に非推奨の警告が出るようになっています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react/issues/8854&quot; title=&quot;React 15.5 and 16 Umbrella · Issue #8854 · facebook/react&quot;&gt;React 15.5 and 16 Umbrella · Issue #8854 · facebook/react&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;本体に同梱されていた&lt;code&gt;React.PropTypes&lt;/code&gt;と&lt;code&gt;React.createClass&lt;/code&gt;はそれぞれ&lt;a href=&quot;https://github.com/reactjs/prop-types&quot; title=&quot;prop-types&quot;&gt;prop-types&lt;/a&gt;と&lt;a href=&quot;https://www.npmjs.com/package/create-react-class&quot; title=&quot;create-react-class&quot;&gt;create-react-class&lt;/a&gt;のパッケージに分離されています。&lt;br&gt;
+これらについては&lt;a href=&quot;https://github.com/reactjs/react-codemod&quot; title=&quot;react-codemod&quot;&gt;react-codemod&lt;/a&gt;を使ったマイグレーションスクリプトが提供されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://qiita.com/azu/items/9d1985bf0140576894aa&quot; title=&quot;React 15.5へのアップデート手順(prop-typesとReact.createClass) - Qiita&quot;&gt;React 15.5へのアップデート手順(prop-typesとReact.createClass) - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また、React Addonsとして提供されていたパッケージのいくつかは、代替えの方法があるため公式でのサポートを終了するようです。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;ESLint v4.0.0のα版がリリースされました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://eslint.org/blog/2017/04/eslint-v4.0.0-alpha.0-released&quot;&gt;ESLint v4.0.0-alpha.0 released - ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://qiita.com/mysticatea/items/3d01452d76ea6c943793&quot;&gt;ESLint v4.0.0 の変更点まとめ - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install eslint@next --save-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;でインストールすることができます。&lt;br&gt;
+ビルトインの&lt;code&gt;eslint:recommended&lt;/code&gt;のルールが変更、&lt;code&gt;indent&lt;/code&gt;ルールの厳密化、&lt;code&gt;.eslintrc&lt;/code&gt;のバリデーションを行うようになるなど色々な変更が予定されています。&lt;/p&gt;
+
+&lt;p&gt;詳しい変更点(予定)は次のマイグレーションページにかかれています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://eslint.org/docs/4.0.0/user-guide/migrating-to-4.0.0&quot; title=&quot;Migrating to v4.0.0 - ESLint - Pluggable JavaScript linter&quot;&gt;Migrating to v4.0.0 - ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;EmberのView層でもあるレンダリング(テンプレート)エンジンの&lt;a href=&quot;https://glimmerjs.com/&quot; title=&quot;Glimmer&quot;&gt;Glimmer&lt;/a&gt;のサイトが公開されました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://emberjs.com/blog/2016/11/30/ember-2-10-released.html&quot; title=&quot;Ember 2.10&quot;&gt;Ember 2.10&lt;/a&gt;でGlimmer 2が同梱されましたが、今回&lt;a href=&quot;https://glimmerjs.com/&quot; title=&quot;Glimmer&quot;&gt;Glimmer&lt;/a&gt;を単独のコンポーネントライブラリとして使う方法が提供されました。&lt;/p&gt;
+
+&lt;p&gt;Glimmerについては、次の記事で詳しく解説されているので、あわせて読むと良さそうです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://emberjs.com/blog/2017/04/05/emberconf-2017-state-of-the-union.html&quot;&gt;Ember.js - EmberConf 2017: State of the Union&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hackernoon.com/why-im-excited-about-glimmerjs-3631bd0c95c4&quot;&gt;Why I’m excited about GlimmerJS – Hacker Noon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;video.js-6.0-release!-|-video.js-blog&quot;&gt;Video.js 6.0 Release! | Video.js Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.videojs.com/Video-js-6-0-Release/&quot; title=&quot;Video.js 6.0 Release! | Video.js Blog&quot;&gt;blog.videojs.com/Video-js-6-0-Release/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Video.js 6.0リリース。&lt;br&gt;
+Flashがコアから取り除かれた。&lt;br&gt;
+middleware周りの変更、DOMメソッドを&lt;code&gt;videojs.dom&lt;/code&gt;へ移動の予定など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/videojs/video.js/wiki/Video.js-6-Migration-Guide&quot; title=&quot;Video.js 6 Migration Guide · videojs/video.js Wiki&quot;&gt;Video.js 6 Migration Guide · videojs/video.js Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release:-npm@5.0.0-by-zkat-·-pull-request-#16244-·-npm/npm&quot;&gt;release: npm@5.0.0 by zkat · Pull Request #16244 · npm/npm&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/npm/npm/pull/16244&quot; title=&quot;release: npm@5.0.0 by zkat · Pull Request #16244 · npm/npm&quot;&gt;github.com/npm/npm/pull/16244&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;issue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;今後リリース予定のnpm 5.0.0βについて。&lt;br&gt;
+相対パスを&lt;code&gt;npm install&lt;/code&gt;がsymlinkを作るように(&lt;code&gt;file:&lt;/code&gt;ではなく&lt;code&gt;link:&lt;/code&gt;へ)、キャッシュシステムの改善、&lt;code&gt;--prefer-offline&lt;/code&gt;と&lt;code&gt;--offline&lt;/code&gt;の追加。&lt;br&gt;
+&lt;code&gt;git://&lt;/code&gt;でもsemverを指定できるように、&lt;code&gt;npm install&lt;/code&gt;の結果がサマリで出るように&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-0.19.0-·-avajs/ava&quot;&gt;Release 0.19.0 · avajs/ava&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/avajs/ava/releases/tag/v0.19.0&quot; title=&quot;Release 0.19.0 · avajs/ava&quot;&gt;github.com/avajs/ava/releases/tag/v0.19.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;AVA 0.19.0リリース。&lt;br&gt;
+一つもassertionが実行されないテストはデフォルトで落ちるように、&lt;code&gt;t.throws()&lt;/code&gt;での非同期対応の改善、非同期テストでハングしているものを検知するようになるなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v2.0.0-rc.0-·-lerna/lerna&quot;&gt;Release v2.0.0-rc.0 · lerna/lerna&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lerna/lerna/releases/tag/v2.0.0-rc.0&quot; title=&quot;Release v2.0.0-rc.0 · lerna/lerna&quot;&gt;github.com/lerna/lerna/releases/tag/v2.0.0-rc.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;monorepo管理ツールのlerna 2.0.0RCリリース。&lt;br&gt;
+&lt;code&gt;--conventional-commits&lt;/code&gt;でconventional-commitsベースのCHANGELOGを作れるようになるなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lerna/lerna/milestone/1&quot; title=&quot;v2.0.0 Milestone&quot;&gt;v2.0.0 Milestone&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;eslint-v4.0.0-alpha.0-released---eslint---pluggable-javascript-linter&quot;&gt;ESLint v4.0.0-alpha.0 released - ESLint - Pluggable JavaScript linter&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://eslint.org/blog/2017/04/eslint-v4.0.0-alpha.0-released&quot; title=&quot;ESLint v4.0.0-alpha.0 released - ESLint - Pluggable JavaScript linter&quot;&gt;eslint.org/blog/2017/04/eslint-v4.0.0-alpha.0-released&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ESLint&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ESLint 4.0.0 αリリース。&lt;br&gt;
+&lt;code&gt;eslint:recommended&lt;/code&gt;の更新、&lt;code&gt;indent&lt;/code&gt;ルールの変更、ASTのコメント周りの扱いの変更、公開APIの変更など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://eslint.org/docs/4.0.0/user-guide/migrating-to-4.0.0&quot; title=&quot;Migrating to v4.0.0 - ESLint - Pluggable JavaScript linter&quot;&gt;Migrating to v4.0.0 - ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://qiita.com/mysticatea/items/3d01452d76ea6c943793&quot; title=&quot;ESLint v4.0.0 の変更点まとめ - Qiita&quot;&gt;ESLint v4.0.0 の変更点まとめ - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v1.6.0-·-karma-runner/karma&quot;&gt;Release v1.6.0 · karma-runner/karma&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/karma-runner/karma/releases/tag/v1.6.0&quot; title=&quot;Release v1.6.0 · karma-runner/karma&quot;&gt;github.com/karma-runner/karma/releases/tag/v1.6.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Karma v1.6.0リリース。&lt;br&gt;
+&lt;code&gt;browser_info&lt;/code&gt;イベントの追加、&lt;code&gt;proxyRes&lt;/code&gt;と&lt;code&gt;proxyReq&lt;/code&gt;イベントをhookできるようになるなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;react-v15.5.0---react-blog&quot;&gt;React v15.5.0 - React Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html&quot; title=&quot;React v15.5.0 - React Blog&quot;&gt;facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React 15.5.0リリース。&lt;br&gt;
+同梱されていた&lt;code&gt;React.PropTypes&lt;/code&gt;と&lt;code&gt;React.createClass&lt;/code&gt;が非推奨となり、それぞれ別パッケージに別れた。&lt;br&gt;
+&lt;code&gt;react-codemod&lt;/code&gt;を使うことでマイグレーションできる。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://qiita.com/azu/items/9d1985bf0140576894aa&quot; title=&quot;React 15.5へのアップデート手順(prop-typesとReact.createClass) - Qiita&quot;&gt;React 15.5へのアップデート手順(prop-typesとReact.createClass) - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react/pull/9359&quot; title=&quot;All doc updates forv15.5 by flarnie · Pull Request #9359 · facebook/react&quot;&gt;All doc updates forv15.5 by flarnie · Pull Request #9359 · facebook/react&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-notes-for-safari-technology-preview-27-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 27 | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7497/release-notes-for-safari-technology-preview-27/&quot; title=&quot;Release Notes for Safari Technology Preview 27 | WebKit&quot;&gt;webkit.org/blog/7497/release-notes-for-safari-technology-preview-27/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Safari Technology Preview Release 27リリース。&lt;br&gt;
+Object spread/rest propertyの実装、&lt;code&gt;window.open&lt;/code&gt;に&lt;code&gt;noopener&lt;/code&gt;を実装、Web Inspectorの改善、Web Cryptography APIでSPKI/PKCS8に対応など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://2ality.com/2016/10/rest-spread-properties.html&quot; title=&quot;ES proposal: Rest/Spread Properties&quot;&gt;ES proposal: Rest/Spread Properties&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ember.js---emberconf-2017:-state-of-the-union&quot;&gt;Ember.js - EmberConf 2017: State of the Union&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://emberjs.com/blog/2017/04/05/emberconf-2017-state-of-the-union.html&quot; title=&quot;Ember.js - EmberConf 2017: State of the Union&quot;&gt;emberjs.com/blog/2017/04/05/emberconf-2017-state-of-the-union.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;歴史&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Ember.jsの歴史とこれからについて。&lt;br&gt;
+スタンドアローンで利用できるようになったコンポーネントレイヤーのGlimmerについてなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;glimmer&quot;&gt;Glimmer&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://glimmerjs.com/&quot; title=&quot;Glimmer&quot;&gt;glimmerjs.com/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebComponents&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Emberとは独立したコンポーネントとして利用できるようになったGlimmerのサイト&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hackernoon.com/why-im-excited-about-glimmerjs-3631bd0c95c4&quot; title=&quot;Why I’m excited about GlimmerJS – Hacker Noon&quot;&gt;Why I’m excited about GlimmerJS – Hacker Noon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-8.0.0-·-developit/preact&quot;&gt;Release 8.0.0 · developit/preact&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/developit/preact/releases/tag/8.0.0&quot; title=&quot;Release 8.0.0 · developit/preact&quot;&gt;github.com/developit/preact/releases/tag/8.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Preact 8.0.0(8.1.0)リリース&lt;br&gt;
+Pure Functional Componentsの書き直し、&lt;code&gt;linkState&lt;/code&gt;、&lt;code&gt;className&lt;/code&gt;のオブジェクトオプションはそれぞれ外部モジュールへと機能を移譲など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/developit/89e0e6decb8fb5eb00def024b6fb7bd7&quot; title=&quot;Important changes coming in Preact 8&quot;&gt;Important changes coming in Preact 8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-version-3.0.0-·-sweet-js/sweet.js&quot;&gt;Release Version 3.0.0 · sweet-js/sweet.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sweet-js/sweet.js/releases/tag/v3.0.0&quot; title=&quot;Release Version 3.0.0 · sweet-js/sweet.js&quot;&gt;github.com/sweet-js/sweet.js/releases/tag/v3.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Hygienic Macrosを提供するsweet.js 3.0.0リリース。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;how-we-built-twitter-lite-|-twitter-blogs&quot;&gt;How we built Twitter Lite | Twitter Blogs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.twitter.com/2017/how-we-built-twitter-lite&quot; title=&quot;How we built Twitter Lite | Twitter Blogs&quot;&gt;blog.twitter.com/2017/how-we-built-twitter-lite&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;twitter&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;mobile&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitter Liteの技術スタックについて。&lt;br&gt;
+React, Redux, Normalizr, Globalize, Babel, Webpack, Jest, WebdriverIOなどを使っている。&lt;br&gt;
+パフォーマンスのためにPRPLパターンを使い、&lt;code&gt;requestAnimationFrame&lt;/code&gt;や&lt;code&gt;requestIdleCallback&lt;/code&gt;を使ってのレンダリングの調整などについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;introducing-reactxp---reactxp-blog&quot;&gt;Introducing ReactXP - ReactXP Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://microsoft.github.io/reactxp/blog/2017/04/06/introducing-reactxp.html&quot; title=&quot;Introducing ReactXP - ReactXP Blog&quot;&gt;microsoft.github.io/reactxp/blog/2017/04/06/introducing-reactxp.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;windows&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ios&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Android&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React/React NativeベースのクロスプラットフォームなUIフレームワーク。&lt;br&gt;
+クロスプラットフォームで共通したコンポーネントを利用できるようにするのが目的でMSのSkypeチームが作成している。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/microsoft/reactxp&quot; title=&quot;Microsoft/reactxp: Library for cross-platform app development.&quot;&gt;Microsoft/reactxp: Library for cross-platform app development.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;graphql-&amp;amp;-react-tutorial-(part-1/6)-–-chroma&quot;&gt;GraphQL &amp;amp; React tutorial (part 1/6) – Chroma&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.hichroma.com/graphql-react-tutorial-part-1-6-d0691af25858&quot; title=&quot;GraphQL &amp;amp; React tutorial (part 1/6) – Chroma&quot;&gt;blog.hichroma.com/graphql-react-tutorial-part-1-6-d0691af25858&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;GraphQL&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;GraphQLについての連載。&lt;br&gt;
+コンポーネント駆動とスキーマファーストについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;how-to-create-a-reddit-client-using-angular-4.0---progur!&quot;&gt;How to Create a Reddit Client Using Angular 4.0 - Progur!&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://progur.com/2017/03/how-to-create-reddit-client-with-angular-4.html&quot; title=&quot;How to Create a Reddit Client Using Angular 4.0 - Progur!&quot;&gt;progur.com/2017/03/how-to-create-reddit-client-with-angular-4.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;AngularJS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Angular v4を使ってRedditのAPIを叩いて、リスト表示するチュートリアル&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;the-quest-for-immer-mutable-state-management&quot;&gt;The Quest For Immer Mutable State Management&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://immer-mutable-state.surge.sh/&quot; title=&quot;The Quest For Immer Mutable State Management&quot;&gt;immer-mutable-state.surge.sh/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;MobXでのSnapshot + mutable state treeについてのスライド。&lt;br&gt;
+Pull/Push-basedなcomputed property、Mutable StateでActionリプレイするために、どのような方法を取るのかについて&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v&amp;amp;#x3D;ta8QKmNRXZM&quot; title=&quot;Michel Weststrate: MobX: The Quest For Immer Mutable State Management - YouTube&quot;&gt;Michel Weststrate: MobX: The Quest For Immer Mutable State Management - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mobxjs/serializr&quot; title=&quot;mobxjs/serializr: Serialize and deserialize complex object graphs to JSON&quot;&gt;mobxjs/serializr: Serialize and deserialize complex object graphs to JSON&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ng-conf-2017---youtube&quot;&gt;ng-conf 2017 - YouTube&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v&amp;amp;#x3D;Nj9_p4qvm5U&quot; title=&quot;ng-conf 2017 - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;Nj9_p4qvm5U&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;AngularJS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;イベント&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ng-conf 2017の動画まとめ&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/ngconf2017-summary-day1/&quot; title=&quot;ng-conf 2017 Summary - Day 1&quot;&gt;ng-conf 2017 Summary - Day 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.lacolaco.net/post/ng-conf-2017-day-1-note/&quot; title=&quot;ng-conf 2017 1日目 Keynoteメモ | &amp;amp;amp;lt;output type&amp;amp;#x3D;&amp;amp;amp;#34;laco&amp;amp;amp;#34;&amp;amp;amp;gt;&quot;&gt;ng-conf 2017 1日目 Keynoteメモ | &amp;lt;output type=&amp;#34;laco&amp;#34;&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.infoq.com/news/2017/04/ng-conf-2017-keynote&quot; title=&quot;Long Term Support for Angular Announced at ng-conf 2017&quot;&gt;Long Term Support for Angular Announced at ng-conf 2017&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;publish-javascript-packages-on-npm---course-by-@trevordmiller-@eggheadio&quot;&gt;Publish JavaScript packages on npm - Course by @trevordmiller @eggheadio&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://egghead.io/courses/publish-javascript-packages-on-npm&quot; title=&quot;Publish JavaScript packages on npm - Course by @trevordmiller @eggheadio&quot;&gt;egghead.io/courses/publish-javascript-packages-on-npm&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;npmのパッケージやscriptについてのスクリーンキャスト&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;stylelint-generator&quot;&gt;Stylelint generator&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://maximgatilin.github.io/stylelint-config/&quot; title=&quot;Stylelint generator&quot;&gt;maximgatilin.github.io/stylelint-config/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;設定&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Stylelintの設定ファイルを選択式で作れるジェネレーター&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;mobxjs/serializr:-serialize-and-deserialize-complex-object-graphs-to-json&quot;&gt;mobxjs/serializr: Serialize and deserialize complex object graphs to JSON&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mobxjs/serializr&quot; title=&quot;mobxjs/serializr: Serialize and deserialize complex object graphs to JSON&quot;&gt;github.com/mobxjs/serializr&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;クラスのオブジェクトシリアライズ/デシリアライズライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;mathjax-cdn-shutting-down-on-april-30,-2017&quot;&gt;MathJax CDN shutting down on April 30, 2017&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.mathjax.org/cdn-shutting-down/&quot; title=&quot;MathJax CDN shutting down on April 30, 2017&quot;&gt;www.mathjax.org/cdn-shutting-down/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;news&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;MathJax CDNがシャットダウンされるため、ローカルにコピーするかcloudflareのものを利用するようにする必要がある&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ukyo/wasm-usui-book:-webassemblyの薄い本&quot;&gt;ukyo/wasm-usui-book: webassemblyの薄い本&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ukyo/wasm-usui-book&quot; title=&quot;ukyo/wasm-usui-book: webassemblyの薄い本&quot;&gt;github.com/ukyo/wasm-usui-book&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebAssembly&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ebook&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;wasmについての電子書籍。&lt;br&gt;
+wasmの概要、WABTを使っての開発、バイナリフォーマットやテキストフォーマットなどについて&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Mon, 10 Apr 2017 21:54:13 +0900</pubDate>
+        <link>https://jser.info/2017/04/10/react-15.5.0-eslint-4.0.0a-glimmer/</link>
+        <guid isPermaLink="true">https://jser.info/2017/04/10/react-15.5.0-eslint-4.0.0a-glimmer/</guid>
+        
+        <category>React</category>
+        
+        <category>ESLint</category>
+        
+        <category>Ember</category>
+        
+        <category>Glimmer</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-04-04のJS: Safari 10.1、ECMAScript 2017-2018、Reactのパフォーマンス計測/改善</title>
@@ -2856,233 +3225,6 @@ ExploringJSの続編&lt;/p&gt;
         <category>ja</category>
         
         <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状</title>
-        <description>&lt;p&gt;JSer.infoでは不定期でレポートという形で、特定のテーマに関する状況をまとめています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/jser/report&quot; title=&quot;jser/report&quot;&gt;jser/report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;レポートなどの更新情報を知りたい方は&lt;a href=&quot;https://jser.info/rss/&quot;&gt;RSS&lt;/a&gt;や&lt;a href=&quot;https://twitter.com/jser_info&quot;&gt;Twitter@jser_info&lt;/a&gt;をフォローしてみてください。&lt;/p&gt;
-
-&lt;h1 id=&quot;bundler-#1&quot;&gt;&lt;a href=&quot;https://github.com/jser/report/issues/1&quot; title=&quot;Next Bundler #1&quot;&gt;Bundler #1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;JavaScriptのコードはモジュールに分けて開発することが一般的です。&lt;br&gt;
-ブラウザにおいて、一つずつ&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;タグでモジュールをロードするのはラウンドトリップやコネクションの問題が発生します。&lt;/p&gt;
-
-&lt;p&gt;そのため、多くの場合ブラウザ向けのコードはモジュールをまとめた(bundleした)ファイルを作成して配信します。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://teppeis.hatenablog.com/entry/2015/05/es6-modules-and-http2&quot; title=&quot;ES6 ModulesはHTTP/2によってconcat無しで使えるようになるのか - teppeis blog&quot;&gt;ES6 ModulesはHTTP/2によってconcat無しで使えるようになるのか - teppeis blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://qiita.com/uctakeoff/items/ce8da368d020273c6064&quot; title=&quot;レトロエンジニアのための近代Webフロントエンド事情 - Qiita&quot;&gt;レトロエンジニアのための近代Webフロントエンド事情 - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;その際にモジュールの依存関係などを解決しながらファイルをまとめる&amp;quot;bundler&amp;quot;と呼ばれるツールの動きについてのレポートです。&lt;/p&gt;
-
-&lt;h2 id=&quot;webpack-2&quot;&gt;webpack 2&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/webpack/webpack/releases/tag/v2.2.0&quot; title=&quot;Release v2.2.0 · webpack/webpack&quot;&gt;Release v2.2.0 · webpack/webpack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;webpack 2が正式にリリースされています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://jser.info/2017/01/24/webpack-2-javascript-2016-js-star/&quot; title=&quot;2017-01-24のJS: webpack 2正式リリース、JavaScriptの開発環境設定、2016 JS Stars - JSer.info&quot;&gt;2017-01-24のJS: webpack 2正式リリース、JavaScriptの開発環境設定、2016 JS Stars - JSer.info&lt;/a&gt;で紹介しました。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;webpack 2のドキュメントは &lt;a href=&quot;https://webpack.js.org/&quot;&gt;webpack.js.org/&lt;/a&gt; の新しいサイトの方にまとめられています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webpack.js.org/guides/migrating/&quot; title=&quot;Migrating from v1 to v2&quot;&gt;Migrating from v1 to v2&lt;/a&gt;にマイグレーションガイドがあります。&lt;/p&gt;
-
-&lt;p&gt;一部設定の名前が変更されていたり、&lt;code&gt;json-loader&lt;/code&gt;がデフォルトとなっていたり既存のconfigを変更する参考になると思います。&lt;/p&gt;
-
-&lt;p&gt;今後の機能追加や改善については、投票ツールを通じて決定していくようです。&lt;br&gt;
-(投票の重み付けに利用されている&lt;a href=&quot;http://azu.github.io/slide/2017/t_wada_sushi/OpenCollective.html&quot; title=&quot;Open Collective&quot;&gt;Open Collectiveについてのスライド&lt;/a&gt;を書いたので、併せてみるといいかもしれません)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/vote/&quot;&gt;https://webpack.js.org/vote/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;投票のサイトを見ると今のところ次の開発候補としてはScope Hoisting(Rollupインスパイアな最適化)、Typescript周りの改善などが上がっているようです。&lt;/p&gt;
-
-&lt;h2 id=&quot;fusebox&quot;&gt;&lt;a href=&quot;http://fuse-box.org/&quot; title=&quot;Fusebox&quot;&gt;Fusebox&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://fuse-box.org/&quot; title=&quot;Fusebox&quot;&gt;Fusebox&lt;/a&gt;という新しいBundlerツールが登場しました。&lt;br&gt;
-実際に試してみると、初回のビルドと再ビルド(&lt;code&gt;.fusebox&lt;/code&gt;のキャッシュあり)どちらも高速です。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://jser.info/2017/01/04/postcss-chrome-fusebox/&quot; title=&quot;2017-01-04のJS: PostCSS概要、Chrome開発者ツール、FuseBox - JSer.info&quot;&gt;2017-01-04のJS: PostCSS概要、Chrome開発者ツール、FuseBox - JSer.info&lt;/a&gt; で紹介しました。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;基本的に設定はJavaScriptのコードとして書くようになっていて、&lt;code&gt;node&lt;/code&gt;で実行するだけです。&lt;/p&gt;
-
-&lt;p&gt;また、webpackのように設定としてentryポイントを設定するのではなく、ビルドの設定をする&lt;code&gt;FuseBox.init&lt;/code&gt;と実際にbudnleするものを決める&lt;code&gt;fuse.bundle&lt;/code&gt;メソッドで分かれています。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FuseBox&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;fusebox&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;FuseBox&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fuse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FuseBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;homeDir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;src/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;globals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;myLib&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;outFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;./out.js&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;fuse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;gt;index.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;そのためコードとして設定を書くgulpとは相性がいいため、公式のサンプルでもgulp内に書いている例を見かけます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/fuse-box/angular2-example/blob/master/gulpfile.js&quot; title=&quot;angular2-example/gulpfile.js at master · fuse-box/angular2-example&quot;&gt;angular2-example/gulpfile.js at master · fuse-box/angular2-example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;rollup&quot;&gt;&lt;a href=&quot;https://github.com/rollup/rollup&quot; title=&quot;Rollup&quot;&gt;Rollup&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;大きな変化はありませんが、Rollupは順調に開発中です。&lt;br&gt;
-次のIssueも併せてみると面白いかもしれません。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/GoogleChrome/sample-framework-boot/pull/10#issuecomment-272632548&quot; title=&quot;Use minified version of React by gaearon · Pull Request #10 · GoogleChrome/sample-framework-boot&quot;&gt;Use minified version of React by gaearon · Pull Request #10 · GoogleChrome/sample-framework-boot&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;browserify&quot;&gt;&lt;a href=&quot;https://github.com/substack/node-browserify&quot; title=&quot;browserify&quot;&gt;Browserify&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Browserify自体を機能追加/改善するアップデートはあまり積極的に行われていません。&lt;br&gt;
-@substack以外にPRをマージするOwnerがいないことに起因しています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/substack/node-browserify/graphs/contributors&quot;&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/19714/22461846/515bb70a-e7ee-11e6-9651-648f65a2a8c8.png&quot; alt=&quot;node-browserify 2017-01-31 19-47-37&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;元々本体に多くの機能があるわけではなく依存するパッケージに機能が分散しています。&lt;br&gt;
-しかし、その依存のアップデートが滞りがちです。&lt;br&gt;
-Issue/PRにはNode.js v6&amp;gt;=で追加されたDeprecated Warningや依存するパッケージのDeprecated Warningを解消する些細なものが多く並んでいます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/substack/node-browserify/pulls&quot;&gt;https://github.com/substack/node-browserify/pulls&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/nodejs/node/issues/9531&quot; title=&quot;buffer: discuss future direction of Buffer constructor API · Issue #9531 · nodejs/node&quot;&gt;buffer: discuss future direction of Buffer constructor API · Issue #9531 · nodejs/node&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;先日、&lt;a href=&quot;https://github.com/substack/node-browserify/blob/master/changelog.markdown#1400&quot; title=&quot;14.0.0&quot;&gt;14.0.0&lt;/a&gt;がリリースされました。&lt;br&gt;
-このリリースでは、Browserifyが利用する&lt;code&gt;buffer&lt;/code&gt;のpolyfillである&lt;a href=&quot;https://github.com/feross/buffer&quot; title=&quot;feross/buffer&quot;&gt;feross/buffer&lt;/a&gt;がアップデートされています。&lt;br&gt;
-&lt;code&gt;TypedArray&lt;/code&gt;を使う実装になったため、bufferを含んだコードを変換した場合に、IE10以下では動かなくなります。&lt;/p&gt;
-
-&lt;p&gt;IE10以下でも動くようにしたい場合は、古い&lt;a href=&quot;https://github.com/feross/buffer&quot; title=&quot;feross/buffer&quot;&gt;feross/buffer&lt;/a&gt;を利用する必要があります。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install buffer@4 --save
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;browserify -r buffer/:buffer main.js &amp;gt; bundle.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;es-modules&quot;&gt;ES modules&lt;/h2&gt;
-
-&lt;p&gt;MSEdgeと&lt;a href=&quot;https://lists.webkit.org/pipermail/webkit-dev/2016-December/028564.html&quot;&gt;WebKit&lt;/a&gt;にES modules(&lt;code&gt;&amp;lt;script type=&amp;quot;module&amp;quot;&amp;gt;&lt;/code&gt;)が実装されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://webkit.org/blog/7265/release-notes-for-safari-technology-preview-21/&quot; title=&quot;Release Notes for Safari Technology Preview 21 | WebKit&quot;&gt;Release Notes for Safari Technology Preview 21 | WebKit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ES modulesとNode.js modulesについては細かな挙動の違いなどが存在します。&lt;br&gt;
-詳しくは次の記事を読むと良いです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.hospodarets.com/native-ecmascript-modules-new-features&quot;&gt;Native ECMAScript modules: the new features and differences from Webpack modules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.hospodarets.com/native-ecmascript-modules-the-first-overview#browsers-support&quot;&gt;Native ECMAScript modules - the first overview&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;webpack 2やrollupなどはES modulesのコードを直接扱うようになっています。&lt;br&gt;
-ES modulesのブラウザ実装が進むにつれ、ES modulesを扱うツールなども増えてくることが予想されます。&lt;br&gt;
-Bundlerはそこへ直接関係するツールであるため、今後の動きに注目していく必要があります。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 id=&quot;testing-framework-#3&quot;&gt;&lt;a href=&quot;https://github.com/jser/report/issues/3&quot; title=&quot;Testing Framework #3&quot;&gt;Testing Framework #3&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;JavaScriptのテスティングフレームワーク周りのレポートです。&lt;/p&gt;
-
-&lt;h2 id=&quot;mochaがcontributorを募集&quot;&gt;&lt;a href=&quot;https://github.com/mochajs/mocha&quot;&gt;Mocha&lt;/a&gt;がContributorを募集&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Mocha needs YOU!&lt;br&gt;
--- &lt;a href=&quot;https://github.com/mochajs/mocha#mocha-needs-you&quot;&gt;https://github.com/mochajs/mocha#mocha-needs-you&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Mochaのメンテナンスリソースが足りていないため協力を募集する内容がREADMEにかかれています。&lt;br&gt;
-IssueやPull Requestのレビューをしてくれる人やMochaへのテストの追加などをコントリビューションを募集しています。&lt;/p&gt;
-
-&lt;p&gt;詳しくは&lt;a href=&quot;https://github.com/mochajs/mocha/projects&quot; title=&quot;Projects · mochajs/mocha&quot;&gt;Projects&lt;/a&gt;を見るかGitterでやり取りすると良さそうです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://gitter.im/mochajs/mocha&quot; title=&quot;mochajs/mocha - Gitter&quot;&gt;mochajs/mocha - Gitter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sinon.js-2.0へ向けて&quot;&gt;Sinon.js 2.0へ向けて&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://sinonjs.org/&quot; title=&quot;Sinon.JS&quot;&gt;Sinon.JS&lt;/a&gt; が2.0向けての作業が進められています。&lt;br&gt;
-タスクについては次のIssueで管理されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/sinonjs/sinon/issues/966&quot; title=&quot;Sinon 2.0 Release · Issue #966 · sinonjs/sinon&quot;&gt;Sinon 2.0 Release · Issue #966 · sinonjs/sinon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The much fabled 2.0 release, that will split Sinon.JS into more modules, tidy up the api, simplify all the dependency boilerplate by using Browserify. &lt;br&gt;
--- &lt;a href=&quot;https://github.com/sinonjs/sinon/milestone/5&quot; title=&quot;2.0 Milestone&quot;&gt;2.0 Milestone&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;とあるように、(CommonJS)モジュールとして管理されていなかったのを大きくリファクタリングし、それぞれがモジュール化されています。&lt;br&gt;
-残りのタスクにはドキュメント系となっているため、そこまで遠くない日に2.0がリリースされるかもしれません。&lt;br&gt;
-プレリリース版は既に公開されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/sinonjs/sinon/releases&quot; title=&quot;Releases · sinonjs/sinon&quot;&gt;Releases · sinonjs/sinon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2016-javascript-rising-stars&quot;&gt;&lt;a href=&quot;https://risingstars2016.js.org/&quot; title=&quot;2016 JavaScript Rising Stars&quot;&gt;2016 JavaScript Rising Stars&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;JavaScriptに関するツールやライブラリのStar増加率をまとめたサイトにおいて、&lt;a href=&quot;https://risingstars2016.js.org/#test-framework&quot; title=&quot;#8Testing Frameworks&quot;&gt;Testing Frameworks&lt;/a&gt;についてもまとめられています。&lt;br&gt;
-2016年は&lt;a href=&quot;https://github.com/avajs/ava&quot; title=&quot;AVA&quot;&gt;AVA&lt;/a&gt;と&lt;a href=&quot;http://facebook.github.io/jest/&quot; title=&quot;Jest&quot;&gt;Jest&lt;/a&gt;のStar数が伸びているようです。&lt;/p&gt;
-
-&lt;h2 id=&quot;ava-will-introduce-magic-assert&quot;&gt;AVA will introduce Magic assert&lt;/h2&gt;
-
-&lt;p&gt;テストフレームワークの&lt;a href=&quot;https://github.com/avajs/ava&quot; title=&quot;AVA&quot;&gt;AVA&lt;/a&gt;は&lt;a href=&quot;https://github.com/power-assert-js/power-assert&quot; title=&quot;power-assert&quot;&gt;power-assert&lt;/a&gt;を内部的に利用しテスト結果を表示することができます。&lt;br&gt;
-現在、そのテスト結果の表示をより分かりやすくしようと&lt;code&gt;magic-assert&lt;/code&gt;という名前で開発がされています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/avajs/ava/issues/1155&quot; title=&quot;Magic assert · Issue #1155 · avajs/ava&quot;&gt;Magic assert · Issue #1155 · avajs/ava&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/697676/21117268/9459421a-c0c1-11e6-80e6-bb2ce6be7c76.png&quot; alt=&quot;magic-assert&quot;&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;JSer.infoでは不定期でレポートという形で、特定のテーマに関する状況をまとめています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/jser/report&quot; title=&quot;jser/report&quot;&gt;jser/report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;レポートなどの更新情報を知りたい方は&lt;a href=&quot;https://jser.info/rss/&quot;&gt;RSS&lt;/a&gt;や&lt;a href=&quot;https://twitter.com/jser_info&quot;&gt;Twitter@jser_info&lt;/a&gt;をフォローしてみてください。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/jser_info&quot; class=&quot;twitter-follow-button&quot; data-show-count=&quot;false&quot; data-size=&quot;large&quot;&gt;Follow @jser_info&lt;/a&gt;&lt;br&gt;
-&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?&amp;#39;http&amp;#39;:&amp;#39;https&amp;#39;;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+&amp;#39;://platform.twitter.com/widgets.js&amp;#39;;fjs.parentNode.insertBefore(js,fjs);}}(document, &amp;#39;script&amp;#39;, &amp;#39;twitter-wjs&amp;#39;);&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#39;http://cloud.feedly.com/#subscription%2Ffeed%2Fhttps://jser.info/rss/&#39; target=&#39;blank&#39;&gt;&lt;img id=&#39;feedlyFollow&#39; src=&#39;https://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png&#39; alt=&#39;follow us in feedly&#39; width=&#39;71&#39; height=&#39;28&#39;&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 31 Jan 2017 10:12:00 +0900</pubDate>
-        <link>https://jser.info/2017/01/31/bundler-testing-framework-report/</link>
-        <guid isPermaLink="true">https://jser.info/2017/01/31/bundler-testing-framework-report/</guid>
-        
-        <category>webpack</category>
-        
-        <category>bundler</category>
-        
-        <category>testing</category>
-        
-        <category>report</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>report</category>
         
       </item>
     
