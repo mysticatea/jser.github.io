@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 18 Apr 2017 11:04:42 +0900</pubDate>
-    <lastBuildDate>Tue, 18 Apr 2017 11:04:42 +0900</lastBuildDate>
+    <pubDate>Tue, 18 Apr 2017 11:05:12 +0900</pubDate>
+    <lastBuildDate>Tue, 18 Apr 2017 11:05:12 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -25,7 +25,7 @@
 &lt;p&gt;JavaScriptは利用者によって書き方が異なることについては、JavaScriptの作者である&lt;a href=&quot;https://twitter.com/brendaneich&quot; title=&quot;@BrendanEich&quot;&gt;@BrendanEich&lt;/a&gt;が次のように書いてたりもします。&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;JavaScriptは、癖をゆるないとか制限がきついなどとは、まるで反対の立場だ。だから、効果的な(effective)プログラムを目指すJavaScript開発者は、(...中略...)より良いスタイル、適切な使い方、ベストプラクティスを学び、追求する必要がある。&lt;br&gt;
+&lt;p&gt;JavaScriptは、癖をゆるさないとか制限がきついなどとは、まるで反対の立場だ。だから、効果的な(effective)プログラムを目指すJavaScript開発者は、(...中略...)より良いスタイル、適切な使い方、ベストプラクティスを学び、追求する必要がある。&lt;br&gt;
 -- &lt;a href=&quot;http://www.amazon.co.jp/dp/B00EESW7JQ?tag=amazon0abac-22&quot;&gt;Effective JavaScript&lt;/a&gt;の序文より&lt;br&gt;
 -- &lt;a href=&quot;https://books.google.co.jp/books?id=lT2g_y4VYx0C&amp;amp;pg=PT9&amp;amp;lpg=PT9&amp;amp;dq=effective+JavaScript+brendan&amp;amp;source=bl&amp;amp;ots=khIHwVtgNt&amp;amp;sig=4qlIQgsgL6yKWwohoY1Q9UFMkDY&amp;amp;hl=ja&amp;amp;sa=X&amp;amp;ved=0ahUKEwjVkKaD5qzTAhWMT7wKHbZwCSIQ6AEILTAB#v=onepage&amp;amp;q=effective%20JavaScript%20brendan&amp;amp;f=false&quot; title=&quot;Effective JavaScript - Devid Herman - Google ブックス&quot;&gt;Effective JavaScript - Devid Herman - Google ブックス&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
