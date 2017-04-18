@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 18 Apr 2017 10:34:25 +0900</pubDate>
-    <lastBuildDate>Tue, 18 Apr 2017 10:34:25 +0900</lastBuildDate>
+    <pubDate>Tue, 18 Apr 2017 11:04:42 +0900</pubDate>
+    <lastBuildDate>Tue, 18 Apr 2017 11:04:42 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -17,7 +17,7 @@
 &lt;li&gt;&lt;a href=&quot;http://jlongster.com/prettier-1.0&quot; title=&quot;Releasing Prettier 1.0&quot;&gt;Releasing Prettier 1.0&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Go言語のgofmtや&lt;a href=&quot;https://facebook.github.io/reason/&quot; title=&quot;Reason&quot;&gt;Reason&lt;/a&gt;のrefmtのように、設定が殆どないコードの整形ツールです。&lt;/p&gt;
+&lt;p&gt;Go言語のgofmtや&lt;a href=&quot;https://facebook.github.io/reason/&quot; title=&quot;Reason&quot;&gt;Reason&lt;/a&gt;のrefmtのようなコード整形ツールです。&lt;/p&gt;
 
 &lt;p&gt;prettierは言語側が提供するツールではないのであくまでopinionatedな整形にすることで設定項目を少なくしています。1.0では利用者でも意見が割れやすいセミコロンやタブ/スペースなどについてはオプションが追加されています。&lt;br&gt;
 (それでもオプションは10個以下なのでかなり少ないです。)&lt;/p&gt;
