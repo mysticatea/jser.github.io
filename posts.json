@@ -1,4 +1,11 @@
 [{
+"title":"2017-04-17のJS: prettier 1.0、MSEdge 15、Twitter Liteのパフォーマンスチューニング",
+"url":"https://jser.info/2017/04/17/prettier-1.0-msedge-15-twitter-lite/",
+"date":"2017-04-17T23:32:02+09:00",
+"content":"JSer.info #327 - JavaScriptの整形ツールであるprettier 1....",
+"category":"JSer",
+"tags":["JavaScript","MSEdge","performance"]
+},{
 "title":"2017-04-10のJS: React 15.5.0、ESLint 4.0.0α、Glimmer",
 "url":"https://jser.info/2017/04/10/react-15.5.0-eslint-4.0.0a-glimmer/",
 "date":"2017-04-10T21:54:13+09:00",
