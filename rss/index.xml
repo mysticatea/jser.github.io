@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 25 Apr 2017 12:13:15 +0900</pubDate>
-    <lastBuildDate>Tue, 25 Apr 2017 12:13:15 +0900</lastBuildDate>
+    <pubDate>Tue, 25 Apr 2017 12:30:21 +0900</pubDate>
+    <lastBuildDate>Tue, 25 Apr 2017 12:30:21 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -20,7 +20,7 @@
 &lt;p&gt;CSS Masksや&lt;code&gt;display: flow-root&lt;/code&gt;のサポート、&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;と&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;のデフォルトUIの変更、URLSearchParamsの仕様追従、&lt;code&gt;auxclick&lt;/code&gt;イベントの対応などが行われています。&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://slides.com/laco/201701-twada-sushi#/&quot; title=&quot;201701-twada-sushi by laco&quot;&gt;201701-twada-sushi by laco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://slides.com/laco/201701-twada-sushi#/&quot; title=&quot;201701-twada-sushi by laco&quot;&gt;whatwg/urlについての最近の動向 by laco&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2016/10/auxclick&quot; title=&quot;auxclick is Coming to Chrome 55  |  Web  |  Google Developers&quot;&gt;auxclick is Coming to Chrome 55  |  Web  |  Google Developers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
