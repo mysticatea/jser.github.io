@@ -1,4 +1,11 @@
 [{
+"title":"2017-04-25のJS: Firefox 53、jsdom 10.0.0",
+"url":"https://jser.info/2017/04/25/firefox-53-jsdom-10.0.0/",
+"date":"2017-04-25T10:55:35+09:00",
+"content":"JSer.info #328 - Firefox 53がリリースされました。Firefox —...",
+"category":"JSer",
+"tags":["Firefox","Node.js","DOM"]
+},{
 "title":"2017-04-17のJS: prettier 1.0、MSEdge 15、Twitter Liteのパフォーマンスチューニング",
 "url":"https://jser.info/2017/04/17/prettier-1.0-msedge-15-twitter-lite/",
 "date":"2017-04-17T23:32:02+09:00",
