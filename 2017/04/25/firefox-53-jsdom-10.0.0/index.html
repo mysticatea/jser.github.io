@@ -237,7 +237,7 @@ Firefox52までは次のように無名関数は<code>fn.name</code>がundefined
 <span class="nx">jsdom</span><span class="p">.</span><span class="nx">env</span><span class="p">(</span>
   <span class="err">`</span><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">world</span><span class="o">&lt;</span><span class="err">/p&gt;`,</span>
   <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nb">window</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">).</span><span class="nx">textContent</span><span class="p">);</span> <span class="c1">// &quot;Hello world&quot;</span>
   <span class="p">}</span>
 <span class="p">);</span>
 </code></pre></div>
