@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 03 May 2017 12:42:39 +0900</pubDate>
-    <lastBuildDate>Wed, 03 May 2017 12:42:39 +0900</lastBuildDate>
+    <pubDate>Wed, 03 May 2017 12:46:42 +0900</pubDate>
+    <lastBuildDate>Wed, 03 May 2017 12:46:42 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -73,7 +73,7 @@ QtWebKitのAlternativeとしてChromiumベースの&lt;a href=&quot;https://wiki
 &lt;li&gt;&lt;a href=&quot;https://github.com/laurentj/slimerjs/issues/80#issuecomment-280813674&quot; title=&quot;Turn SlimerJS into an headless browser · Issue #80 · laurentj/slimerjs&quot;&gt;Turn SlimerJS into an headless browser · Issue #80 · laurentj/slimerjs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;まとめ&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;まとめ&lt;/strong&gt;: Headless Browser&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/azu/c4206d94f18f35f6fe2fe303f988e7d5.js&quot;&gt;&lt;/script&gt;
 
