@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 03 May 2017 12:46:42 +0900</pubDate>
-    <lastBuildDate>Wed, 03 May 2017 12:46:42 +0900</lastBuildDate>
+    <pubDate>Wed, 03 May 2017 12:54:46 +0900</pubDate>
+    <lastBuildDate>Wed, 03 May 2017 12:54:46 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -64,7 +64,7 @@ QtWebKitのAlternativeとしてChromiumベースの&lt;a href=&quot;https://wiki
 
 &lt;hr&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://adriftwith.me/coding/2017/04/21/headless-slimerjs-with-firefox/&quot; title=&quot;Headless SlimerJS with Firefox – Coding&quot;&gt;Headless SlimerJS with Firefox – Coding&lt;/a&gt;の記事では、Firefox NightlyでHeadlessがサポートに向けて開発されている点について書かれています。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://adriftwith.me/coding/2017/04/21/headless-slimerjs-with-firefox/&quot; title=&quot;Headless SlimerJS with Firefox – Coding&quot;&gt;Headless SlimerJS with Firefox – Coding&lt;/a&gt;の記事では、Firefox NightlyでHeadlessサポートに向けて開発されている点について書かれています。&lt;/p&gt;
 
 &lt;p&gt;また、FirefoxベースのPhantomJSといえる&lt;a href=&quot;http://slimerjs.org/&quot; title=&quot;SlimerJS&quot;&gt;SlimerJS&lt;/a&gt;が、このHeadless Firefoxをサポートする方向について書かれています。&lt;br&gt;
 (&lt;a href=&quot;http://slimerjs.org/&quot; title=&quot;SlimerJS&quot;&gt;SlimerJS&lt;/a&gt;は&lt;a href=&quot;http://phantomjs.org/api/&quot; title=&quot;API | PhantomJS&quot;&gt;PhantomJSの持つAPI&lt;/a&gt;とよく似ているAPIを持つ)&lt;/p&gt;
