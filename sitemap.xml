@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jser.info/2017/05/03/headless-chromefirefoxphantomjsslimerjs-es-modules/</loc>
+    <lastmod>2017-05-03T11:03:59+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jser.info/2017/04/25/firefox-53-jsdom-10.0.0/</loc>
     <lastmod>2017-04-25T10:55:35+09:00</lastmod>
     <priority>0.8</priority>
@@ -1862,23 +1867,23 @@
   </url>
   <url>
     <loc>https://jser.info/</loc>
-    <lastmod>2017-04-25T12:30:21+09:00</lastmod>
+    <lastmod>2017-05-03T12:42:39+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jser.info/404.html</loc>
-    <lastmod>2017-04-25T12:29:10+09:00</lastmod>
+    <lastmod>2017-05-03T12:41:26+09:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jser.info/public/event/textillate/index.html</loc>
-    <lastmod>2017-04-25T12:29:10+09:00</lastmod>
+    <lastmod>2017-05-03T12:41:26+09:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jser.info/public/svg/test.html</loc>
-    <lastmod>2017-04-25T12:29:10+09:00</lastmod>
+    <lastmod>2017-05-03T12:41:26+09:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
