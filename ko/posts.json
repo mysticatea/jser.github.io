@@ -1,4 +1,11 @@
 [{
+"title":"2017-05-03 JS: Headless Chrome/Firefox와 PhantomJS/SlimerJS, ES modules",
+"url":"https://jser.info/ko/2017/05/03/headless-chromefirefoxphantomjsslimerjs-es-modules/",
+"date":"2017-05-03T11:03:59+09:00",
+"content":"JSer.info #329 - Chrome 59 베타(β)가 릴리즈됐습니다.Chrom...",
+"category":"JSer",
+"tags":["Firefox","Chrome","Headless","PhantomJS","SlimerJS","modules","ECMAScript"]
+},{
 "title":"2017-04-17 JS: prettier 1.0, MSEdge 15, Twitter Lite의 성능 튜닝",
 "url":"https://jser.info/ko/2017/04/17/prettier-1.0-msedge-15-twitter-lite/",
 "date":"2017-04-17T23:32:02+09:00",
