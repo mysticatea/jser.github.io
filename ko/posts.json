@@ -6,6 +6,13 @@
 "category":"JSer",
 "tags":["Firefox","Chrome","Headless","PhantomJS","SlimerJS","modules","ECMAScript"]
 },{
+"title":"2017-04-25 JS: Firefox 53, jsdom 10.0.0",
+"url":"https://jser.info/ko/2017/04/25/firefox-53-jsdom-10.0.0/",
+"date":"2017-04-25T10:55:35+09:00",
+"content":"JSer.info #328 - Firefox 53이 릴리즈됐습니다.Firefox — ...",
+"category":"JSer",
+"tags":["Firefox","Node.js","DOM"]
+},{
 "title":"2017-04-17 JS: prettier 1.0, MSEdge 15, Twitter Lite의 성능 튜닝",
 "url":"https://jser.info/ko/2017/04/17/prettier-1.0-msedge-15-twitter-lite/",
 "date":"2017-04-17T23:32:02+09:00",
