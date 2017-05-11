@@ -1,4 +1,11 @@
 [{
+"title":"2017-05-11のJS: UglifyJS 3、butternut、webpack-cli",
+"url":"https://jser.info/2017/05/10/uglifyjs-3-butternut-webpack-cli/",
+"date":"2017-05-10T23:19:19+09:00",
+"content":"JSer.info #330 - UglifyJS v3.0.0がリリースされました。ugli...",
+"category":"JSer",
+"tags":["UglifyJS","webpack-cli","webpack"]
+},{
 "title":"2017-05-03のJS: Headless Chrome/FirefoxとPhantomJS/SlimerJS、ES modules",
 "url":"https://jser.info/2017/05/03/headless-chromefirefoxphantomjsslimerjs-es-modules/",
 "date":"2017-05-03T11:03:59+09:00",
