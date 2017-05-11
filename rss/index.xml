@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 11 May 2017 11:22:14 +0900</pubDate>
-    <lastBuildDate>Thu, 11 May 2017 11:22:14 +0900</lastBuildDate>
+    <pubDate>Thu, 11 May 2017 12:24:48 +0900</pubDate>
+    <lastBuildDate>Thu, 11 May 2017 12:24:48 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -138,7 +138,7 @@ BabylonでパースしたASTを元に実行できるinterpreterを持ち、そ�
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;Jest 20リリース。&lt;br&gt;
-プロジェクトをまたいでテストを実行できるように、&lt;code&gt;expect&lt;/code&gt;でPromiseのサポートを改善、&lt;code&gt;expect.assertions(n)&lt;/code&gt;の追加、Jasmineをforkした使うように、CIではSnapshotを自動的に保存しないようになるなど&lt;/p&gt;
+プロジェクトをまたいでテストを実行できるように、&lt;code&gt;expect&lt;/code&gt;でPromiseのサポートを改善、&lt;code&gt;expect.assertions(n)&lt;/code&gt;の追加、Jasmineをforkして使うように、CIではSnapshotを自動的に保存しないようになるなど&lt;/p&gt;
 
 &lt;hr&gt;
 
