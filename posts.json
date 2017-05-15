@@ -1,4 +1,11 @@
 [{
+"title":"2017-05-15のJS: PostCSS 6.0、FuseBox 2.0、テストツールまとめ",
+"url":"https://jser.info/2017/05/15/postcss-6.0-fusebox-2.0/",
+"date":"2017-05-15T19:34:23+09:00",
+"content":"JSer.info #331 - PostCSS 6.0がリリースされました。Release ...",
+"category":"JSer",
+"tags":["PostCSS","FuseBox","Testing"]
+},{
 "title":"2017-05-11のJS: UglifyJS 3、butternut、webpack-cli",
 "url":"https://jser.info/2017/05/10/uglifyjs-3-butternut-webpack-cli/",
 "date":"2017-05-10T23:19:19+09:00",
