@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 May 2017 20:12:24 +0900</pubDate>
-    <lastBuildDate>Mon, 15 May 2017 20:12:24 +0900</lastBuildDate>
+    <pubDate>Mon, 15 May 2017 21:46:23 +0900</pubDate>
+    <lastBuildDate>Mon, 15 May 2017 21:46:23 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -19,7 +19,7 @@
 
 &lt;p&gt;Node.js 0.12のサポート終了、&lt;code&gt;@apply&lt;/code&gt;のサポート、APIの修正と改善、パーサの書き直しでメモリ消費量の改善などが行われています。&lt;/p&gt;
 
-&lt;p&gt;また、&lt;code&gt;@apply&lt;/code&gt;は仕様のエディタによってこれ以上の策定が放棄されていますが、それについてPostCSS側の対応については次のIssueで議論されています。&lt;/p&gt;
+&lt;p&gt;また、&lt;code&gt;@apply&lt;/code&gt;は仕様策定者によってこれ以上の更新が放棄されていますが、それについてPostCSS側の対応は次のIssueで議論されています。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.xanthir.com/b4o00&quot; title=&quot;Why I Abandoned @apply - Tab Completion&quot;&gt;Why I Abandoned @apply - Tab Completion&lt;/a&gt;&lt;/li&gt;
