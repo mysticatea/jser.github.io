@@ -1,4 +1,11 @@
 [{
+"title":"2017-05-15 JS: PostCSS 6.0, FuseBox 2.0, 테스트 도구 정리",
+"url":"https://jser.info/ko/2017/05/15/postcss-6.0-fusebox-2.0/",
+"date":"2017-05-15T19:34:23+09:00",
+"content":"JSer.info #331 - PostCSS 6.0이 릴리즈됐습니다.Release 6...",
+"category":"JSer",
+"tags":["PostCSS","FuseBox","Testing"]
+},{
 "title":"2017-05-03 JS: Headless Chrome/Firefox와 PhantomJS/SlimerJS, ES modules",
 "url":"https://jser.info/ko/2017/05/03/headless-chromefirefoxphantomjsslimerjs-es-modules/",
 "date":"2017-05-03T11:03:59+09:00",
