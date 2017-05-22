@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 22 May 2017 22:04:30 +0900</pubDate>
-    <lastBuildDate>Mon, 22 May 2017 22:04:30 +0900</lastBuildDate>
+    <pubDate>Tue, 23 May 2017 08:19:47 +0900</pubDate>
+    <lastBuildDate>Tue, 23 May 2017 08:19:47 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -232,7 +232,7 @@ ES2015から無名関数やArrow Functionなど関数自体が名前を持って
 
 &lt;h2 id=&quot;a-modern-front-end-workflow-–-umar-hansa-|-render-2017---youtube&quot;&gt;A Modern Front-End Workflow – Umar Hansa | Render 2017 - YouTube&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v&amp;amp;#x3D;v5r_n6Tq0uk&quot; title=&quot;A Modern Front-End Workflow – Umar Hansa | Render 2017 - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;v5r_n6Tq0uk&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=v5r_n6Tq0uk&quot; title=&quot;A Modern Front-End Workflow – Umar Hansa | Render 2017 - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;v5r_n6Tq0uk&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;Chrome開発者ツールのTipsやデバッグワークフローについての発表動画&lt;/p&gt;
@@ -241,7 +241,7 @@ ES2015から無名関数やArrow Functionなど関数自体が名前を持って
 
 &lt;h2 id=&quot;the-future-of-audio-and-video-on-the-web-(google-i/o-&amp;#39;17)---youtube&quot;&gt;The Future of Audio and Video on the Web (Google I/O &amp;#39;17) - YouTube&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v&amp;amp;#x3D;z9unKFzAj1w&quot; title=&quot;The Future of Audio and Video on the Web (Google I/O &amp;#39;17) - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;z9unKFzAj1w&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=z9unKFzAj1w&quot; title=&quot;The Future of Audio and Video on the Web (Google I/O &amp;#39;17) - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;z9unKFzAj1w&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ProgressiveWebApp&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;ウェブサイトにおける動画や音楽のPWA対応についての発表動画。&lt;br&gt;
@@ -257,7 +257,7 @@ ServiceWorkerを使ったオフライン対応、回転とフルスクリーン�
 
 &lt;h2 id=&quot;web-performance:-leveraging-the-metrics-that-most-affect-user-experience-(google-i/o-&amp;#39;17)---youtube&quot;&gt;Web Performance: Leveraging the Metrics that Most Affect User Experience (Google I/O &amp;#39;17) - YouTube&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v&amp;amp;#x3D;6Ljq-Jn-EgU&amp;amp;amp;index&amp;amp;#x3D;71&amp;amp;amp;list&amp;amp;#x3D;PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&quot; title=&quot;Web Performance: Leveraging the Metrics that Most Affect User Experience (Google I/O &amp;#39;17) - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;6Ljq-Jn-EgU&amp;amp;index&amp;#x3D;71&amp;amp;list&amp;#x3D;PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6Ljq-Jn-EgU&amp;amp;index=71&amp;amp;list=PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&quot; title=&quot;Web Performance: Leveraging the Metrics that Most Affect User Experience (Google I/O &amp;#39;17) - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;6Ljq-Jn-EgU&amp;amp;index&amp;#x3D;71&amp;amp;list&amp;#x3D;PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;パフォーマンスとメトリクスについての発表動画。&lt;br&gt;
@@ -282,7 +282,7 @@ CSS/JavaScript/ブラウザの連携、Workletについて&lt;/p&gt;
 
 &lt;h2 id=&quot;google-i/o-2017---all-sessions---youtube&quot;&gt;Google I/O 2017 - All Sessions - YouTube&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/playlist?list&amp;amp;#x3D;PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&quot; title=&quot; Google I/O 2017 - All Sessions - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/playlist?list=PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&quot; title=&quot; Google I/O 2017 - All Sessions - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;イベント&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;Google I/O 2017の動画まとめ&lt;/p&gt;
@@ -291,7 +291,7 @@ CSS/JavaScript/ブラウザの連携、Workletについて&lt;/p&gt;
 
 &lt;h2 id=&quot;jsconf-eu-2017---youtube&quot;&gt;JSConf EU 2017 - YouTube&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list&amp;amp;#x3D;PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_&quot; title=&quot; JSConf EU 2017 - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_&quot; title=&quot; JSConf EU 2017 - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;イベント&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;JSConf EU 2017の動画一覧&lt;/p&gt;
