@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jser.info/2017/05/22/safari-tp-30-polymer-2.0bower-create-react-app-1.0.0/</loc>
+    <lastmod>2017-05-22T19:59:03+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jser.info/2017/05/15/postcss-6.0-fusebox-2.0/</loc>
     <lastmod>2017-05-15T19:34:23+09:00</lastmod>
     <priority>0.8</priority>
@@ -1877,23 +1882,23 @@
   </url>
   <url>
     <loc>https://jser.info/</loc>
-    <lastmod>2017-05-16T12:47:20+09:00</lastmod>
+    <lastmod>2017-05-22T22:04:30+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jser.info/404.html</loc>
-    <lastmod>2017-05-16T12:46:02+09:00</lastmod>
+    <lastmod>2017-05-22T22:03:10+09:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jser.info/public/event/textillate/index.html</loc>
-    <lastmod>2017-05-16T12:46:02+09:00</lastmod>
+    <lastmod>2017-05-22T22:03:10+09:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jser.info/public/svg/test.html</loc>
-    <lastmod>2017-05-16T12:46:02+09:00</lastmod>
+    <lastmod>2017-05-22T22:03:10+09:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
