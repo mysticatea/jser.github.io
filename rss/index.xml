@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 30 May 2017 12:15:40 +0900</pubDate>
-    <lastBuildDate>Tue, 30 May 2017 12:15:40 +0900</lastBuildDate>
+    <pubDate>Wed, 31 May 2017 08:00:34 +0900</pubDate>
+    <lastBuildDate>Wed, 31 May 2017 08:00:34 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -28,6 +28,8 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/nodejs/node/issues/10117&quot; title=&quot;Node.js 8.0.0 Tracking Issue · Issue #10117 · nodejs/node&quot;&gt;Node.js 8.0.0 Tracking Issue · Issue #10117 · nodejs/node&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/the-node-js-collection/node-js-8-0-0-has-been-delayed-and-will-ship-on-or-around-may-30th-cd38ba96980d&quot; title=&quot;Node.js 8.0.0 has been delayed and will ship on or around May 30th&quot;&gt;Node.js 8.0.0 has been delayed and will ship on or around May 30th&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;追記: &lt;a href=&quot;https://nodejs.org/en/blog/release/v8.0.0/&quot; title=&quot;Node v8.0.0 (Current) | Node.js&quot;&gt;Node v8.0.0 (Current) | Node.js&lt;/a&gt;リリースされました。&lt;/p&gt;
 
 &lt;p&gt;npm@5の変更点としてはインストール速度の改善され、&lt;code&gt;npm install&lt;/code&gt;の&lt;code&gt;--save&lt;/code&gt;オプションがデフォルト化しています。&lt;br&gt;
 加えて従来の&lt;code&gt;shrinkwrap&lt;/code&gt;とは別のロックシステムとして&lt;code&gt;package-lock.json&lt;/code&gt;の導入されています。&lt;br&gt;
