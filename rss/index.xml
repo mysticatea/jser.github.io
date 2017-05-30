@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 30 May 2017 12:15:17 +0900</pubDate>
-    <lastBuildDate>Tue, 30 May 2017 12:15:17 +0900</lastBuildDate>
+    <pubDate>Tue, 30 May 2017 12:15:40 +0900</pubDate>
+    <lastBuildDate>Tue, 30 May 2017 12:15:40 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -25,6 +25,7 @@
 &lt;p&gt;npm@5は2017-05-30リリース予定(日本時間だと明日)の&lt;a href=&quot;https://github.com/nodejs/node/pull/12220&quot;&gt;Node.js 8.0.0&lt;/a&gt;に&lt;a href=&quot;https://github.com/nodejs/node/pull/13276&quot;&gt;同梱&lt;/a&gt;される予定となっています。&lt;/p&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nodejs/node/issues/10117&quot; title=&quot;Node.js 8.0.0 Tracking Issue · Issue #10117 · nodejs/node&quot;&gt;Node.js 8.0.0 Tracking Issue · Issue #10117 · nodejs/node&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/the-node-js-collection/node-js-8-0-0-has-been-delayed-and-will-ship-on-or-around-may-30th-cd38ba96980d&quot; title=&quot;Node.js 8.0.0 has been delayed and will ship on or around May 30th&quot;&gt;Node.js 8.0.0 has been delayed and will ship on or around May 30th&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
