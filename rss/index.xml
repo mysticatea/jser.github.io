@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 31 May 2017 15:26:44 +0900</pubDate>
-    <lastBuildDate>Wed, 31 May 2017 15:26:44 +0900</lastBuildDate>
+    <pubDate>Wed, 31 May 2017 15:27:05 +0900</pubDate>
+    <lastBuildDate>Wed, 31 May 2017 15:27:05 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -189,7 +189,7 @@ third party badgesの表示、ブレークポイントでContinue to hereの追�
 &lt;p&gt;&lt;a href=&quot;http://www.youtube.com/playlist?list=PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&quot; title=&quot;ReactEurope 2017 - Day 1 - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PLCC436JpVnK3ruJeDWd-xWIMb0l47VcxD&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;イベント&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;ReactRurope 2017の動画一覧&lt;/p&gt;
+&lt;p&gt;ReactEurope 2017の動画一覧&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLCC436JpVnK3KpieWtxYN6aC2-exR_IxH&quot; title=&quot;ReactEurope 2017 - Day 2 - YouTube&quot;&gt;ReactEurope 2017 - Day 2 - YouTube&lt;/a&gt;&lt;/li&gt;
