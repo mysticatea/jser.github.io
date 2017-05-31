@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 31 May 2017 08:00:34 +0900</pubDate>
-    <lastBuildDate>Wed, 31 May 2017 08:00:34 +0900</lastBuildDate>
+    <pubDate>Wed, 31 May 2017 15:26:44 +0900</pubDate>
+    <lastBuildDate>Wed, 31 May 2017 15:26:44 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -277,7 +277,7 @@ Inline CSSのメリット/デメリット、RTTとレイテンシー、クリテ
 &lt;p&gt;&lt;a href=&quot;https://github.com/ngryman/speedracer&quot; title=&quot;ngryman/speedracer: Collect performance metrics for your library/application.&quot;&gt;github.com/ngryman/speedracer&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;Chrome DevTools protocolを使いCLIでページの表示にかかる時間やなどのパフォーマンステストを行えるツール&lt;/p&gt;
+&lt;p&gt;Chrome DevTools protocolを使いCLIでページの表示にかかる時間などのパフォーマンステストを行えるツール&lt;/p&gt;
 
 &lt;hr&gt;
 
