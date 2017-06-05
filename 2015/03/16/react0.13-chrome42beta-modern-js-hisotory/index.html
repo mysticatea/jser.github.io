@@ -210,10 +210,7 @@ Service Workerを使ったPush APIが実装され、Google Cloud Messagingなど
 </ul>
 
 <p>また、ES6 Classesの実装や<a href="https://fetch.spec.whatwg.org/" title="Fetch">Fetch</a>がwindowコンテキストでも動作するようになりました。</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://httpbin.org/get&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
-<span class="p">});</span>
-</code></pre></div>
+
 <p>Web Audio関連では<a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/startRendering%28promise%29" title="OfflineAudioContext">OfflineAudioContext#startRendering</a>が最新の仕様に追従してPromiseを返すようになっています。</p>
 
 <p>Chrome 41ではAudioContextで<code>suspend</code>と<code>resume</code>のサポート、StereoPannerNodeの追加など色々増えているので、併せてChromium 41ベースのOpera 28のリリースノートも見ておくといい気がします。</p>

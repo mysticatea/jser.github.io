@@ -225,14 +225,7 @@
 <p>大きな機能として<a href="https://github.com/petkaantonov/bluebird/blob/master/API.md#global-rejection-events" title="Global rejection events">Global rejection events</a>が追加されました。</p>
 
 <p>これは、グローバルにイベントを登録しておくと<a href="http://azu.github.io/promises-book/#promise-done" title="unhandled rejection">unhandled rejection</a>(<code>.catch</code>等でエラー処理を行わない場合にエラーが握りつぶされてしまう現象)をキャッチすることができるようになっています。</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">process</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;unhandledRejection&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">reason</span><span class="p">,</span> <span class="nx">promise</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// See Promise.onPossiblyUnhandledRejection for parameter documentation</span>
-<span class="p">});</span>
 
-<span class="nx">process</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;rejectionHandled&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">promise</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// See Promise.onUnhandledRejectionHandled for parameter documentation</span>
-<span class="p">});</span>
-</code></pre></div>
 <p>これに類似する機能は仕様としても議論されていて、以下にまとめられています。</p>
 
 <ul>
