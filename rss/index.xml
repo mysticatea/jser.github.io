@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 05 Jun 2017 20:47:54 +0900</pubDate>
-    <lastBuildDate>Mon, 05 Jun 2017 20:47:54 +0900</lastBuildDate>
+    <pubDate>Tue, 06 Jun 2017 23:01:56 +0900</pubDate>
+    <lastBuildDate>Tue, 06 Jun 2017 23:01:56 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -251,7 +251,7 @@ codemodを使ったマイグレーション、js以外を読み込んでいた�
 &lt;p&gt;&lt;a href=&quot;https://mil-tokyo.github.io/webdnn/&quot; title=&quot;MIL WebDNN&quot;&gt;mil-tokyo.github.io/webdnn/&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebAssembly&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;機械学習&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;WebGPU、WebAssermbly、JavaScriptのFallbackを持ったディープニューラルネットワーク(DNN)の実行環境の実装。&lt;br&gt;
+&lt;p&gt;WebGPU、WebAssembly、JavaScriptのFallbackを持ったディープニューラルネットワーク(DNN)の実行環境の実装。&lt;br&gt;
 ブラウザ上で高速に処理することが目的。&lt;/p&gt;
 
 &lt;ul&gt;
