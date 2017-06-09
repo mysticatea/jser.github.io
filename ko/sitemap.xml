@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jser.info/2017/06/05/node.js-8.0.0-npm-canary-mocha-to-jest/</loc>
+    <lastmod>2017-06-05T17:45:58+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jser.info/2017/05/30/npm-5.0.0node.js-8.0.0-yarn-chrome-60/</loc>
     <lastmod>2017-05-30T09:11:15+09:00</lastmod>
     <priority>0.8</priority>
@@ -352,13 +357,13 @@
   </url>
   <url>
     <loc>https://jser.info/</loc>
-    <lastmod>2017-06-06T23:01:57+09:00</lastmod>
+    <lastmod>2017-06-09T14:45:19+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jser.info/404.html</loc>
-    <lastmod>2017-06-06T23:00:31+09:00</lastmod>
+    <lastmod>2017-06-09T14:43:41+09:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
