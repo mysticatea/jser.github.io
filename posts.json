@@ -1,4 +1,11 @@
 [{
+"title":"2017-06-12のJS: Safari 11.0、prettier 1.4.0、ESLint 4.0.0",
+"url":"https://jser.info/2017/06/12/safari-11.0-prettier-1.4.0-eslint-4.0.0/",
+"date":"2017-06-12T22:01:39+09:00",
+"content":"JSer.info #335 - Safari 11.0のリリースノートが公開されました。Wh...",
+"category":"JSer",
+"tags":["Safari","TypeScript","PostCSS","ESLint"]
+},{
 "title":"2017-06-05のJS: Node.js 8.0.0、npm canary、Mocha to Jest",
 "url":"https://jser.info/2017/06/05/node.js-8.0.0-npm-canary-mocha-to-jest/",
 "date":"2017-06-05T17:45:58+09:00",
