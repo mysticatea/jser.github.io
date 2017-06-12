@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 12 Jun 2017 22:37:55 +0900</pubDate>
-    <lastBuildDate>Mon, 12 Jun 2017 22:37:55 +0900</lastBuildDate>
+    <pubDate>Mon, 12 Jun 2017 22:47:03 +0900</pubDate>
+    <lastBuildDate>Mon, 12 Jun 2017 22:47:03 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -77,7 +77,7 @@
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webpack&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;webpack 3.0.0 RC0リリース。&lt;br&gt;
-RollupのようなScope Hoisting(inlining)を行うプラグインの追加、、&lt;code&gt;output.libraryExport&lt;/code&gt;のサポート、&lt;code&gt;node: false&lt;/code&gt;でnode関係はまとめて無効化できるようになるなど&lt;/p&gt;
+RollupのようなScope Hoisting(inlining)を行うプラグインの追加、&lt;code&gt;output.libraryExport&lt;/code&gt;のサポート、&lt;code&gt;node: false&lt;/code&gt;でnode関係はまとめて無効化できるようになるなど&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://nolanlawson.com/2016/08/15/the-cost-of-small-modules/&quot; title=&quot;The cost of small modules | Read the Tea Leaves&quot;&gt;The cost of small modules | Read the Tea Leaves&lt;/a&gt;&lt;/li&gt;
