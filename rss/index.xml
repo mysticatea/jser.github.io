@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 14 Jun 2017 13:58:09 +0900</pubDate>
-    <lastBuildDate>Wed, 14 Jun 2017 13:58:09 +0900</lastBuildDate>
+    <pubDate>Wed, 14 Jun 2017 13:59:59 +0900</pubDate>
+    <lastBuildDate>Wed, 14 Jun 2017 13:59:59 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -124,7 +124,7 @@ TypeScript(&lt;code&gt;.ts&lt;/code&gt;と&lt;code&gt;.tsx&lt;/code&gt;)、CSS�
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;MSEdge&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;Windows 10 build 16215/MSEdgeリリース。&lt;br&gt;
-Shared Memoery、Passive Event、&lt;code&gt;object-fit&lt;/code&gt;、&lt;code&gt;position: sticky&lt;/code&gt;、&lt;code&gt;object-position&lt;/code&gt;のサポートなど&lt;/p&gt;
+Shared Memory、Passive Event、&lt;code&gt;object-fit&lt;/code&gt;、&lt;code&gt;position: sticky&lt;/code&gt;、&lt;code&gt;object-position&lt;/code&gt;のサポートなど&lt;/p&gt;
 
 &lt;hr&gt;
 
