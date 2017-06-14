@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 12 Jun 2017 22:47:03 +0900</pubDate>
-    <lastBuildDate>Mon, 12 Jun 2017 22:47:03 +0900</lastBuildDate>
+    <pubDate>Wed, 14 Jun 2017 13:58:09 +0900</pubDate>
+    <lastBuildDate>Wed, 14 Jun 2017 13:58:09 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -17,7 +17,7 @@
 &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Safari_11_0/Safari_11_0.html&quot; title=&quot;Safari 11.0&quot;&gt;What&amp;#39;s New in Safari - Safari 11.0&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;JavaScript周りでは、WebRTC、WebAssermbly、Media Capture API、WebCrypto APIのアルゴリズム追加、Resource timing APIのサポート。CSS周りではVariable fonts、CSS strokeのサポートが行われています。&lt;/p&gt;
+&lt;p&gt;JavaScript周りでは、WebRTC、WebAssembly、Media Capture API、WebCrypto APIのアルゴリズム追加、Resource timing APIのサポート。CSS周りではVariable fonts、CSS strokeのサポートが行われています。&lt;/p&gt;
 
 &lt;p&gt;また、Mobile Safariや&lt;a href=&quot;https://developers.google.com/web/updates/2016/07/autoplay&quot; title=&quot;Chrome for Android&quot;&gt;Chrome for Android&lt;/a&gt;で導入されていた、MediaElementの自動再生制限がmacOSのSafariにも導入されています。&lt;/p&gt;
 
