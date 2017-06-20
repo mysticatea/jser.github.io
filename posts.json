@@ -1,4 +1,11 @@
 [{
+"title":"2017-06-19のJS: webpack v3.0.0、redux 3.7.0、JavaScript最適化ハンドブック",
+"url":"https://jser.info/2017/06/20/webpack-v3.0.0-redux-3.7.0-javascript/",
+"date":"2017-06-20T08:24:17+09:00",
+"content":"JSer.info #336 - webpack 3がリリースされました。Release v3...",
+"category":"JSer",
+"tags":["webpack","redux","JavaScript","performance"]
+},{
 "title":"2017-06-12のJS: Safari 11.0、prettier 1.4.0、ESLint 4.0.0",
 "url":"https://jser.info/2017/06/12/safari-11.0-prettier-1.4.0-eslint-4.0.0/",
 "date":"2017-06-12T22:01:39+09:00",
