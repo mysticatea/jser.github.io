@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 20 Jun 2017 09:05:51 +0900</pubDate>
-    <lastBuildDate>Tue, 20 Jun 2017 09:05:51 +0900</lastBuildDate>
+    <pubDate>Tue, 20 Jun 2017 09:14:15 +0900</pubDate>
+    <lastBuildDate>Tue, 20 Jun 2017 09:14:15 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -43,6 +43,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/43219030/what-is-flat-bundling-and-why-is-rollup-better-at-this-than-webpack/43255948&quot; title=&quot;reactjs - What is flat bundling and why is Rollup better at this than Webpack? - Stack Overflow&quot;&gt;reactjs - What is flat bundling and why is Rollup better at this than Webpack? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c&quot; title=&quot;Webpack and Rollup: the same but different – webpack – Medium&quot;&gt;Webpack and Rollup: the same but different – webpack – Medium&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
