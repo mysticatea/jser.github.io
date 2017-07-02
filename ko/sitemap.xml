@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jser.info/2017/06/20/webpack-v3.0.0-redux-3.7.0-javascript/</loc>
+    <lastmod>2017-06-20T08:24:17+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jser.info/2017/06/12/safari-11.0-prettier-1.4.0-eslint-4.0.0/</loc>
     <lastmod>2017-06-12T22:01:39+09:00</lastmod>
     <priority>0.8</priority>
@@ -362,13 +367,13 @@
   </url>
   <url>
     <loc>https://jser.info/</loc>
-    <lastmod>2017-06-26T18:39:37+09:00</lastmod>
+    <lastmod>2017-07-02T16:38:26+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jser.info/404.html</loc>
-    <lastmod>2017-06-26T18:37:11+09:00</lastmod>
+    <lastmod>2017-07-02T16:35:59+09:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
