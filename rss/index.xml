@@ -5,9 +5,341 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 02 Jul 2017 16:38:25 +0900</pubDate>
-    <lastBuildDate>Sun, 02 Jul 2017 16:38:25 +0900</lastBuildDate>
+    <pubDate>Mon, 03 Jul 2017 17:39:20 +0900</pubDate>
+    <lastBuildDate>Mon, 03 Jul 2017 17:39:20 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-07-03のJS: ECMAScript 2017、Prettier 1.5.0、UXのパフォーマンスメトリクス</title>
+        <description>&lt;p&gt;JSer.info #338 - ECMAScript 2017が正式リリースされました。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ECMA-262 8th edition - ECMAScript® 2017 Language Specification&lt;br&gt;
+-- &lt;a href=&quot;http://ecma-international.org/news/index.html&quot; title=&quot;Ecma latest news&quot;&gt;Ecma latest news&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ecma-international.org/publications/standards/Ecma-262.htm&quot; title=&quot;Standard ECMA-262&quot;&gt;Standard ECMA-262&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ES2017ではasync/await、shared memory and atomic、&lt;code&gt;Object.entires&lt;/code&gt;/&lt;code&gt;Object.values&lt;/code&gt;、&lt;code&gt;String#padStart&lt;/code&gt;/&lt;code&gt;String#padEnd&lt;/code&gt;、&lt;code&gt;Object.getOwnPropertyDescriptors()&lt;/code&gt;や関数内での末尾カンマの許容などが追加されています。&lt;/p&gt;
+
+&lt;p&gt;詳細は次のサイトを見るといいかもしれません。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://exploringjs.com/es2016-es2017/pt_es2017.html&quot; title=&quot;III ECMAScript 2017&quot;&gt;III ECMAScript 2017&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今後(ES2018~)で策定していくProposalについては次のページにまとめられています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tc39/proposals&quot; title=&quot;tc39/proposals: Tracking ECMAScript Proposals&quot;&gt;tc39/proposals: Tracking ECMAScript Proposals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/babel/proposals&quot; title=&quot;babel/proposals: (WIP) Tracking the status of Babel&amp;amp;#39;s implementation of TC39 proposals&quot;&gt;babel/proposals: (WIP) Tracking the status of Babel&amp;#39;s implementation of TC39 proposals&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Babelの対応&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;整形ツールのPrettier 1.5.0がリリースされました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/prettier/prettier/releases/tag/1.5.0&quot; title=&quot;Release 1.5.0: GraphQL, CSS-in-JS &amp;amp;amp; JSON · prettier/prettier&quot;&gt;Release 1.5.0: GraphQL, CSS-in-JS &amp;amp; JSON · prettier/prettier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;GraphQL、CSS in JS、JSONの対応、CSSやTypeScript、JSX周りバグ修正などが行われています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics&quot;&gt;Leveraging the Performance Metrics that Most Affect User Experience  |  Web  |  Google Developers&lt;/a&gt;という記事では、ユーザー体験への影響を見るパフォーマンスのメトリクスについて書かれています。&lt;/p&gt;
+
+&lt;p&gt;単純に&lt;code&gt;DOMContentLoaded&lt;/code&gt;や&lt;code&gt;load&lt;/code&gt;の時間を見るだけでは体験を計測できないという問題があります。&lt;br&gt;
+そのため、First Paint/First Meaningful Paing/Time to Interactive(TTI)/Longtasksなどの指標やその意味についてかかれています。&lt;/p&gt;
+
+&lt;p&gt;記事の元は、Google I/Oでの発表となっているので併せて動画の方も見るといいかもしれません。&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/6Ljq-Jn-EgU?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-1.5.0:-graphql,-css-in-js-&amp;amp;-json-·-prettier/prettier&quot;&gt;Release 1.5.0: GraphQL, CSS-in-JS &amp;amp; JSON · prettier/prettier&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/prettier/prettier/releases/tag/1.5.0&quot; title=&quot;Release 1.5.0: GraphQL, CSS-in-JS &amp;amp; JSON · prettier/prettier&quot;&gt;github.com/prettier/prettier/releases/tag/1.5.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;prettier 1.5.0リリース。&lt;br&gt;
+GraphQL、CSS in JS、JSONの対応、CSSやTypeScript、JSX周りバグ修正など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/geckoboard-under-the-hood/adding-a-new-layout-strategy-to-prettier-8d33084c0f99&quot; title=&quot;Adding a new layout strategy to Prettier – Geckoboard: Under-the-Hood – Medium&quot;&gt;Adding a new layout strategy to Prettier – Geckoboard: Under-the-Hood – Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v7.0.0-beta.16-·-babel/babylon&quot;&gt;Release v7.0.0-beta.16 · babel/babylon&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/babel/babylon/releases/tag/v7.0.0-beta.16&quot; title=&quot;Release v7.0.0-beta.16 · babel/babylon&quot;&gt;github.com/babel/babylon/releases/tag/v7.0.0-beta.16&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;babel&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;AST&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Babylon 7.0.0 beta16リリース。&lt;br&gt;
+TypeScriptパーサの追加、BigInt(Stage 2)のサポートなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/babel/babylon/pull/523&quot; title=&quot;TypeScript parser by andy-ms · Pull Request #523 · babel/babylon&quot;&gt;TypeScript parser by andy-ms · Pull Request #523 · babel/babylon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ecma-latest-news&quot;&gt;Ecma latest news&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ecma-international.org/news/index.html&quot; title=&quot;Ecma latest news&quot;&gt;ecma-international.org/news/index.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;news&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;ECMA-262 8th edition - ECMAScript® 2017 Language Specification&amp;quot; ES2017がGAで承認されて正式リリースされた。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ecma-international.org/publications/standards/Ecma-262.htm&quot; title=&quot;Standard ECMA-262&quot;&gt;Standard ECMA-262&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-notes-for-safari-technology-preview 34-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 34 | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7760/release-notes-for-safari-technology-preview-34/&quot; title=&quot;Release Notes for Safari Technology Preview 34 | WebKit&quot;&gt;webkit.org/blog/7760/release-notes-for-safari-technology-preview-34/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Safari Technology Preview Release 34リリース。&lt;br&gt;
+&lt;code&gt;RTCRtpTransceiver#addTransceiver&lt;/code&gt;をサポートしトラック単位での片方向通信を使えるように、W3C Secure Contextsの実装、SRIを試験的にサポートなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://qiita.com/tomoyukilabs/items/59267f25c9dbd43d5ecb&quot; title=&quot;Safari TP 34では新しい片方向WebRTCの手順が使えるようになったので、試してみた - Qiita&quot;&gt;Safari TP 34では新しい片方向WebRTCの手順が使えるようになったので、試してみた - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;leveraging-the-performance-metrics-that-most-affect-user-experience- | -web- | -google-developers&quot;&gt;Leveraging the Performance Metrics that Most Affect User Experience  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics&quot; title=&quot;Leveraging the Performance Metrics that Most Affect User Experience  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/06/user-centric-performance-metrics&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ユーザー体験への影響を見るパフォーマンスのメトリクスについて。&lt;br&gt;
+ロード時間だけでは体験を計測できないため。&lt;br&gt;
+そのため、First Paint/First Meaningful Paing/Time to Interactive/Longtasksを指標にそれぞれ何を意味するかや計測方法について&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/yosuke_furukawa/you-need-to-know-ssr&quot; title=&quot;You Need to know SSR // Speaker Deck&quot;&gt;You Need to know SSR // Speaker Deck&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;chrome-60-devtools-の新機能/変更点---qiita&quot;&gt;Chrome 60 DevTools の新機能/変更点 - Qiita&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://qiita.com/kyoshidajp/items/e3f9be02a7ccd00aa7d7&quot; title=&quot;Chrome 60 DevTools の新機能/変更点 - Qiita&quot;&gt;qiita.com/kyoshidajp/items/e3f9be02a7ccd00aa7d7&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome 60の開発者ツールの変更点について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;nytimes/kyt:-starting-a-new-js-app?-build,-test-and-run-advanced-apps-with-kyt-🔥&quot;&gt;NYTimes/kyt: Starting a new JS app? Build, test and run advanced apps with kyt 🔥&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/nytimes/kyt&quot; title=&quot;NYTimes/kyt: Starting a new JS app? Build, test and run advanced apps with kyt 🔥&quot;&gt;github.com/nytimes/kyt&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptアプリのツールキット。&lt;br&gt;
+Babel/webpack/Jest/Stylelint/ESlint/protoなどのセットアップをまとめて行うツール&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;supercharged-live-stream-blog:-code-splitting- | -web- | -google-developers&quot;&gt;Supercharged Live Stream Blog: Code Splitting  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/06/supercharged-codesplit&quot; title=&quot;Supercharged Live Stream Blog: Code Splitting  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/06/supercharged-codesplit&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;babel&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Code Splittingを行うBabelプラグインを作成するスクリーンキャスト&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;building-m.uber:-engineering-a-high-performance-web-app-for-the-global-market---uber-engineering-blog&quot;&gt;Building m.uber: Engineering a High-Performance Web App for the Global Market - Uber Engineering Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eng.uber.com/m-uber/&quot; title=&quot;Building m.uber: Engineering a High-Performance Web App for the Global Market - Uber Engineering Blog&quot;&gt;eng.uber.com/m-uber/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;mobile&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Uberのモバイル向けの最適化について。&lt;br&gt;
+Reactを使っているが、mobileではPreactに置き換えて利用している。&lt;br&gt;
+また、サーバサイドレンダリングや、初期bundleサイズを小さくするためのcode split、依存が小さなJustの利用、SWやIndexedDBを使ったキャッシュなどについて。&lt;br&gt;
+問題を見つけるためのエラーハンドリングについて。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/angus-c/just&quot; title=&quot;angus-c/just: A library of dependency-free utilities that do just do one thing.&quot;&gt;angus-c/just: A library of dependency-free utilities that do just do one thing.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;graphql-network-communication-framework&quot;&gt;GraphQL Network Communication Framework&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://graphql-io.com/&quot; title=&quot;GraphQL Network Communication Framework&quot;&gt;graphql-io.com/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;GraphQL&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;クライアント &amp;lt;-&amp;gt; サーバのコミュニケーションを行うGraphQLフレームワーク。&lt;br&gt;
+Apollo/WebSocketベース&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;html-standard&quot;&gt;HTML Standard&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://html.spec.whatwg.org/dev/&quot; title=&quot;HTML Standard&quot;&gt;html.spec.whatwg.org/dev/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;HTML&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WHATWG&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;spec&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;WHATWG HTML仕様のDeveloper&amp;#39;s Edition。&lt;br&gt;
+ブラウザベンダー向けの情報は削除し、ウェブ開発者向けの情報に絞ったHTML仕様。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://momdo.github.io/html/dev/&quot; title=&quot;HTML Standard 日本語訳&quot;&gt;HTML Standard 日本語訳&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/whatwg/html/issues/1488#issuecomment-310450737&quot; title=&quot;Review on utilization of \&amp;amp;#x60;w-nodev\&amp;amp;#x60; annotation · Issue #1488 · whatwg/html&quot;&gt;Review on utilization of `w-nodev` annotation · Issue #1488 · whatwg/html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://momdo.hatenablog.jp/entry/20170702/1498999477&quot; title=&quot;WHATWG HTML Standard Developer Editionの話 - 水底の血&quot;&gt;WHATWG HTML Standard Developer Editionの話 - 水底の血&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://html5doctor.com/html5-for-web-developers/&quot; title=&quot;HTML5 for Web Developers | HTML5 Doctor&quot;&gt;HTML5 for Web Developers | HTML5 Doctor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;babel/proposals:-(wip)-tracking-the-status-of-babel&amp;#39;s-implementation-of-tc39-proposals&quot;&gt;babel/proposals: (WIP) Tracking the status of Babel&amp;#39;s implementation of TC39 proposals&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/babel/proposals&quot; title=&quot;babel/proposals: (WIP) Tracking the status of Babel&amp;#39;s implementation of TC39 proposals&quot;&gt;github.com/babel/proposals&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;babel&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;plugin&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ECMAScript proposalとBabelの実装の対応をまとめたもの&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;roman01la/js-memory-usage:-data-structures-memory-usage-in-javascript&quot;&gt;roman01la/js-memory-usage: Data Structures Memory Usage in JavaScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/roman01la/js-memory-usage&quot; title=&quot;roman01la/js-memory-usage: Data Structures Memory Usage in JavaScript&quot;&gt;github.com/roman01la/js-memory-usage&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;まとめ&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptのデータ構造別/ライブラリごとのメモリ消費量をまとめたもの。List/Array/Map/SetをJavaScript/ImmutableJS/ClojureScript/GopherJS/Reasonなど色々な実装ごと比較&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;pinterest/esprint:-fast-eslint-runner&quot;&gt;pinterest/esprint: Fast eslint runner&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pinterest/esprint&quot; title=&quot;pinterest/esprint: Fast eslint runner&quot;&gt;github.com/pinterest/esprint&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ESLint&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ESLintをparallelで実行できるツール&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;anvilresearch/webcrypto:-w3c-web-cryptography-api-for-node.js&quot;&gt;anvilresearch/webcrypto: W3C Web Cryptography API for Node.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/anvilresearch/webcrypto&quot; title=&quot;anvilresearch/webcrypto: W3C Web Cryptography API for Node.js&quot;&gt;github.com/anvilresearch/webcrypto&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;security&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.jsでWeb Cryptography APIに対応するpolyfill(ponyfill)ライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;coast-team/netflux:-javascript-client-and-server-side-transport-api-based-on-webrtc-&amp;amp;-websocket&quot;&gt;coast-team/netflux: JavaScript client and server side transport API based on WebRTC &amp;amp; WebSocket&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/coast-team/netflux&quot; title=&quot;coast-team/netflux: JavaScript client and server side transport API based on WebRTC &amp;amp; WebSocket&quot;&gt;github.com/coast-team/netflux&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebRTC&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebSocket&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;WebRTC、WebSocketを使ったP2Pライブラリ。&lt;br&gt;
+ブラウザ、Node.jsでデータのやり取りを行える&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;onetapinc/chromy:-chromy-is-a-library-for-operating-headless-chrome.-🍺🍺🍺&quot;&gt;OnetapInc/chromy: Chromy is a library for operating headless chrome. 🍺🍺🍺&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/OnetapInc/chromy&quot; title=&quot;OnetapInc/chromy: Chromy is a library for operating headless chrome. 🍺🍺🍺&quot;&gt;github.com/OnetapInc/chromy&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Headless ChromeをNightmare.jsのように操作するAPIを提供するライブラリ。&lt;br&gt;
+Chrome DevTools Protocolを使って処理をやり取りしている。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;dollarshaveclub/study:-a-simple,-progressive,-client/server-ab-testing-library-⚡️&quot;&gt;dollarshaveclub/study: A Simple, progressive, client/server AB testing library ⚡️&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/dollarshaveclub/study&quot; title=&quot;dollarshaveclub/study: A Simple, progressive, client/server AB testing library ⚡️&quot;&gt;github.com/dollarshaveclub/study&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;A/Bテストティングライブラリ。&lt;br&gt;
+universalで動き、storage driverでデータの保存先を指定できる。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;egoist/dom-dom:-jsx-to-actual-dom.&quot;&gt;egoist/dom-dom: JSX to actual DOM.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/egoist/dom-dom&quot; title=&quot;egoist/dom-dom: JSX to actual DOM.&quot;&gt;github.com/egoist/dom-dom&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;jsx&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JSXを&lt;code&gt;document&lt;/code&gt; APIを使ってDOMオブジェクトにするライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;yahoo/mendel:-build-toolchain-for-experimentation-on-isomorphic-web-applications-with-tree-inheritance-and-multivariate-support.&quot;&gt;yahoo/mendel: Build toolchain for experimentation on isomorphic web applications with tree-inheritance and multivariate support.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yahoo/mendel&quot; title=&quot;yahoo/mendel: Build toolchain for experimentation on isomorphic web applications with tree-inheritance and multivariate support.&quot;&gt;github.com/yahoo/mendel&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;設計&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;コードのフラグではなくルールファイルベースでプロジェクト構造を管理できるツール。&lt;br&gt;
+試験的な機能を取り入れたA/Bテストを管理しやすくするためのフレームワーク。&lt;br&gt;
+フラグ管理は技術的負債となりやすく、持続可能性をYahooで調査した結果作成されたデザイン。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yahoo/mendel/blob/master/docs/Design.md&quot; title=&quot;mendel/Design.md at master · yahoo/mendel&quot;&gt;mendel/Design.md at master · yahoo/mendel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;jaredpalmer/formik:-forms-in-react,-without-tears&quot;&gt;jaredpalmer/formik: Forms in React, without tears&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jaredpalmer/formik&quot; title=&quot;jaredpalmer/formik: Forms in React, without tears&quot;&gt;github.com/jaredpalmer/formik&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React向けのフォームライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Mon, 03 Jul 2017 14:14:08 +0900</pubDate>
+        <link>https://jser.info/2017/07/03/ecmascript-2017-prettier-1.5.0-ux/</link>
+        <guid isPermaLink="true">https://jser.info/2017/07/03/ecmascript-2017-prettier-1.5.0-ux/</guid>
+        
+        <category>ECMAScript</category>
+        
+        <category>Prettier</category>
+        
+        <category>performance</category>
+        
+        <category>browser</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-06-26のJS: React入門、sonar - linting for web、Angularパフォーマンス改善</title>
@@ -3007,347 +3339,6 @@ requestIdleCallback、reflow、repaint、パフォーマンス計測などにつ
         <category>modules</category>
         
         <category>ECMAScript</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-04-25のJS: Firefox 53、jsdom 10.0.0</title>
-        <description>&lt;p&gt;JSer.info #328 - Firefox 53がリリースされました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/53.0/releasenotes/&quot; title=&quot;Firefox — Notes (53.0) — Mozilla&quot;&gt;Firefox — Notes (53.0) — Mozilla&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CSS Masksや&lt;code&gt;display: flow-root&lt;/code&gt;のサポート、&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;と&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;のデフォルトUIの変更、URLSearchParamsの仕様追従、&lt;code&gt;auxclick&lt;/code&gt;イベントの対応などが行われています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://slides.com/laco/201701-twada-sushi#/&quot; title=&quot;201701-twada-sushi by laco&quot;&gt;whatwg/urlについての最近の動向 by laco&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2016/10/auxclick&quot; title=&quot;auxclick is Coming to Chrome 55  |  Web  |  Google Developers&quot;&gt;auxclick is Coming to Chrome 55  |  Web  |  Google Developers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;また、ES2015のFunction.nameの仕様追従が行われました。&lt;br&gt;
-Firefox52までは次のように無名関数は&lt;code&gt;fn.name&lt;/code&gt;がundefinedとなっていました。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// undefined&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Firefox53からは、無名関数やArrow Functionに対してもコンテキストに基づいた名前がつくようになりました。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &amp;quot;foo&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &amp;quot;bar&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://js-next.hatenablog.com/entry/2016/04/19/190006&quot; title=&quot;Function#nameについて - JS.next&quot;&gt;Function#nameについて - JS.next&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Node.jsのHTML/DOM実装である&lt;a href=&quot;https://github.com/tmpvar/jsdom&quot; title=&quot;jsdom&quot;&gt;jsdom&lt;/a&gt; 10.0.0がリリースされました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tmpvar/jsdom/blob/10.0.0/Changelog.md&quot; title=&quot;jsdom/Changelog.md at 10.0.0 · tmpvar/jsdom&quot;&gt;jsdom/Changelog.md at 10.0.0 · tmpvar/jsdom&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Node.js 5.x以下はサポートしないことや基本的な使い方が大きく変更されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tmpvar/jsdom/commit/58a7028d0d5b6aacc5b435daee9fd8f9eacbb14c&quot; title=&quot;Overhaul the public jsdom API · tmpvar/jsdom@58a7028&quot;&gt;Overhaul the public jsdom API · tmpvar/jsdom@58a7028&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;今までは、&lt;code&gt;jsdom.env&lt;/code&gt;というメソッドで初期化を行っていました。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jsdom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;jsdom&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;jsdom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/p&amp;gt;`,&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;p&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &amp;quot;Hello world&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;10.0.0からは、JSDOMコンストラクタをnewすることで、&lt;code&gt;dom&lt;/code&gt;オブジェクト経由で&lt;code&gt;window&lt;/code&gt;を手に入れることができるようになりました。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSDOM&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;jsdom&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/p&amp;gt;`);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;p&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &amp;quot;Hello world&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;その他にも&lt;code&gt;Script&lt;/code&gt;や&lt;code&gt;CookieJar&lt;/code&gt;の追加、&lt;code&gt;omitJsdomErrors&lt;/code&gt;を&lt;code&gt;omitJSDOMErrors&lt;/code&gt;へリネーム、&lt;code&gt;dir&lt;/code&gt;の対応改善、&lt;code&gt;window.postMessage()&lt;/code&gt;のoriginチェックを修正などが含まれています。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-notes-for-safari-technology-preview 28-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 28 | WebKit&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7516/release-notes-for-safari-technology-preview-28/&quot; title=&quot;Release Notes for Safari Technology Preview 28 | WebKit&quot;&gt;webkit.org/blog/7516/release-notes-for-safari-technology-preview-28/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Safari Technology Preview Release 28リリース。&lt;br&gt;
-バックグラウンドタブの処理を抑制、クロスオリジン iframeの&lt;code&gt;requestAnimationFrame&lt;/code&gt;を30fpsに制限するなど。&lt;br&gt;
-WebCryptoでAES-CTRをサポート&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;firefox-—-notes-(53.0)-—-mozilla&quot;&gt;Firefox — Notes (53.0) — Mozilla&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/53.0/releasenotes/&quot; title=&quot;Firefox — Notes (53.0) — Mozilla&quot;&gt;www.mozilla.org/en-US/firefox/53.0/releasenotes/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Firefox 53.0リリース。&lt;br&gt;
-ES2015のFunction.nameの仕様追従&lt;br&gt;
-&lt;code&gt;var f = function() {};f.name; // &amp;quot;f&amp;quot;&lt;/code&gt;、&lt;code&gt;auxclick&lt;/code&gt;イベントの対応、&lt;code&gt;display: flow-root&lt;/code&gt;の対応など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/Firefox/Releases/53&quot; title=&quot;Firefox 53 for developers - Mozilla | MDN&quot;&gt;Firefox 53 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mozillazine.jp/?p&amp;amp;#x3D;5422&quot; title=&quot;MozillaZine.jp » Blog Archive » Firefox 53 がリリースされた&quot;&gt;MozillaZine.jp » Blog Archive » Firefox 53 がリリースされた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://hacks.mozilla.org/2017/04/firefox-53-quantum-compositor-compact-themes-css-masks-and-more/&quot; title=&quot;Firefox 53: Quantum Compositor, Compact Themes, CSS Masks, and More ★ Mozilla Hacks – the Web developer blog&quot;&gt;Firefox 53: Quantum Compositor, Compact Themes, CSS Masks, and More ★ Mozilla Hacks – the Web developer blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/ja/versions/53/&quot; title=&quot;Firefox 53 サイト互換性情報 | Firefox サイト互換性情報&quot;&gt;Firefox 53 サイト互換性情報 | Firefox サイト互換性情報&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;new-in-chrome-58- | -web- | -google-developers&quot;&gt;New in Chrome 58  |  Web  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/04/nic58&quot; title=&quot;New in Chrome 58  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/04/nic58&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Chrome 58リリース。&lt;br&gt;
-IndexedDB 2.0、&lt;code&gt;display: flow-root&lt;/code&gt;のサポートなど&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.chromium.org/2017/03/chrome-58-beta-indexeddb-20_21.html&quot; title=&quot;Chromium Blog: Chrome 58 Beta: IndexedDB 2.0, an improvement to iframe navigation, and immersive full screen for PWAs&quot;&gt;Chromium Blog: Chrome 58 Beta: IndexedDB 2.0, an improvement to iframe navigation, and immersive full screen for PWAs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;jsdom/changelog.md-at-10.0.0-·-tmpvar/jsdom&quot;&gt;jsdom/Changelog.md at 10.0.0 · tmpvar/jsdom&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/tmpvar/jsdom/blob/10.0.0/Changelog.md&quot; title=&quot;jsdom/Changelog.md at 10.0.0 · tmpvar/jsdom&quot;&gt;github.com/tmpvar/jsdom/blob/10.0.0/Changelog.md&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;jsdom 10.0.0リリース。&lt;br&gt;
-Node.js &amp;lt;=5のサポートを終了、基本的な使い方を変更(&lt;code&gt;new JSDOM(html)&lt;/code&gt;など)、&lt;code&gt;Script&lt;/code&gt;の追加。&lt;br&gt;
-&lt;code&gt;omitJsdomErrors&lt;/code&gt;を&lt;code&gt;omitJSDOMErrors&lt;/code&gt;へリネーム、&lt;code&gt;dir&lt;/code&gt;の対応改善、&lt;code&gt;window.postMessage()&lt;/code&gt;のoriginチェックを修正など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tmpvar/jsdom/pull/1741&quot; title=&quot;New API draft by domenic · Pull Request #1741 · tmpvar/jsdom&quot;&gt;New API draft by domenic · Pull Request #1741 · tmpvar/jsdom&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;async-iterators-and-generators---jakearchibald.com&quot;&gt;Async iterators and generators - JakeArchibald.com&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jakearchibald.com/2017/async-iterators-and-generators/&quot; title=&quot;Async iterators and generators - JakeArchibald.com&quot;&gt;jakearchibald.com/2017/async-iterators-and-generators/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Async iteratorについての解説&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;a-vue.js-introduction-for-people-who-know-just-enough-jquery-to-get-by&quot;&gt;A Vue.js introduction for people who know just enough jQuery to get by&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.com/vue-js-introduction-for-people-who-know-just-enough-jquery-to-get-by-eab5aa193d77&quot; title=&quot;A Vue.js introduction for people who know just enough jQuery to get by&quot;&gt;medium.freecodecamp.com/vue-js-introduction-for-people-who-know-just-enough-jquery-to-get-by-eab5aa193d77&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Vue.jsを使ってTwitterの投稿画面のようなダイアログ表示を作成するチュートリアル。&lt;br&gt;
-機能毎に実装を進めていて、データバインディングやメソッドの呼び出し、アニメーションなどについて解説してる。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;fresh!-web-パフォーマンス改善-〜クライアントサイド編〜-|-cyberagent-developers-blog-|-サイバーエージェント-デベロッパーズブログ&quot;&gt;FRESH! Web パフォーマンス改善 〜クライアントサイド編〜 | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.cyberagent.co.jp/blog/archives/6057/&quot; title=&quot;FRESH! Web パフォーマンス改善 〜クライアントサイド編〜 | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ&quot;&gt;developers.cyberagent.co.jp/blog/archives/6057/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;パフォーマンス改善についての解説記事。&lt;br&gt;
-Service Workerを使ったキャッシュ、Intersection Observerを使ったlazy load、SVGスプライトをやめて個別にSVGを読み込むなど。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;脱jqueryのためにしたこと---qiita&quot;&gt;脱jQueryのためにしたこと - Qiita&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://qiita.com/clockmaker/items/50c3a9772e36a95ae500&quot; title=&quot;脱jQueryのためにしたこと - Qiita&quot;&gt;qiita.com/clockmaker/items/50c3a9772e36a95ae500&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;jQuery&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;リファクタリング&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;jQueryで書かれたサイトを標準のAPIやVue.jsを使って書き換えていく話&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;visual-testing-—-the-pragmatic-way-to-test-uis-–-chroma&quot;&gt;Visual Testing — the pragmatic way to test UIs – Chroma&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.hichroma.com/visual-testing-the-pragmatic-way-to-test-uis-18c8da617ecf&quot; title=&quot;Visual Testing — the pragmatic way to test UIs – Chroma&quot;&gt;blog.hichroma.com/visual-testing-the-pragmatic-way-to-test-uis-18c8da617ecf&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;コンポーネントのビジュアルテストについて。&lt;br&gt;
-スナップショットテスト、ReactStoryBookなどを使ったUI component explorersのアプローチなどについて&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.hichroma.com/the-crucial-tool-for-modern-frontend-engineers-fb849b06187a&quot; title=&quot;UI component explorers — your new favorite tool – Chroma&quot;&gt;UI component explorers — your new favorite tool – Chroma&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;how-to-build-a-math-expression-tokenizer-using-javascript-(or-any-other-language)&quot;&gt;How to build a math expression tokenizer using JavaScript (or any other language)&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.com/how-to-build-a-math-expression-tokenizer-using-javascript-3638d4e5fbe9&quot; title=&quot;How to build a math expression tokenizer using JavaScript (or any other language)&quot;&gt;medium.freecodecamp.com/how-to-build-a-math-expression-tokenizer-using-javascript-3638d4e5fbe9&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScriptでトークナイザーを書いていくチュートリアル&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;javascript-testing-tool-showdown:-sinon.js-vs-testdouble.js-—-sitepoint&quot;&gt;JavaScript Testing Tool Showdown: Sinon.js vs testdouble.js — SitePoint&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.sitepoint.com/javascript-testing-tool-showdown-sinon-js-vs-testdouble-js/&quot; title=&quot;JavaScript Testing Tool Showdown: Sinon.js vs testdouble.js — SitePoint&quot;&gt;www.sitepoint.com/javascript-testing-tool-showdown-sinon-js-vs-testdouble-js/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Sinon.jsとtestdouble.jsの比較記事&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;react-fiber現状確認---blog.koba04.com&quot;&gt;React Fiber現状確認 - blog.koba04.com&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.koba04.com/post/2017/04/25/a-state-of-react-fiber/&quot; title=&quot;React Fiber現状確認 - blog.koba04.com&quot;&gt;blog.koba04.com/post/2017/04/25/a-state-of-react-fiber/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;React v16から入る予定のFiberアーキテクチャについて。&lt;br&gt;
-ReactコアのReconciliationを置き換えるもので、今までは作業単位が1つのツリーだったものを、Filberという作業単位で行うようにする仕組みの解説。&lt;br&gt;
-また、v16以降に入るError Boundaryなどの変更について。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://postd.cc/react-fiber-architecture/&quot; title=&quot;React Fiberアーキテクチャについて | プログラミング | POSTD&quot;&gt;React Fiberアーキテクチャについて | プログラミング | POSTD&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;browser-animation-in-2017-by-birtles&quot;&gt;Browser animation in 2017 by birtles&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://slides.com/birtles/browser-animation-2017&quot; title=&quot;Browser animation in 2017 by birtles&quot;&gt;slides.com/birtles/browser-animation-2017&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;animation&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;CSS Animations/Web Animationsについてのスライド。&lt;br&gt;
-Web Animations APIやフレームアニメーションについて、またその実装状況にについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;abouthiroppy/node8&quot;&gt;abouthiroppy/node8&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://abouthiroppy.github.io/slides/node8/&quot; title=&quot;abouthiroppy/node8&quot;&gt;abouthiroppy.github.io/slides/node8/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;5月30日にリリース予定のNode.js 8.0.0についてのスライド。&lt;br&gt;
-Node.js 8.0.0ではV8の新しいコンパイラパイプラインが入る予定。&lt;br&gt;
-またNode.js 7.x ~ 8.0.0で入る予定の変更点について。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://v8project.blogspot.jp/2017/02/help-us-test-future-of-v8.html&quot; title=&quot;V8 JavaScript Engine: Help us test the future of V8!&quot;&gt;V8 JavaScript Engine: Help us test the future of V8!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/11T2CRex9hXxoJwbYqVQ32yIPMh0uouUZLdyrtmMoL44/edit?pli&amp;amp;#x3D;1&quot; title=&quot;Ignition Design Doc - Google ドキュメント&quot;&gt;Ignition Design Doc - Google ドキュメント&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;ericvicenti/intro-to-react:-a-hands-on-walkthrough-of-your-first-react-web-app&quot;&gt;ericvicenti/intro-to-react: A Hands-On Walkthrough of your first React Web App&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ericvicenti/intro-to-react&quot; title=&quot;ericvicenti/intro-to-react: A Hands-On Walkthrough of your first React Web App&quot;&gt;github.com/ericvicenti/intro-to-react&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactについて学ぶワークショップの資料と動画&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;get-started-with-analyzing-runtime-performance- | -web- | -google-developers&quot;&gt;Get Started With Analyzing Runtime Performance  |  Web  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/&quot; title=&quot;Get Started With Analyzing Runtime Performance  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/tools/chrome-devtools/evaluate-performance/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Chromeの開発者ツールを使ったパフォーマンス解析のチュートリアル&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;wcag-2.0-達成方法集&quot;&gt;WCAG 2.0 達成方法集&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://waic.jp/docs/WCAG-TECHS/Overview.html&quot; title=&quot;WCAG 2.0 達成方法集&quot;&gt;waic.jp/docs/WCAG-TECHS/Overview.html&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;accessibility&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;W3C&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;翻訳&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Techniques for WCAG 2.0の翻訳&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://momdo.hatenablog.jp/entry/20170420/1492684716&quot; title=&quot;2016年版のWCAG 2.0達成方法集がWAICサイトで公開されました - 水底の血&quot;&gt;2016年版のWCAG 2.0達成方法集がWAICサイトで公開されました - 水底の血&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;state-architecture-patterns-in-react:-a-review-–-skyler-nelson-–-medium&quot;&gt;State Architecture Patterns in React: A Review – Skyler Nelson – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@skylernelson_64801/state-architecture-patterns-in-react-a-review-df02c1e193c6&quot; title=&quot;State Architecture Patterns in React: A Review – Skyler Nelson – Medium&quot;&gt;medium.com/@skylernelson_64801/state-architecture-patterns-in-react-a-review-df02c1e193c6&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;設計&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactでよく見るステート管理パターンについて。&lt;br&gt;
-ナイーブな階層構造、上から下へStateを渡すTop-Heavy Architecture(Central State)、Pub/Subなどについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;introducing-a-faster-bbc-news-front-page-|-wildly-inaccurate&quot;&gt;Introducing a faster BBC News front page | Wildly Inaccurate&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page&quot; title=&quot;Introducing a faster BBC News front page | Wildly Inaccurate&quot;&gt;wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;BBC Newsのパフォーマンス改善について。&lt;br&gt;
-SpeedCurveを使って計測を行い、画像遅延ロード、Reactをサーバサイドレンダリングのみに利用してる。&lt;br&gt;
-まだ改善の1段階で、Reactをブラウザ側で動かしたときにモバイルだと重たい問題などが課題となってる(そのためサーバサイドレンダリングのみになっている)&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;chadhietala/babel-plugin-debug-macros&quot;&gt;chadhietala/babel-plugin-debug-macros&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/chadhietala/babel-plugin-debug-macros/&quot; title=&quot;chadhietala/babel-plugin-debug-macros&quot;&gt;github.com/chadhietala/babel-plugin-debug-macros/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;babel&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;plugin&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Babelを使ったHygenic Macroのプラグイン。&lt;br&gt;
-assertやdeprecate、warning、feature flagなどのマクロ化したもの&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;aweary/tinytime:-a-straightforward-time-and-time-formatter-in-&amp;lt;1kb&quot;&gt;aweary/tinytime: A straightforward time and time formatter in &amp;lt;1kb&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/aweary/tinytime&quot; title=&quot;aweary/tinytime: A straightforward time and time formatter in &amp;lt;1kb&quot;&gt;github.com/aweary/tinytime&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;小さなstrtime的なライブラリ。 時間フォーマット&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Tue, 25 Apr 2017 10:55:35 +0900</pubDate>
-        <link>https://jser.info/2017/04/25/firefox-53-jsdom-10.0.0/</link>
-        <guid isPermaLink="true">https://jser.info/2017/04/25/firefox-53-jsdom-10.0.0/</guid>
-        
-        <category>Firefox</category>
-        
-        <category>Node.js</category>
-        
-        <category>DOM</category>
         
         
         <category>_i18n</category>
