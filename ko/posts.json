@@ -1,4 +1,11 @@
 [{
+"title":"2017-07-03 JS: ECMAScript 2017, Prettier 1.5.0, UX의 성능 지표",
+"url":"https://jser.info/ko/2017/07/03/ecmascript-2017-prettier-1.5.0-ux/",
+"date":"2017-07-03T14:14:08+09:00",
+"content":"JSer.info #338 - ECMAScript 2017가 정식 릴리즈됐습니다.EC...",
+"category":"JSer",
+"tags":["ECMAScript","Prettier","performance","browser"]
+},{
 "title":"2017-06-26 JS: React 입문, sonar - linting for web, Angular 성능 개선",
 "url":"https://jser.info/ko/2017/06/26/react-sonar-angular-perf/",
 "date":"2017-06-26T17:55:22+09:00",
