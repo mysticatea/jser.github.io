@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 11 Jul 2017 11:56:30 +0900</pubDate>
-    <lastBuildDate>Tue, 11 Jul 2017 11:56:30 +0900</lastBuildDate>
+    <pubDate>Tue, 11 Jul 2017 11:58:51 +0900</pubDate>
+    <lastBuildDate>Tue, 11 Jul 2017 11:58:51 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -18,11 +18,11 @@
 &lt;/ul&gt;
 
 &lt;p&gt;npm 5.2.0では&lt;a href=&quot;https://www.npmjs.com/package/npx&quot; title=&quot;npx&quot;&gt;npx&lt;/a&gt;というnpmのCLIパッケージの実行サポートをするコマンドが同梱されています。&lt;br&gt;
-今までは、npmで配布されているツールはnpm installしてから&lt;code&gt;./node_modules/.bin/command&lt;/code&gt;やnpm run-scriptsに書いて実行していました。&lt;br&gt;
+今までは、npmで配布されているツールはnpm installしてから&lt;code&gt;$(npm bin)/some-bin&lt;/code&gt;、&lt;code&gt;./node_modules/.bin/some-bin&lt;/code&gt;やnpm run-scriptsに書いて実行していました。&lt;br&gt;
 &lt;code&gt;npx&lt;/code&gt;では、&lt;code&gt;npx create-react-app my-cool-new-app&lt;/code&gt;のようなコマンドを実行するだけで、インストールから実行までを行えます。ローカルに既にインストールされている場合はそちらのコマンドが利用されます。&lt;/p&gt;
 
 &lt;p&gt;また、&lt;code&gt;-p&lt;/code&gt;オプションでは指定したパッケージを&lt;code&gt;$PATH&lt;/code&gt;へ追加してから実行します。&lt;br&gt;
-これを利用して、特定Node.jsのバージョンをパッケージとしてインストールし、そのNode.jsを使ってコマンドを実行できます(*nixプラットフォームのみ対応)&lt;/p&gt;
+これを利用して、特定Node.jsのバージョンをパッケージとしてインストールし、そのNode.jsを使ってコマンドを実行できます(&lt;code&gt;node-bin&lt;/code&gt;は*nixプラットフォームのみ対応)&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npx -p node-bin@&amp;lt;version&amp;gt; node -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;詳細は次の記事で解説されています。&lt;/p&gt;
