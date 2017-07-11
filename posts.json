@@ -1,4 +1,11 @@
 [{
+"title":"2017-07-11のJS: npm 5.2.0(npx)、lerna 2.0.0、WebRTC",
+"url":"https://jser.info/2017/07/11/npm-5.2.0npx-lerna-2.0.0-webrtc/",
+"date":"2017-07-11T10:52:00+09:00",
+"content":"JSer.info #340 - npm 5.2.0がリリースされました。Release v5...",
+"category":"JSer",
+"tags":["npm","monorepo","safari","WebRTC"]
+},{
 "title":"2017-07-03のJS: ECMAScript 2017、Prettier 1.5.0、UXのパフォーマンスメトリクス",
 "url":"https://jser.info/2017/07/03/ecmascript-2017-prettier-1.5.0-ux/",
 "date":"2017-07-03T14:14:08+09:00",
