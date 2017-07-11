@@ -208,7 +208,8 @@
 今までは、npmで配布されているツールはnpm installしてから<code>./node_modules/.bin/command</code>やnpm run-scriptsに書いて実行していました。<br>
 <code>npx</code>では、<code>npx create-react-app my-cool-new-app</code>のようなコマンドを実行するだけで、インストールから実行までを行えます。ローカルに既にインストールされている場合はそちらのコマンドが利用されます。</p>
 
-<p>また、<code>-p</code>オプションでは実行するNode.jsのバージョンを指定できるようになっています(*nixプラットフォームのみ対応)</p>
+<p>また、<code>-p</code>オプションでは指定したパッケージを<code>$PATH</code>へ追加してから実行します。<br>
+これを利用して、特定Node.jsのバージョンをパッケージとしてインストールし、そのNode.jsを使ってコマンドを実行できます(*nixプラットフォームのみ対応)</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">npx -p node-bin@&lt;version&gt; node -v
 </code></pre></div>
 <p>詳細は次の記事で解説されています。</p>
