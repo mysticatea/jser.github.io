@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 11 Jul 2017 11:58:51 +0900</pubDate>
-    <lastBuildDate>Tue, 11 Jul 2017 11:58:51 +0900</lastBuildDate>
+    <pubDate>Wed, 12 Jul 2017 16:34:30 +0900</pubDate>
+    <lastBuildDate>Wed, 12 Jul 2017 16:34:30 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -214,7 +214,7 @@ Reactとの違いや互換性についてや、preact-cliを使ったビルド�
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;組織&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;Node.js Foundationを構成するワーキンググループや技術委員会についての解説。&lt;br&gt;
-どのようなワーキンググループがり、どのように議論が行われているかについて&lt;/p&gt;
+どのようなワーキンググループがあり、どのように議論が行われているかについて&lt;/p&gt;
 
 &lt;hr&gt;
 
