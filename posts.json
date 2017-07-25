@@ -1,4 +1,11 @@
 [{
+"title":"2017-07-25のJS: Node.js 8.2.0、TypeScriptへの漸進的移行、リファクタリングJavaScript",
+"url":"https://jser.info/2017/07/25/node.js-8.2.0-typescript-javascript/",
+"date":"2017-07-25T09:15:42+09:00",
+"content":"JSer.info #341 - Node v8.2.0がリリースされました。Node v8....",
+"category":"JSer",
+"tags":["Node.js","TypeScript","JavaScript"]
+},{
 "title":"2017-07-18のJS: Babylon.js 3.0、Yarnの作り方、Code splittingの重複モジュール検査",
 "url":"https://jser.info/2017/07/18/340draft/",
 "date":"2017-07-18T10:03:49+09:00",
