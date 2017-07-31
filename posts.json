@@ -1,4 +1,11 @@
 [{
+"title":"2017-07-31のJS: React 16.0β、WebCrypto API、The JavaScript Way book",
+"url":"https://jser.info/2017/07/31/react-16.0b-webcrypto-api-the-javascript-way-book/",
+"date":"2017-07-31T19:57:09+09:00",
+"content":"JSer.info #342 - React 16 β1が公開されました。React 16 b...",
+"category":"JSer",
+"tags":["React","WebCrypto","book"]
+},{
 "title":"2017-07-25のJS: Node.js 8.2.0、TypeScriptへの漸進的移行、リファクタリングJavaScript",
 "url":"https://jser.info/2017/07/25/node.js-8.2.0-typescript-javascript/",
 "date":"2017-07-25T09:15:42+09:00",
