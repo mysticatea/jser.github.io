@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 31 Jul 2017 20:20:49 +0900</pubDate>
-    <lastBuildDate>Mon, 31 Jul 2017 20:20:49 +0900</lastBuildDate>
+    <pubDate>Tue, 01 Aug 2017 09:29:28 +0900</pubDate>
+    <lastBuildDate>Tue, 01 Aug 2017 09:29:28 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -17,7 +17,7 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react/issues/10294&quot; title=&quot;React 16 beta · Issue #10294 · facebook/react&quot;&gt;React 16 beta · Issue #10294 · facebook/react&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;@next&lt;/code&gt;タグを指定することで試すことができます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@next&lt;/code&gt;タグを指定することでインストールできます。&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# Yarn
 yarn add react@next react-dom@next
 
@@ -275,6 +275,8 @@ TypeScriptでのプロジェクト開発についての書籍&lt;/p&gt;
         <guid isPermaLink="true">https://jser.info/2017/07/31/react-16.0b-webcrypto-api-the-javascript-way-book/</guid>
         
         <category>React</category>
+        
+        <category>Safari</category>
         
         <category>WebCrypto</category>
         
