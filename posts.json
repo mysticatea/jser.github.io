@@ -1,4 +1,11 @@
 [{
+"title":"2017-08-08のJS: Storybook 3.2、core-js 2.5.0、Flow Lint",
+"url":"https://jser.info/2017/08/08/storybook-3.2-core-js-2.5.0-flow-lint/",
+"date":"2017-08-08T09:18:58+09:00",
+"content":"JSer.info #343 - React Componentの開発環境ツールであるStor...",
+"category":"JSer",
+"tags":["Storybook","polyfill","ECMAScript","Flow"]
+},{
 "title":"2017-07-31のJS: React 16.0β、WebCrypto API、The JavaScript Way book",
 "url":"https://jser.info/2017/07/31/react-16.0b-webcrypto-api-the-javascript-way-book/",
 "date":"2017-07-31T19:57:09+09:00",
