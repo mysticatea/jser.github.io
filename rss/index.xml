@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Aug 2017 11:56:00 +0900</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2017 11:56:00 +0900</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2017 11:57:22 +0900</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 11:57:22 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -43,7 +43,7 @@
 
 &lt;hr&gt;
 
-&lt;p&gt;[Bootstrap 4 Beta · Bootstrap]: http://blog.getbootstrap.com/2017/08/10/bootstrap-4-beta/  &amp;quot;Bootstrap 4 Beta · Bootstrap&amp;quot;が公開されました。&lt;a href=&quot;http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/&quot; title=&quot;Bootstrap 4 alpha&quot;&gt;Bootstrap 4 alpha&lt;/a&gt;から2年弱程度経っています。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.getbootstrap.com/2017/08/10/bootstrap-4-beta/&quot; title=&quot;Bootstrap 4 Beta · Bootstrap&quot;&gt;Bootstrap 4 Beta · Bootstrap&lt;/a&gt;が公開されました。&lt;a href=&quot;http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/&quot; title=&quot;Bootstrap 4 alpha&quot;&gt;Bootstrap 4 alpha&lt;/a&gt;から2年弱程度経っています。&lt;/p&gt;
 
 &lt;p&gt;3.xからの変更点として、LessからSassへ移行、FlexboxとGridシステムの改善、IE8/9のサポート終了、JavaScriptプラグインの書き直しなどが行われています。&lt;br&gt;
 詳細な変更点については次のIssueを見るとよさそうです。&lt;/p&gt;
