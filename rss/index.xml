@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Aug 2017 11:33:53 +0900</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2017 11:33:53 +0900</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2017 11:56:00 +0900</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 11:56:00 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -27,7 +27,7 @@
 &lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/ja/docs/2017/scrollx-scrolly-pagexoffset-pageyoffset-now-return-double-instead-of-integer/&quot; title=&quot;scrollX、scrollY、pageXOffset、pageYOffset が整数の代わりに浮動小数点数を返すようになりました | Firefox サイト互換性情報&quot;&gt;scrollX、scrollY、pageXOffset、pageYOffset が整数の代わりに浮動小数点数を返すようになりました | Firefox サイト互換性情報&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;既に&lt;a href=&quot;https://developers.google.com/web/updates/2017/03/background_tabs&quot;&gt;Chrome(11~)&lt;/a&gt;やFireox(50~)でも行われているバックグラウンドタブにおける&lt;code&gt;setTimeout&lt;/code&gt;などのスロットルについてですが、[]トラッキングスクリプト](https://wiki.mozilla.org/Security/Tracking_protection#Lists)に対してはさらに強い制約がかかるようになりました。&lt;/p&gt;
+&lt;p&gt;既に&lt;a href=&quot;https://developers.google.com/web/updates/2017/03/background_tabs&quot;&gt;Chrome(11~)&lt;/a&gt;やFireox(50~)でも行われているバックグラウンドタブにおける&lt;code&gt;setTimeout&lt;/code&gt;などのスロットルについてですが、&lt;a href=&quot;https://wiki.mozilla.org/Security/Tracking_protection#Lists&quot;&gt;トラッキングスクリプト&lt;/a&gt;に対してはさらに強い制約がかかるようになりました。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Throttling_of_tracking_timeout_scripts&quot; title=&quot;Throttling of tracking timeout scripts&quot;&gt;Throttling of tracking timeout scripts&lt;/a&gt;&lt;/li&gt;
