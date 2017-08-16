@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Aug 2017 11:57:22 +0900</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2017 11:57:22 +0900</lastBuildDate>
+    <pubDate>Wed, 16 Aug 2017 14:47:29 +0900</pubDate>
+    <lastBuildDate>Wed, 16 Aug 2017 14:47:29 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -516,9 +516,9 @@ Collectionの&lt;code&gt;of&lt;/code&gt;/&lt;code&gt;from&lt;/code&gt;静的メ�
 
 &lt;hr&gt;
 
-&lt;h2 id=&quot;babel-preset-env@2.0-を試した--トランスパイル環境をスケールさせていく--|-mediba-creator-×-engineer-blog&quot;&gt;babel-preset-env@2.0 を試した -トランスパイル環境をスケールさせていく- | mediba Creator × Engineer Blog&lt;/h2&gt;
+&lt;h2 id=&quot;babel-preset-env@2.0-を試した--トランスパイル環境をスケールさせていく--|-mediba-creator-×-engineer-blog&quot;&gt;babel-preset-env@2.0 を試した -トランスパイル環境をスケールさせていく- | mediba Creator × Engineer Blog&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://ceblog.mediba.jp/post/163780014387/babel-preset-env-v2&quot; title=&quot;babel-preset-env@2.0 を試した -トランスパイル環境をスケールさせていく- | mediba Creator × Engineer Blog&quot;&gt;ceblog.mediba.jp/post/163780014387/babel-preset-env-v2&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;http://ceblog.mediba.jp/post/163780014387/babel-preset-env-v2&quot; title=&quot;babel-preset-env@2.0 を試した -トランスパイル環境をスケールさせていく- | mediba Creator × Engineer Blog&quot;&gt;ceblog.mediba.jp/post/163780014387/babel-preset-env-v2&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;babel&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;現在αリリースされているbabel-preset-env 2.0αについて。 静的解析した結果のpolyfillだけを読み込む&lt;code&gt;&amp;quot;useBuiltIns&amp;quot;: &amp;quot;usage&amp;quot;&lt;/code&gt;の解説と挙動について。&lt;/p&gt;
