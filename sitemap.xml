@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jser.info/2017/08/22/chrome-61b-typescript-2.5rc-flow-0.53.0/</loc>
+    <lastmod>2017-08-22T11:00:59+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jser.info/2017/08/15/firefox-55-bootstrap-4b-node.js-8.3.0/</loc>
     <lastmod>2017-08-15T08:21:14+09:00</lastmod>
     <priority>0.8</priority>
@@ -1942,23 +1947,23 @@
   </url>
   <url>
     <loc>https://jser.info/</loc>
-    <lastmod>2017-08-16T15:02:53+09:00</lastmod>
+    <lastmod>2017-08-22T11:29:04+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jser.info/404.html</loc>
-    <lastmod>2017-08-16T15:00:28+09:00</lastmod>
+    <lastmod>2017-08-22T11:27:53+09:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jser.info/public/event/textillate/index.html</loc>
-    <lastmod>2017-08-16T15:00:28+09:00</lastmod>
+    <lastmod>2017-08-22T11:27:53+09:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jser.info/public/svg/test.html</loc>
-    <lastmod>2017-08-16T15:00:28+09:00</lastmod>
+    <lastmod>2017-08-22T11:27:53+09:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
