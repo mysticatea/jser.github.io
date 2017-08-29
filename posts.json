@@ -1,4 +1,11 @@
 [{
+"title":"2017-08-29のJS: Prettier 1.6.0の設定ファイルサポート、Polymer 3.0がES Modulesへ移行",
+"url":"https://jser.info/2017/08/29/prettier-1.6.0-polymer-3.0es-modules/",
+"date":"2017-08-29T09:52:30+09:00",
+"content":"JSer.info #346 - Opinionatedな整形ツールのPrettier 1.6...",
+"category":"JSer",
+"tags":["prettier","polymer","webcomponents"]
+},{
 "title":"2017-08-22のJS:  Chrome 61β、TypeScript 2.5RC、Flow 0.53.0",
 "url":"https://jser.info/2017/08/22/chrome-61b-typescript-2.5rc-flow-0.53.0/",
 "date":"2017-08-22T11:00:59+09:00",
