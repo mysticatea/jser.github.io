@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 05 Sep 2017 11:08:38 +0900</pubDate>
-    <lastBuildDate>Tue, 05 Sep 2017 11:08:38 +0900</lastBuildDate>
+    <pubDate>Tue, 05 Sep 2017 11:44:54 +0900</pubDate>
+    <lastBuildDate>Tue, 05 Sep 2017 11:44:54 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -19,7 +19,7 @@
 
 &lt;p&gt;FirefoxのHeadlessモードはLinuxではFirefox 55から、Mac/Windowsは56(現在のNightly)から動作します。&lt;/p&gt;
 
-&lt;p&gt;ChromeもMac/LinuxはChrome 59から、WindowsはChrome 60からHeadlessモードをが利用できるようになっています。&lt;/p&gt;
+&lt;p&gt;ChromeもMac/LinuxはChrome 59から、WindowsはChrome 60からHeadlessモードを利用できるようになっています。&lt;/p&gt;
 
 &lt;p&gt;以前&lt;a href=&quot;https://jser.info/2017/05/03/headless-chromefirefoxphantomjsslimerjs-es-modules/&quot; title=&quot;2017-05-03のJS: Headless Chrome/FirefoxとPhantomJS/SlimerJS、ES modules - JSer.info&quot;&gt;2017-05-03のJS: Headless Chrome/FirefoxとPhantomJS/SlimerJS、ES modules - JSer.info&lt;/a&gt;でまとめた現在のHeadless対応状況をまとめると次のような感じです。&lt;/p&gt;
 
