@@ -1,4 +1,11 @@
 [{
+"title":"2017-09-05のJS: Headless Browserの対応、Browserifyの再開",
+"url":"https://jser.info/2017/09/05/headless-browser-browserify/",
+"date":"2017-09-05T10:20:45+09:00",
+"content":"JSer.info #347 - FirefoxのHeadlessモードについてのドキュメント...",
+"category":"JSer",
+"tags":["browser","firefox","Chrome","headless","browserify"]
+},{
 "title":"2017-08-29のJS: Prettier 1.6.0の設定ファイルサポート、Polymer 3.0がES Modulesへ移行",
 "url":"https://jser.info/2017/08/29/prettier-1.6.0-polymer-3.0es-modules/",
 "date":"2017-08-29T09:52:30+09:00",

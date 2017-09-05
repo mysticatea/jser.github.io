@@ -5,9 +5,292 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 29 Aug 2017 21:03:32 +0900</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2017 21:03:32 +0900</lastBuildDate>
+    <pubDate>Tue, 05 Sep 2017 11:08:38 +0900</pubDate>
+    <lastBuildDate>Tue, 05 Sep 2017 11:08:38 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-09-05のJS: Headless Browserの対応、Browserifyの再開</title>
+        <description>&lt;p&gt;JSer.info #347 - FirefoxのHeadlessモードについてのドキュメントが公開されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/Firefox/Headless_mode&quot; title=&quot;Headless mode - Mozilla | MDN&quot;&gt;Headless mode - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;FirefoxのHeadlessモードはLinuxではFirefox 55から、Mac/Windowsは56(現在のNightly)から動作します。&lt;/p&gt;
+
+&lt;p&gt;ChromeもMac/LinuxはChrome 59から、WindowsはChrome 60からHeadlessモードをが利用できるようになっています。&lt;/p&gt;
+
+&lt;p&gt;以前&lt;a href=&quot;https://jser.info/2017/05/03/headless-chromefirefoxphantomjsslimerjs-es-modules/&quot; title=&quot;2017-05-03のJS: Headless Chrome/FirefoxとPhantomJS/SlimerJS、ES modules - JSer.info&quot;&gt;2017-05-03のJS: Headless Chrome/FirefoxとPhantomJS/SlimerJS、ES modules - JSer.info&lt;/a&gt;でまとめた現在のHeadless対応状況をまとめると次のような感じです。&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/azu/c4206d94f18f35f6fe2fe303f988e7d5.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Firefoxは&lt;a href=&quot;https://www.npmjs.com/package/selenium-webdriver&quot; title=&quot;selenium-webdriver&quot;&gt;selenium-webdriver&lt;/a&gt;を使った例が紹介されています。&lt;br&gt;
+Chromeは、Chromeチームが公開している&lt;a href=&quot;https://github.com/GoogleChrome/puppeteer&quot; title=&quot;Puppeteer&quot;&gt;Puppeteer&lt;/a&gt;をはじめ、&lt;a href=&quot;https://medium.com/@kensoh/chromeless-chrominator-chromy-navalia-lambdium-ghostjs-autogcd-ef34bcd26907&quot; title=&quot;Chromeless, Chrominator, Chromy, Navalia, Lambdium, GhostJS, AutoGCD&quot;&gt;Chromeless, Chrominator, Chromy, Navalia, Lambdium, GhostJS, AutoGCD&lt;/a&gt;などさまざまなライブラリが公開されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nickjs.org/&quot; title=&quot;NickJS | The Modern Headless Browser Library&quot;&gt;NickJS&lt;/a&gt;のようにPhantomJSからHeadless Chromeへ移行しているツールも出てきています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.phantombuster.com/web-scraping-in-2017-headless-chrome-tips-tricks-4d6521d695e8&quot; title=&quot;Web Scraping in 2017: Advanced Headless Chrome Tips &amp;amp;amp; Tricks&quot;&gt;Web Scraping in 2017: Advanced Headless Chrome Tips &amp;amp; Tricks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Browserifyが&lt;code&gt;substack/node-browserify&lt;/code&gt;から&lt;a href=&quot;https://github.com/browserify/browserify&quot; title=&quot;browserify/browserify&quot;&gt;browserify/browserify&lt;/a&gt;のorganizationへ移行するとともに、次のようなIssueを立てて協力を求めています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/browserify/discuss/issues/5&quot; title=&quot;help wanted · Issue #5 · browserify/discuss&quot;&gt;help wanted · Issue #5 · browserify/discuss&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jser.info/2017/01/31/bundler-testing-framework-report/&quot; title=&quot;JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状 - JSer.info&quot;&gt;JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状 - JSer.info&lt;/a&gt;で伝えていたようにBrowserifyの開発は停滞していました。&lt;br&gt;
+今のBrowserifyはCommonJSをベースとしたBundlerであるため、今後&lt;a href=&quot;https://blog.jxck.io/entries/2017-08-15/universal-mjs-ecosystem.html&quot; title=&quot;.mjs&quot;&gt;.mjs&lt;/a&gt;などがくることに備えた対応が必要であるなどを踏まえて現在のエコシステムを整理し始めています。&lt;/p&gt;
+
+&lt;p&gt;このIssueを始め、&lt;a href=&quot;https://github.com/browserify/admin&quot; title=&quot;browserify/admin: administrative procedures for the browserify org&quot;&gt;browserify/admin: administrative procedures for the browserify org&lt;/a&gt;といったコミュニティ向けのドキュメント公開や今まで各自のリポジトリにあった&lt;code&gt;*fy&lt;/code&gt;パッケージを &lt;a href=&quot;https://github.com/browserify&quot;&gt;https://github.com/browserify&lt;/a&gt; に集約しています。&lt;/p&gt;
+
+&lt;p&gt;Browserifyに意見がある人はこのIssueに書くとよさそうです。&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;if you want to help out the browserify ecosystem, there&amp;#39;s a new help wanted thread &lt;a href=&quot;https://t.co/nB98TS5Cls&quot;&gt;https://t.co/nB98TS5Cls&lt;/a&gt;&lt;/p&gt;&amp;mdash; substack (@substack) &lt;a href=&quot;https://twitter.com/substack/status/902644080445874177&quot;&gt;August 29, 2017&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;announcing-typescript-2.5-|-typescript&quot;&gt;Announcing TypeScript 2.5 | TypeScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/typescript/2017/08/31/announcing-typescript-2-5/&quot; title=&quot;Announcing TypeScript 2.5 | TypeScript&quot;&gt;blogs.msdn.microsoft.com/typescript/2017/08/31/announcing-typescript-2-5/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;TypeScript 2.5リリース。&lt;br&gt;
+Optinal-catch-bindingのサポート、エディタ連携の改善、重複/aliasなパッケージの扱いを改善、&lt;code&gt;--preserveSymlinks&lt;/code&gt;のサポートなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://abcdef.gets.b6n.ch/entry/2017/09/01/143601&quot; title=&quot;Typescript 2.5 リリース - abcdefGets&quot;&gt;Typescript 2.5 リリース - abcdefGets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ember.js---ember-2.15-and-2.16-beta-released&quot;&gt;Ember.js - Ember 2.15 and 2.16 Beta Released&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://emberjs.com/blog/2017/09/01/ember-2-15-released.html&quot; title=&quot;Ember.js - Ember 2.15 and 2.16 Beta Released&quot;&gt;emberjs.com/blog/2017/09/01/ember-2-15-released.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Ember 2.15リリース。&lt;br&gt;
+&lt;code&gt;Ember.Router&lt;/code&gt;のスーパーセットである&lt;code&gt;router&lt;/code&gt; serviceの公開など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;concurrent-javascript:-it-can-work!-|-webkit&quot;&gt;Concurrent JavaScript: It can work! | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7846/concurrent-javascript-it-can-work/&quot; title=&quot;Concurrent JavaScript: It can work! | WebKit&quot;&gt;webkit.org/blog/7846/concurrent-javascript-it-can-work/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webkit&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SharedArrayBuffer&lt;/code&gt;が追加されるため、JavaScriptでThreadをサポートした場合にどうなるのかという思考実験についての記事。&lt;br&gt;
+現在のJavaScript VMはシングルスレッドであることを利用しているので、マルチスレッドの場合のVMのパフォーマンスなどについて。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;🏁-release:-iteration-10-–-10th-developer-preview-·-issue-#177-·-ckeditor/ckeditor5-design&quot;&gt;🏁 Release: Iteration 10 – 10th developer preview · Issue #177 · ckeditor/ckeditor5-design&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ckeditor/ckeditor5-design/issues/177&quot; title=&quot;🏁 Release: Iteration 10 – 10th developer preview · Issue #177 · ckeditor/ckeditor5-design&quot;&gt;github.com/ckeditor/ckeditor5-design/issues/177&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;editor&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;CKEditor 5 v0.10.0リリース。&lt;br&gt;
+MSEdgeのサポート、ツールチップメニューの改善、クリップボードの改善など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ckeditor5.github.io/&quot; title=&quot;CKEditor 5 Developer Preview (v0.10.0)&quot;&gt;CKEditor 5 Developer Preview (v0.10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ckeditor/ckeditor5-design/issues/172&quot; title=&quot;CKEditor 5 – Roadmap to 1.0.0 and beyond · Issue #172 · ckeditor/ckeditor5-design&quot;&gt;CKEditor 5 – Roadmap to 1.0.0 and beyond · Issue #172 · ckeditor/ckeditor5-design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;what&amp;#39;s-new-in-devtools-(chrome-62)- | -web- | -google-developers&quot;&gt;What&amp;#39;s New In DevTools (Chrome 62)  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/08/devtools-release-notes&quot; title=&quot;What&amp;#39;s New In DevTools (Chrome 62)  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/08/devtools-release-notes&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome 62の開発者ツールの更新点について。&lt;br&gt;
+Top-level &lt;code&gt;await&lt;/code&gt;がコンソールで利用可能に、特定のnodeのスクリーンショットを取れるように、CSS Gridのハイライト、コンソールフィルタの改善。&lt;br&gt;
+またHARをインポートできるようになり、キャッシュデータの閲覧ができるように&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;form-validation-with-web-audio-|-css-tricks&quot;&gt;Form Validation with Web Audio | CSS-Tricks&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://css-tricks.com/form-validation-web-audio/&quot; title=&quot;Form Validation with Web Audio | CSS-Tricks&quot;&gt;css-tricks.com/form-validation-web-audio/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;web &lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;audio&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;accessibility&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Web Audio APIとフォームバリデーションを組み合わせる話。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;measuring-performance-gains-—-angularjs-to-react-(with-redux-or-mobx)&quot;&gt;Measuring performance gains — AngularJS to React (with Redux or Mobx)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@guptagaruda/measuring-performance-gains-angularjs-to-react-with-redux-or-mobx-fb221517455&quot; title=&quot;Measuring performance gains — AngularJS to React (with Redux or Mobx)&quot;&gt;medium.com/@guptagaruda/measuring-performance-gains-angularjs-to-react-with-redux-or-mobx-fb221517455&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;3つのベンチマークアプリを元にAngular 1.xとReact/Redux/Mobxを比較した記事。&lt;br&gt;
+現在も多くのエンタープライズアプリがAngular 1.xで動いているため、Reactに移ることでどのようなメリットがあるのかを計測する目的&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;decaffeinating-a-large-coffeescript-codebase-without-losing-sleep-·-datafox-tech-blog&quot;&gt;Decaffeinating a Large CoffeeScript Codebase Without Losing Sleep · DataFox Tech Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://eng.datafox.com/javascript/2017/07/18/decaffeinating-large-coffeescript-codebase/&quot; title=&quot;Decaffeinating a Large CoffeeScript Codebase Without Losing Sleep · DataFox Tech Blog&quot;&gt;eng.datafox.com/javascript/2017/07/18/decaffeinating-large-coffeescript-codebase/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CoffeeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;bulk-decaffeinateを使ったCoffeeScriptからJavaScriptへの移行手順についての記事。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;react-+-rxjsで始める状態管理---voyage-group-techlog&quot;&gt;React + RxJSで始める状態管理 - VOYAGE GROUP techlog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://techlog.voyagegroup.com/entry/2017/08/31/102915&quot; title=&quot;React + RxJSで始める状態管理 - VOYAGE GROUP techlog&quot;&gt;techlog.voyagegroup.com/entry/2017/08/31/102915&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;almin&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;設計&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Write層とRead層を分けることでのメリットとデメリットについて。 &lt;br&gt;
+複雑さに対する責務の分離と依存局所化について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;headless-mode---mozilla-|-mdn&quot;&gt;Headless mode - Mozilla | MDN&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode&quot; title=&quot;Headless mode - Mozilla | MDN&quot;&gt;developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Firefoxのheadless modeについてのドキュメント&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;rendering-on-google-search- | -search- | -google-developers&quot;&gt;Rendering on Google Search  |  Search  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/search/docs/guides/rendering&quot; title=&quot;Rendering on Google Search  |  Search  |  Google Developers&quot;&gt;developers.google.com/search/docs/guides/rendering&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;SEO&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Google Search Botのレンダリングサブシステムで利用してるChromeのバージョンやサポートしてない(無効化されている)機能について書かれてる。&lt;br&gt;
+2017年9月4日現在はChrome 41をベースにしている&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.suzukikenichi.com/blog/ama-with-gary/amp/&quot; title=&quot;来日したGoogleゲイリーに何でも聞いてみた――プロジェクトOWL、検索アナリティクス、PWA etc. #inhouseseo | 海外SEO情報ブログ&quot;&gt;来日したGoogleゲイリーに何でも聞いてみた――プロジェクトOWL、検索アナリティクス、PWA etc. #inhouseseo | 海外SEO情報ブログ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;kea-vs-setstate,-redux,-mobx,-dva,-jumpstate,-apollo,-etc.&quot;&gt;Kea vs setState, Redux, Mobx, Dva, JumpState, Apollo, etc.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@mariusandra/kea-vs-setstate-redux-mobx-dva-jumpstate-apollo-etc-4aa26ea11d02&quot; title=&quot;Kea vs setState, Redux, Mobx, Dva, JumpState, Apollo, etc.&quot;&gt;medium.com/@mariusandra/kea-vs-setstate-redux-mobx-dva-jumpstate-apollo-etc-4aa26ea11d02&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React向けのステート管理ライブラリのKeaについての記事。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://kea.js.org/&quot; title=&quot;Kea&quot;&gt;Kea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;help-wanted-·-issue-#5-·-browserify/discuss&quot;&gt;help wanted · Issue #5 · browserify/discuss&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/browserify/discuss/issues/5&quot; title=&quot;help wanted · Issue #5 · browserify/discuss&quot;&gt;github.com/browserify/discuss/issues/5&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browserify&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;issue&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;browserifyのissueと今後(ES Moduleやhmrなど)について。&lt;br&gt;
+browserify organizationにそれぞれのパッケージが移されまとめて管理されるようになった&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;phantombuster/nickjs:-web-scraping-library-made-by-the-phantombuster-team.-modern,-simple-&amp;amp;-works-on-all-websites.&quot;&gt;phantombuster/nickjs: Web scraping library made by the Phantombuster team. Modern, simple &amp;amp; works on all websites.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/phantombuster/nickjs&quot; title=&quot;phantombuster/nickjs: Web scraping library made by the Phantombuster team. Modern, simple &amp;amp; works on all websites.&quot;&gt;github.com/phantombuster/nickjs&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Headless ChromeとPhantomJSをサポートしてるスクレイピングライブラリ&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://phantombuster.com/&quot; title=&quot;Phantombuster: API-fy the Web&quot;&gt;Phantombuster: API-fy the Web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;react-tools/react-move:-react-move-🌀-beautiful,-data-driven-animations-for-react&quot;&gt;react-tools/react-move: React Move 🌀 Beautiful, data-driven animations for React&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/react-tools/react-move&quot; title=&quot;react-tools/react-move: React Move 🌀 Beautiful, data-driven animations for React&quot;&gt;github.com/react-tools/react-move&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;animation&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Reactでデータドリブンなアニメーションを行うライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;lukechilds/keyv:-simple-key-value-store-with-support-for-multiple-backends&quot;&gt;lukechilds/keyv: Simple key-value store with support for multiple backends&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lukechilds/keyv&quot; title=&quot;lukechilds/keyv: Simple key-value store with support for multiple backends&quot;&gt;github.com/lukechilds/keyv&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Redis、MySQLなどさまざまなバックエンドに対応してるシンプルなKVSライブラリ。&lt;br&gt;
+Map的なAPIを実装したadpterを使うことでバックエンドを変更できる&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;react-for-real - o&amp;#39;reilly-media&quot;&gt;React for Real - O&amp;#39;Reilly Media&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://shop.oreilly.com/product/9781680502633.do&quot; title=&quot;React for Real - O&amp;#39;Reilly Media&quot;&gt;shop.oreilly.com/product/9781680502633.do&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Reactについての書籍&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;new-javascript-books&quot;&gt;New Javascript Books&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://newjavascriptbooks.com/&quot; title=&quot;New Javascript Books&quot;&gt;newjavascriptbooks.com/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptについての新書をまとめてるサイト&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Tue, 05 Sep 2017 10:20:45 +0900</pubDate>
+        <link>https://jser.info/2017/09/05/headless-browser-browserify/</link>
+        <guid isPermaLink="true">https://jser.info/2017/09/05/headless-browser-browserify/</guid>
+        
+        <category>browser</category>
+        
+        <category>firefox</category>
+        
+        <category>Chrome</category>
+        
+        <category>headless</category>
+        
+        <category>browserify</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-08-29のJS: Prettier 1.6.0の設定ファイルサポート、Polymer 3.0がES Modulesへ移行</title>
@@ -2801,284 +3084,6 @@ universalで動き、storage driverでデータの保存先を指定できる。
         <category>performance</category>
         
         <category>browser</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-06-26のJS: React入門、sonar - linting for web、Angularパフォーマンス改善</title>
-        <description>&lt;p&gt;JSer.info #337 - &lt;a href=&quot;http://www.react.express/&quot; title=&quot;React Express&quot;&gt;React Express&lt;/a&gt;というサイトでは、Reactでのアプリケーション開発についてのチュートリアルが書かれています。&lt;br&gt;
-Reactから始める開発という形なので、npmなどの関連するツールやES2015など周辺環境についても簡単に紹介されています。&lt;br&gt;
-基本的に実行できるサンプルコードと共にReactについて紹介されているので、触りながら理解するのに役立ちそうです。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://sonarwhal.com/&quot; title=&quot;sonar, a linting tool for the web&quot;&gt;sonar, a linting tool for the web&lt;/a&gt;というウェブサイトに対するESLintのようなツールがJS Foundationの元で公開されました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://js.foundation/announcements/2017/06/22/sonar-js-foundation-welcomes-newest-project&quot; title=&quot;sonar – JS Foundation Welcomes Newest Project – JS Foundation&quot;&gt;sonar – JS Foundation Welcomes Newest Project – JS Foundation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;元々はMSEdgeのチームによって作られたもので、ESLintのようにカスタムルールを書くことができます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/sonarwhal/sonar/blob/master/docs/developer-guide/collectors/events.md&quot; title=&quot;sonar/events.md at master · sonarwhal/sonar&quot;&gt;sonar/events.md at master · sonarwhal/sonar&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;hookできるイベント&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ウェブサイトのHTML要素をトラバースしながら処理したり、リソースに対するリクエストに関する処理などをルールとして書くことができます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://sonarwhal.com/about/faq.html&quot; title=&quot;FAQ&quot;&gt;FAQ&lt;/a&gt;によると、&lt;a href=&quot;https://www.deque.com/products/axe/&quot; title=&quot;Easy Accessibility Testing with aXe&quot;&gt;aXe&lt;/a&gt;や&lt;a href=&quot;https://www.ssllabs.com/ssltest/&quot; title=&quot;SSL Server Test&quot;&gt;SSL Server Test&lt;/a&gt;など既存ツールやサービスと連携したLintingツールとすることを目的としているようです。(そのためルールも非同期処理に対応している)&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;sonar doesn’t want to reinvent the wheel. For that reason it tries to integrate other tools and services that do a great job and contribute back where appropriate. For example, we are using axe for accessibility, SSL Server Test for checking the certificate configuration, etc.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/manakuro/improve-spa-performance-with-angular-app&quot; title=&quot;Improve SPA Performance with Angular App // Speaker Deck&quot;&gt;Improve SPA Performance with Angular App // Speaker Deck&lt;/a&gt;というスライドでは、メモリリークが起きやすいパターンやChrome開発者ツールを使った計測方法について書かれています。&lt;br&gt;
-また、AngularにおけるメモリリークのパターンやChange Detectionの処理を削減する方法などについて書かれています。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;dev.opera-—-what’s-new-in-chromium-59-and-opera-46&quot;&gt;Dev.Opera — What’s new in Chromium 59 and Opera 46&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dev.opera.com/blog/opera-46/&quot; title=&quot;Dev.Opera — What’s new in Chromium 59 and Opera 46&quot;&gt;dev.opera.com/blog/opera-46/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Opera&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Opera 46 (based on Chromium 59)リリース。&lt;br&gt;
-Animation PNG、SVGファビコン、バックグラウンドタブのスロットリング、&lt;code&gt;MediaError.message&lt;/code&gt;のサポートなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;new-release:-2.9.5&quot;&gt;New Release: 2.9.5&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jshint.com/blog/2017-06-22/release-2-9-5/&quot; title=&quot;New Release: 2.9.5&quot;&gt;jshint.com/blog/2017-06-22/release-2-9-5/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JSHint 2.9.5リリース。&lt;br&gt;
-&lt;code&gt;trailingcomma&lt;/code&gt;オプションの追加、バグ修正など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;eslint-v4.1.0-released---eslint---pluggable-javascript-linter&quot;&gt;ESLint v4.1.0 released - ESLint - Pluggable JavaScript linter&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://eslint.org/blog/2017/06/eslint-v4.1.0-released&quot; title=&quot;ESLint v4.1.0 released - ESLint - Pluggable JavaScript linter&quot;&gt;eslint.org/blog/2017/06/eslint-v4.1.0-released&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ESLint&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ESLint 4.1.0リリース。 globベースの&lt;code&gt;overrides&lt;/code&gt;設定の追加、無視ファイルを&lt;code&gt;package.json&lt;/code&gt;に定義できるように&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://qiita.com/mysticatea/items/e758c9a9a7dfb8b9cdb1&quot; title=&quot;ESLint v4.1.0 - Qiita&quot;&gt;ESLint v4.1.0 - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;js-scope:-static,-dynamic,-and-runtime-augmented-–-dmitry-soshnikov-–-medium&quot;&gt;JS scope: static, dynamic, and runtime-augmented – Dmitry Soshnikov – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@DmitrySoshnikov/js-scope-static-dynamic-and-runtime-augmented-5abfee6223fe&quot; title=&quot;JS scope: static, dynamic, and runtime-augmented – Dmitry Soshnikov – Medium&quot;&gt;medium.com/@DmitrySoshnikov/js-scope-static-dynamic-and-runtime-augmented-5abfee6223fe&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScriptのスコープについて。&lt;br&gt;
-作ったときに参照が解決できるStatic scope、呼び出し元によって参照が決まるDynamic scope、&lt;code&gt;witH&lt;/code&gt;や&lt;code&gt;eval&lt;/code&gt;によるRuntime-augmented scopeについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;react-express&quot;&gt;React Express&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.react.express/&quot; title=&quot;React Express&quot;&gt;www.react.express/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactのチュートリアルサイト。&lt;br&gt;
-実行できるサンプルと共にReactの使い方や、npm/webpack/ES2015など関連するツールや知識について解説してる。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;redux-architecture-guidelines-|-joeellis.la&quot;&gt;Redux Architecture Guidelines | joeellis.la&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://joeellis.la/redux-architecture/&quot; title=&quot;Redux Architecture Guidelines | joeellis.la&quot;&gt;joeellis.la/redux-architecture/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ケースバイケースではあるけど、Reduxを使ったアーキテクチャのガイドライン。&lt;br&gt;
-stateのネストを避けるためにnormalizeする、stateにはsourceとなるデータを入れる、ReactのstateよりReduxのState。&lt;br&gt;
-Standard Action、Container componentについてなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;aligned-input-events- | -web- | -google-developers&quot;&gt;Aligned Input Events  |  Web  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/06/aligning-input-events&quot; title=&quot;Aligned Input Events  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/06/aligning-input-events&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;event&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Android&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Pointer Eventsの&lt;code&gt;getCoalescedEvents&lt;/code&gt;について。&lt;br&gt;
-入力デバイスは60-120Hzに対して、モニタが60Hzである場合にポインタのイベントをすべて処理するのは無駄となる。&lt;br&gt;
-その無駄を回避するためにイベントをまとめてくれる&lt;code&gt;getCoalescedEvents()&lt;/code&gt;について&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;codemods:-a-quick-and-easy-way-to-automate-code-refactoring-—-sitepoint&quot;&gt;Codemods: A Quick and Easy Way to Automate Code Refactoring — SitePoint&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.sitepoint.com/getting-started-with-codemods/&quot; title=&quot;Codemods: A Quick and Easy Way to Automate Code Refactoring — SitePoint&quot;&gt;www.sitepoint.com/getting-started-with-codemods/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;AST&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;codemodを使ったリファクタリングツールの作り方についての記事&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;✨locally-scoped-css-variables:-what,-how,-and-why-|-una-kravets-online✨&quot;&gt;✨Locally Scoped CSS Variables: What, How, and Why | Una Kravets Online✨&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://una.im/local-css-vars/&quot; title=&quot;✨Locally Scoped CSS Variables: What, How, and Why | Una Kravets Online✨&quot;&gt;una.im/local-css-vars/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;CSS Custom Propertiesについて。&lt;br&gt;
-利用方法、ローカルスコープ、サポート状況についてなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;high-performance-js-in-v8---google-スライド&quot;&gt;High Performance JS in V8 - Google スライド&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1KCcA-WAyhGs0SEOrfU21fjaTWTxvNxYLwmNlGIbuZFw/edit#slide=id.p&quot; title=&quot;High Performance JS in V8 - Google スライド&quot;&gt;docs.google.com/presentation/d/1KCcA-WAyhGs0SEOrfU21fjaTWTxvNxYLwmNlGIbuZFw/edit#slide&amp;#x3D;id.p&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;V8のES2015+のパフォーマンスについてのスライド。&lt;br&gt;
-CrankshaftはES2015を最適化しないため遅かった。またtry-catchなどがあると最適化できなかった。&lt;br&gt;
-新しいpipelineのIgnition + Turbofanではその部分が改善されているという話。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;improve-spa-performance-with-angular-app-//-speaker-deck&quot;&gt;Improve SPA Performance with Angular App // Speaker Deck&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/manakuro/improve-spa-performance-with-angular-app&quot; title=&quot;Improve SPA Performance with Angular App // Speaker Deck&quot;&gt;speakerdeck.com/manakuro/improve-spa-performance-with-angular-app&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;メモリリークのパターン、Chromeの開発者ツールを使っての計測方法について。&lt;br&gt;
-Angularにおける意図しないメモリリークを避ける方法やChange Detectionのコストを削減する方法についてなど&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/mgechev/angular-performance-checklist&quot; title=&quot;mgechev/angular-performance-checklist: Cheatsheet for developing ⚡lightning⚡ fast progressive Angular applications.&quot;&gt;mgechev/angular-performance-checklist: Cheatsheet for developing ⚡lightning⚡ fast progressive Angular applications.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;mgechev/angular-performance-checklist:-cheatsheet-for-developing-⚡lightning⚡-fast-progressive-angular-applications.&quot;&gt;mgechev/angular-performance-checklist: Cheatsheet for developing ⚡lightning⚡ fast progressive Angular applications.&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/mgechev/angular-performance-checklist&quot; title=&quot;mgechev/angular-performance-checklist: Cheatsheet for developing ⚡lightning⚡ fast progressive Angular applications.&quot;&gt;github.com/mgechev/angular-performance-checklist&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Angularのパフォーマンスチェックリスト&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;faceyspacey/redux-first-router:-🎖-seamless-redux-first-routing----just-dispatch-actions&quot;&gt;faceyspacey/redux-first-router: 🎖 seamless redux-first routing -- just dispatch actions&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/faceyspacey/redux-first-router&quot; title=&quot;faceyspacey/redux-first-router: 🎖 seamless redux-first routing -- just dispatch actions&quot;&gt;github.com/faceyspacey/redux-first-router&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Redux向けのルーターライブラリ。&lt;br&gt;
-URLパターンにマッチしたActionを発行することをベースにしてルーティングできるようにしている&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/faceyspacey/pre-release-redux-first-router-a-step-beyond-redux-little-router-cd2716576aea&quot; title=&quot;Pre Release: Redux-First Router — A Step Beyond Redux-Little-Router&quot;&gt;Pre Release: Redux-First Router — A Step Beyond Redux-Little-Router&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;sonar,-a-linting-tool-for-the-web&quot;&gt;sonar, a linting tool for the web&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://sonarwhal.com/&quot; title=&quot;sonar, a linting tool for the web&quot;&gt;sonarwhal.com/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ESLint&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ウェブサイト(URL)に対するESLintのようなLintツール。&lt;br&gt;
-カスタムルールを自分で定義することができ、axeやSSL Server Testなど既存のツールを簡単に統合して利用できるようにする目的。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;await-to-js---nmotw&quot;&gt;await-to-js - NMOTW&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nmotw.in//github/await-to-js/&quot; title=&quot;await-to-js - NMOTW&quot;&gt;nmotw.in//github/await-to-js/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;awaitと組み合わせて使うことで、go言語のように&lt;code&gt;[error, value]&lt;/code&gt;の値を返すようにするライブラリ&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;medikoo/date-from-timezone:-construct-dates-with-timezone-context&quot;&gt;medikoo/date-from-timezone: Construct dates with timezone context&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/medikoo/date-from-timezone&quot; title=&quot;medikoo/date-from-timezone: Construct dates with timezone context&quot;&gt;github.com/medikoo/date-from-timezone&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;i18n&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Intl.DateTimeFormat&lt;/code&gt;を使うことで、JavaScriptでタイムゾーン情報を付与して&lt;code&gt;new Date&lt;/code&gt;を行うライブラリ&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://esdiscuss.org/topic/add-timezone-data-to-date#content-6&quot; title=&quot;Add timezone data to Date&quot;&gt;Add timezone data to Date&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;optimalbits/redbird:-a-modern-reverse-proxy-for-node&quot;&gt;OptimalBits/redbird: A modern reverse proxy for node&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/OptimalBits/redbird&quot; title=&quot;OptimalBits/redbird: A modern reverse proxy for node&quot;&gt;github.com/OptimalBits/redbird&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proxy&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTPSやHTTP/2に対応したNode.jsでのリバースプロキシライブラリ&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;o&amp;#39;reilly-japan---アイソモーフィックjavascript&quot;&gt;O&amp;#39;Reilly Japan - アイソモーフィックJavaScript&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.oreilly.co.jp/books/9784873118079/&quot; title=&quot;O&amp;#39;Reilly Japan - アイソモーフィックJavaScript&quot;&gt;www.oreilly.co.jp/books/9784873118079/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;2017年7月4日発売&lt;br&gt;
-Isomorphic JavaScriptについての書籍。&lt;br&gt;
-実現する方法や各種フレームワークReact/Angular/Brisketを使った方法、ケーススタディなど&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Mon, 26 Jun 2017 17:55:22 +0900</pubDate>
-        <link>https://jser.info/2017/06/26/react-sonar-angular-perf/</link>
-        <guid isPermaLink="true">https://jser.info/2017/06/26/react-sonar-angular-perf/</guid>
-        
-        <category>React</category>
-        
-        <category>Lint</category>
-        
-        <category>ESLint</category>
-        
-        <category>Angular</category>
         
         
         <category>_i18n</category>
