@@ -1,4 +1,11 @@
 [{
+"title":"2017-09-05 JS: Headless Browser 대응, Browserify 재개",
+"url":"https://jser.info/ko/2017/09/05/headless-browser-browserify/",
+"date":"2017-09-05T10:20:45+09:00",
+"content":"JSer.info #347 - Firefox Headless 모드에 관한 문서가 공개...",
+"category":"JSer",
+"tags":["browser","firefox","Chrome","headless","browserify"]
+},{
 "title":"2017-07-31 JS: React 16.0β, WebCrypto API, The JavaScript Way book",
 "url":"https://jser.info/ko/2017/07/31/react-16.0b-webcrypto-api-the-javascript-way-book/",
 "date":"2017-07-31T19:57:09+09:00",
