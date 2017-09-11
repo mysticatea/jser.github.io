@@ -1,4 +1,11 @@
 [{
+"title":"2017-09-11のJS: Yarn 1.0とworkspace、Node.jsウェブフレームワークのfastify",
+"url":"https://jser.info/2017/09/11/yarn-1.0workspace-node.jsfastify/",
+"date":"2017-09-11T20:21:47+09:00",
+"content":"JSer.info #348 - Yarn 1.0がリリースされました。Announcing ...",
+"category":"JSer",
+"tags":["Yarn","Node.js","framework"]
+},{
 "title":"2017-09-05のJS: Headless Browserの対応、Browserifyの再開",
 "url":"https://jser.info/2017/09/05/headless-browser-browserify/",
 "date":"2017-09-05T10:20:45+09:00",
