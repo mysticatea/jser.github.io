@@ -1,4 +1,11 @@
 [{
+"title":"2017-09-11 JS: Yarn 1.0과 workspace, Node.js 웹 프레임워크 fastify",
+"url":"https://jser.info/ko/2017/09/11/yarn-1.0workspace-node.jsfastify/",
+"date":"2017-09-11T20:21:47+09:00",
+"content":"JSer.info #348 - Yarn 1.0이 릴리즈됐습니다.Announcing Y...",
+"category":"JSer",
+"tags":["Yarn","Node.js","framework"]
+},{
 "title":"2017-09-05 JS: Headless Browser 대응, Browserify 재개",
 "url":"https://jser.info/ko/2017/09/05/headless-browser-browserify/",
 "date":"2017-09-05T10:20:45+09:00",

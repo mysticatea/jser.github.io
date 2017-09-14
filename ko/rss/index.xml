@@ -5,9 +5,321 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/ko/</link>
     <atom:link href="https://jser.info/ko/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 Sep 2017 22:21:57 +0900</pubDate>
-    <lastBuildDate>Mon, 11 Sep 2017 22:21:57 +0900</lastBuildDate>
+    <pubDate>Thu, 14 Sep 2017 15:25:55 +0900</pubDate>
+    <lastBuildDate>Thu, 14 Sep 2017 15:25:55 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-09-11 JS: Yarn 1.0과 workspace, Node.js 웹 프레임워크 fastify</title>
+        <description>&lt;p&gt;JSer.info #348 - Yarn 1.0이 릴리즈됐습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://code.facebook.com/posts/274518539716230&quot;&gt;Announcing Yarn 1.0 | Engineering Blog | Facebook Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yarnpkg/yarn/releases/tag/v1.0.0&quot;&gt;Release v1.0.0 ! 🎉 · yarnpkg/yarn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://yarnpkg.com/en/docs/workspaces#search&quot; title=&quot;Workspaces&quot;&gt;Workspaces&lt;/a&gt;, &lt;a href=&quot;https://github.com/yarnpkg/yarn/pull/3359&quot; title=&quot;link:&quot;&gt;link:&lt;/a&gt; 식별자, &lt;code&gt;--cwd&lt;/code&gt;를 지원하고 &lt;code&gt;yarn.lock&lt;/code&gt; 파서를 &lt;a href=&quot;https://www.npmjs.com/package/@yarnpkg/lockfile&quot; title=&quot;@yarnpkg/lockfile&quot;&gt;@yarnpkg/lockfile&lt;/a&gt;로써 모듈화 하여 분리했으며 &lt;code&gt;yarn.lock&lt;/code&gt;의 충돌을 자동으로 해결 가능하도록 개선됐습니다.&lt;/p&gt;
+
+&lt;p&gt;Yarn workspace는 &lt;a href=&quot;https://github.com/lerna/lerna&quot; title=&quot;Lerna&quot;&gt;Lerna&lt;/a&gt; 처럼 monorepo를 관리하는 기능이며 Lerna와는 다르게 조금 더 저수준의 기능을 제공하는 것을 목적으로 두고 있습니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Yarn’s workspaces are the low-level primitives that tools like Lerna can (and do!) use. They will never try to support the high-level feature that Lerna offers, but by implementing the core logic of the resolution and linking steps inside Yarn itself we hope to enable new usages and improve performance.&lt;br&gt;&lt;br&gt;
+-- &lt;a href=&quot;https://yarnpkg.com/en/docs/workspaces#toc-how-does-it-compare-to-lerna&quot; title=&quot;How does it compare to Lerna?&quot;&gt;How does it compare to Lerna?&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yarn workspace에 관해서는 아래 문서에 잘 소개돼 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/&quot; title=&quot;Workspaces in Yarn | Yarn Blog&quot;&gt;Workspaces in Yarn | Yarn Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;또, publish 관련 작업을 할 수 없으며 관련한 내용은 아래 이슈에서 다루고 있으니 참고하시기 바랍니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yarnpkg/yarn/issues/3294&quot; title=&quot;Workspaces issue progress · Issue #3294 · yarnpkg/yarn&quot;&gt;Workspaces issue progress · Issue #3294 · yarnpkg/yarn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/fastify/fastify&quot; title=&quot;fastify&quot;&gt;fastify&lt;/a&gt;는 속도와 오버헤드를 가능한한 줄이는데 초점을 둔 Node.js 웹 프레임워크입니다. Connect/Express와 Restify와의 호환 가능한 &lt;a href=&quot;http://www.fastify.io/docs/v0.27.x/Middlewares/&quot; title=&quot;Middlewares&quot;&gt;Middlewares&lt;/a&gt;를 지원하여 확장할 수 있게 디자인돼 있습니다. 또한 JSON Schema를 사용해 &lt;a href=&quot;http://www.fastify.io/docs/v0.27.x/Validation-And-Serialize/&quot; title=&quot;Validation and Serialize&quot;&gt;Validation과 Serialize&lt;/a&gt;를 정의할 수 있는 구조를 가지고 있습니다.(&lt;a href=&quot;https://github.com/fastify/fast-json-stringify&quot; title=&quot;fast-json-stringify&quot;&gt;fast-json-stringify&lt;/a&gt;는 이 JSON Schema를 사용해 직렬화를 고속으로 처리 하고 있습니다.)&lt;/p&gt;
+
+&lt;p&gt;아래 문서에 어떻게 오버 헤드를 줄이고 있는지 그 원리에 대해서 작성돼 있으니 함께 읽어보시면 좋을 것 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://thenewstack.io/introducing-fastify-speedy-node-js-web-framework/&quot; title=&quot;Introducing Fastify, a Speedy Node.js Web Framework - The New Stack&quot;&gt;Introducing Fastify, a Speedy Node.js Web Framework - The New Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;헤드라인&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;node-v6.11.3-(lts)-|-node.js&quot;&gt;Node v6.11.3 (LTS) | Node.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v6.11.3/&quot; title=&quot;Node v6.11.3 (LTS) | Node.js&quot;&gt;nodejs.org/en/blog/release/v6.11.3/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Node v6.11.3(LTS)가 릴리됐습니다.&lt;br&gt;
+hash flooding의 취약점 때문에 비활성화 됐던 V8의 Snapshots이 다시 활성화됐습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://v8project.blogspot.jp/2017/08/about-that-hash-flooding-vulnerability.html&quot; title=&quot;V8 JavaScript Engine: About that hash flooding vulnerability in Node.js…&quot;&gt;V8 JavaScript Engine: About that hash flooding vulnerability in Node.js…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;angulardart-4&quot;&gt;AngularDart 4&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://news.dartlang.org/2017/09/angulardart-4.html&quot; title=&quot;AngularDart 4&quot;&gt;news.dartlang.org/2017/09/angulardart-4.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;dart&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;AngularDart 4가 릴리즈됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;new-in-chrome-61- | -web- | -google-developers&quot;&gt;New in Chrome 61  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/09/nic61&quot; title=&quot;New in Chrome 61  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/09/nic61&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome 61이 릴리즈됐습니다.&lt;br&gt;
+&lt;code&gt;&amp;lt;script type=module&amp;gt;&lt;/code&gt;, &lt;code&gt;navigator.share&lt;/code&gt;, WebUSB API 등을 지원합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.chromestatus.com/features#browsers.chrome.desktop%3D61&quot; title=&quot;Chrome Platform Status&quot;&gt;Chrome Platform Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.chromium.org/2017/08/chrome-61-beta-javascript-modules.html&quot; title=&quot;Chromium Blog: Chrome 61 Beta: JavaScript modules, Payment Request API on desktop, Web Share API, and WebUSB&quot;&gt;Chromium Blog: Chrome 61 Beta: JavaScript modules, Payment Request API on desktop, Web Share API, and WebUSB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-notes-for-safari-technology-preview 39-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 39 | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7913/release-notes-for-safari-technology-preview-39/&quot; title=&quot;Release Notes for Safari Technology Preview 39 | WebKit&quot;&gt;webkit.org/blog/7913/release-notes-for-safari-technology-preview-39/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Safari Technology Preview Release 39가 릴리즈됐습니다.&lt;br&gt;
+Beacon API를 개선했고 &lt;code&gt;FetchRequest.body&lt;/code&gt;와 Stage 3의 RegExp &lt;code&gt;dotAll&lt;/code&gt;을 지원합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;assemblyscript/assemblyscript:-a-subset-of-typescript-that-compiles-to-webassembly.&quot;&gt;AssemblyScript/assemblyscript: A subset of TypeScript that compiles to WebAssembly.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/AssemblyScript/assemblyscript&quot; title=&quot;AssemblyScript/assemblyscript: A subset of TypeScript that compiles to WebAssembly.&quot;&gt;github.com/AssemblyScript/assemblyscript&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebAssembly&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;assemblyscript는 WebAssembly로 컴파일 가능한 TypeScript의 서브셋으로 정의된 언어입니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;react-16-rc-·-issue-#10294-·-facebook/react&quot;&gt;React 16 RC · Issue #10294 · facebook/react&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/react/issues/10294&quot; title=&quot;React 16 RC · Issue #10294 · facebook/react&quot;&gt;github.com/facebook/react/issues/10294&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;issue&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React 16 RC가 릴리즈됐습니다. &lt;code&gt;Map&lt;/code&gt;/&lt;code&gt;Set&lt;/code&gt;을 의존하고 있으므로 polyfill이 필요하며 코어가 재작성(Fiber)된 버전입니다. Stream SSR을 지원하고 &lt;code&gt;componentDidCatch&lt;/code&gt;로 자식 컴포넌트의 에러를 처리할 수 있도록 개선됐습니다. 또, bundle된 파일이 배포되도록 변경됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;announcing-yarn-1.0-|-engineering-blog-|-facebook-code&quot;&gt;Announcing Yarn 1.0 | Engineering Blog | Facebook Code&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://code.facebook.com/posts/274518539716230&quot; title=&quot;Announcing Yarn 1.0 | Engineering Blog | Facebook Code&quot;&gt;code.facebook.com/posts/274518539716230&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Yarn 1.0이 릴리즈됐습니다.&lt;br&gt;
+Yarn Workspace가 기본적으로 활성화 됐으며 &lt;code&gt;yarn.lock&lt;/code&gt;의 파서를 모듈로 분리했습니다. 그리고 &lt;code&gt;--cwd&lt;/code&gt;를 지원하고 &lt;code&gt;yarn.lock&lt;/code&gt;의 충돌을 자동으로 해결하도록 개선됐습니다.&lt;br&gt;
+또, 암묵적 &lt;code&gt;file:&lt;/code&gt; 의존에 경고를 발생시키도록 변경됐고 &lt;code&gt;yarn clean&lt;/code&gt;이 &lt;code&gt;yarn autoclean&lt;/code&gt;으로 이름이 변경됐습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yarnpkg/yarn/releases/tag/v1.0.0&quot; title=&quot;Release v1.0.0 ! 🎉 · yarnpkg/yarn&quot;&gt;Release v1.0.0 ! 🎉 · yarnpkg/yarn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/@yarnpkg/lockfile&quot; title=&quot;@yarnpkg/lockfile&quot;&gt;@yarnpkg/lockfile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v0.6.0-·-sonarwhal/sonar&quot;&gt;Release v0.6.0 · sonarwhal/sonar&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sonarwhal/sonar/releases/tag/0.6.0&quot; title=&quot;Release v0.6.0 · sonarwhal/sonar&quot;&gt;github.com/sonarwhal/sonar/releases/tag/0.6.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;sonar v0.6.0이 릴리즈됐습니다.&lt;br&gt;
+&lt;code&gt;apple-touch-icon&lt;/code&gt; 체크 규칙이 &lt;code&gt;summary&lt;/code&gt; 포멧터가 추가됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-workbox-v2.0.0-·-googlechrome/workbox&quot;&gt;Release Workbox v2.0.0 · GoogleChrome/workbox&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/GoogleChrome/workbox/releases/tag/v2.0.0&quot; title=&quot;Release Workbox v2.0.0 · GoogleChrome/workbox&quot;&gt;github.com/GoogleChrome/workbox/releases/tag/v2.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ServiceWorker&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Workbox v2.0.0이 릴리즈됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;아티클&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;미완・web-브라우저의-색상-관리-대응-정리-:-왕잠자리-마노의-blog(임시)(일본어)&quot;&gt;미완・Web 브라우저의 색상 관리 대응 정리  : 왕잠자리 마노의 blog(임시)(일본어)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.livedoor.jp/yamma_ma/archives/38413741.html&quot; title=&quot;続・Webブラウザのカラーマネジメント対応まとめ : やんま まのblog（仮）&quot;&gt;blog.livedoor.jp/yamma_ma/archives/38413741.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;color&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;브라우저의 색상 관리 및 프로파일에 관해 정리된 글입니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;angular-vs.-react-vs.-vue:-a-2017-comparison-–-unicorn.supplies-–-medium&quot;&gt;Angular vs. React vs. Vue: A 2017 comparison – unicorn.supplies – Medium&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/unicorn-supplies/angular-vs-react-vs-vue-a-2017-comparison-c5c52d620176&quot; title=&quot;Angular vs. React vs. Vue: A 2017 comparison – unicorn.supplies – Medium&quot;&gt;medium.com/unicorn-supplies/angular-vs-react-vs-vue-a-2017-comparison-c5c52d620176&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScript 프레임워크를 비교한 글입니다.&lt;br&gt;
+Angular, React, Vue가 여러 측면에서 비교돼 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;learn-how-to-debug-javascript-with-chrome-devtools-–-codeburst&quot;&gt;Learn How To Debug JavaScript with Chrome DevTools – codeburst&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeburst.io/learn-how-to-debug-javascript-with-chrome-devtools-9514c58479db&quot; title=&quot;Learn How To Debug JavaScript with Chrome DevTools – codeburst&quot;&gt;codeburst.io/learn-how-to-debug-javascript-with-chrome-devtools-9514c58479db&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome 개발자 도구를 사용한 디버깅 방법에 관해 소개돼 있습니다.&lt;br&gt;
+디버거에서 브레이크 포인트를 걸어 디버깅하는 방법을 단계별로 설명합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;슬라이드, 영상&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;polymer-summit-2017---youtube&quot;&gt;Polymer Summit 2017 - YouTube&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=tNulrEbTQf8&quot; title=&quot;Polymer Summit 2017 - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;tNulrEbTQf8&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;이벤트&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Polymer Summit 2017의 영상이 공개됐습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://summit.polymer-project.org/&quot; title=&quot;Polymer Summit 2017&quot;&gt;Polymer Summit 2017&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;google-developer-days-europe-2017---youtube&quot;&gt;Google Developer Days Europe 2017 - YouTube&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/playlist?list=PLOU2XLYxmsIJz-cYWfjQP8SV7n8C-PTVm&quot; title=&quot;Google Developer Days Europe 2017 - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PLOU2XLYxmsIJz-cYWfjQP8SV7n8C-PTVm&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ProgressiveWebApp&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;이벤트&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Google Developer Days Europe의 영상이 공개됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;웹-브라우저-용-심층-학습-모델-고속-실행-프레임워크-「webdnn」-//-speaker-deck&quot;&gt;웹 브라우저 용 심층 학습 모델 고속 실행 프레임워크 「WebDNN」 // Speaker Deck&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/kiikurage/uebuburauzaxiang-keshen-ceng-xue-xi-moderugao-su-shi-xing-huremuwaku-webdnn&quot; title=&quot;ウェブブラウザ向け深層学習モデル高速実行フレームワーク「WebDNN」 // Speaker Deck&quot;&gt;speakerdeck.com/kiikurage/uebuburauzaxiang-keshen-ceng-xue-xi-moderugao-su-shi-xing-huremuwaku-webdnn&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;기계학습&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;WebDNN을 소개하는 슬라이드 입니다.&lt;br&gt;
+WebGPU / WebGL / WebAssembly 등을 사용한 웹브라우저에서의 계산 백엔드 구조, Keras나 TensorFlow 등의 학습 모델의 변환, 클라이언트 사이드에서 연산을 고속으로 처리하기 위한 최적화 방법 등에 대해 이야기합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mil-tokyo.github.io/webdnn/&quot; title=&quot;MIL WebDNN&quot;&gt;MIL WebDNN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;javascript-conferences-in-2017-|-confs.tech&quot;&gt;JavaScript conferences in 2017 | Confs.tech&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://confs.tech/&quot; title=&quot;JavaScript conferences in 2017 | Confs.tech&quot;&gt;confs.tech/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;이벤트&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;정리&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScript 관련 컨퍼런스가 정리돼 있는 사이트입니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;소프트웨어, 도구, 라이브러리&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;pinterest/service-workers:-a-collection-of-utilities-for-creating/testing/experimenting-with-service-workers.&quot;&gt;pinterest/service-workers: A collection of utilities for creating/testing/experimenting with service workers.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pinterest/service-workers&quot; title=&quot;pinterest/service-workers: A collection of utilities for creating/testing/experimenting with service workers.&quot;&gt;github.com/pinterest/service-workers&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ServiceWorker&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;pinterest의 Service Worker와 관련된 유틸리티 도구 묶음입니다.&lt;br&gt;
+Service Worker에서 캐시할 파일 관리하는 도구와 webpack 플러그인 그리고 테스트 유틸리티를 제공합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;transform-|-all-important-transforms-at-one-place.&quot;&gt;Transform | All important transforms at one place.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://transform.now.sh/&quot; title=&quot;Transform | All important transforms at one place.&quot;&gt;transform.now.sh/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webservice&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JSON에서 React PropTypes, HTML에서 JSX, GraphQL에서 TypeScript 등 여러가지 변환 기능을 제공하는 도구입니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;fastify/fastify:-fast-and-low-overhead-web-framework,-for-node.js&quot;&gt;fastify/fastify: Fast and low overhead web framework, for Node.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/fastify/fastify&quot; title=&quot;fastify/fastify: Fast and low overhead web framework, for Node.js&quot;&gt;github.com/fastify/fastify&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;サーバー&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.js 웹 프레임워크입니다. 오버 해드가 작은 라우팅, Schema를 기반으로한 직렬화, express / connect와 호환성을 갖는 middleware를 제공합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;antonmedv/jsize:-find-out-minified-and-gzipped-npm-package-size&quot;&gt;antonmedv/jsize: Find out minified and gzipped npm package size&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/antonmedv/jsize&quot; title=&quot;antonmedv/jsize: Find out minified and gzipped npm package size&quot;&gt;github.com/antonmedv/jsize&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;npm 모듈의 사이즈(gzip)을 살펴 볼 수 있는 도구입니다.&lt;br&gt;
+복수의 모듈을 + 로 조합하면 중복을 고려한 모듈의 총 크기도 알 수 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;allegro/node-worker-nodes:-a-node.js-library-to-run-cpu-intensive-tasks-in-a-separate-processes-and-not-block-the-event-loop.&quot;&gt;allegro/node-worker-nodes: A node.js library to run cpu-intensive tasks in a separate processes and not block the event loop.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/allegro/node-worker-nodes&quot; title=&quot;allegro/node-worker-nodes: A node.js library to run cpu-intensive tasks in a separate processes and not block the event loop.&quot;&gt;github.com/allegro/node-worker-nodes&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.js 환경에서 복수의 프로세스로 분할하여 cpu-intensive한 처리를 다룰 수 있는 라이브러리입니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;도서&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;o&amp;#39;reilly-japan---처음-하는-자동-테스트(일본어)&quot;&gt;O&amp;#39;Reilly Japan - 처음 하는 자동 테스트(일본어)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.oreilly.co.jp/books/9784873118161/&quot; title=&quot;O&amp;#39;Reilly Japan - 初めての自動テスト&quot;&gt;www.oreilly.co.jp/books/9784873118161/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;2017년 9월 21일 출간 예정인 도서로 UI 테스트, 통합 테스트, 유닛테스트, TDD 등 테스트와 관련한 주제를 다룹니다.&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Mon, 11 Sep 2017 20:21:47 +0900</pubDate>
+        <link>https://jser.info/ko/2017/09/11/yarn-1.0workspace-node.jsfastify/</link>
+        <guid isPermaLink="true">https://jser.info/ko/2017/09/11/yarn-1.0workspace-node.jsfastify/</guid>
+        
+        <category>Yarn</category>
+        
+        <category>Node.js</category>
+        
+        <category>framework</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ko</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-09-05 JS: Headless Browser 대응, Browserify 재개</title>
@@ -2720,366 +3032,6 @@ preact를 사용한 Scaffolding 도구로 create/build/watch/serve 등의 개발
         <category>yarn</category>
         
         <category>Chrome</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ko</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-05-22 JS: Safari TP 30, Polymer 2.0와 Bower, Create React App 1.0.0</title>
-        <description>&lt;p&gt;JSer.info #332 - &lt;a href=&quot;https://webkit.org/blog/7614/release-notes-for-safari-technology-preview-30/&quot; title=&quot;Safari Technology Preview Release 30&quot;&gt;Safari Technology Preview Release 30&lt;/a&gt;이 릴리즈됐습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.w3.org/TR/SRI/&quot; title=&quot;Subresource Integrity&quot;&gt;Subresource Integrity&lt;/a&gt;(SRI), &lt;code&gt;X-Content-Type-Options:nosniff&lt;/code&gt;을 지원합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://hacks.mozilla.org/2016/04/how-to-implement-sri-into-your-build-process/&quot; title=&quot;How to implement SRI in your build process ★ Mozilla Hacks – the Web developer blog&quot;&gt;How to implement SRI in your build process ★ Mozilla Hacks – the Web developer blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Fyrd/caniuse/issues/2758&quot; title=&quot;X-Content-Type-Options: nosniff · Issue #2758 · Fyrd/caniuse&quot;&gt;X-Content-Type-Options: nosniff · Issue #2758 · Fyrd/caniuse&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Firefox도 버전 50부터 지원(&lt;a href=&quot;https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/&quot;&gt;참고&lt;/a&gt;)하고 있으며 이제 사파리도 지원하면서 주요 브라우저에서 모두 nosniff 지원하게 됐습니다.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;또, Promise의 &lt;code&gt;rejectionhandled&lt;/code&gt;와 &lt;code&gt;unhandledrejection&lt;/code&gt; 이벤트도 지원합니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Polymer/polymer/releases/tag/v2.0.0&quot; title=&quot;2.0.0&quot;&gt;Polymer 2.0.0&lt;/a&gt;과 &lt;a href=&quot;https://github.com/Polymer/polymer-cli&quot; title=&quot;polymer-cli&quot;&gt;polymer-cli 1.0.0&lt;/a&gt;이 릴리즈됐습니다.&lt;br&gt;
-ES2015의 클래스 기반으로 쓸 수 있도록 됐고 Dirty checking을 opt-out할 수단과 1.x와의 호환 계층 등도 준비돼 있습니다.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/tKvNeNGmOtU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/blog/2017-05-15-time-for-two&quot; title=&quot;Time for 2.0 - Polymer Project&quot;&gt;Time for 2.0 - Polymer Project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/2.0/docs/about_20&quot; title=&quot;What&amp;amp;#39;s new in 2.0 - Polymer Project&quot;&gt;What&amp;#39;s new in 2.0 - Polymer Project&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;아래 문서에 1.x에서의 마이그레이션에 대해 작성돼 있으니 참고하시길 바랍니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/2.0/docs/upgrade&quot; title=&quot;Polymer 2.0 upgrade guide - Polymer Project&quot;&gt;Polymer 2.0 upgrade guide - Polymer Project&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;또, &lt;a href=&quot;https://bower.io/&quot; title=&quot;Bower&quot;&gt;Bower&lt;/a&gt;를 사용해 Polymer를 설치하는게 공식 방법입니다(&lt;a href=&quot;https://github.com/Polymer/polymer-cli&quot; title=&quot;polymer-cli&quot;&gt;polymer-cli&lt;/a&gt;도 Bower를 기반으로 하고 있습니다).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/2.0/start/install-2-0&quot; title=&quot;Install Polymer 2.x - Polymer Project&quot;&gt;Install Polymer 2.x - Polymer Project&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;하지만 며칠 전에 Bower는 정식으로 비권장이 됐습니다.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Bower is deprecated. &lt;a href=&quot;https://t.co/XkIxOKhfBc&quot;&gt;pic.twitter.com/XkIxOKhfBc&lt;/a&gt;&lt;/p&gt;&amp;mdash; azu (@azu_re) &lt;a href=&quot;https://twitter.com/azu_re/status/866085257052798976&quot;&gt;May 21, 2017&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/bower/bower/pull/2458&quot; title=&quot;Add yarn and webpack recommendation from bower.io to readme Fixes #2298 by graingert · Pull Request #2458 · bower/bower&quot;&gt;Add yarn and webpack recommendation from bower.io to readme Fixes #2298 by graingert · Pull Request #2458 · bower/bower&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;때문에 Polymer도 npm/yarn을 지원하도록 변경 중입니다.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;philipahlberg 5:52 PM
-Hi everyone, with Bower being depreciated and pointing to Yarn now, should an issue be filed for the Polymer CLI to make the switch at some point in the future?
-
-fresnizky 7:47 PM
-@philipahlberg I think they&amp;#39;re​ already working on it.
- https://github.com/Polymer/polymer/issues/3903#issuecomment-279180914
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Polymer의 slack에서 &lt;a href=&quot;https://polymer.slack.com/archives/C03PF4L4L/p1495270338490522&quot;&gt;https://polymer.slack.com/archives/C03PF4L4L/p1495270338490522&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;다음 Issue에서 npm 지원에 관해 의논되고 있으며 현재 &lt;a href=&quot;https://www.npmjs.com/package/@polymer/polymer&quot; title=&quot;@polymer/polymer&quot;&gt;@polymer/polymer&lt;/a&gt; 알파(α) 버전이 공개돼 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Polymer/polymer/issues/3903#issuecomment-279180914&quot; title=&quot;Polymer on NPM stuck on version 1.2.5 · Issue #3903 · Polymer/polymer&quot;&gt;Polymer on NPM stuck on version 1.2.5 · Issue #3903 · Polymer/polymer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;React의 Scafolding 도구인 Create React App 1.0이 릴리즈됐습니다.&lt;/p&gt;
-
-&lt;p&gt;webpack2로 업그레이드 됐고 런타임 상 에러가 웹페이지로 출력되며 Service Worker 대응하고 Jest20을 사용하도록 됐습니다. 또, Dynamic import를 사용한 코드가 분할 빌드 되도록 변경됐습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/blog/2017/05/18/whats-new-in-create-react-app.html&quot; title=&quot;What&amp;amp;#39;s New in Create React App - React Blog&quot;&gt;What&amp;#39;s New in Create React App - React Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;아래 릴리즈 노트에 0.9.5에서의 마이그레이션 방법이 작성돼 있으니 참고하시길 바랍니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/facebookincubator/create-react-app/releases/tag/v1.0.0&quot; title=&quot;Release v1.0.0 · facebookincubator/create-react-app&quot;&gt;Release v1.0.0 · facebookincubator/create-react-app&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;헤드라인&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-notes-for-safari-technology-preview-30-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 30 | WebKit&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7614/release-notes-for-safari-technology-preview-30/&quot; title=&quot;Release Notes for Safari Technology Preview 30 | WebKit&quot;&gt;webkit.org/blog/7614/release-notes-for-safari-technology-preview-30/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Safari Technology Preview Release 30이 릴리즈됐습니다. &lt;br&gt;
-Subresource Integrity(SRI), &lt;code&gt;X-Content-Type-Options:nosniff&lt;/code&gt;를 대응했고 Promise의 Unhandled rejection 이벤트를 지원합니다.&lt;br&gt;
-&lt;code&gt;document.cookie&lt;/code&gt;의 동작 방식을 보다 정밀히 변경했고 WAI-ARIA와 관련 기능을 수정하는 등 다양한 변경 사항이 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;time-for-2.0---polymer-project&quot;&gt;Time for 2.0 - Polymer Project&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.polymer-project.org/blog/2017-05-15-time-for-two&quot; title=&quot;Time for 2.0 - Polymer Project&quot;&gt;www.polymer-project.org/blog/2017-05-15-time-for-two&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebComponents&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Polymer 2.0이 릴리즈됐습니다.&lt;br&gt;
-클래스 기반으로 작성할 수 있도록 변경됐고 Polymer CLI도 함께 업데이트 됐습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Polymer/polymer/releases/tag/v2.0.0&quot; title=&quot;Release Stable Release 2.0.0 · Polymer/polymer&quot;&gt;Release Stable Release 2.0.0 · Polymer/polymer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.polymer-project.org/2.0/docs/about_20&quot; title=&quot;What&amp;amp;amp;#39;s new in 2.0 - Polymer Project&quot;&gt;What&amp;#39;s new in 2.0 - Polymer Project&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-7.0-“coelestem-adspicit-lucem”-·-postcss/autoprefixer&quot;&gt;Release 7.0 “Coelestem adspicit lucem” · postcss/autoprefixer&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/postcss/autoprefixer/releases/tag/7.0.0&quot; title=&quot;Release 7.0 “Coelestem adspicit lucem” · postcss/autoprefixer&quot;&gt;github.com/postcss/autoprefixer/releases/tag/7.0.0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Autoprefixer 7.0이 릴리즈됐습니다.&lt;br&gt;
-PostCSS 6.0, Browserslist 2.0, caniuse-lite를 이용하도록 변경됐습니다.&lt;br&gt;
-Node.js 0.12의 지원을 종료했고 기본적으로 Grid Layout의 접두사 기능을 비활성화 했고 코드 베이스가 CoffeeScript에서 Babel을 사용한 ECAMScript6로 변경됐습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://evilmartians.com/chronicles/autoprefixer-7-browserslist-2-released&quot; title=&quot;Autoprefixer 7.0 and Browserslist 2.0 — Martian Chronicles, Evil Martians’ team blog&quot;&gt;Autoprefixer 7.0 and Browserslist 2.0 — Martian Chronicles, Evil Martians’ team blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;eslint-v4.0.0-beta.0-released---eslint---pluggable-javascript-linter&quot;&gt;ESLint v4.0.0-beta.0 released - ESLint - Pluggable JavaScript linter&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://eslint.org/blog/2017/05/eslint-v4.0.0-beta.0-released&quot; title=&quot;ESLint v4.0.0-beta.0 released - ESLint - Pluggable JavaScript linter&quot;&gt;eslint.org/blog/2017/05/eslint-v4.0.0-beta.0-released&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ESLint&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ESLint 4.0.0β가 릴리즈됐습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://qiita.com/mysticatea/items/3d01452d76ea6c943793&quot; title=&quot;ESLint v4.0.0의 변경사항 정리 - Qiita&quot;&gt;ESLint v4.0.0의 변경사항 정리 - Qiita&lt;/a&gt;(일본어)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;add-yarn-and-webpack-recommendation-from-bower.io-to-readme-fixes-#2298-by-graingert-·-pull-request-#2458-·-bower/bower&quot;&gt;Add yarn and webpack recommendation from bower.io to readme Fixes #2298 by graingert · Pull Request #2458 · bower/bower&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/bower/bower/pull/2458&quot; title=&quot;Add yarn and webpack recommendation from bower.io to readme Fixes #2298 by graingert · Pull Request #2458 · bower/bower&quot;&gt;github.com/bower/bower/pull/2458&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;news&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Bower가 &lt;code&gt;npm deprecate&lt;/code&gt;가 되어 정식으로 비권장 됐습니다.&lt;br&gt;
-유지보수는 계속 할 예정이며 Bower의 미래(유지보수/개발)에 흥미가 있는 사람은 메일로 연락해 달라고 합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/bower/bower/issues/2298#issuecomment-302792690&quot; title=&quot;Consider deprecating Bower. · Issue #2298 · bower/bower&quot;&gt;Consider deprecating Bower. · Issue #2298 · bower/bower&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-v1.0.0-·-facebookincubator/create-react-app&quot;&gt;Release v1.0.0 · facebookincubator/create-react-app&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/facebookincubator/create-react-app/releases/tag/v1.0.0&quot; title=&quot;Release v1.0.0 · facebookincubator/create-react-app&quot;&gt;github.com/facebookincubator/create-react-app/releases/tag/v1.0.0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;create-react-app v1.0.0이 릴리즈됐습니다.&lt;br&gt;
-webpack2로 업그레이드 됐고 런타임 상 에러가 웹페이지로 출력되며 Service Worker 대응하고 Jest20을 사용하도록 됐습니다. 또, Dynamic import를 사용한 코드가 분할 빌드 되도록 변경됐습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/blog/2017/05/18/whats-new-in-create-react-app.html&quot; title=&quot;What&amp;amp;amp;#39;s New in Create React App - React Blog&quot;&gt;What&amp;#39;s New in Create React App - React Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;아티클&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;zeit-–-next-3.0-preview&quot;&gt;ZEIT – Next 3.0 Preview&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://zeit.co/blog/next3-preview&quot; title=&quot;ZEIT – Next 3.0 Preview&quot;&gt;zeit.co/blog/next3-preview&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;서버&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Next 3.0 프리뷰 버전이 릴리즈됐습니다.&lt;br&gt;
-&lt;code&gt;next export&lt;/code&gt;로 정적인 HTML로 출력할 수 있도록 변경됐고 컴포넌트의 dynamic import를 지원하는 등 다양한 변경 사항이 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;developer-edition-54:-new-inspector-and-debugger-features,-mdn-help-in-the-netmonitor,-and-more-★-mozilla-hacks-–-the-web-developer-blog&quot;&gt;Developer Edition 54: New inspector and debugger features, MDN help in the netmonitor, and more ★ Mozilla Hacks – the Web developer blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hacks.mozilla.org/2017/03/developer-edition-54-new-inspector-and-debugger-features/&quot; title=&quot;Developer Edition 54: New inspector and debugger features, MDN help in the netmonitor, and more ★ Mozilla Hacks – the Web developer blog&quot;&gt;hacks.mozilla.org/2017/03/developer-edition-54-new-inspector-and-debugger-features/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Firefox 54 개발자 도구의 변경 사항을 소개하는 글입니다.&lt;br&gt;
-CSS Inspect가 개선됐고 Debugger 패널에서 코드판이 별도의 탭으로 열리거나 현 상태의 변수 값이 툴팁으로 출력되도록 변경됐습니다. 또, Network 패널에서 [More Info]을 통해 도움말 페이지로 바로 갈 수 있으며 JSON Viewer가 추가됐습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;javascript의-또-하나의-「함수명」-——-name-프로퍼티---qiita(일본어)&quot;&gt;JavaScript의 또 하나의 「함수명」 —— name 프로퍼티 - Qiita(일본어)&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://qiita.com/8x9/items/34272b59b5aa68e33256&quot; title=&quot;JavaScript의 또 하나의 「함수명」 —— name 프로퍼티 - Qiita&quot;&gt;qiita.com/8x9/items/34272b59b5aa68e33256&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScript Function의 &lt;code&gt;name&lt;/code&gt; 프로퍼티에 관한 설명 글입니다.&lt;br&gt;
-ES2015부터 익명 함수나 Arrow Function 등에 함수 이름이 없어도 선언된 변수의 이름이 &lt;code&gt;name&lt;/code&gt; 프로퍼티로 참조된다는 것과 &lt;code&gt;writable&lt;/code&gt; 속성의 사양에 관해 소개 돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;the-many-faces-of-functions-in-javascript---bocoup&quot;&gt;The Many Faces of Functions in JavaScript - Bocoup&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://bocoup.com/blog/the-many-faces-of-functions-in-javascript&quot; title=&quot;The Many Faces of Functions in JavaScript - Bocoup&quot;&gt;bocoup.com/blog/the-many-faces-of-functions-in-javascript&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScript의 여러가지 &amp;quot;함수&amp;quot; 선언 및 표현 방식에 관해 정리돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;슬라이드, 영상&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;a-modern-front-end-workflow-–-umar-hansa-|-render-2017---youtube&quot;&gt;A Modern Front-End Workflow – Umar Hansa | Render 2017 - YouTube&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=v5r_n6Tq0uk&quot; title=&quot;A Modern Front-End Workflow – Umar Hansa | Render 2017 - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;v5r_n6Tq0uk&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Chrome 개발자 도구의 팁이나 디버깅 워크 플로우에 대해 소개하는 발표 영상입니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;the-future-of-audio-and-video-on-the-web-(google-i/o-&amp;#39;17)---youtube&quot;&gt;The Future of Audio and Video on the Web (Google I/O &amp;#39;17) - YouTube&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=z9unKFzAj1w&quot; title=&quot;The Future of Audio and Video on the Web (Google I/O &amp;#39;17) - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;z9unKFzAj1w&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ProgressiveWebApp&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;웹의 영상이나 음악을 PWA로 어떻게 대응할 수 있는지 소개하는 발표 영상입니다.&lt;br&gt;
-ServiceWorker를 사용한 오프라인 대응, 디바이스 회전 시 자동 풀스크린, Media Capabilities를 사용한 재생 판단, MediaSession API를 이용한 커버 디자인 등 다양한 API와 사용 방법에 대해 소개합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/GoogleChrome/sample-media-pwa&quot; title=&quot;GoogleChrome/sample-media-pwa: A sample video-on-demand media Progressive Web App&quot;&gt;GoogleChrome/sample-media-pwa: A sample video-on-demand media Progressive Web App&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/02/media-session&quot; title=&quot;Customize Media Notifications and Handle Playlists  |  Web  |  Google Developers&quot;&gt;Customize Media Notifications and Handle Playlists  |  Web  |  Google Developers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/google/shaka-player&quot; title=&quot;google/shaka-player: JavaScript player library / DASH client / MSE-EME player&quot;&gt;google/shaka-player: JavaScript player library / DASH client / MSE-EME player&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;web-performance:-leveraging-the-metrics-that-most-affect-user-experience-(google-i/o-&amp;#39;17)---youtube&quot;&gt;Web Performance: Leveraging the Metrics that Most Affect User Experience (Google I/O &amp;#39;17) - YouTube&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6Ljq-Jn-EgU&amp;amp;index=71&amp;amp;list=PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&quot; title=&quot;Web Performance: Leveraging the Metrics that Most Affect User Experience (Google I/O &amp;#39;17) - YouTube&quot;&gt;www.youtube.com/watch?v&amp;#x3D;6Ljq-Jn-EgU&amp;amp;index&amp;#x3D;71&amp;amp;list&amp;#x3D;PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;성능과 측정 항목(Metrics)에 관해 소개하는 발표 영상입니다.&lt;br&gt;
-로드 완료가 아닌 상호 작용(Interactive)된 시간(TTI)를 측정하는 방법과 Hero Elements, UX를 측정 항목에 기준하여 이야기하며 Long Tasks(50ms)를 PerformanceObserver로 감지하는 방법과 조작 지연 측정, 개선을 위한 패턴에 대해서도 소개합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/GoogleChrome/tti-polyfill&quot; title=&quot;GoogleChrome/tti-polyfill: TTI polyfill&quot;&gt;GoogleChrome/tti-polyfill: TTI polyfill&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;css-houdini--the-bridge-between-css,-javascript-and-the-browser-by-serg-hospodarets&quot;&gt;CSS Houdini- the bridge between CSS, JavaScript and the browser by Serg Hospodarets&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://slides.com/malyw/houdini-codemotion#/&quot; title=&quot;CSS Houdini- the bridge between CSS, JavaScript and the browser by Serg Hospodarets&quot;&gt;slides.com/malyw/houdini-codemotion#/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;CSS Houdini(DOM을 벗어나 조금 더 저수준 레벨에서 CSS를 제어할 수 있도록 하는 스펙)에 관해 소개하는 슬라이드입니다.&lt;br&gt;
-CSS / JavaScript / 브라우저의 연계와 각 Worklet에 관해 이야기합니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;google-i/o-2017---all-sessions---youtube&quot;&gt;Google I/O 2017 - All Sessions - YouTube&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/playlist?list=PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&quot; title=&quot; Google I/O 2017 - All Sessions - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PLOU2XLYxmsIKC8eODk_RNCWv3fBcLvMMy&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;이벤트&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Google I/O 2017 발표 영상이 공개됐습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;jsconf-eu-2017---youtube&quot;&gt;JSConf EU 2017 - YouTube&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_&quot; title=&quot; JSConf EU 2017 - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;이벤트&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JSConf EU 2017의 영상이 공개됐습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;사이트, 서비스, 문서&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;don&amp;#39;t-overcomplicate-javascript-–-bits-from-nikola-ristic-∞-ƒront-end-∆eveloper&quot;&gt;Don&amp;#39;t Overcomplicate Javascript – Bits from Nikola Ristic ∞ ƒront-end ∆eveloper&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://bits.ristic.io/dont-overcomplicate-javascript-0&quot; title=&quot;Don&amp;#39;t Overcomplicate Javascript – Bits from Nikola Ristic ∞ ƒront-end ∆eveloper&quot;&gt;bits.ristic.io/dont-overcomplicate-javascript-0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScript에서의 카고 컬트 프로그래밍(Cargo cult programming)에 대해 이야기하는 연재 글입니다. 특정 패턴이나 기술의 원칙이나 배경 이해 없이 코드 습관을 갖고 기술을 적용하면 기술적 부채나 복잡성도 함께 뒤따라 가져올 가능성이 있다고 이야기를 시작하면서 Redux에서의 Action에 대한 상수 패턴과 &lt;code&gt;import * as Constans from &amp;#39;./constants&amp;#39;&lt;/code&gt;의 문제점 등에 관해 소개합니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;hn-pwa---hacker-news-readers-as-progressive-web-apps&quot;&gt;HN PWA - Hacker News readers as Progressive Web Apps&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hnpwa.com/&quot; title=&quot;HN PWA - Hacker News readers as Progressive Web Apps&quot;&gt;hnpwa.com/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ProgressiveWebApp&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;example&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Hacker News를 여러가지 View 프레임워크로 구현한 결과를 정리하고 공개하는 사이트입니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://efcl.info/2014/10/11/hackernews-api/&quot; title=&quot;Hacker News API가 TodoMVC적인 장소가 됐다 | Web Scratch&quot;&gt;Hacker News API가 TodoMVC적인 장소가 됐다 | Web Scratch&lt;/a&gt;(일본어)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;소프트웨어, 도구, 라이브러리&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;diegomura/react-pdf:-create-pdf-files-using-react&quot;&gt;diegomura/react-pdf: Create PDF files using React&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/diegomura/react-pdf&quot; title=&quot;diegomura/react-pdf: Create PDF files using React&quot;&gt;github.com/diegomura/react-pdf&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;PDF&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;React 컴포넌트로 레이아웃 등을 작성하고 PDF로 생성하는 라이브러리입니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;도서&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;complete-redux-book-by-ilya-gelman-et-al.-[pdf/ipad/kindle]&quot;&gt;Complete Redux Book by Ilya Gelman et al. [PDF/iPad/Kindle]&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://leanpub.com/redux-book&quot; title=&quot;Complete Redux Book by Ilya Gelman et al. \[PDF/iPad/Kindle\]&quot;&gt;leanpub.com/redux-book&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Redux를 다루는 전자 서적입니다.&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Mon, 22 May 2017 19:59:03 +0900</pubDate>
-        <link>https://jser.info/ko/2017/05/22/safari-tp-30-polymer-2.0bower-create-react-app-1.0.0/</link>
-        <guid isPermaLink="true">https://jser.info/ko/2017/05/22/safari-tp-30-polymer-2.0bower-create-react-app-1.0.0/</guid>
-        
-        <category>Safari</category>
-        
-        <category>Polymer</category>
-        
-        <category>Bower</category>
-        
-        <category>React</category>
         
         
         <category>_i18n</category>
