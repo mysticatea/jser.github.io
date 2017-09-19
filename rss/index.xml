@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Sep 2017 14:49:31 +0900</pubDate>
-    <lastBuildDate>Tue, 19 Sep 2017 14:49:31 +0900</lastBuildDate>
+    <pubDate>Tue, 19 Sep 2017 14:56:35 +0900</pubDate>
+    <lastBuildDate>Tue, 19 Sep 2017 14:56:35 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -354,7 +354,8 @@ TypeScriptでの開発についての本&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.jp/dp/479805075X&quot; title=&quot;作りながら学ぶ React入門 | 吉田裕美 |本 | 通販 | Amazon&quot;&gt;www.amazon.co.jp/dp/479805075X&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;Reactについての入門本&lt;br&gt;
+&lt;p&gt;2018年9月16日発売&lt;br&gt;
+Reactについての入門書。&lt;br&gt;
 電子版も発売予定 via &lt;a href=&quot;https://github.com/jser/ping/issues/74&quot;&gt;https://github.com/jser/ping/issues/74&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr&gt;
