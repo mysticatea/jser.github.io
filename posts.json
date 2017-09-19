@@ -1,4 +1,11 @@
 [{
+"title":"2017-09-19のJS: Node.js 8.5.0、MSEdge 16の変更点、CoffeeScript 2",
+"url":"https://jser.info/2017/09/19/node.js-8.5.0-msedge-16-coffeescript-2/",
+"date":"2017-09-19T10:38:34+09:00",
+"content":"JSer.info #349 - Node.js 8.5.0がリリースされました。Node v...",
+"category":"JSer",
+"tags":["Node.js","MSEdge","CoffeeScript"]
+},{
 "title":"2017-09-11のJS: Yarn 1.0とworkspace、Node.jsウェブフレームワークのfastify",
 "url":"https://jser.info/2017/09/11/yarn-1.0workspace-node.jsfastify/",
 "date":"2017-09-11T20:21:47+09:00",
