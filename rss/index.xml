@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Sep 2017 11:42:44 +0900</pubDate>
-    <lastBuildDate>Tue, 19 Sep 2017 11:42:44 +0900</lastBuildDate>
+    <pubDate>Tue, 19 Sep 2017 11:56:32 +0900</pubDate>
+    <lastBuildDate>Tue, 19 Sep 2017 11:56:32 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -83,6 +83,16 @@ CoffeeScript 2の&lt;code&gt;class&lt;/code&gt;や&lt;code&gt;=&amp;gt;&lt;/code
 &lt;/ul&gt;
 
 &lt;p&gt;また、一行コメント(&lt;code&gt;# コメント&lt;/code&gt;)がコメントとして出力されるようになり、Async function、JSX、ES module、for...ofの対応などが行われています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;editor-notes&quot;&gt;Editor Notes&lt;/h2&gt;
+
+&lt;p&gt;Geneva, 18 September 2017でECMAScriptは20歳になりました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ecma-international.org/news/ECMA-262%2020th%20birthday.htm&quot; title=&quot;ECMA-262 20th birthday&quot;&gt;ECMA-262 20th birthday&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr&gt;
 
