@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Sep 2017 14:56:35 +0900</pubDate>
-    <lastBuildDate>Tue, 19 Sep 2017 14:56:35 +0900</lastBuildDate>
+    <pubDate>Wed, 20 Sep 2017 13:24:57 +0900</pubDate>
+    <lastBuildDate>Wed, 20 Sep 2017 13:24:57 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -214,7 +214,7 @@ webpack/babelの設定、ファイルサイズやパース時間の違いなど&
 
 &lt;p&gt;Chromeデスクトップの自動再生ポリシーの変更について。&lt;br&gt;
 Safari 11と同様に音がある動画はユーザーインタラクションや幾つかの条件を満たした場合のみ自動再生が可能になる。&lt;br&gt;
-Media Engagement Indexやiframeの」&lt;code&gt;gesture=&amp;quot;media&amp;quot;&lt;/code&gt;属性についてなど&lt;/p&gt;
+Media Engagement Indexやiframeの&lt;code&gt;gesture=&amp;quot;media&amp;quot;&lt;/code&gt;属性についてなど&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/&quot; title=&quot;Auto-Play Policy Changes for macOS | WebKit&quot;&gt;Auto-Play Policy Changes for macOS | WebKit&lt;/a&gt;&lt;/li&gt;
@@ -354,8 +354,7 @@ TypeScriptでの開発についての本&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.jp/dp/479805075X&quot; title=&quot;作りながら学ぶ React入門 | 吉田裕美 |本 | 通販 | Amazon&quot;&gt;www.amazon.co.jp/dp/479805075X&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;2018年9月16日発売&lt;br&gt;
-Reactについての入門書。&lt;br&gt;
+&lt;p&gt;Reactについての入門書。&lt;br&gt;
 電子版も発売予定 via &lt;a href=&quot;https://github.com/jser/ping/issues/74&quot;&gt;https://github.com/jser/ping/issues/74&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr&gt;
