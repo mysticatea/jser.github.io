@@ -1,4 +1,11 @@
 [{
+"title":"2017-09-26のJS: Chrome 62 Beta、Safari 11.0、モダンブラウザのレンダリングパイプライン",
+"url":"https://jser.info/2017/09/26/chrome-62-beta-safari-11.0/",
+"date":"2017-09-26T09:37:50+09:00",
+"content":"JSer.info #350 - Chrome 62betaがリリースされました。Chromi...",
+"category":"JSer",
+"tags":["Chrome","Safari","browser"]
+},{
 "title":"2017-09-19のJS: Node.js 8.5.0、MSEdge 16の変更点、CoffeeScript 2",
 "url":"https://jser.info/2017/09/19/node.js-8.5.0-msedge-16-coffeescript-2/",
 "date":"2017-09-19T10:38:34+09:00",
