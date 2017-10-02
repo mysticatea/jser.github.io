@@ -1,4 +1,11 @@
 [{
+"title":"2017-10-02のJS: React 16.0、Firefox 56、画像最適化",
+"url":"https://jser.info/2017/10/02/react-16.0-firefox-56-images.guide/",
+"date":"2017-10-02T19:54:50+09:00",
+"content":"JSer.info #351 - React 16.0が正式リリースされました。[React ...",
+"category":"JSer",
+"tags":["react","firefox","image"]
+},{
 "title":"2017-09-26のJS: Chrome 62 Beta、Safari 11.0、モダンブラウザのレンダリングパイプライン",
 "url":"https://jser.info/2017/09/26/chrome-62-beta-safari-11.0/",
 "date":"2017-09-26T09:37:50+09:00",
