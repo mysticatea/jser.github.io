@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 02 Oct 2017 20:50:03 +0900</pubDate>
-    <lastBuildDate>Mon, 02 Oct 2017 20:50:03 +0900</lastBuildDate>
+    <pubDate>Mon, 02 Oct 2017 20:57:23 +0900</pubDate>
+    <lastBuildDate>Mon, 02 Oct 2017 20:57:23 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -43,8 +43,8 @@ core-jsやbabel-polyfillといったpolyfillを入れる必要があります。
 &lt;p&gt;Firefox 56.0がリリースされました。&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://reactjs.org/blog/2017/09/26/react-v16.0.html&quot;&gt;React v16.0 - React Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.koba04.com/post/2017/09/27/react-v16-changes/&quot;&gt;React v16 changes - blog.koba04.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/56.0/releasenotes/&quot; title=&quot;Firefox — Notes (56.0) — Mozilla&quot;&gt;Firefox — Notes (56.0) — Mozilla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/Firefox/Releases/56&quot; title=&quot;Firefox 56 for developers - Mozilla | MDN&quot;&gt;Firefox 56 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;CSS Grid DevToolsの追加、&lt;code&gt;&amp;lt;link rel=&amp;quot;preload&amp;quot;&amp;gt;&lt;/code&gt;のサポートされています。&lt;br&gt;
