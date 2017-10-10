@@ -1,4 +1,11 @@
 [{
+"title":"2017-10-10のJS: Mocha 4.0.0、npm 2要素認証、WHATWG Stream",
+"url":"https://jser.info/2017/10/10/mocha-4.0.0-npm-2-whatwg-stream/",
+"date":"2017-10-10T13:21:18+09:00",
+"content":"JSer.info #352 - Mocha 4.0.0がリリースされました。Mocha v4...",
+"category":"JSer",
+"tags":["Mocha","npm","security","Stream","WHATWG"]
+},{
 "title":"2017-10-02のJS: React 16.0、Firefox 56、画像最適化",
 "url":"https://jser.info/2017/10/02/react-16.0-firefox-56-images.guide/",
 "date":"2017-10-02T19:54:50+09:00",
