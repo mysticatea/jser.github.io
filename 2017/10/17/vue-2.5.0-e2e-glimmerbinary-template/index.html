@@ -250,7 +250,7 @@ CypressはTime Travelなどデバッグのしやすさ、Automatic waitingなど
 <p>テンプレート:</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
 </code></pre></div>
-<p>コンパイラーがテンプレートをJSONで表現するWire-formatという中間表現(IR)にします。<br>
+<p>コンパイラーがテンプレートをJSON形式の中間表現(IR)にします。<br>
 （現在のGlimmer VMがコンパイルするのは、このJSON表現までです）</p>
 <div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span>
   <span class="p">[</span><span class="s2">&quot;open-element&quot;</span><span class="p">,</span> <span class="s2">&quot;h1&quot;</span><span class="p">,</span> <span class="p">[]],</span>
@@ -258,7 +258,7 @@ CypressはTime Travelなどデバッグのしやすさ、Automatic waitingなど
   <span class="p">[</span><span class="s2">&quot;close-element&quot;</span><span class="p">]</span>
 <span class="p">]</span>
 </code></pre></div>
-<p>ランタイムでJSONであるWire-formatを読み込み、Opcodeと定数で表現したテンプレート情報を作ります。</p>
+<p>ランタイムでJSONを読み込み、Opcodeと定数で表現したテンプレート情報を作ります。</p>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// OpCode</span>
 <span class="kr">const</span> <span class="nx">Program</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="kr">const</span> <span class="nx">ConstantsPool</span> <span class="o">=</span> <span class="p">{</span>
