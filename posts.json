@@ -1,4 +1,11 @@
 [{
+"title":"2017-10-17のJS: Vue 2.5.0、E2Eテストフレームワーク、GlimmerのBinary Template",
+"url":"https://jser.info/2017/10/17/vue-2.5.0-e2e-glimmerbinary-template/",
+"date":"2017-10-17T09:54:58+09:00",
+"content":"JSer.info #353 - Vue 2.5.0がリリースされました。Release v2...",
+"category":"JSer",
+"tags":["Vue","E2E","Glimmer","Template"]
+},{
 "title":"2017-10-10のJS: Mocha 4.0.0、npm 2要素認証、WHATWG Stream",
 "url":"https://jser.info/2017/10/10/mocha-4.0.0-npm-2-whatwg-stream/",
 "date":"2017-10-10T13:21:18+09:00",
