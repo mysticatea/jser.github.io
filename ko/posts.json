@@ -1,4 +1,11 @@
 [{
+"title":"2017-10-17 JS: Vue 2.5.0, E2E 테스트 프레임워크, Glimmer의 Binary Template",
+"url":"https://jser.info/ko/2017/10/17/vue-2.5.0-e2e-glimmerbinary-template/",
+"date":"2017-10-17T09:54:58+09:00",
+"content":"JSer.info #353 - Vue 2.5.0이 릴리즈 됐습니다.Release v2...",
+"category":"JSer",
+"tags":["Vue","E2E","Glimmer","Template"]
+},{
 "title":"2017-09-11 JS: Yarn 1.0과 workspace, Node.js 웹 프레임워크 fastify",
 "url":"https://jser.info/ko/2017/09/11/yarn-1.0workspace-node.jsfastify/",
 "date":"2017-09-11T20:21:47+09:00",
