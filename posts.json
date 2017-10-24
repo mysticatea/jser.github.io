@@ -1,4 +1,11 @@
 [{
+"title":"2017-10-24のJS: CKEditor 5、MDN Web Docsへのドキュメント統合",
+"url":"https://jser.info/2017/10/24/ckeditor-5-mdn-web-docs/",
+"date":"2017-10-24T10:41:38+09:00",
+"content":"JSer.info #354 - Mozilla、Microsoft、Google、W3Cが協...",
+"category":"JSer",
+"tags":["MDN","CKEditor","CORS","domain"]
+},{
 "title":"2017-10-17のJS: Vue 2.5.0、E2Eテストフレームワーク、GlimmerのBinary Template",
 "url":"https://jser.info/2017/10/17/vue-2.5.0-e2e-glimmerbinary-template/",
 "date":"2017-10-17T09:54:58+09:00",

@@ -5,9 +5,282 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 22 Oct 2017 22:39:20 +0900</pubDate>
-    <lastBuildDate>Sun, 22 Oct 2017 22:39:20 +0900</lastBuildDate>
+    <pubDate>Tue, 24 Oct 2017 12:03:26 +0900</pubDate>
+    <lastBuildDate>Tue, 24 Oct 2017 12:03:26 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-10-24のJS: CKEditor 5、MDN Web Docsへのドキュメント統合</title>
+        <description>&lt;p&gt;JSer.info #354 - Mozilla、Microsoft、Google、W3Cが協調してウェブ開発のドキュメントを&lt;a href=&quot;https://developer.mozilla.org/&quot; title=&quot;MDN Web Docs&quot;&gt;MDN Web Docs&lt;/a&gt;に集約していくことを発表しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.mozilla.org/blog/2017/10/18/mozilla-brings-microsoft-google-w3c-samsung-together-create-cross-browser-documentation-mdn/&quot; title=&quot;Mozilla brings Microsoft, Google, the W3C, Samsung together to create cross-browser documentation on MDN - The Mozilla Blog&quot;&gt;Mozilla brings Microsoft, Google, the W3C, Samsung together to create cross-browser documentation on MDN - The Mozilla Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;目に見える変化としては、MSDNのドキュメントがMDNにリダイレクトされていきます。&lt;br&gt;
+ブラウザ固有のドキュメントに関しては&lt;a href=&quot;https://docs.microsoft.com/ja-jp/microsoft-edge/&quot; title=&quot;Microsoft Edge documentation - Microsoft Edge Development | Microsoft Docs&quot;&gt;Microsoft Edge documentation - Microsoft Edge Development | Microsoft Docs&lt;/a&gt;などに残ります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/10/18/documenting-web-together-mdn-web-docs/&quot; title=&quot;Documenting the Web together - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;Documenting the Web together - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以前、Web Platform APIのドキュメントを統合しようという動きは&lt;a href=&quot;https://webplatform.github.io/&quot; title=&quot;Your Web, documented. · WebPlatform.org&quot;&gt;WebPlatform.org&lt;/a&gt;という試みが行われていましたが、2015年にdiscontinueとなっています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ckeditor.com/blog/CKEditor-5-A-new-era-for-rich-text-editing/&quot; title=&quot;CKEditor 5: A new era for rich text editing | CKEditor.com&quot;&gt;CKEditor 5: A new era for rich text editing | CKEditor.com&lt;/a&gt;という記事ではリッチエディタライブラリであるCKEditor 5の変更点について書かれています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ckeditor/ckeditor5&quot; title=&quot;ckeditor/ckeditor5: Development environment for CKEditor 5; the best browser-based rich text editor.&quot;&gt;ckeditor/ckeditor5: Development environment for CKEditor 5; the best browser-based rich text editor.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CKEditor 5では内部的にドキュメントモデルを持ち、エディタのインターフェースやAPI経由での変更はこのドキュメントモデルを操作するようになりました。&lt;br&gt;
+今まではContentEditable + プリプロセスで行っていたため、汚いHTMLが生成される場合もあります。ドキュメントモデルから一意なHTMLを出力できるようになっています。また、ドキュメントモデルからの出力先として&lt;a href=&quot;https://docs.ckeditor.com/ckeditor5/latest/features/markdown.html&quot; title=&quot;Markdown&quot;&gt;Markdownへの出力&lt;/a&gt;などもできるようになっています。&lt;/p&gt;
+
+&lt;p&gt;このドキュメントモデルを内部的にもつアプローチは同様のリッチエディタでは採用されることが多くなっています。&lt;br&gt;
+&lt;a href=&quot;https://draftjs.org/&quot; title=&quot;Draft.js&quot;&gt;Draft.js&lt;/a&gt;、&lt;a href=&quot;http://marijnhaverbeke.nl/blog/prosemirror-1.html&quot; title=&quot;ProseMirror&quot;&gt;ProseMirror&lt;/a&gt;、&lt;a href=&quot;https://github.com/quilljs/quill&quot; title=&quot;Quill&quot;&gt;Quill&lt;/a&gt;の&lt;a href=&quot;https://github.com/quilljs/parchment&quot; title=&quot;Parchment&quot;&gt;Parchment&lt;/a&gt;、&lt;a href=&quot;https://github.com/basecamp/trix#understanding-the-document-model&quot; title=&quot;Trix&quot;&gt;Trix&lt;/a&gt;、&lt;a href=&quot;https://github.com/ianstormtaylor/slate&quot; title=&quot;Slate&quot;&gt;Slate&lt;/a&gt;のdata modelなどが似たような仕組みを持っています。&lt;/p&gt;
+
+&lt;p&gt;興味がある人は合わせて見るとよいかもしれません。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;what’s-new-in-microsoft-edge-in-the-windows-10-fall-creators-update---microsoft-edge-dev-blogmicrosoft-edge-dev-blog&quot;&gt;What’s New in Microsoft Edge in the Windows 10 Fall Creators Update - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/10/17/edgehtml-16-fall-creators-update/&quot; title=&quot;What’s New in Microsoft Edge in the Windows 10 Fall Creators Update - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;blogs.windows.com/msedgedev/2017/10/17/edgehtml-16-fall-creators-update/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;MSEdge&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;MSEdge 16の変更点について。&lt;br&gt;
+CSS Grid Layout、objefct-fit、Payment Request APIのサポート。&lt;br&gt;
+Service Workerの試験的サポート、WebVR対応の改善など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-notes-for-safari-technology-preview-42-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 42 | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/8001/release-notes-for-safari-technology-preview-42/&quot; title=&quot;Release Notes for Safari Technology Preview 42 | WebKit&quot;&gt;webkit.org/blog/8001/release-notes-for-safari-technology-preview-42/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Safari Technology Preview 42リリース。&lt;br&gt;
+Payment Requestの機能実装、&lt;code&gt;font-display&lt;/code&gt;の実装、&lt;code&gt;constant()&lt;/code&gt;が&lt;code&gt;env()&lt;/code&gt;にリネーム、&lt;code&gt;link rel=preconnect&lt;/code&gt;、&lt;code&gt;import.meta&lt;/code&gt;のサポート、Web InspectorにCanvasタブを追加など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;mozilla-brings-microsoft,-google,-the-w3c,-samsung-together-to-create-cross-browser-documentation-on-mdn---the-mozilla-blog&quot;&gt;Mozilla brings Microsoft, Google, the W3C, Samsung together to create cross-browser documentation on MDN - The Mozilla Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.mozilla.org/blog/2017/10/18/mozilla-brings-microsoft-google-w3c-samsung-together-create-cross-browser-documentation-mdn/&quot; title=&quot;Mozilla brings Microsoft, Google, the W3C, Samsung together to create cross-browser documentation on MDN - The Mozilla Blog&quot;&gt;blog.mozilla.org/blog/2017/10/18/mozilla-brings-microsoft-google-w3c-samsung-together-create-cross-browser-documentation-mdn/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Mozilla&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;MS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;W3C&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;news&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Mozilla、Microsoft、Googleなどがウェブ開発系のドキュメントをMDNへ集約することになった。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/10/18/documenting-web-together-mdn-web-docs/&quot; title=&quot;Documenting the Web together - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;Documenting the Web together - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.chromium.org/2017/10/building-unified-documentation-for-web.html&quot; title=&quot;Chromium Blog: Building unified documentation for the web&quot;&gt;Chromium Blog: Building unified documentation for the web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/blog/2017/10/w3c-to-work-with-mdn-on-web-platform-documentation/&quot; title=&quot;W3C to work with MDN on Web Platform documentation | W3C Blog&quot;&gt;W3C to work with MDN on Web Platform documentation | W3C Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ckeditor-5:-a-new-era-for-rich-text-editing-|-ckeditor.com&quot;&gt;CKEditor 5: A new era for rich text editing | CKEditor.com&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ckeditor.com/blog/CKEditor-5-A-new-era-for-rich-text-editing/&quot; title=&quot;CKEditor 5: A new era for rich text editing | CKEditor.com&quot;&gt;ckeditor.com/blog/CKEditor-5-A-new-era-for-rich-text-editing/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;editor&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;CKEditor 5の変更点について。&lt;br&gt;
+今までのアーキテクチャを一新し、編集するテキストをデータモデルとしてもつことでContentEditable特有の出力を回避できるように。&lt;br&gt;
+またエディタ共通の問題についてを扱うEditor Recommendationsサイトの公開など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ckeditor.github.io/editor-recommendations/&quot; title=&quot;Home | editor-recommendations&quot;&gt;Home | editor-recommendations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;new-in-chrome-62- | -web- | -google-developers&quot;&gt;New in Chrome 62  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/10/nic62&quot; title=&quot;New in Chrome 62  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/10/nic62&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome 62の変更点について。&lt;br&gt;
+ Network Information API、OpenType Variable Fonts、WebVRのorigin trialの開始など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;the-100%-correct-way-to-structure-a-react-app-(or-why-there’s-no-such-thing)&quot;&gt;The 100% correct way to structure a React app (or why there’s no such thing)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed&quot; title=&quot;The 100% correct way to structure a React app (or why there’s no such thing)&quot;&gt;hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Reactアプリケーションのディレクトリ構造について。&lt;br&gt;
+index.js or コンポーネント名.js、階層構造、exportするものについてなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;node.js-security-overview&quot;&gt;Node.js Security Overview&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nemethgergely.com/nodejs-security-overview/&quot; title=&quot;Node.js Security Overview&quot;&gt;nemethgergely.com/nodejs-security-overview/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;security&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.jsと関連するエコスシステムのセキュリティについてをざっくりと。&lt;br&gt;
+Core、npm、express、security.txt、関連サービスやツールなどについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;introducing-paypal’s-open-source-cross-domain-javascript-suite&quot;&gt;Introducing PayPal’s open-source cross-domain javascript suite&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@bluepnume/introducing-paypals-open-source-cross-domain-javascript-suite-95f991b2731d&quot; title=&quot;Introducing PayPal’s open-source cross-domain javascript suite&quot;&gt;medium.com/@bluepnume/introducing-paypals-open-source-cross-domain-javascript-suite-95f991b2731d&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;PayPalが使ってるクロスドメイン関係のライブラリまとめ。&lt;br&gt;
+&lt;code&gt;postMessage&lt;/code&gt;を使ったやり取り、コンポーネント、Util、同期的なPromiseであるZalgoとsetTimeoutのブロックについて、CORSとiframeについてなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;an-imperative-guide-to-forms-in-vue.js-–-logrocket&quot;&gt;An imperative guide to forms in Vue.js – LogRocket&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.logrocket.com/an-imperative-guide-to-forms-in-vue-js-7536bfa374e0&quot; title=&quot;An imperative guide to forms in Vue.js – LogRocket&quot;&gt;blog.logrocket.com/an-imperative-guide-to-forms-in-vue-js-7536bfa374e0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Vueを使った各種フォーム要素の管理やバリデーションについての紹介記事&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;blinkon-8---tokyo,-japan---youtube&quot;&gt;BlinkOn 8 - Tokyo, Japan - YouTube&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/playlist?list=PL9ioqAuyl6UK7Z0HHswBM5JgAp-izn_3S&quot; title=&quot;BlinkOn 8 - Tokyo, Japan - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PL9ioqAuyl6UK7Z0HHswBM5JgAp-izn_3S&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;blink&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;イベント&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;BlinkOn 8の動画一覧&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/11Y1MK-jVQl_xlhFS8dds_6FsC70jQ_9aOtcWALBiz5k/edit&quot; title=&quot;BlinkOn 8 Information - Google ドキュメント&quot;&gt;BlinkOn 8 Information - Google ドキュメント&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;prantlf/nettime:-prints-timings-of-a-http/s-request,-including-dns-lookup,-tls-handshake-etc.&quot;&gt;prantlf/nettime: Prints timings of a HTTP/S request, including DNS lookup, TLS handshake etc.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/prantlf/nettime&quot; title=&quot;prantlf/nettime: Prints timings of a HTTP/S request, including DNS lookup, TLS handshake etc.&quot;&gt;github.com/prantlf/nettime&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;network&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;特定のURLに対するDNS LookupやTCPコネクションの時間などネットワークの接続や通信にかかった時間を計測するCLI&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;micro frontends---extending-the-microservice-idea-to-frontend-development&quot;&gt;Micro Frontends - extending the microservice idea to frontend development&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://micro-frontends.org/&quot; title=&quot;Micro Frontends - extending the microservice idea to frontend development&quot;&gt;micro-frontends.org/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;architecture&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;組織&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Micro Frontendsについて。&lt;br&gt;
+マイクロサービスアーキテクチャ的な考えをフロントエンドの中にも適応していく話。&lt;br&gt;
+機能でのチーム分割、独立したコンポーネントとWeb Components、ナビゲーションなど各トピックごとの実現方法についてを書いていくとのこと&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.thoughtworks.com/radar/techniques/micro-frontends&quot; title=&quot;Micro frontends | Technology Radar | ThoughtWorks&quot;&gt;Micro frontends | Technology Radar | ThoughtWorks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;chrome-user-experience-report- | -tools-for-web-developers- | -google-developers&quot;&gt;Chrome User Experience Report  |  Tools for Web Developers  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/tools/chrome-user-experience-report/&quot; title=&quot;Chrome User Experience Report  |  Tools for Web Developers  |  Google Developers&quot;&gt;developers.google.com/web/tools/chrome-user-experience-report/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;統計&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Chromeの使用統計データを元にしたoriginごとのRUMを集めたBigQueryのデータセット。&lt;br&gt;
+origin、通信タイプ、デバイスの種類、first_paintのヒストグラムを扱うデータセット。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html&quot; title=&quot;Chromium Blog: Introducing the Chrome User Experience Report&quot;&gt;Chromium Blog: Introducing the Chrome User Experience Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;http-archive-(beta)&quot;&gt;HTTP Archive (beta)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://beta.httparchive.org/&quot; title=&quot;HTTP Archive (beta)&quot;&gt;beta.httparchive.org/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webservice&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;統計&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;新しいHTTP Archiveのβ版が公開された。&lt;br&gt;
+lighthouseを使ったLoad Speed関連の統計データやDesktopとmobileの比較データなどをみることができる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://twitter.com/HTTPArchive/status/922582514010488832&quot; title=&quot;HTTP Archive on Twitter: &amp;amp;amp;#34;Excited to share the open beta for the new HTTP Archive. Check it out at https://t.co/MmiFOKXTrM and let us know what you think! 1/3… https://t.co/ycJ03nMkEj&amp;amp;amp;#34;&quot;&gt;HTTP Archive on Twitter: &amp;#34;Excited to share the open beta for the new HTTP Archive. Check it out at https://t.co/MmiFOKXTrM and let us know what you think! 1/3… https://t.co/ycJ03nMkEj&amp;#34;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;dollarshaveclub/es-check:-checks-the-version-of-es-in-javascript-files-with-simple-shell-commands-🏆&quot;&gt;dollarshaveclub/es-check: Checks the version of ES in JavaScript files with simple shell commands 🏆&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/dollarshaveclub/es-check&quot; title=&quot;dollarshaveclub/es-check: Checks the version of ES in JavaScript files with simple shell commands 🏆&quot;&gt;github.com/dollarshaveclub/es-check&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Acornを使って特定のECMAScriptバージョンでパースできるかをテストするツール。&lt;br&gt;
+コードが構文的にそのECMAScriptバージョンをサポートしてるかチェックできる&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;kbrsh/wade:-blazing-fast,-1kb-search-for-javascript&quot;&gt;kbrsh/wade: Blazing fast, 1kb search for Javascript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kbrsh/wade&quot; title=&quot;kbrsh/wade: Blazing fast, 1kb search for Javascript&quot;&gt;github.com/kbrsh/wade&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;深さ優先探索で文字列検索を行うライブラリ&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.kabir.ml/posts/inside-wade.html&quot; title=&quot;Inside Wade | Kabir Shah&quot;&gt;Inside Wade | Kabir Shah&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;eyejs---testing-framework&quot;&gt;EyeJS - testing framework&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eye.js.org/&quot; title=&quot;EyeJS - testing framework&quot;&gt;eye.js.org/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;nodeとbrowserのモードを持ったテストフレームワーク。&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Tue, 24 Oct 2017 10:41:38 +0900</pubDate>
+        <link>https://jser.info/2017/10/24/ckeditor-5-mdn-web-docs/</link>
+        <guid isPermaLink="true">https://jser.info/2017/10/24/ckeditor-5-mdn-web-docs/</guid>
+        
+        <category>MDN</category>
+        
+        <category>CKEditor</category>
+        
+        <category>CORS</category>
+        
+        <category>domain</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-10-17のJS: Vue 2.5.0、E2Eテストフレームワーク、GlimmerのBinary Template</title>
@@ -2859,335 +3132,6 @@ Chromeチームが開発している。&lt;/p&gt;
         <category>TypeScript</category>
         
         <category>Flow</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-08-14のJS: Firefox 55、BootStrap 4β、Node.js 8.3.0</title>
-        <description>&lt;p&gt;JSer.info #344 - &lt;a href=&quot;https://www.mozilla.jp/firefox/55.0/releasenotes/&quot; title=&quot;Firefox 55.0&quot;&gt;Firefox 55.0&lt;/a&gt;がリリースされました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/Firefox/Releases/55&quot;&gt;Firefox 55 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://hacks.mozilla.org/2017/08/firefox-55-supports-webvr/&quot;&gt;Firefox 55: first desktop browser to support WebVR ★ Mozilla Hacks – the Web developer blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ECMAScriptにおいてはES2017の&lt;code&gt;SharedArrayBuffer&lt;/code&gt;、現在Stage 3の&lt;a href=&quot;https://github.com/tc39/proposal-object-rest-spread&quot;&gt;Object rest/spread properties&lt;/a&gt;のサポートが行われています。&lt;br&gt;
-加えて&lt;code&gt;requestIdleCallback&lt;/code&gt;、&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API&quot; title=&quot;WebVR API&quot;&gt;WebVR API&lt;/a&gt;、&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API&quot; title=&quot;Intersection Observer API&quot;&gt;Intersection Observer API&lt;/a&gt;がサポートされています。&lt;/p&gt;
-
-&lt;p&gt;また、既存の挙動の変更としてスクロール位置の値を浮動小数点数として返すように変更、&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Selection#Behavior_of_Selection_API_in_terms_of_editing_host_focus_changes&quot;&gt;Selection API&lt;/a&gt;の仕様追従、WebRTC APIの仕様追従が行われています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/ja/docs/2017/scrollx-scrolly-pagexoffset-pageyoffset-now-return-double-instead-of-integer/&quot; title=&quot;scrollX、scrollY、pageXOffset、pageYOffset が整数の代わりに浮動小数点数を返すようになりました | Firefox サイト互換性情報&quot;&gt;scrollX、scrollY、pageXOffset、pageYOffset が整数の代わりに浮動小数点数を返すようになりました | Firefox サイト互換性情報&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;既に&lt;a href=&quot;https://developers.google.com/web/updates/2017/03/background_tabs&quot;&gt;Chrome(11~)&lt;/a&gt;やFireox(50~)でも行われているバックグラウンドタブにおける&lt;code&gt;setTimeout&lt;/code&gt;などのスロットルについてですが、&lt;a href=&quot;https://wiki.mozilla.org/Security/Tracking_protection#Lists&quot;&gt;トラッキングスクリプト&lt;/a&gt;に対してはさらに強い制約がかかるようになりました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Throttling_of_tracking_timeout_scripts&quot; title=&quot;Throttling of tracking timeout scripts&quot;&gt;Throttling of tracking timeout scripts&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Geolocation APIと&lt;a href=&quot;https://developer.mozilla.org/ja/docs/Web/API/Storage_API&quot;&gt;Storage API&lt;/a&gt;(ストレージの容量を確認するAPI)は&lt;a href=&quot;https://developer.mozilla.org/ja/docs/Web/Security/Secure_Contexts&quot; title=&quot;Secure Contexts&quot;&gt;Secure Contexts&lt;/a&gt;(つまりHTTPS)でのみ有効となりました。&lt;br&gt;
-既にChrome(50~)において、Geolocation APIはSecure Contextのみとなっています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only&quot; title=&quot;Geolocation API Removed from Unsecured Origins in Chrome 50  |  Web  |  Google Developers&quot;&gt;Geolocation API Removed from Unsecured Origins in Chrome 50  |  Web  |  Google Developers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins&quot; title=&quot;Deprecating Powerful Features on Insecure Origins - The Chromium Projects&quot;&gt;Deprecating Powerful Features on Insecure Origins - The Chromium Projects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.getbootstrap.com/2017/08/10/bootstrap-4-beta/&quot; title=&quot;Bootstrap 4 Beta · Bootstrap&quot;&gt;Bootstrap 4 Beta · Bootstrap&lt;/a&gt;が公開されました。&lt;a href=&quot;http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/&quot; title=&quot;Bootstrap 4 alpha&quot;&gt;Bootstrap 4 alpha&lt;/a&gt;から2年弱程度経っています。&lt;/p&gt;
-
-&lt;p&gt;3.xからの変更点として、LessからSassへ移行、FlexboxとGridシステムの改善、IE8/9のサポート終了、JavaScriptプラグインの書き直しなどが行われています。&lt;br&gt;
-詳細な変更点については次のIssueを見るとよさそうです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/twbs/bootstrap/issues/21568&quot; title=&quot;Beta 1 ship list · Issue #21568 · twbs/bootstrap&quot;&gt;Beta 1 ship list · Issue #21568 · twbs/bootstrap&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Node.js 8.3.0がリリースされました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v8.3.0/&quot; title=&quot;Node v8.3.0 (Current) | Node.js&quot;&gt;Node v8.3.0 (Current) | Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;このバージョンから&lt;a href=&quot;https://v8project.blogspot.jp/2017/06/v8-release-60.html&quot; title=&quot;V8 6.0&quot;&gt;V8 6.0&lt;/a&gt;が使われるようになり、新しい最適化コンパイラのTurbofanが有効化されています。&lt;br&gt;
-そのため、既存の最適化とは異なる傾向が出るようになっています。&lt;/p&gt;
-
-&lt;p&gt;たとえば今までは&lt;code&gt;try/catch&lt;/code&gt;を含む関数は最適化が行われませんでしたが、Turbofanでは最適化されるようになっています。また、&lt;code&gt;Function#bind&lt;/code&gt;も今まではArrow Functionでラップした関数に比べて遅いものでしたが、ほぼ同等の速度がでるようになっています。&lt;br&gt;
-コードの最適化がどのように変わっているかについては、次の記事でコード例と共に紹介されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/the-node-js-collection/get-ready-a-new-v8-is-coming-node-js-performance-is-changing-46a63d6da4de&quot; title=&quot;GET READY: A NEW V8 IS COMING, NODE.JS PERFORMANCE IS CHANGING.&quot;&gt;GET READY: A NEW V8 IS COMING, NODE.JS PERFORMANCE IS CHANGING.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.nearform.com/blog/node-js-is-getting-a-new-v8-with-turbofan/&quot; title=&quot;Get ready: A new V8 is coming, Node.js performance is changing. | nearForm&quot;&gt;Get ready: A new V8 is coming, Node.js performance is changing. | nearForm&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;そのため、&lt;a href=&quot;https://github.com/petkaantonov/bluebird/wiki/Optimization-killers&quot; title=&quot;Optimization killers · petkaantonov/bluebird Wiki&quot;&gt;Optimization killers · petkaantonov/bluebird Wiki&lt;/a&gt;で紹介されているような「最適化を妨げるコード」はTurboFanが使われているかで大きく変わっています。(Wikiの内容も更新されています)&lt;br&gt;
-興味がある人は読んでみるといいと思います。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-v3.1.0-·-sinonjs/sinon&quot;&gt;Release v3.1.0 · sinonjs/sinon&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/sinonjs/sinon/releases/tag/v3.1.0&quot; title=&quot;Release v3.1.0 · sinonjs/sinon&quot;&gt;github.com/sinonjs/sinon/releases/tag/v3.1.0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Sinon.js 3.1.0リリース&lt;br&gt;
-sandboxにファクトリメソッドの追加、&lt;br&gt;
-&lt;code&gt;sandbox.stub&lt;/code&gt;のリグレッションの修正など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-v3.5.0-·-webpack/webpack&quot;&gt;Release v3.5.0 · webpack/webpack&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/webpack/webpack/releases/tag/v3.5.0&quot; title=&quot;Release v3.5.0 · webpack/webpack&quot;&gt;github.com/webpack/webpack/releases/tag/v3.5.0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webpack&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;webpack v3.5.0リリース。&lt;br&gt;
-Dynamic Importに&lt;code&gt;webpackMode&lt;/code&gt;のオプションを追加、&lt;code&gt;require.context&lt;/code&gt;にcontext modeの第4引数を追加など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/api/module-methods/&quot; title=&quot;Module API - Methods&quot;&gt;Module API - Methods&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;microsoft/napajs:-napa.js:-multi-threaded-javascript-runtime&quot;&gt;Microsoft/napajs: Napa.js: Multi-threaded JavaScript runtime&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Microsoft/napajs&quot; title=&quot;Microsoft/napajs: Napa.js: Multi-threaded JavaScript runtime&quot;&gt;github.com/Microsoft/napajs&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node.jsで動くマルチスレッドライブラリ。元々BingでCPU-boundな処理を扱うために作られたもの。&lt;br&gt;
-スレッド(Worker)をまとめたZoneがあり、Zoneに対して値を渡してそれぞれのスレッドで処理が行える&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-notes-for-safari-technology-preview-release-37-|-webkit&quot;&gt;Release Notes for Safari Technology Preview Release 37 | WebKit&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7862/release-notes-for-safari-technology-preview-release-37/&quot; title=&quot;Release Notes for Safari Technology Preview Release 37 | WebKit&quot;&gt;webkit.org/blog/7862/release-notes-for-safari-technology-preview-release-37/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Safari Technology Preview Release 37リリース。&lt;br&gt;
-&lt;code&gt;navigator.sendBeacon&lt;/code&gt;、&lt;code&gt;document.elementsFromPoint&lt;/code&gt;のサポート。&lt;br&gt;
-&lt;code&gt;Promise#finally&lt;/code&gt;、optional &lt;code&gt;catch&lt;/code&gt; bindingのサポートなど&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tc39/proposal-optional-catch-binding&quot; title=&quot;tc39/proposal-optional-catch-binding: proposal for ECMAScript to allow omission of the catch binding&quot;&gt;tc39/proposal-optional-catch-binding: proposal for ECMAScript to allow omission of the catch binding&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;node-v8.3.0-(current)-|-node.js&quot;&gt;Node v8.3.0 (Current) | Node.js&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v8.3.0/&quot; title=&quot;Node v8.3.0 (Current) | Node.js&quot;&gt;nodejs.org/en/blog/release/v8.3.0/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node v8.3.0リリース。&lt;br&gt;
-Turbofanが有効化されたV8 6.0へのアップグレード、WHATWG Encodingのサポートなど&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/the-node-js-collection/get-ready-a-new-v8-is-coming-node-js-performance-is-changing-46a63d6da4de&quot; title=&quot;GET READY: A NEW V8 IS COMING, NODE.JS PERFORMANCE IS CHANGING.&quot;&gt;GET READY: A NEW V8 IS COMING, NODE.JS PERFORMANCE IS CHANGING.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;bootstrap-4-beta-·-bootstrap&quot;&gt;Bootstrap 4 Beta · Bootstrap&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.getbootstrap.com/2017/08/10/bootstrap-4-beta/&quot; title=&quot;Bootstrap 4 Beta · Bootstrap&quot;&gt;blog.getbootstrap.com/2017/08/10/bootstrap-4-beta/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Bootstrap 4βリリース。&lt;br&gt;
-LessからSassへ、FlexboxとGridシステムの改善、IE8/9のサポート終了、JavaScriptプラグインの書き直しなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;firefox-55-for-developers---mozilla-|-mdn&quot;&gt;Firefox 55 for developers - Mozilla | MDN&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/55&quot; title=&quot;Firefox 55 for developers - Mozilla | MDN&quot;&gt;developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/55&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Firefox 55リリース。&lt;br&gt;
-Object spread/rest operator、SharedArrayBufferに対応。&lt;br&gt;
-WebVR、requestIdleCallback、Intersection Observer API対応。&lt;br&gt;
-またSelection APIの仕様追従、Geo APIなどがSecure Contextのみで利用可能になるなど&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mozilla.jp/firefox/55.0/releasenotes/&quot; title=&quot;Firefox 55.0 リリースノート&quot;&gt;Firefox 55.0 リリースノート&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://hacks.mozilla.org/2017/08/firefox-55-supports-webvr/&quot; title=&quot;Firefox 55: first desktop browser to support WebVR ★ Mozilla Hacks – the Web developer blog&quot;&gt;Firefox 55: first desktop browser to support WebVR ★ Mozilla Hacks – the Web developer blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://example.com/&quot; title=&quot;Dummy&quot;&gt;Dummy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;zeit-–-next.js-3.0&quot;&gt;ZEIT – Next.js 3.0&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://zeit.co/blog/next3&quot; title=&quot;ZEIT – Next.js 3.0&quot;&gt;zeit.co/blog/next3&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;サーバー&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Next.js 3.0リリース。&lt;br&gt;
-Static Exportのサポート、Dynamic Importのサポート、HMRの対応改善など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;es-modules-in-node-today!-–-web-dev-@-microsoft-–-medium&quot;&gt;ES Modules in Node Today! – Web Dev @ Microsoft – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/web-on-the-edge/es-modules-in-node-today-32cff914e4b&quot; title=&quot;ES Modules in Node Today! – Web Dev @ Microsoft – Medium&quot;&gt;medium.com/web-on-the-edge/es-modules-in-node-today-32cff914e4b&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node.jsで今後サポートが予定されているES modulesを扱えるようにするrequire extension hookライブラリ。&lt;br&gt;
-&lt;code&gt;.mjs&lt;/code&gt;対応やCommonJSとの相互運用性に考慮したオプションなどを持つ&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/standard-things/esm&quot; title=&quot;standard-things/esm: ES modules in Node today!&quot;&gt;standard-things/esm: ES modules in Node today!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/nodejs/node-eps/blob/master/002-es-modules.md&quot; title=&quot;node-eps/002-es-modules.md at master · nodejs/node-eps&quot;&gt;node-eps/002-es-modules.md at master · nodejs/node-eps&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;passing-data-between-promise-callbacks&quot;&gt;Passing data between Promise callbacks&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://2ality.com/2017/08/promise-callback-data-flow.html&quot; title=&quot;Passing data between Promise callbacks&quot;&gt;2ality.com/2017/08/promise-callback-data-flow.html&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Promises&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Promiseチェイン間における値のやり取りのパターンについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;the-modern-javascript-tutorial&quot;&gt;The Modern Javascript Tutorial&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://javascript.info/&quot; title=&quot;The Modern Javascript Tutorial&quot;&gt;javascript.info/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScript/DOM APIのチュートリアルサイト。&lt;br&gt;
-それぞれの項目ごとに解説やサンプル、演習問題がある。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;introduction-to-preact-—-a-smaller,-faster-react-alternative&quot;&gt;Introduction to Preact — a smaller, faster React alternative&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.logrocket.com/introduction-to-preact-a-smaller-faster-react-alternative-ad5532eb6d79&quot; title=&quot;Introduction to Preact — a smaller, faster React alternative&quot;&gt;blog.logrocket.com/introduction-to-preact-a-smaller-faster-react-alternative-ad5532eb6d79&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Preactについての記事。&lt;br&gt;
-Preactとは何か、Reactとの違いや互換性(preact-compat)について。&lt;br&gt;
-またPreactの基本的な使い方、preact-cliを使っての開発についてなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;javascript-performance-by-mikesherov&quot;&gt;Javascript Performance by mikesherov&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://slides.com/mikesherov/javascript-performance&quot; title=&quot;Javascript Performance by mikesherov&quot;&gt;slides.com/mikesherov/javascript-performance&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;パフォーマンス最適化についてのスライド。&lt;br&gt;
-&lt;code&gt;O(n^2)&lt;/code&gt;なアルゴリズムを避ける、キャッシュとメモ化、GCを避ける。&lt;br&gt;
-不必要なImmutableを避ける、必要ないことはしない、パフォーマンス計測の仕方などについて。&lt;br&gt;
-npmやwebpackなど実際のプロジェクトの例などについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;investigating-performance-of-object#tostring-in-es2015&quot;&gt;Investigating Performance of Object#toString in ES2015&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ponyfoo.com/articles/investigating-performance-object-prototype-to-string-es2015&quot; title=&quot;Investigating Performance of Object#toString in ES2015&quot;&gt;ponyfoo.com/articles/investigating-performance-object-prototype-to-string-es2015&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;V8の&lt;code&gt;Object.prototype.toString()&lt;/code&gt;の最適化について。&lt;br&gt;
-ES2015で&lt;code&gt;Symbol.toStringTag&lt;/code&gt;が追加され、toStringはこの実装を考慮する必要がある。(toString自体はオブジェクトの型判定によく使われている)&lt;br&gt;
-オブジェクトが&lt;code&gt;Symbol.toStringTag&lt;/code&gt;を実装しているかのフラグをMapで持っておき、持ってない場合は余計なlookupを省くようにしたという話。&lt;br&gt;
-元々はSpiderMonkeyでデザインされていた方法をportした内容についての解説。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1369042#c0&quot; title=&quot;1369042 - Optimize the @@toStringTag and @@toPrimitive lookups&quot;&gt;1369042 - Optimize the @@toStringTag and @@toPrimitive lookups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1q_Y2YM8S055RF1R6qvDe65kOEVO99tdviI1vaDcbnmc/edit#&quot; title=&quot;Interesting Symbols - Google ドキュメント&quot;&gt;Interesting Symbols - Google ドキュメント&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;zeeshanu/learn-regex:-learn-regex-the-easy-way&quot;&gt;zeeshanu/learn-regex: Learn regex the easy way&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/zeeshanu/learn-regex&quot; title=&quot;zeeshanu/learn-regex: Learn regex the easy way&quot;&gt;github.com/zeeshanu/learn-regex&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;正規表現&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;正規表現について簡単にまとめられたドキュメント。&lt;br&gt;
-基本的な使い方やメタ文字、フラグなどについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;masakazu-yanai/char-canvas:-draw-tool-for-ascii-art.&quot;&gt;masakazu-yanai/char-canvas: Draw Tool for Ascii Art.&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/masakazu-yanai/char-canvas&quot; title=&quot;masakazu-yanai/char-canvas: Draw Tool for Ascii Art.&quot;&gt;github.com/masakazu-yanai/char-canvas&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;canvas&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;CanvasライクなAPIでアスキーアートを扱うライブラリ。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;darcyclarke/rawkit:-🦊-immediately-open-chrome-devtools-when-debugging-node.js-apps&quot;&gt;darcyclarke/rawkit: 🦊 Immediately Open Chrome DevTools when debugging Node.js apps&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/darcyclarke/rawkit&quot; title=&quot;darcyclarke/rawkit: 🦊 Immediately Open Chrome DevTools when debugging Node.js apps&quot;&gt;github.com/darcyclarke/rawkit&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Extension&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;console&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Chromeの立ち上げと&lt;code&gt;node --inspect&lt;/code&gt;のデバッガーへの接続を自動的に行うことができるツール&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;json-to-typescript-interfaces-and-runtime-type-checkers-–-quicktype&quot;&gt;JSON to TypeScript interfaces and runtime type-checkers – quicktype&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ts.quicktype.io/&quot; title=&quot;JSON to TypeScript interfaces and runtime type-checkers – quicktype&quot;&gt;ts.quicktype.io/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JSON&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webservice&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JSONからTypeScript/JSON Schema/Go/C#/Elmなどの型定義/interfaceを生成することができるツール&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;ream/ream:-🚀-framework-for-building-universal-vue.js-app&quot;&gt;ream/ream: 🚀 Framework for building universal Vue.js app&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ream/ream&quot; title=&quot;ream/ream: 🚀 Framework for building universal Vue.js app&quot;&gt;github.com/ream/ream&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;UniversalなVueアプリのフレームワーク。&lt;br&gt;
-Next.jsやNuxt.jsのディレクトリ構造などの暗黙的な規約ではなく、明示的な設定/コードによりアプリケーションを作れるようにする目的&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Tue, 15 Aug 2017 08:21:14 +0900</pubDate>
-        <link>https://jser.info/2017/08/15/firefox-55-bootstrap-4b-node.js-8.3.0/</link>
-        <guid isPermaLink="true">https://jser.info/2017/08/15/firefox-55-bootstrap-4b-node.js-8.3.0/</guid>
-        
-        <category>Firefox</category>
-        
-        <category>BootStrap</category>
-        
-        <category>Node.js</category>
         
         
         <category>_i18n</category>
