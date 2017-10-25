@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 24 Oct 2017 12:03:26 +0900</pubDate>
-    <lastBuildDate>Tue, 24 Oct 2017 12:03:26 +0900</lastBuildDate>
+    <pubDate>Wed, 25 Oct 2017 11:42:33 +0900</pubDate>
+    <lastBuildDate>Wed, 25 Oct 2017 11:42:33 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -54,7 +54,7 @@
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;MSEdge&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;MSEdge 16の変更点について。&lt;br&gt;
-CSS Grid Layout、objefct-fit、Payment Request APIのサポート。&lt;br&gt;
+CSS Grid Layout、object-fit、Payment Request APIのサポート。&lt;br&gt;
 Service Workerの試験的サポート、WebVR対応の改善など&lt;/p&gt;
 
 &lt;hr&gt;
