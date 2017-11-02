@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 31 Oct 2017 11:09:33 +0900</pubDate>
-    <lastBuildDate>Tue, 31 Oct 2017 11:09:33 +0900</lastBuildDate>
+    <pubDate>Thu, 02 Nov 2017 22:57:25 +0900</pubDate>
+    <lastBuildDate>Thu, 02 Nov 2017 22:57:25 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -229,7 +229,7 @@ JavaScriptで書かれたVueアプリケーションをTypeScriptに移行する
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;Reduxの動作フローについてのスライド。&lt;br&gt;
-アニメーション画像によってView-&amp;gt;Action-&amp;gt;Reduder-&amp;gt;Stateの流れについてを可視化している。&lt;/p&gt;
+アニメーション画像によってView-&amp;gt;Action-&amp;gt;Reducer-&amp;gt;Stateの流れについてを可視化している。&lt;/p&gt;
 
 &lt;hr&gt;
 
