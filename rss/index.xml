@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Nov 2017 11:33:36 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Nov 2017 11:33:36 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Nov 2017 11:35:46 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Nov 2017 11:35:46 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -56,10 +56,12 @@ languageserviceの改善でVSCodeなどでJSDocから型をQuickfixできるよ�
 &lt;li&gt;&lt;a href=&quot;https://medium.com/the-node-js-collection/news-node-js-8-moves-into-long-term-support-and-node-js-9-becomes-the-new-current-release-line-74cf754a10a0&quot; title=&quot;NEWS: Node.js 8 Moves into Long-Term Support and Node.js 9 Becomes the New Current Release Line&quot;&gt;NEWS: Node.js 8 Moves into Long-Term Support and Node.js 9 Becomes the New Current Release Line&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;また、同時にリリースされてNode.js 9.0.0ではさまざまなBreaking Changeが含まれています。&lt;/p&gt;
+&lt;p&gt;また、同時にNode.js 9.0.0がリリースされています。&lt;br&gt;
+Node.js 9.0.0では、さまざまなBreaking Changeが含まれています。&lt;/p&gt;
 
-&lt;p&gt;Error codeの対応、&lt;code&gt;assert.deepStrictEqual&lt;/code&gt;がSameValueZeroのロジックで比較するように、&lt;code&gt;assert&lt;/code&gt;のメソッドがカスタムエラーをサポート、&lt;code&gt;util.callbackify&lt;/code&gt;、&lt;code&gt;util.isDeepStrictEqual&lt;/code&gt;の追加など。&lt;br&gt;
-また&lt;code&gt;Intl.v8BreakIterator&lt;/code&gt;や&lt;code&gt;domain&lt;/code&gt;から&lt;code&gt;.dispose()&lt;/code&gt;の削除などが行われています。&lt;/p&gt;
+&lt;p&gt;Error codeの対応、&lt;code&gt;assert.deepStrictEqual&lt;/code&gt;がSameValueZeroのロジックで比較するようになり、&lt;code&gt;Intl.v8BreakIterator&lt;/code&gt;や&lt;code&gt;domain&lt;/code&gt;から&lt;code&gt;.dispose()&lt;/code&gt;の削除などが行われています。&lt;/p&gt;
+
+&lt;p&gt;機能追加として、&lt;code&gt;assert&lt;/code&gt;のメソッドがカスタムエラーをサポート、&lt;code&gt;util.callbackify&lt;/code&gt;、&lt;code&gt;util.isDeepStrictEqual&lt;/code&gt;の追加などが行われています。&lt;/p&gt;
 
 &lt;p&gt;詳細は次の記事を参照してください。&lt;/p&gt;
 
