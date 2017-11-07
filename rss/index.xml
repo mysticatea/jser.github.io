@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Nov 2017 11:16:34 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Nov 2017 11:16:34 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Nov 2017 11:33:36 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Nov 2017 11:33:36 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -44,7 +44,7 @@ languageserviceの改善でVSCodeなどでJSDocから型をQuickfixできるよ�
 &lt;p&gt;Node.js 8.9.0では、npm 5.5.1へのアップデート、&lt;code&gt;require.resolve()&lt;/code&gt;に指定パスを基準に探索するオプションが追加、&lt;code&gt;util.TextEncoder&lt;/code&gt;と&lt;code&gt;util.TextDecoder&lt;/code&gt;の実験フラグが外れています。&lt;br&gt;
 また、Node.js 8.9.0は8.x系のLong-Term Supported (LTS)となりました。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jser.info/uploads/2017/11/07-1510019474.png&quot; alt=&quot;LTS&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.rawgit.com/nodejs/Release/05e27d38230ae5077a3bb463933f5c2eeb33f981/schedule.png&quot; alt=&quot;LTS&quot;&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/nodejs/Release&quot; title=&quot;nodejs/Release: Node.js Foundation Release Working Group&quot;&gt;nodejs/Release: Node.js Foundation Release Working Group&lt;/a&gt;より&lt;/p&gt;
