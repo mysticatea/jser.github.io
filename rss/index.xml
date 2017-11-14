@@ -5,9 +5,313 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Nov 2017 11:51:02 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Nov 2017 11:51:02 +0900</lastBuildDate>
+    <pubDate>Tue, 14 Nov 2017 11:03:45 +0900</pubDate>
+    <lastBuildDate>Tue, 14 Nov 2017 11:03:45 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-11-14のJS: React v16.1.0、Firefox DevTools、Docusaurus</title>
+        <description>&lt;p&gt;JSer.info #357 - React v16.1.0がリリースされました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react/releases/tag/v16.1.0&quot; title=&quot;Release v16.1.0 · facebook/react&quot;&gt;Release v16.1.0 · facebook/react&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bower向けの配布は終了したため代わりに&lt;a href=&quot;https://reactjs.org/docs/installation.html#using-a-cdn&quot;&gt;CDN&lt;/a&gt;の利用の推奨しています。&lt;code&gt;React.Children&lt;/code&gt; utilがPortalをサポート、React DOM Serverに&lt;code&gt;suppressHydrationWarning&lt;/code&gt;属性の追加などが行われいます。&lt;/p&gt;
+
+&lt;p&gt;また、&lt;a href=&quot;https://github.com/facebook/react/tree/master/packages/react-call-return&quot; title=&quot;react-call-return&quot;&gt;react-call-return&lt;/a&gt;というパッケージが試験的に公開されています。&lt;br&gt;
+次の記事で解説されていますが、&lt;code&gt;ReactCallReturn.unstable_createCall&lt;/code&gt;でChildrenに値を渡して呼び出し、その結果を使って別の要素を返すことができる仕組みのようです。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// https://github.com/facebook/react/blob/2d23a4563ef2bec7d90c4a7edff2657c890b4334/packages/react-call-return/src/__tests__/ReactCallReturn-test.js&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactCallReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;unstable_createReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactCallReturn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;unstable_createCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;a&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;a&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;b&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;b&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;c&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;c&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ReactNoop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ReactNoop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ReactNoop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://cdb.reacttraining.com/react-call-return-what-and-why-7e7761f81843&quot; title=&quot;React Call Return — What and Why – componentDidBlog&quot;&gt;React Call Return — What and Why – componentDidBlog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Firefoxの開発者ツールのデバッガーの使い方を学べるサイトが公開されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mozilladevelopers.github.io/playground/debugger/&quot;&gt;Debugger PlayGround | Introduction | Mozilla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hacks.mozilla.org/2017/11/go-beyond-console-log-with-the-firefox-debugger/&quot;&gt;Go beyond console.log with the Firefox Debugger – Mozilla Hacks – the Web developer blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以前公開された&lt;a href=&quot;https://mozilladevelopers.github.io/playground/css-grid&quot; title=&quot;CSS Grid PlayGround | Terminology | Mozilla&quot;&gt;CSS Grid PlayGround&lt;/a&gt;と同じく実際にデバッガーを使って体験できる形式のチュートリアルとなっています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;まだ正式にOSSとしては公開されていませんが、Facebook系のOSSが利用している静的サイトジェネレーターのサイトが公開されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docusaurus.io/&quot; title=&quot;Docusaurus&quot;&gt;Docusaurus&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://prettier.io/&quot;&gt;Prettier&lt;/a&gt;や&lt;a href=&quot;https://facebook.github.io/jest/&quot;&gt;Jest&lt;/a&gt;のサイトではすでに取り入れられていて、OSSのソフトウェアやライブラリ、ツールといったプロダクトに特化した静的サイトジェネレーターとなっています。&lt;/p&gt;
+
+&lt;p&gt;Markdownで書くことができ、GitHubの編集リンク、翻訳への対応、ブログ機能やalgoliaを使った検索、Reactを使ったカスタマイズなどが行えるようになっています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;polymerlabs/lit-html:-html-template-literals-in-javascript&quot;&gt;PolymerLabs/lit-html: HTML template literals in JavaScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/PolymerLabs/lit-html&quot; title=&quot;PolymerLabs/lit-html: HTML template literals in JavaScript&quot;&gt;github.com/PolymerLabs/lit-html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;HTML&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Tagged Template literalでHTMLを書いてレンダリングできるライブラリ。テンプレートのキャッシュが行われ再描画のコストを小さくするモチベーション。&lt;code&gt;&amp;lt;template&amp;gt;&lt;/code&gt;要素との連携が考えられていて、Custom Elementでの利用がしやすくなっている。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Io6JjgckHbg&quot; title=&quot;lit-HTML (Chrome Dev Summit 2017) - YouTube&quot;&gt;lit-HTML (Chrome Dev Summit 2017) - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://1000ch.net/posts/2017/lit-html.html&quot; title=&quot;lit-html を調べたメモと考えたこと - EagleLand&quot;&gt;lit-html を調べたメモと考えたこと - EagleLand&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v1.0.0-·-addyosmani/critical&quot;&gt;Release v1.0.0 · addyosmani/critical&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/addyosmani/critical/releases/tag/v1.0.0&quot; title=&quot;Release v1.0.0 · addyosmani/critical&quot;&gt;github.com/addyosmani/critical/releases/tag/v1.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;クリティカルパスの解析、インライン化を行うライブラリであるcritical 1.0.0リリース。&lt;br&gt;
+実行エンジンがPhantomJSからChrome headlessへ変更された&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;dev.opera-—-what’s-new-in-chromium-62-and-opera-49&quot;&gt;Dev.Opera — What’s new in Chromium 62 and Opera 49&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev.opera.com/blog/opera-49/&quot; title=&quot;Dev.Opera — What’s new in Chromium 62 and Opera 49&quot;&gt;dev.opera.com/blog/opera-49/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Opera&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Opera 49 (based on Chromium 62)リリース。&lt;br&gt;
+Network Information API、OpenType Variable Fonts、DOM要素のMedia Captureなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v16.1.0-·-facebook/react&quot;&gt;Release v16.1.0 · facebook/react&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/react/releases/tag/v16.1.0&quot; title=&quot;Release v16.1.0 · facebook/react&quot;&gt;github.com/facebook/react/releases/tag/v16.1.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React 16.1.0リリース。&lt;br&gt;
+Bowerのサポート終了、&lt;code&gt;React.Children&lt;/code&gt; utilがPortalをサポート、React DOM Serverに&lt;code&gt;suppressHydrationWarning&lt;/code&gt;の追加など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;announcing-draftjs-plugins-2.0-–-nik-graf-–-medium&quot;&gt;Announcing DraftJS Plugins 2.0 – Nik Graf – Medium&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@nikgraf/announcing-draftjs-plugins-2-0-8c25f2a4df55&quot; title=&quot;Announcing DraftJS Plugins 2.0 – Nik Graf – Medium&quot;&gt;medium.com/@nikgraf/announcing-draftjs-plugins-2-0-8c25f2a4df55&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;DraftJSのプラグイン集であるDraftJS Plugins 2.0リリース。&lt;br&gt;
+画像の操作、整形、D&amp;amp;D、mentionやemojiなどに対応するプラグインを公開している。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.draft-js-plugins.com/&quot; title=&quot;DraftJS Plugins - High quality plugins with great UX&quot;&gt;DraftJS Plugins - High quality plugins with great UX&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;es-proposal:-`import.meta`-–-module-metadata&quot;&gt;ES proposal: `import.meta` – module metadata&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://2ality.com/2017/11/import-meta.html&quot; title=&quot;ES proposal: \`import.meta\` – module metadata&quot;&gt;2ality.com/2017/11/import-meta.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proposal&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Stage 3のECMAScript Proposalである&lt;code&gt;import.meta&lt;/code&gt;について。&lt;br&gt;
+モジュールのメタデータを扱うオブジェクトの仕様&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;creating-a-star-to-heart-animation-with-svg-and-vanilla-javascript-|-css-tricks&quot;&gt;Creating a Star to Heart Animation with SVG and Vanilla JavaScript | CSS-Tricks&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://css-tricks.com/creating-star-heart-animation-svg-vanilla-javascript/&quot; title=&quot;Creating a Star to Heart Animation with SVG and Vanilla JavaScript | CSS-Tricks&quot;&gt;css-tricks.com/creating-star-heart-animation-svg-vanilla-javascript/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;SVG&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;SVGとJavaScriptでスターやハートを書きアニメーションさせる話。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;angular-5:-upgrading-&amp;amp;-summary-of-new-features-←-alligator.io&quot;&gt;Angular 5: Upgrading &amp;amp; Summary of New Features ← Alligator.io&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://alligator.io/angular/angular-5/&quot; title=&quot;Angular 5: Upgrading &amp;amp; Summary of New Features ← Alligator.io&quot;&gt;alligator.io/angular/angular-5/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Angular 5の変更点について。&lt;br&gt;
+Angular CLIの改善や最適化オプション、&lt;code&gt;updateOn&lt;/code&gt;オプション、&lt;code&gt;@angular/service-worker&lt;/code&gt;の追加などについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;high-performance-service-worker-loading- | -web-fundamentals- | -google-developers&quot;&gt;High-performance service worker loading  |  Web Fundamentals  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading&quot; title=&quot;High-performance service worker loading  |  Web Fundamentals  |  Google Developers&quot;&gt;developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ServiceWorker&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Service Workerのローディングについてのプラクティス。&lt;br&gt;
+HTMLのキャッシュ、Application Shellパターン、&lt;code&gt;fetch&lt;/code&gt;ハンドラで何もしない処理を登録するのは避ける、preloadについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;resource-prioritization-–-getting-the-browser-to-help-you- | -web-fundamentals- | -google-developers&quot;&gt;Resource Prioritization – Getting the Browser to Help You  |  Web Fundamentals  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/resource-prioritization&quot; title=&quot;Resource Prioritization – Getting the Browser to Help You  |  Web Fundamentals  |  Google Developers&quot;&gt;developers.google.com/web/fundamentals/performance/resource-prioritization&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;リソース取得の優先度について。&lt;br&gt;
+開発者ツールでの読み方、&lt;code&gt;preload&lt;/code&gt;、&lt;code&gt;preconnect&lt;/code&gt;(&lt;code&gt;dns-prefetch&lt;/code&gt;)、&lt;code&gt;prefetch&lt;/code&gt;での優先度の指定やそれぞれのユースケースの紹介など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;proper-error-handling-in-javascript-―-scotch&quot;&gt;Proper Error Handling in JavaScript ― Scotch&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://scotch.io/tutorials/proper-error-handling-in-javascript&quot; title=&quot;Proper Error Handling in JavaScript ― Scotch&quot;&gt;scotch.io/tutorials/proper-error-handling-in-javascript&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptのエラーハンドリングや基本的な構文について。&lt;br&gt;
+try...catch...finally、throw、window.onerror、コールスタックの読み方、Promiseのエラーハンドリングについてなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;browser-automation-revisited---meet-puppeteer&quot;&gt;Browser automation revisited - meet Puppeteer&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nemethgergely.com/puppeteer-browser-automation/&quot; title=&quot;Browser automation revisited - meet Puppeteer&quot;&gt;nemethgergely.com/puppeteer-browser-automation/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Puppeteerを使ったデバッグの自動化についての記事。&lt;br&gt;
+コンソールログの取得、スクリーンショット、プロファイルの記録、HTTPリクエストの制御などを行う方法についてを紹介している&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;コンポーネント指向と余白の設計&quot;&gt;コンポーネント指向と余白の設計&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/manabuyasuda1/ss-71261608&quot; title=&quot;コンポーネント指向と余白の設計&quot;&gt;www.slideshare.net/manabuyasuda1/ss-71261608&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;design&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Atomic Design/コンポーネント指向とmargin/paddingのパターンについてのスライド。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;docusaurus-·-easy-to-maintain-open-source-documentation-websites&quot;&gt;Docusaurus · Easy to Maintain Open Source Documentation Websites&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docusaurus.io/&quot; title=&quot;Docusaurus · Easy to Maintain Open Source Documentation Websites&quot;&gt;docusaurus.io/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Markdown&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;API&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;PrettierやJestなどが利用している静的サイトジェネレータ。&lt;br&gt;
+Reactを使ったカスタマイズ、翻訳への対応、ブログ機能やalgoliaを使った検索などライブラリサイト向けの機能を持っている。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;debugger-playground-|-introduction-|-mozilla&quot;&gt;Debugger PlayGround | Introduction | Mozilla&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mozilladevelopers.github.io/playground/debugger&quot; title=&quot;Debugger PlayGround | Introduction | Mozilla&quot;&gt;mozilladevelopers.github.io/playground/debugger&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Firefoxの開発者ツールのチュートリアル。&lt;br&gt;
+デバッガーの使い方、ブレークポイントの読み方、コールスタックの読み方などについて&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hacks.mozilla.org/2017/11/go-beyond-console-log-with-the-firefox-debugger/&quot; title=&quot;Go beyond console.log with the Firefox Debugger – Mozilla Hacks – the Web developer blog&quot;&gt;Go beyond console.log with the Firefox Debugger – Mozilla Hacks – the Web developer blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;bogdan-lyashenko/under-the-hood-reactjs:-entire-react-code-base-explanation-by-visual-block-schemes-(stack+fiber-versions)&quot;&gt;Bogdan-Lyashenko/Under-the-hood-ReactJS: Entire React code base explanation by visual block schemes (Stack+Fiber versions)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Bogdan-Lyashenko/Under-the-hood-ReactJS&quot; title=&quot;Bogdan-Lyashenko/Under-the-hood-ReactJS: Entire React code base explanation by visual block schemes (Stack+Fiber versions)&quot;&gt;github.com/Bogdan-Lyashenko/Under-the-hood-ReactJS&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Reactのコードベースの解説リポジトリ。&lt;br&gt;
+コードの構造などの図などとともに、React Fiber、Stack reconcilerなどの解説をしてる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Bogdan-Lyashenko/js-code-to-svg-flowchart&quot; title=&quot;Bogdan-Lyashenko/js-code-to-svg-flowchart: js2flowchart - a visualization library to convert any JavaScript code into beautiful SVG flowchart. Learn other’s code. Design your code. Refactor code. Document code. Explain code.&quot;&gt;Bogdan-Lyashenko/js-code-to-svg-flowchart: js2flowchart - a visualization library to convert any JavaScript code into beautiful SVG flowchart. Learn other’s code. Design your code. Refactor code. Document code. Explain code.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;lifenautjoe/noel:-a-universal,-human-centric,-replayable-javascript-event-emitter.&quot;&gt;lifenautjoe/noel: A universal, human-centric, replayable javascript event emitter.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lifenautjoe/noel&quot; title=&quot;lifenautjoe/noel: A universal, human-centric, replayable javascript event emitter.&quot;&gt;github.com/lifenautjoe/noel&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;イベントハンドラを登録する前に発火したイベントも後からリプレイして再度発火することができるEventEmitterライブラリ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;papercss-·-the-less-formal-css-framework&quot;&gt;PaperCSS · the less formal CSS framework&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.getpapercss.com/&quot; title=&quot;PaperCSS · the less formal CSS framework&quot;&gt;www.getpapercss.com/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;手書き風のCSSフレームワーク&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;bogdan-lyashenko/js-code-to-svg-flowchart:-js2flowchart---a-visualization-library-to-convert-any-javascript-code-into-beautiful-svg-flowchart.-learn-other’s-code.-design-your-code.-refactor-code.-document-code.-explain-code.&quot;&gt;Bogdan-Lyashenko/js-code-to-svg-flowchart: js2flowchart - a visualization library to convert any JavaScript code into beautiful SVG flowchart. Learn other’s code. Design your code. Refactor code. Document code. Explain code.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Bogdan-Lyashenko/js-code-to-svg-flowchart&quot; title=&quot;Bogdan-Lyashenko/js-code-to-svg-flowchart: js2flowchart - a visualization library to convert any JavaScript code into beautiful SVG flowchart. Learn other’s code. Design your code. Refactor code. Document code. Explain code.&quot;&gt;github.com/Bogdan-Lyashenko/js-code-to-svg-flowchart&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;SVG&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptのコードから制御フローチャートの図を作成するツール。 ifやwhileなどのループをそのままフローチャートにしてくれる&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Tue, 14 Nov 2017 10:27:38 +0900</pubDate>
+        <link>https://jser.info/2017/11/14/react-v16.1.0-firefox-devtools-docusaurus/</link>
+        <guid isPermaLink="true">https://jser.info/2017/11/14/react-v16.1.0-firefox-devtools-docusaurus/</guid>
+        
+        <category>React</category>
+        
+        <category>Firefox</category>
+        
+        <category>Tool</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-11-07のJS: TypeScript 2.6.、Node.js 8.9.0 LTS、Angular 5.0.0</title>
@@ -3016,290 +3320,6 @@ UIテスト、結合テスト、ユニットテスト、TDDなどウェブブラ
         <category>Node.js</category>
         
         <category>framework</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-09-05のJS: Headless Browserの対応、Browserifyの再開</title>
-        <description>&lt;p&gt;JSer.info #347 - FirefoxのHeadlessモードについてのドキュメントが公開されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/Firefox/Headless_mode&quot; title=&quot;Headless mode - Mozilla | MDN&quot;&gt;Headless mode - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;FirefoxのHeadlessモードはLinuxではFirefox 55から、Mac/Windowsは56(現在のNightly)から動作します。&lt;/p&gt;
-
-&lt;p&gt;ChromeもMac/LinuxはChrome 59から、WindowsはChrome 60からHeadlessモードを利用できるようになっています。&lt;/p&gt;
-
-&lt;p&gt;以前&lt;a href=&quot;https://jser.info/2017/05/03/headless-chromefirefoxphantomjsslimerjs-es-modules/&quot; title=&quot;2017-05-03のJS: Headless Chrome/FirefoxとPhantomJS/SlimerJS、ES modules - JSer.info&quot;&gt;2017-05-03のJS: Headless Chrome/FirefoxとPhantomJS/SlimerJS、ES modules - JSer.info&lt;/a&gt;でまとめた現在のHeadless対応状況を更新しました。&lt;br&gt;
-Chromeは現バージョンである60から、Firefoxは次バージョンである56から全てのOSでHeadlessモードが利用できます。&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/azu/c4206d94f18f35f6fe2fe303f988e7d5.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Firefoxは&lt;a href=&quot;https://www.npmjs.com/package/selenium-webdriver&quot; title=&quot;selenium-webdriver&quot;&gt;selenium-webdriver&lt;/a&gt;を使った例が紹介されています。&lt;br&gt;
-Chromeは、Chromeチームが公開している&lt;a href=&quot;https://github.com/GoogleChrome/puppeteer&quot; title=&quot;Puppeteer&quot;&gt;Puppeteer&lt;/a&gt;をはじめ、&lt;a href=&quot;https://medium.com/@kensoh/chromeless-chrominator-chromy-navalia-lambdium-ghostjs-autogcd-ef34bcd26907&quot; title=&quot;Chromeless, Chrominator, Chromy, Navalia, Lambdium, GhostJS, AutoGCD&quot;&gt;Chromeless, Chrominator, Chromy, Navalia, Lambdium, GhostJS, AutoGCD&lt;/a&gt;などさまざまなライブラリが公開されています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nickjs.org/&quot; title=&quot;NickJS | The Modern Headless Browser Library&quot;&gt;NickJS&lt;/a&gt;のようにPhantomJSからHeadless Chromeへ移行しているツールも出てきています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.phantombuster.com/web-scraping-in-2017-headless-chrome-tips-tricks-4d6521d695e8&quot; title=&quot;Web Scraping in 2017: Advanced Headless Chrome Tips &amp;amp;amp; Tricks&quot;&gt;Web Scraping in 2017: Advanced Headless Chrome Tips &amp;amp; Tricks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Browserifyが&lt;code&gt;substack/node-browserify&lt;/code&gt;から&lt;a href=&quot;https://github.com/browserify/browserify&quot; title=&quot;browserify/browserify&quot;&gt;browserify/browserify&lt;/a&gt;のorganizationへ移行するとともに、次のようなIssueを立てて協力を求めています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/browserify/discuss/issues/5&quot; title=&quot;help wanted · Issue #5 · browserify/discuss&quot;&gt;help wanted · Issue #5 · browserify/discuss&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jser.info/2017/01/31/bundler-testing-framework-report/&quot; title=&quot;JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状 - JSer.info&quot;&gt;JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状 - JSer.info&lt;/a&gt;で伝えていたようにBrowserifyの開発は停滞していました。&lt;br&gt;
-今のBrowserifyはCommonJSをベースとしたBundlerであるため、今後&lt;a href=&quot;https://blog.jxck.io/entries/2017-08-15/universal-mjs-ecosystem.html&quot; title=&quot;.mjs&quot;&gt;.mjs&lt;/a&gt;などがくることに備えた対応が必要であるなどを踏まえて現在のエコシステムを整理し始めています。&lt;/p&gt;
-
-&lt;p&gt;このIssueを始め、&lt;a href=&quot;https://github.com/browserify/admin&quot; title=&quot;browserify/admin: administrative procedures for the browserify org&quot;&gt;browserify/admin: administrative procedures for the browserify org&lt;/a&gt;といったコミュニティ向けのドキュメント公開や今まで各自のリポジトリにあった&lt;code&gt;*fy&lt;/code&gt;パッケージを &lt;a href=&quot;https://github.com/browserify&quot;&gt;https://github.com/browserify&lt;/a&gt; に集約しています。&lt;/p&gt;
-
-&lt;p&gt;Browserifyに意見がある人はこのIssueに書くとよさそうです。&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;if you want to help out the browserify ecosystem, there&amp;#39;s a new help wanted thread &lt;a href=&quot;https://t.co/nB98TS5Cls&quot;&gt;https://t.co/nB98TS5Cls&lt;/a&gt;&lt;/p&gt;&amp;mdash; substack (@substack) &lt;a href=&quot;https://twitter.com/substack/status/902644080445874177&quot;&gt;August 29, 2017&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;announcing-typescript-2.5-|-typescript&quot;&gt;Announcing TypeScript 2.5 | TypeScript&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/typescript/2017/08/31/announcing-typescript-2-5/&quot; title=&quot;Announcing TypeScript 2.5 | TypeScript&quot;&gt;blogs.msdn.microsoft.com/typescript/2017/08/31/announcing-typescript-2-5/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;TypeScript 2.5リリース。&lt;br&gt;
-Optinal-catch-bindingのサポート、エディタ連携の改善、重複/aliasなパッケージの扱いを改善、&lt;code&gt;--preserveSymlinks&lt;/code&gt;のサポートなど&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://abcdef.gets.b6n.ch/entry/2017/09/01/143601&quot; title=&quot;Typescript 2.5 リリース - abcdefGets&quot;&gt;Typescript 2.5 リリース - abcdefGets&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;ember.js---ember-2.15-and-2.16-beta-released&quot;&gt;Ember.js - Ember 2.15 and 2.16 Beta Released&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://emberjs.com/blog/2017/09/01/ember-2-15-released.html&quot; title=&quot;Ember.js - Ember 2.15 and 2.16 Beta Released&quot;&gt;emberjs.com/blog/2017/09/01/ember-2-15-released.html&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Ember 2.15リリース。&lt;br&gt;
-&lt;code&gt;Ember.Router&lt;/code&gt;のスーパーセットである&lt;code&gt;router&lt;/code&gt; serviceの公開など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;concurrent-javascript:-it-can-work!-|-webkit&quot;&gt;Concurrent JavaScript: It can work! | WebKit&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/7846/concurrent-javascript-it-can-work/&quot; title=&quot;Concurrent JavaScript: It can work! | WebKit&quot;&gt;webkit.org/blog/7846/concurrent-javascript-it-can-work/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webkit&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;SharedArrayBuffer&lt;/code&gt;が追加されるため、JavaScriptでThreadをサポートした場合にどうなるのかという思考実験についての記事。&lt;br&gt;
-現在のJavaScript VMはシングルスレッドであることを利用しているので、マルチスレッドの場合のVMのパフォーマンスなどについて。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;🏁-release:-iteration-10-–-10th-developer-preview-·-issue-#177-·-ckeditor/ckeditor5-design&quot;&gt;🏁 Release: Iteration 10 – 10th developer preview · Issue #177 · ckeditor/ckeditor5-design&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/ckeditor/ckeditor5-design/issues/177&quot; title=&quot;🏁 Release: Iteration 10 – 10th developer preview · Issue #177 · ckeditor/ckeditor5-design&quot;&gt;github.com/ckeditor/ckeditor5-design/issues/177&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;editor&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;CKEditor 5 v0.10.0リリース。&lt;br&gt;
-MSEdgeのサポート、ツールチップメニューの改善、クリップボードの改善など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://ckeditor5.github.io/&quot; title=&quot;CKEditor 5 Developer Preview (v0.10.0)&quot;&gt;CKEditor 5 Developer Preview (v0.10.0)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ckeditor/ckeditor5-design/issues/172&quot; title=&quot;CKEditor 5 – Roadmap to 1.0.0 and beyond · Issue #172 · ckeditor/ckeditor5-design&quot;&gt;CKEditor 5 – Roadmap to 1.0.0 and beyond · Issue #172 · ckeditor/ckeditor5-design&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;what&amp;#39;s-new-in-devtools-(chrome-62)- | -web- | -google-developers&quot;&gt;What&amp;#39;s New In DevTools (Chrome 62)  |  Web  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/08/devtools-release-notes&quot; title=&quot;What&amp;#39;s New In DevTools (Chrome 62)  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/08/devtools-release-notes&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Chrome 62の開発者ツールの更新点について。&lt;br&gt;
-Top-level &lt;code&gt;await&lt;/code&gt;がコンソールで利用可能に、特定のnodeのスクリーンショットを取れるように、CSS Gridのハイライト、コンソールフィルタの改善。&lt;br&gt;
-またHARをインポートできるようになり、キャッシュデータの閲覧ができるように&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;form-validation-with-web-audio-|-css-tricks&quot;&gt;Form Validation with Web Audio | CSS-Tricks&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://css-tricks.com/form-validation-web-audio/&quot; title=&quot;Form Validation with Web Audio | CSS-Tricks&quot;&gt;css-tricks.com/form-validation-web-audio/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;web &lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;audio&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;accessibility&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Web Audio APIとフォームバリデーションを組み合わせる話。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;measuring-performance-gains-—-angularjs-to-react-(with-redux-or-mobx)&quot;&gt;Measuring performance gains — AngularJS to React (with Redux or Mobx)&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@guptagaruda/measuring-performance-gains-angularjs-to-react-with-redux-or-mobx-fb221517455&quot; title=&quot;Measuring performance gains — AngularJS to React (with Redux or Mobx)&quot;&gt;medium.com/@guptagaruda/measuring-performance-gains-angularjs-to-react-with-redux-or-mobx-fb221517455&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;3つのベンチマークアプリを元にAngular 1.xとReact/Redux/Mobxを比較した記事。&lt;br&gt;
-現在も多くのエンタープライズアプリがAngular 1.xで動いているため、Reactに移ることでどのようなメリットがあるのかを計測する目的&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;decaffeinating-a-large-coffeescript-codebase-without-losing-sleep-·-datafox-tech-blog&quot;&gt;Decaffeinating a Large CoffeeScript Codebase Without Losing Sleep · DataFox Tech Blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://eng.datafox.com/javascript/2017/07/18/decaffeinating-large-coffeescript-codebase/&quot; title=&quot;Decaffeinating a Large CoffeeScript Codebase Without Losing Sleep · DataFox Tech Blog&quot;&gt;eng.datafox.com/javascript/2017/07/18/decaffeinating-large-coffeescript-codebase/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CoffeeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;bulk-decaffeinateを使ったCoffeeScriptからJavaScriptへの移行手順についての記事。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;react-+-rxjsで始める状態管理---voyage-group-techlog&quot;&gt;React + RxJSで始める状態管理 - VOYAGE GROUP techlog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://techlog.voyagegroup.com/entry/2017/08/31/102915&quot; title=&quot;React + RxJSで始める状態管理 - VOYAGE GROUP techlog&quot;&gt;techlog.voyagegroup.com/entry/2017/08/31/102915&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;almin&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;設計&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Write層とRead層を分けることでのメリットとデメリットについて。 &lt;br&gt;
-複雑さに対する責務の分離と依存局所化について&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;headless-mode---mozilla-|-mdn&quot;&gt;Headless mode - Mozilla | MDN&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode&quot; title=&quot;Headless mode - Mozilla | MDN&quot;&gt;developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Firefoxのheadless modeについてのドキュメント&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;rendering-on-google-search- | -search- | -google-developers&quot;&gt;Rendering on Google Search  |  Search  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/search/docs/guides/rendering&quot; title=&quot;Rendering on Google Search  |  Search  |  Google Developers&quot;&gt;developers.google.com/search/docs/guides/rendering&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;SEO&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Google Search Botのレンダリングサブシステムで利用してるChromeのバージョンやサポートしてない(無効化されている)機能について書かれてる。&lt;br&gt;
-2017年9月4日現在はChrome 41をベースにしている&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.suzukikenichi.com/blog/ama-with-gary/amp/&quot; title=&quot;来日したGoogleゲイリーに何でも聞いてみた――プロジェクトOWL、検索アナリティクス、PWA etc. #inhouseseo | 海外SEO情報ブログ&quot;&gt;来日したGoogleゲイリーに何でも聞いてみた――プロジェクトOWL、検索アナリティクス、PWA etc. #inhouseseo | 海外SEO情報ブログ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;kea-vs-setstate,-redux,-mobx,-dva,-jumpstate,-apollo,-etc.&quot;&gt;Kea vs setState, Redux, Mobx, Dva, JumpState, Apollo, etc.&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@mariusandra/kea-vs-setstate-redux-mobx-dva-jumpstate-apollo-etc-4aa26ea11d02&quot; title=&quot;Kea vs setState, Redux, Mobx, Dva, JumpState, Apollo, etc.&quot;&gt;medium.com/@mariusandra/kea-vs-setstate-redux-mobx-dva-jumpstate-apollo-etc-4aa26ea11d02&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;React向けのステート管理ライブラリのKeaについての記事。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://kea.js.org/&quot; title=&quot;Kea&quot;&gt;Kea&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;help-wanted-·-issue-#5-·-browserify/discuss&quot;&gt;help wanted · Issue #5 · browserify/discuss&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/browserify/discuss/issues/5&quot; title=&quot;help wanted · Issue #5 · browserify/discuss&quot;&gt;github.com/browserify/discuss/issues/5&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browserify&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;issue&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;browserifyのissueと今後(ES Moduleやhmrなど)について。&lt;br&gt;
-browserify organizationにそれぞれのパッケージが移されまとめて管理されるようになった&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;phantombuster/nickjs:-web-scraping-library-made-by-the-phantombuster-team.-modern,-simple-&amp;amp;-works-on-all-websites.&quot;&gt;phantombuster/nickjs: Web scraping library made by the Phantombuster team. Modern, simple &amp;amp; works on all websites.&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/phantombuster/nickjs&quot; title=&quot;phantombuster/nickjs: Web scraping library made by the Phantombuster team. Modern, simple &amp;amp; works on all websites.&quot;&gt;github.com/phantombuster/nickjs&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Headless ChromeとPhantomJSをサポートしてるスクレイピングライブラリ&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://phantombuster.com/&quot; title=&quot;Phantombuster: API-fy the Web&quot;&gt;Phantombuster: API-fy the Web&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;react-tools/react-move:-react-move-🌀-beautiful,-data-driven-animations-for-react&quot;&gt;react-tools/react-move: React Move 🌀 Beautiful, data-driven animations for React&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/react-tools/react-move&quot; title=&quot;react-tools/react-move: React Move 🌀 Beautiful, data-driven animations for React&quot;&gt;github.com/react-tools/react-move&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;animation&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactでデータドリブンなアニメーションを行うライブラリ&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;lukechilds/keyv:-simple-key-value-store-with-support-for-multiple-backends&quot;&gt;lukechilds/keyv: Simple key-value store with support for multiple backends&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/lukechilds/keyv&quot; title=&quot;lukechilds/keyv: Simple key-value store with support for multiple backends&quot;&gt;github.com/lukechilds/keyv&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Redis、MySQLなどさまざまなバックエンドに対応してるシンプルなKVSライブラリ。&lt;br&gt;
-Map的なAPIを実装したadpterを使うことでバックエンドを変更できる&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;react-for-real - o&amp;#39;reilly-media&quot;&gt;React for Real - O&amp;#39;Reilly Media&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://shop.oreilly.com/product/9781680502633.do&quot; title=&quot;React for Real - O&amp;#39;Reilly Media&quot;&gt;shop.oreilly.com/product/9781680502633.do&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactについての書籍&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;new-javascript-books&quot;&gt;New Javascript Books&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://newjavascriptbooks.com/&quot; title=&quot;New Javascript Books&quot;&gt;newjavascriptbooks.com/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScriptについての新書をまとめてるサイト&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Tue, 05 Sep 2017 10:20:45 +0900</pubDate>
-        <link>https://jser.info/2017/09/05/headless-browser-browserify/</link>
-        <guid isPermaLink="true">https://jser.info/2017/09/05/headless-browser-browserify/</guid>
-        
-        <category>browser</category>
-        
-        <category>firefox</category>
-        
-        <category>Chrome</category>
-        
-        <category>headless</category>
-        
-        <category>browserify</category>
         
         
         <category>_i18n</category>
