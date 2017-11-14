@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Nov 2017 11:09:45 +0900</pubDate>
-    <lastBuildDate>Tue, 14 Nov 2017 11:09:45 +0900</lastBuildDate>
+    <pubDate>Tue, 14 Nov 2017 11:14:51 +0900</pubDate>
+    <lastBuildDate>Tue, 14 Nov 2017 11:14:51 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -17,7 +17,7 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react/releases/tag/v16.1.0&quot; title=&quot;Release v16.1.0 · facebook/react&quot;&gt;Release v16.1.0 · facebook/react&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Bower向けの配布は終了したため代わりに&lt;a href=&quot;https://reactjs.org/docs/installation.html#using-a-cdn&quot;&gt;CDN&lt;/a&gt;の利用の推奨しています。&lt;code&gt;React.Children&lt;/code&gt; utilがPortalをサポート、React DOM Serverに&lt;code&gt;suppressHydrationWarning&lt;/code&gt;属性の追加などが行われいます。&lt;/p&gt;
+&lt;p&gt;Bower向けの配布は終了したため代わりに&lt;a href=&quot;https://reactjs.org/docs/installation.html#using-a-cdn&quot;&gt;CDN&lt;/a&gt;の利用の推奨しています。&lt;code&gt;React.Children&lt;/code&gt; utilがPortalをサポート、React DOM Serverに&lt;code&gt;suppressHydrationWarning&lt;/code&gt;属性の追加などが行われています。&lt;/p&gt;
 
 &lt;p&gt;また、&lt;a href=&quot;https://github.com/facebook/react/tree/master/packages/react-call-return&quot; title=&quot;react-call-return&quot;&gt;react-call-return&lt;/a&gt;というパッケージが試験的に公開されています。&lt;br&gt;
 次の記事で解説されていますが、&lt;code&gt;ReactCallReturn.unstable_createCall&lt;/code&gt;でChildrenに値を渡して呼び出し、その結果を使って別の要素を返すことができる仕組みのようです。&lt;/p&gt;
@@ -212,9 +212,9 @@ try...catch...finally、throw、window.onerror、コールスタックの読み�
 
 &lt;hr&gt;
 
-&lt;h2 id=&quot;コンポーネント指向と余白の設計&quot;&gt;コンポーネント指向と余白の設計&lt;/h2&gt;
+&lt;h2 id=&quot;コンポーネント指向と余白の設計&quot;&gt;コンポーネント指向と余白の設計&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/manabuyasuda1/ss-71261608&quot; title=&quot;コンポーネント指向と余白の設計&quot;&gt;www.slideshare.net/manabuyasuda1/ss-71261608&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/manabuyasuda1/ss-71261608&quot; title=&quot;コンポーネント指向と余白の設計&quot;&gt;www.slideshare.net/manabuyasuda1/ss-71261608&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;design&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;Atomic Design/コンポーネント指向とmargin/paddingのパターンについてのスライド。&lt;/p&gt;
