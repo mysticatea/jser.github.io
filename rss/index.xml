@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 19 Nov 2017 22:19:46 +0900</pubDate>
-    <lastBuildDate>Sun, 19 Nov 2017 22:19:46 +0900</lastBuildDate>
+    <pubDate>Sun, 19 Nov 2017 23:09:16 +0900</pubDate>
+    <lastBuildDate>Sun, 19 Nov 2017 23:09:16 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -362,7 +362,7 @@ Vueについての書籍&lt;/p&gt;
 
 &lt;p&gt;2017年11月23日発売&lt;br&gt;
 ウェブページのパフォーマンス改善についての書籍。&lt;br&gt;
-ネットワーク、レンダリング、スクリプトの項目ごとに測定方法や改善方法についてを解説する&lt;/p&gt;
+ネットワーク、レンダリング、スクリプトの項目ごとに測定方法や改善方法についてを扱う。&lt;/p&gt;
 
 &lt;hr&gt;
 
