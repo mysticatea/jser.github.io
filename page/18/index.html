@@ -55,7 +55,8 @@
 
 
 
-    <script async src='//www.google-analytics.com/analytics.js'></script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src='/public/js/autotrack.custom.js'></script>
 <script async>
     window.ga = window.ga || function () {
                 (ga.q = ga.q || []).push(arguments)
@@ -63,6 +64,12 @@
     ga.l = +new Date;
     ga('create', 'UA-2184335-9', 'auto');
     ga('send', 'pageview');
+    // autotrack plugin
+    ga('require', 'eventTracker');
+    ga('require', 'outboundLinkTracker');
+    ga('require', 'maxScrollTracker');
+    ga('require', 'pageVisibilityTracker');
+    // Add _blank
     document.addEventListener('DOMContentLoaded', function () {
         var links = Array.prototype.slice.call(document.querySelectorAll("a[href^='http']:not([href*='jser.info'])"));
         // add _blank and track
@@ -70,11 +77,6 @@
             if (!link.target) {
                 link.target = "_blank";
             }
-            link.addEventListener("click", function (event) {
-                var elementTarget = event.target;
-                var url = elementTarget.href;
-                ga('send', 'event', 'outbound', 'click', url);
-            });
         });
     });
 </script>
@@ -421,6 +423,12 @@ npm run-scriptに引数を渡せるようになったことや、npmのリリー
         transition: all .3s ease;
     }
 </style>
-<a class="ping-show-button" href="https://jser.info/ping/">記事を紹介する</a>
+<a 
+    class="ping-show-button"
+    href="https://jser.info/ping/"
+    ga-on="click"
+    ga-event-category="Ping"
+    ga-event-action="click"
+>記事を紹介する</a>
 </body>
 </html>
