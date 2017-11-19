@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 19 Nov 2017 23:09:16 +0900</pubDate>
-    <lastBuildDate>Sun, 19 Nov 2017 23:09:16 +0900</lastBuildDate>
+    <pubDate>Sun, 19 Nov 2017 23:38:11 +0900</pubDate>
+    <lastBuildDate>Sun, 19 Nov 2017 23:38:11 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -61,7 +61,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://moment.github.io/luxon/docs/manual/faq/moment.html&quot; title=&quot;For Moment users&quot;&gt;For Moment users&lt;/a&gt;にも書かれていますが、MomentとAPIの互換性はありません。&lt;/p&gt;
 
-&lt;p&gt;特徴としては、日付/時間/インターバルの操作/パース/フォーマットを行うことができ、momentとは異なりImmutableなAPIとなっています。また、ECMA i18n APIを使ったTimeZoneやIntlを使った国際化に対応しています。&lt;/p&gt;
+&lt;p&gt;特徴としては、日付/時間/インターバルの操作/パース/フォーマットを行うことができ、momentとは異なりImmutableなAPIとなっています。また、TimeZoneやIntlを使った国際化に対応しています。&lt;/p&gt;
 
 &lt;p&gt;そして、LuxonはネイティブのDate、Moment、Date-fnsとは異なりmonthを&lt;code&gt;1-indexed&lt;/code&gt;な値として扱います。&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// 2017-01-01&lt;/span&gt;
