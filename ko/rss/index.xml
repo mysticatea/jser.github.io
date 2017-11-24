@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/ko/</link>
     <atom:link href="https://jser.info/ko/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 24 Nov 2017 22:13:14 +0900</pubDate>
-    <lastBuildDate>Fri, 24 Nov 2017 22:13:14 +0900</lastBuildDate>
+    <pubDate>Fri, 24 Nov 2017 23:20:57 +0900</pubDate>
+    <lastBuildDate>Fri, 24 Nov 2017 23:20:57 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -51,7 +51,8 @@ Quantum CSS(Stylo)라고 불리는 새롭게 개발된 CSS 엔진이 포함된 �
 
 &lt;p&gt;본래 &lt;a href=&quot;https://github.com/moment/moment&quot; title=&quot;moment&quot;&gt;moment&lt;/a&gt;-lab 프로젝트에서 시작된 라이브러리로 moment의 문제점 중 하나인 &lt;a href=&quot;https://github.com/moment/moment-rfcs/pull/2&quot;&gt;mutable&lt;/a&gt; 특징을 해결한 라이브러리입니다.&lt;/p&gt;
 
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Wondering about the future of Moment, modularization, etc? We have what we&amp;#39;ll call a &amp;#39;moment-labs&amp;#39; project here: &lt;a href=&quot;https://t.co/tFxIq9lEjm&quot;&gt;https://t.co/tFxIq9lEjm&lt;/a&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Wondering about the future of Moment, modularization, etc? We have what we&amp;#39;ll call a &amp;#39;moment-labs&amp;#39; project here: &lt;a href=&quot;https://t.co/tFxIq9lEjm&quot;&gt;https://t.co/tFxIq9lEjm&lt;/a&gt;&lt;/p&gt;&amp;mdash; moment.js (@momentjs) &lt;a href=&quot;https://twitter.com/momentjs/status/918264220663214081?ref_src=twsrc%5Etfw&quot;&gt;October 11, 2017&lt;/a&gt;&lt;/blockquote&gt;
+
 &lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Want a smaller, immutable date library for modern browsers? Luxon has officially joined the family! &lt;a href=&quot;https://t.co/HSjRuRuZG1&quot;&gt;https://t.co/HSjRuRuZG1&lt;/a&gt;&lt;/p&gt;&amp;mdash; moment.js (@momentjs) &lt;a href=&quot;https://twitter.com/momentjs/status/923982141704192000?ref_src=twsrc%5Etfw&quot;&gt;October 27, 2017&lt;/a&gt;&lt;/blockquote&gt;
