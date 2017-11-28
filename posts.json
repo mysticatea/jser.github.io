@@ -1,4 +1,11 @@
 [{
+"title":"2017-11-28のJS: Firefox 58の変更点、Emscripten/WebAssembly/Rust",
+"url":"https://jser.info/2017/11/28/firefox-58-emscripten-webassembly-rust/",
+"date":"2017-11-28T09:43:49+09:00",
+"content":"JSer.info #359 - New in Firefox 58: Developer E...",
+"category":"JSer",
+"tags":["firefox","webassembly","emscripten"]
+},{
 "title":"2017-11-19のJS: Firefox 57、JavaScriptのコスト、momentとLuxon",
 "url":"https://jser.info/2017/11/19/firefox-57-javascript-momentluxon/",
 "date":"2017-11-19T19:51:22+09:00",
