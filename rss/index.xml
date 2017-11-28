@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 28 Nov 2017 11:46:41 +0900</pubDate>
-    <lastBuildDate>Tue, 28 Nov 2017 11:46:41 +0900</lastBuildDate>
+    <pubDate>Tue, 28 Nov 2017 12:47:23 +0900</pubDate>
+    <lastBuildDate>Tue, 28 Nov 2017 12:47:23 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -114,7 +114,7 @@ ReduxやMobXなどのように&lt;code&gt;Store&lt;/code&gt;でStateを管理し
 &lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/11/dynamic-import&quot; title=&quot;Dynamic import()  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/11/dynamic-import&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;Chrom 63から利用できるDynamic &lt;code&gt;import()&lt;/code&gt;についての解説&lt;/p&gt;
+&lt;p&gt;Chrome 63から利用できるDynamic &lt;code&gt;import()&lt;/code&gt;についての解説&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -155,7 +155,7 @@ ReduxやMobXなどのように&lt;code&gt;Store&lt;/code&gt;でStateを管理し
 &lt;p&gt;&lt;a href=&quot;https://qiita.com/teatime77/items/e867d7d462cb553b373d&quot; title=&quot;JavaScriptのWebGL 2.0でGPGPU - Qiita&quot;&gt;qiita.com/teatime77/items/e867d7d462cb553b373d&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebGL&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;WebGL 2.0を使ったGPUGPUについての解説記事。&lt;br&gt;
+&lt;p&gt;WebGL 2.0を使ったGPGPUについての解説記事。&lt;br&gt;
 WebGL 2.0を使った行列計算や他の実装との比較など&lt;/p&gt;
 
 &lt;hr&gt;
