@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 28 Nov 2017 12:47:23 +0900</pubDate>
-    <lastBuildDate>Tue, 28 Nov 2017 12:47:23 +0900</lastBuildDate>
+    <pubDate>Thu, 30 Nov 2017 10:01:10 +0900</pubDate>
+    <lastBuildDate>Thu, 30 Nov 2017 10:01:10 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -21,7 +21,7 @@
 &lt;p&gt;&lt;a href=&quot;http://gfx.hatenablog.com/entry/2017/11/16/231950&quot; title=&quot;WebAssemblyをNodeJS Native Addonの配布形式として使う - Islands in the byte stream&quot;&gt;WebAssemblyをNodeJS Native Addonの配布形式として使う - Islands in the byte stream&lt;/a&gt;という記事では&lt;a href=&quot;https://kripken.github.io/emscripten-site/&quot;&gt;Emscripten&lt;/a&gt;経由でWebAssemblyを利用する方法について書かれています。&lt;/p&gt;
 
 &lt;p&gt;Node.jsではNative addonの仕組みがあるためバインディングを書けばCやC++などで書かれたものも利用できますが、node-gypによるビルドは環境によって問題を起こすことがあります。&lt;br&gt;
-ネイティブコードをwasmにビルド済みのものを配布し、各環境でwasmを読み込んで実行ことでこの問題を回避するという話を&lt;code&gt;zopfli&lt;/code&gt;を例にして紹介しています。&lt;/p&gt;
+ネイティブコードをwasmにビルド済みのものを配布し、各環境でwasmを読み込んで実行することでこの問題を回避するという話を&lt;code&gt;zopfli&lt;/code&gt;を例にして紹介しています。&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -188,7 +188,7 @@ WebGL 2.0を使った行列計算や他の実装との比較など&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/brn/source-to-binary-journey-of-v8-javascript-engine&quot; title=&quot;Source to Binary - journey of V8 javascript engine // Speaker Deck&quot;&gt;speakerdeck.com/brn/source-to-binary-journey-of-v8-javascript-engine&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;V8がJavaScriptのコードをを実行するフロー、コンパイルパイプラインについてのスライド&lt;/p&gt;
+&lt;p&gt;V8がJavaScriptのコードを実行するフロー、コンパイルパイプラインについてのスライド&lt;/p&gt;
 
 &lt;hr&gt;
 
