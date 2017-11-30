@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 30 Nov 2017 10:01:10 +0900</pubDate>
-    <lastBuildDate>Thu, 30 Nov 2017 10:01:10 +0900</lastBuildDate>
+    <pubDate>Thu, 30 Nov 2017 10:01:48 +0900</pubDate>
+    <lastBuildDate>Thu, 30 Nov 2017 10:01:48 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -188,7 +188,7 @@ WebGL 2.0を使った行列計算や他の実装との比較など&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/brn/source-to-binary-journey-of-v8-javascript-engine&quot; title=&quot;Source to Binary - journey of V8 javascript engine // Speaker Deck&quot;&gt;speakerdeck.com/brn/source-to-binary-journey-of-v8-javascript-engine&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;V8がJavaScriptのコードを実行するフロー、コンパイルパイプラインについてのスライド&lt;/p&gt;
+&lt;p&gt;V8がJavaScriptのコードをを実行するフロー、コンパイルパイプラインについてのスライド&lt;/p&gt;
 
 &lt;hr&gt;
 
