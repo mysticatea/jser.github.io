@@ -1,4 +1,11 @@
 [{
+"title":"2017-12-05のJS: npm 5.6.0(beta)、React 16.2.0、New ECMAScript Proposals",
+"url":"https://jser.info/2017/12/05/npm-5.6.0beta-react-16.2.0-new-ecmascript-proposals/",
+"date":"2017-12-05T11:02:14+09:00",
+"content":"JSer.info #360 - npm 5.6.0(beta)が公開されています。The n...",
+"category":"JSer",
+"tags":["npm","React","ECMAScript"]
+},{
 "title":"2017-11-28のJS: Firefox 58の変更点、Emscripten/WebAssembly/Rust",
 "url":"https://jser.info/2017/11/28/firefox-58-emscripten-webassembly-rust/",
 "date":"2017-11-28T09:43:49+09:00",
