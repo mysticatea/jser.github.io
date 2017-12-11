@@ -1,4 +1,11 @@
 [{
+"title":"2017-12-11のJS: Parcel、webpack 4.0.0α、Node.js Performance改善ガイド",
+"url":"https://jser.info/2017/12/11/parcel-webpack-4.0.0a-node.js-performance/",
+"date":"2017-12-11T09:06:46+09:00",
+"content":"JSer.info #361 - 設定より規約(Convention over configu...",
+"category":"JSer",
+"tags":["bundler","webpack","node.js","performance"]
+},{
 "title":"2017-12-05のJS: npm 5.6.0(beta)、React 16.2.0、New ECMAScript Proposals",
 "url":"https://jser.info/2017/12/05/npm-5.6.0beta-react-16.2.0-new-ecmascript-proposals/",
 "date":"2017-12-05T11:02:14+09:00",
