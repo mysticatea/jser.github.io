@@ -1,4 +1,11 @@
 [{
+"title":"2017-12-19のJS: JavaScript開発者アンケート2017、Reactのインフラ、CQRS/EventSourcing",
+"url":"https://jser.info/2017/12/19/javascript2017-react-cqrseventsourcing/",
+"date":"2017-12-19T10:21:14+09:00",
+"content":"JSer.info #362 - The State of JavaScript 2017: ...",
+"category":"JSer",
+"tags":["JavaScript","react","cqrs","EventSourcing"]
+},{
 "title":"2017-12-11のJS: Parcel、webpack 4.0.0α、Node.js Performance改善ガイド",
 "url":"https://jser.info/2017/12/11/parcel-webpack-4.0.0a-node.js-performance/",
 "date":"2017-12-11T09:06:46+09:00",
