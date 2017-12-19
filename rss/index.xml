@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Dec 2017 11:43:55 +0900</pubDate>
-    <lastBuildDate>Tue, 19 Dec 2017 11:43:55 +0900</lastBuildDate>
+    <pubDate>Tue, 19 Dec 2017 21:16:20 +0900</pubDate>
+    <lastBuildDate>Tue, 19 Dec 2017 21:16:20 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -17,9 +17,9 @@
 またそれらの結果と給料や経験年数などを組み合わせた結果を見れます。&lt;/p&gt;
 
 &lt;p&gt;たとえば、&lt;a href=&quot;http://stateofjs.com/2017/front-end/results/&quot;&gt;#StateOfJS 2017 Results: Front-end Frameworks&lt;/a&gt;ではフロントエンドのフレームワークとして何を使っているかという質問の結果が掲載されています。&lt;br&gt;
-結果としてはReact、何も使ってない、Angularとなっていて、それらのフレームワークをまた使いたいかどうかや組み合わせて使っているのかといった内容になっています。&lt;/p&gt;
+結果としてはReact、何も使ってない、Angularとなっていて、それらのフレームワークをまた使いたいかどうかや組み合わせて使っているのかなどの投票結果が書かれています。&lt;/p&gt;
 
-&lt;p&gt;去年の結果も&lt;a href=&quot;http://2016.stateofjs.com/&quot;&gt;http://2016.stateofjs.com/&lt;/a&gt;で見れるため、比べて見ると思い白いかもしれません。&lt;/p&gt;
+&lt;p&gt;去年の結果も&lt;a href=&quot;http://2016.stateofjs.com/&quot;&gt;http://2016.stateofjs.com/&lt;/a&gt;で見れるため、比べて見ると面白いかもしれません。&lt;/p&gt;
 
 &lt;hr&gt;
 
