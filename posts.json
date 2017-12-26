@@ -1,4 +1,11 @@
 [{
+"title":"2017-12-25のJS: Service Worker in MSEdge/Safari、Jest 22、jQuery UIとMobileの統合",
+"url":"https://jser.info/2017/12/26/service-worker-in-msedgesafari-jest-22-jquery-uimobile/",
+"date":"2017-12-26T07:55:06+09:00",
+"content":"JSer.info #363 - MSEdge(Insider build)とSafari(T...",
+"category":"JSer",
+"tags":["ServiceWorker","jest","jQuery"]
+},{
 "title":"2017-12-19のJS: JavaScript開発者アンケート2017、Reactのインフラ、CQRS/EventSourcing",
 "url":"https://jser.info/2017/12/19/javascript2017-react-cqrseventsourcing/",
 "date":"2017-12-19T20:21:14+09:00",
