@@ -5,12 +5,12 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Dec 2017 09:47:46 +0900</pubDate>
-    <lastBuildDate>Tue, 26 Dec 2017 09:47:46 +0900</lastBuildDate>
+    <pubDate>Tue, 26 Dec 2017 10:03:20 +0900</pubDate>
+    <lastBuildDate>Tue, 26 Dec 2017 10:03:20 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>2017-12-25のJS: Service Worker in MSEdge/Safari、Jest 22、jQuery UIとMobileの統合</title>
+        <title>2017-12-26のJS: Service Worker in MSEdge/Safari、Jest 22、jQuery UIとMobileの統合</title>
         <description>&lt;p&gt;JSer.info #363 - MSEdge(Insider build)とSafari(Technology Preview)でそれぞれService Workerが実装されたことについてのブログが公開されました。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -295,7 +295,7 @@ Reactコンポーネントのプロファイルを取れるライブラリ。&lt
 
 &lt;hr&gt;
 </description>
-        <pubDate>Tue, 26 Dec 2017 07:55:06 +0900</pubDate>
+        <pubDate>Tue, 26 Dec 2017 18:55:06 +0900</pubDate>
         <link>https://jser.info/2017/12/26/service-worker-in-msedgesafari-jest-22-jquery-uimobile/</link>
         <guid isPermaLink="true">https://jser.info/2017/12/26/service-worker-in-msedgesafari-jest-22-jquery-uimobile/</guid>
         
