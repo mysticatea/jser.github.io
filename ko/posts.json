@@ -1,4 +1,11 @@
 [{
+"title":"2017-12-26 JS: Service Worker in MSEdge/Safari, Jest 22, jQuery UI와 Mobile 통합",
+"url":"https://jser.info/ko/2017/12/26/service-worker-in-msedgesafari-jest-22-jquery-uimobile/",
+"date":"2017-12-26T18:55:06+09:00",
+"content":"JSer.info #363 - MSEdge(Insider build)와 Safari(...",
+"category":"JSer",
+"tags":["ServiceWorker","jest","jQuery"]
+},{
 "title":"2017-12-05 JS: npm 5.6.0(beta), React 16.2.0, New ECMAScript Proposals",
 "url":"https://jser.info/ko/2017/12/05/npm-5.6.0beta-react-16.2.0-new-ecmascript-proposals/",
 "date":"2017-12-05T11:02:14+09:00",

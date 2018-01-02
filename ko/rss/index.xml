@@ -5,9 +5,310 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/ko/</link>
     <atom:link href="https://jser.info/ko/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Dec 2017 10:03:21 +0900</pubDate>
-    <lastBuildDate>Tue, 26 Dec 2017 10:03:21 +0900</lastBuildDate>
+    <pubDate>Tue, 02 Jan 2018 12:59:22 +0900</pubDate>
+    <lastBuildDate>Tue, 02 Jan 2018 12:59:22 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2017-12-26 JS: Service Worker in MSEdge/Safari, Jest 22, jQuery UI와 Mobile 통합</title>
+        <description>&lt;p&gt;JSer.info #363 - MSEdge(Insider build)와 Safari(Technology Preview)의 Service Worker 구현 내용이 블로그를 통해 공개됐습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/&quot;&gt;Service Workers: Going beyond the page - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webkit.org/blog/8042/release-notes-for-safari-technology-preview-46/&quot;&gt;Release Notes for Safari Technology Preview 46 | WebKit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이로써 모든 모던 브라우저에서 Service Worker를 지원하게 됐습니다.&lt;/p&gt;
+
+&lt;p class=&quot;ciu_embed&quot; data-feature=&quot;serviceworkers&quot; data-periods=&quot;future_1,current,past_1,past_2&quot;&gt;
+  &lt;a href=&quot;http://caniuse.com/#feat=serviceworkers&quot;&gt;Can I Use serviceworkers?&lt;/a&gt; Data on support for the serviceworkers feature across the major browsers from caniuse.com.
+&lt;/p&gt;
+
+&lt;p&gt;MSEdge와 Safari 둘 다 아직 실험적 빌드 버전으로 공개한 것이므로 비정상적으로 동작하는 경우도 있는 것 같습니다.&lt;br&gt;
+그러한 경우를 발견했을 때는 각 Issue Tracker에 등록해주길 권장하고 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MSEdge: &lt;a href=&quot;https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;amp;q=Service%20Worker&quot; title=&quot;Microsoft Edge issue tracker - Microsoft Edge Development&quot;&gt;Microsoft Edge issue tracker - Microsoft Edge Development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Safari: &lt;a href=&quot;https://bugs.webkit.org/buglist.cgi?quicksearch=Service%20Worker&quot; title=&quot;Bug List&quot;&gt;Bug List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Jest 22이 릴리즈 됐습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://facebook.github.io/jest/blog/2017/12/18/jest-22.html&quot; title=&quot;Jest 22: Refinements &amp;amp;amp; Custom Runners · Jest&quot;&gt;Jest 22: Refinements &amp;amp; Custom Runners · Jest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Node.js 4 지원이 종료됐고 Custom Runner의 코어인 &lt;a href=&quot;https://github.com/facebook/jest/tree/master/packages/jest-worker&quot; title=&quot;jest-worker&quot;&gt;jest-worker&lt;/a&gt;가 공개됐습니다.&lt;br&gt;
+Jest는 테스트를 병렬 실행하는데 &lt;a href=&quot;https://github.com/rvagg/node-worker-farm&quot; title=&quot;node-worker-farm&quot;&gt;node-worker-farm&lt;/a&gt;을 사용하고 있었으며 현재 해당 역할로 &lt;a href=&quot;https://github.com/facebook/jest/tree/master/packages/jest-worker&quot; title=&quot;jest-worker&quot;&gt;jest-worker&lt;/a&gt;를 개발, 대체하고 있습니다. - &lt;a href=&quot;https://github.com/facebook/jest/pull/4497&quot; title=&quot;Initial version of jest-worker by mjesun · Pull Request #4497 · facebook/jest&quot;&gt;Initial version of jest-worker by mjesun · Pull Request #4497 · facebook/jest&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/jest/pull/4497&quot; title=&quot;Initial version of jest-worker by mjesun · Pull Request #4497 · facebook/jest&quot;&gt;Initial version of jest-worker by mjesun · Pull Request #4497 · facebook/jest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그리고 Jest를 병렬 처리 기반으로 사용할 수 있는 Custom Runner가 Jest 22를 통해 정식으로 공개됐습니다.&lt;br&gt;
+의해 Jest 상에서 &lt;a href=&quot;https://github.com/rogeliog/jest-runner-mocha&quot; title=&quot;jest-runner-mocha&quot;&gt;jest-runner-mocha&lt;/a&gt;나 &lt;a href=&quot;https://github.com/jest-community/jest-runner-eslint&quot; title=&quot;jest-runner-eslint&quot;&gt;jest-runner-eslint&lt;/a&gt; 등의 Runner를 이용해 다른 테스트 프레임워크나 Lint 처리 등을 병렬로 실행할 수 있게 됐습니다.&lt;/p&gt;
+
+&lt;p&gt;자세한 내용은 아래 동영상을 참고해주세요.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NtjyeojAOBs&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;또 테스트 결과 포맷이 변경됐고 &lt;code&gt;--detectLeaks&lt;/code&gt; 옵션이 실험적으로 추가됐으며 Babel 7 지원 등이 이뤄졌습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.jqueryui.com/2017/12/the-future-of-jquery-ui-and-jquery-mobile/&quot; title=&quot;The Future of jQuery UI and jQuery Mobile | jQuery UI Blog&quot;&gt;The Future of jQuery UI and jQuery Mobile | jQuery UI Blog&lt;/a&gt;에는 jQuery UI와 jQuery Mobile 프로젝트의 통합과 관련한 내용이 소개돼 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jquery/jquery-mobile&quot; title=&quot;jquery-mobile&quot;&gt;jquery-mobile&lt;/a&gt;은 &lt;a href=&quot;https://github.com/jquery/jquery-ui&quot; title=&quot;jquery-ui&quot;&gt;jquery-ui&lt;/a&gt;를 의존하고 있지만 지금까지 팀이나 저장소가 따로 분리돼 있었습니다.&lt;br&gt;
+이번에 &lt;a href=&quot;https://github.com/scottgonzalez&quot; title=&quot;scottgonzalez&quot;&gt;@scottgonzalez&lt;/a&gt;가 Query UI 프로젝트 리더를 그만두게 돼 현재 jQuery Mobile 프로젝터 리더인 &lt;a href=&quot;https://github.com/arschmitz&quot; title=&quot;arschmitz&quot;&gt;@arschmitz&lt;/a&gt;가 jQuery UI 프로젝트도 함께 담당하게 됐습니다.&lt;br&gt;
+jQuery Mobile는 UI에 의존하고 있기 때문에 별도의 프로젝트로 운영하여 발생하는 중복이나 낭비를 피하기 위해 2개의 프로젝트 팀을 하나로 통합해 진행할 방침에 대해 작성돼 있습니다.&lt;/p&gt;
+
+&lt;p&gt;또 이에 맞춰 협력자를 모집하기 위해 slack 팀 &lt;a href=&quot;https://jqueryui-dev.slack.com/&quot;&gt;jquery-dev&lt;/a&gt;을 만들어 의견을 모으고 있습니다(&lt;a href=&quot;http://bit.ly/2Btf6pu&quot;&gt;http://bit.ly/2Btf6pu&lt;/a&gt;을 통해 Slack 팀에 join할 수 있습니다).&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;헤드라인&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-notes-for-safari-technology-preview-46-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 46 | WebKit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/8042/release-notes-for-safari-technology-preview-46/&quot; title=&quot;Release Notes for Safari Technology Preview 46 | WebKit&quot;&gt;webkit.org/blog/8042/release-notes-for-safari-technology-preview-46/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ServiceWorker&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Safari Technology Preview Release 46이 릴리즈 됐습니다.&lt;br&gt;
+Service Worker가 기본적으로 활성화됐고 &lt;code&gt;--useBigInt&lt;/code&gt; 플래그를 이용해 사용할 수 있는 BigInt가 구현됐습니다. 또, &lt;code&gt;img&lt;/code&gt; 요소의 &lt;code&gt;decoding&lt;/code&gt; 속성 등을 지원합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;v8-javascript-engine:-v8-release-v6.4&quot;&gt;V8 JavaScript Engine: V8 release v6.4&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://v8project.blogspot.com/2017/12/v8-release-64.html&quot; title=&quot;V8 JavaScript Engine: V8 release v6.4&quot;&gt;v8project.blogspot.com/2017/12/v8-release-64.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;V8 v6.4가 릴리즈됐습니다.&lt;br&gt;
+성능과 메모리 사용 효율성이 개선됐고 named capture 정규 표현 제안이 구현됐으며 &lt;code&gt;import.meta.url&lt;/code&gt; 등을 지원합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-webpack-cli-v.2.0.0-·-webpack/webpack-cli&quot;&gt;Release Webpack-CLI V.2.0.0 · webpack/webpack-cli&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/webpack/webpack-cli/releases/tag/v.2.0.0&quot; title=&quot;Release Webpack-CLI V.2.0.0 · webpack/webpack-cli&quot;&gt;github.com/webpack/webpack-cli/releases/tag/v.2.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webpack&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;webpack-cli 2.0.0이 릴리즈됐습니다.&lt;br&gt;
+&lt;code&gt;add&lt;/code&gt; 커맨드와 &lt;code&gt;serve&lt;/code&gt; 커맨드가 추가됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v2.0.0-·-karma-runner/karma&quot;&gt;Release v2.0.0 · karma-runner/karma&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/karma-runner/karma/releases/tag/v2.0.0&quot; title=&quot;Release v2.0.0 · karma-runner/karma&quot;&gt;github.com/karma-runner/karma/releases/tag/v2.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Karma v2.0.0이 릴리즈됐습니다.&lt;br&gt;
+Node.js 4 미만 지원이 종료됐으며 에러를 출력하는 방식이 개선됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;eslint-v4.14.0-released---eslint---pluggable-javascript-linter&quot;&gt;ESLint v4.14.0 released - ESLint - Pluggable JavaScript linter&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eslint.org/blog/2017/12/eslint-v4.14.0-released&quot; title=&quot;ESLint v4.14.0 released - ESLint - Pluggable JavaScript linter&quot;&gt;eslint.org/blog/2017/12/eslint-v4.14.0-released&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ESLint&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ESLint 4.14.0이 릴리즈됐습니다.&lt;br&gt;
+파서 용의 Scope 해석 hook 포인트가 추가됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;jest-22:-refinements-&amp;amp;-custom-runners-·-jest&quot;&gt;Jest 22: Refinements &amp;amp; Custom Runners · Jest&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://facebook.github.io/jest/blog/2017/12/18/jest-22.html&quot; title=&quot;Jest 22: Refinements &amp;amp; Custom Runners · Jest&quot;&gt;facebook.github.io/jest/blog/2017/12/18/jest-22.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Jest 22가 릴리즈됐습니다.&lt;br&gt;
+Node.js 4에 대한 지원이 종료됐고 커스텀 Runner의 코어인 &lt;code&gt;jest-worker&lt;/code&gt;가 공개됐습니다.&lt;br&gt;
+또, 결과 포맷팅이 변경됐고 &lt;code&gt;--detectLeaks&lt;/code&gt; 옵션이 추가 됐습니다. 그리고 Babel 7을 지원하며 MIT 라이센스로 변경됐습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;아티클&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;【연재글】javascript로-프로그래밍을-배우다-그-첫-편：기초와-문법(일본어)&quot;&gt;【연재글】JavaScript로 프로그래밍을 배우다 그 첫 편：기초와 문법(일본어)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sbfl.net/blog/2017/12/14/javascript-programming-1/&quot; title=&quot;【連載記事】JavaScriptでプログラミングを学ぶ　その1：基礎と文法&quot;&gt;sbfl.net/blog/2017/12/14/javascript-programming-1/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;프로그래밍을 공부한 적 없는 사람을 위한 JavaScript 입문 연재 글입니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;use-a-render-prop!-–-componentdidblog&quot;&gt;Use a Render Prop! – componentDidBlog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce&quot; title=&quot;Use a Render Prop! – componentDidBlog&quot;&gt;cdb.reacttraining.com/use-a-render-prop-50de598f11ce&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React의 자식 컴포넌트와 값이나 로직을 공유하는 패턴인 render props에 대한 글입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/reactjs.org/pull/355&quot; title=&quot;Add doc about Render Props by mjackson · Pull Request #355 · reactjs/reactjs.org&quot;&gt;Add doc about Render Props by mjackson · Pull Request #355 · reactjs/reactjs.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;react-🎄&quot;&gt;React 🎄&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://react.holiday/&quot; title=&quot;React 🎄&quot;&gt;react.holiday/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React 튜토리얼을 Advent Calendar로 정리한 곳입니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;service-workers:-going-beyond-the-page---microsoft-edge-dev-blogmicrosoft-edge-dev-blog&quot;&gt;Service Workers: Going beyond the page - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/&quot; title=&quot;Service Workers: Going beyond the page - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;MSEdge&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ServiceWorker&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;MSEdge에 Service Worker가 구현됐습니다.&lt;br&gt;
+Service Worker의 기본적인 사용 방법과 제한에 관해 작성돼 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;the-future-of-jquery-ui-and-jquery-mobile-|-jquery-ui-blog&quot;&gt;The Future of jQuery UI and jQuery Mobile | jQuery UI Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.jqueryui.com/2017/12/the-future-of-jquery-ui-and-jquery-mobile/&quot; title=&quot;The Future of jQuery UI and jQuery Mobile | jQuery UI Blog&quot;&gt;blog.jqueryui.com/2017/12/the-future-of-jquery-ui-and-jquery-mobile/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;jQuery&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;mobile&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;jQuery Mobile은 jQuery UI에 의존하고 있지만 지금까지는 다른 팀/저장소로 운영되고 있었습니다.&lt;br&gt;
+중복이나 비용 낭비가 있어 팀을 통합하고 정체중인 프로젝트를 개선하고자하는 지침이 공개됐습니다.&lt;br&gt;
+함께 Slack 채널을 개설하고 협력할 사람을 모집하고 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;preloading-modules- | -web- | -google-developers&quot;&gt;Preloading modules  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/12/modulepreload&quot; title=&quot;Preloading modules  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/12/modulepreload&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;modulepreload&amp;quot;&amp;gt;&lt;/code&gt;에 관해 소개한 글입니다.&lt;br&gt;
+&lt;code&gt;&amp;lt;link rel=&amp;quot;preload&amp;quot;&amp;gt;&lt;/code&gt;와의 차이점, 모듈의 의존 관계를 수평적으로 모든 파일을 정의해야 하는지에 대해 작성돼 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;idiomatic-redux:-using-reselect-selectors-for-encapsulation-and-performance-·-mark&amp;#39;s-dev-blog&quot;&gt;Idiomatic Redux: Using Reselect Selectors for Encapsulation and Performance · Mark&amp;#39;s Dev Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/&quot; title=&quot;Idiomatic Redux: Using Reselect Selectors for Encapsulation and Performance · Mark&amp;#39;s Dev Blog&quot;&gt;blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;reselect를 사용한 성능 최적화에 관해 작성돼 있습니다.&lt;br&gt;
+reselect는 state에서 state를 만드는 라이브러리로 입력에 대해 메모이제이션이 이뤄져있습니다.&lt;br&gt;
+이를 사용해 Redux의 state에서 애플리케이션에 적절한 형태로 state를 변환하는 예제를 함께 소개하고 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;es6-modules의-에러-처리를-결정적(deterministic)으로-한-이야기---google-문서(일본어)&quot;&gt;ES6 Modules의 에러 처리를 결정적(deterministic)으로 한 이야기 - Google 문서(일본어)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/document/d/1Wuc2LVLb2Ii-itnA4sKw_KndJGvZ4mvdfw0POm5qcs4/edit#&quot; title=&quot;ES6 Modules のエラー処理を決定的(deterministic)にした話 - Google ドキュメント&quot;&gt;docs.google.com/document/d/1Wuc2LVLb2Ii-itnA4sKw_KndJGvZ4mvdfw0POm5qcs4/edit#&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;spec&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ES Modules(사양)의 에러가 네트워크에 의존한 것으로 돼 있어 매번 같지 않은 에러가 출력되는 문제가 있습니다.&lt;br&gt;
+에러의 결과가 항상 같도록 사양을 어떻게 수정하고 있는지에 대해 작성돼 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;브라우저의-구조:-데이터-구조와-알고리즘과-분위기로-이해한다,-dom과-shadow-dom-—-hayato.io(일본어)&quot;&gt;브라우저의 구조: 데이터 구조와 알고리즘과 분위기로 이해한다, DOM과 Shadow DOM — hayato.io(일본어)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hayato.io/2017/dom/&quot; title=&quot;ブラウザのしくみ: データ構造とアルゴリズムと雰囲気で理解する DOM と Shadow DOM — hayato.io&quot;&gt;hayato.io/2017/dom/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebComponents&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;DOM과 Shadow DOM의 구조나 구현에 대해 설명돼 있습니다.&lt;br&gt;
+Shadow DOM의 등장으로 DOM은 트리의 트리(Super Tree)가 됐습니다.&lt;br&gt;
+그 경우에 있어 CSS 셀렉터의 맷칭이나 이벤트 패스 처리 등을 Chrome의 구현에 맞춰 소개합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;lint-the-web-forward-with-sonarwhal-◆-24-ways&quot;&gt;Lint the Web Forward With Sonarwhal ◆ 24 ways&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://24ways.org/2017/lint-the-web-forward-with-sonarwhal/&quot; title=&quot;Lint the Web Forward With Sonarwhal ◆ 24 ways&quot;&gt;24ways.org/2017/lint-the-web-forward-with-sonarwhal/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;HTML&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;web &lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Sonarwhal를 사용한 웹사이트 Lint에 대해 작성돼 있습니다.&lt;br&gt;
+Sonarwhal의 기본적인 사용 방법과 설정에 관해 소개합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;testing-angular-2-and-continuous-integration-with-jest---semaphore&quot;&gt;Testing Angular 2 and Continuous Integration with Jest - Semaphore&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://semaphoreci.com/community/tutorials/testing-angular-2-and-continuous-integration-with-jest&quot; title=&quot;Testing Angular 2 and Continuous Integration with Jest - Semaphore&quot;&gt;semaphoreci.com/community/tutorials/testing-angular-2-and-continuous-integration-with-jest&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Jest를 사용한 Angular 테스트 방법에 관해 소개돼 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;슬라이드, 영상&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;닛케이-전자-버전-사이트-고속화와-pwa-대응-/-nikkei-high-performance-pwa-//-speaker-deck(일본어)&quot;&gt;닛케이 전자 버전 사이트 고속화와 PWA 대응 / nikkei-high-performance-pwa // Speaker Deck(일본어)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/sisidovski/nikkei-high-performance-pwa&quot; title=&quot;日経電子版 サイト高速化とPWA対応 / nikkei-high-performance-pwa // Speaker Deck&quot;&gt;speakerdeck.com/sisidovski/nikkei-high-performance-pwa&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;웹 사이트의 성능 개선 사례에 대해 소개돼 있는 슬라이드입니다.&lt;br&gt;
+에셋 전송 최적화, Resource Hints로 preload, SpeedCurve를 사용한 모니터링이나 파일 사이즈 체크, Service Worker를 이용한 캐시나 디버깅 기법 등에 관해 소개합니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;사이트, 서비스, 문서&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;amsul/react-performance:-helpers-to-debug-and-record-component-render-performance-🚀&quot;&gt;amsul/react-performance: Helpers to debug and record component render performance 🚀&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/amsul/react-performance&quot; title=&quot;amsul/react-performance: Helpers to debug and record component render performance 🚀&quot;&gt;github.com/amsul/react-performance&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;React 16에서 동작하는 &lt;code&gt;react-addons-perf&lt;/code&gt;와 비슷한 역할을 하는 구현체를 목표로 하는 라이브러리입니다.&lt;br&gt;
+React 컴포넌트의 프로파일을 취할 수 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;도서&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;responsively-retrofitting:-retrofitting-web-sites-with-html5-and-css3:-christopher-schmitt:-9781449364205:-amazon.com:-books&quot;&gt;Responsively Retrofitting: Retrofitting Web Sites with HTML5 and CSS3: Christopher Schmitt: 9781449364205: Amazon.com: Books&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Responsively-Retrofitting-Sites-HTML5-CSS3/dp/1449364209&quot; title=&quot;Responsively Retrofitting: Retrofitting Web Sites with HTML5 and CSS3: Christopher Schmitt: 9781449364205: Amazon.com: Books&quot;&gt;www.amazon.com/Responsively-Retrofitting-Sites-HTML5-CSS3/dp/1449364209&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;HTML&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;2018년 8월 25일 출간 예정인 레거시한 웹 사이트를 모바일 용으로 리뉴얼하는 방법을 주제로한 서적입니다.&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Tue, 26 Dec 2017 18:55:06 +0900</pubDate>
+        <link>https://jser.info/ko/2017/12/26/service-worker-in-msedgesafari-jest-22-jquery-uimobile/</link>
+        <guid isPermaLink="true">https://jser.info/ko/2017/12/26/service-worker-in-msedgesafari-jest-22-jquery-uimobile/</guid>
+        
+        <category>ServiceWorker</category>
+        
+        <category>jest</category>
+        
+        <category>jQuery</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ko</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-12-05 JS: npm 5.6.0(beta), React 16.2.0, New ECMAScript Proposals</title>
@@ -2933,283 +3234,6 @@ universal로 동작하고 storage driver로 데이터의 저장소를 지정할 
         <category>performance</category>
         
         <category>browser</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ko</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-06-26 JS: React 입문, sonar - linting for web, Angular 성능 개선</title>
-        <description>&lt;p&gt;JSer.info #337 - &lt;a href=&quot;http://www.react.express/&quot; title=&quot;React Express&quot;&gt;React Express&lt;/a&gt; 라는 사이트에는 React를 이용한 애플리케이션 개발에 관한 튜토리얼이 작성돼 있습니다.&lt;br&gt;
-React로 처음하는 개발이라는 컨셉으로 npm, ES2015 등 관련 도구나 환경에 대해서도 간단하게 소개돼 있습니다.&lt;br&gt;
-기본적으로 실행할 수 있는 샘플코드 / 예제와 함께 React가 소개돼 있어 직접 실행해 보며 이해할 수 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;ESLint와 비슷한 도구 &lt;a href=&quot;https://sonarwhal.com/&quot; title=&quot;sonar, a linting tool for the web&quot;&gt;sonar, a linting tool for the web&lt;/a&gt;가 JS Foundation 프로젝트로서 공개됐습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://js.foundation/announcements/2017/06/22/sonar-js-foundation-welcomes-newest-project&quot; title=&quot;sonar – JS Foundation Welcomes Newest Project – JS Foundation&quot;&gt;sonar – JS Foundation Welcomes Newest Project – JS Foundation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;본래 MSEdge의 팀에 의해 만들어진 것으로 ESLint 처럼 커스텀 규칙을 작성할 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/sonarwhal/sonar/blob/master/docs/developer-guide/collectors/events.md&quot; title=&quot;sonar/events.md at master · sonarwhal/sonar&quot;&gt;sonar/events.md at master · sonarwhal/sonar&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;hook 할 수 있는 이벤트&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;웹사이트의 HTML 요소를 트래버어스(Traverse) 하면서 처리하거나 리소스에 대한 리퀘스트 처리를 규칙으로 작성할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://sonarwhal.com/about/faq.html&quot; title=&quot;FAQ&quot;&gt;FAQ&lt;/a&gt;에 따르면 &lt;a href=&quot;https://www.deque.com/products/axe/&quot; title=&quot;Easy Accessibility Testing with aXe&quot;&gt;aXe&lt;/a&gt;나 &lt;a href=&quot;https://www.ssllabs.com/ssltest/&quot; title=&quot;SSL Server Test&quot;&gt;SSL Server Test&lt;/a&gt; 등 기존 도구나 서비스와 연동할 수 있는 Linting 도구를 목적으로 하고 있는 것 같습니다(이를 위해 규칙도 비동기 처리에 대응하고 있음).&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;sonar doesn’t want to reinvent the wheel. For that reason it tries to integrate other tools and services that do a great job and contribute back where appropriate. For example, we are using axe for accessibility, SSL Server Test for checking the certificate configuration, etc.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/manakuro/improve-spa-performance-with-angular-app&quot; title=&quot;Improve SPA Performance with Angular App // Speaker Deck&quot;&gt;Improve SPA Performance with Angular App // Speaker Deck&lt;/a&gt;(일본어) 슬라이드에는 메모리 누수가 발생하기 쉬운 패턴이나 Chrome 개발자 도구를 사용한 측정 방법에 관해 소개합니다.&lt;br&gt;
-또, Angular에 의한 메모리 누수 패턴이나 Change Detection 처리를 주리는 방법 등에 대해서도 작성돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;헤드라인&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;dev.opera-—-what’s-new-in-chromium-59-and-opera-46&quot;&gt;Dev.Opera — What’s new in Chromium 59 and Opera 46&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dev.opera.com/blog/opera-46/&quot; title=&quot;Dev.Opera — What’s new in Chromium 59 and Opera 46&quot;&gt;dev.opera.com/blog/opera-46/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Opera&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Opera 46 (based on Chromium 59)이 릴리즈됐습니다.&lt;br&gt;
-Animation PNG, SVG 파비콘, 백그라운드 탭의 처리 성능 지연(throttling), &lt;code&gt;MediaError.message&lt;/code&gt;를 지원하는 등 다양한 변경 사항이 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;new-release:-2.9.5&quot;&gt;New Release: 2.9.5&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jshint.com/blog/2017-06-22/release-2-9-5/&quot; title=&quot;New Release: 2.9.5&quot;&gt;jshint.com/blog/2017-06-22/release-2-9-5/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JSHint 2.9.5가 릴리즈됐습니다.&lt;br&gt;
-&lt;code&gt;trailingcomma&lt;/code&gt; 옵션이 추가됐고 몇 가지 버그 수정이 이뤄졌습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;eslint-v4.1.0-released---eslint---pluggable-javascript-linter&quot;&gt;ESLint v4.1.0 released - ESLint - Pluggable JavaScript linter&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://eslint.org/blog/2017/06/eslint-v4.1.0-released&quot; title=&quot;ESLint v4.1.0 released - ESLint - Pluggable JavaScript linter&quot;&gt;eslint.org/blog/2017/06/eslint-v4.1.0-released&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;ESLint&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ESLint 4.1.0이 릴리즈됐습니다. glob 기반의 &lt;code&gt;overrides&lt;/code&gt; 설정 방식이 추가 됐고 무시할 파일을 &lt;code&gt;package.json&lt;/code&gt;에 정의할 수 있도록 변경됐습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://qiita.com/mysticatea/items/e758c9a9a7dfb8b9cdb1&quot; title=&quot;ESLint v4.1.0 - Qiita&quot;&gt;ESLint v4.1.0 - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;아티클&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;js-scope:-static,-dynamic,-and-runtime-augmented-–-dmitry-soshnikov-–-medium&quot;&gt;JS scope: static, dynamic, and runtime-augmented – Dmitry Soshnikov – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@DmitrySoshnikov/js-scope-static-dynamic-and-runtime-augmented-5abfee6223fe&quot; title=&quot;JS scope: static, dynamic, and runtime-augmented – Dmitry Soshnikov – Medium&quot;&gt;medium.com/@DmitrySoshnikov/js-scope-static-dynamic-and-runtime-augmented-5abfee6223fe&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScript의 스코프에 관해 소개돼 있는 글입니다.&lt;br&gt;
-생성 시 참조가 결정되는 Static scope, 호출 시 참조가 결정되는 Dynamic scope(Perl을 이용해 설명), &lt;code&gt;with&lt;/code&gt;나 &lt;code&gt;eval&lt;/code&gt;에 의해 Runtime-augmented scope에 관해 작성돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;react-express&quot;&gt;React Express&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.react.express/&quot; title=&quot;React Express&quot;&gt;www.react.express/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;React 튜토리얼이 공개돼 있는 사이트입니다.&lt;br&gt;
-사이트 내에서 실행할 수 있는 샘플과 함께 React 사용법과 npm / webpack / ES2015 등 관련 도구나 지식이 소개돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;redux-architecture-guidelines-|-joeellis.la&quot;&gt;Redux Architecture Guidelines | joeellis.la&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://joeellis.la/redux-architecture/&quot; title=&quot;Redux Architecture Guidelines | joeellis.la&quot;&gt;joeellis.la/redux-architecture/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;개개별로 특이 사항은 있겠지만 작성자가 생각했을 때 고수하는 Redux 아키텍처 가이드라인이 작성돼 있습니다.&lt;br&gt;
-state의 중첩(Nest)을 피하기 위해 normalize 하고 state에는 resource가 되는 원시 데이터(raw data)만 넣어 사용하며 React의 state보다 Redux의 State를 선호하는 방안에 대해 이야기합니다. &lt;br&gt;
-또, Standard Action, Container component에 관해서도 작성돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;aligned-input-events- | -web- | -google-developers&quot;&gt;Aligned Input Events  |  Web  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/06/aligning-input-events&quot; title=&quot;Aligned Input Events  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/06/aligning-input-events&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;event&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Android&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Pointer Events의 &lt;code&gt;getCoalescedEvents&lt;/code&gt;에 관해 설명하는 글입니다.&lt;br&gt;
-터치 입력은 보통 60-120Hz에 맞춰 발생하고 마우스 입력은 100Hz(최대 2000Hz)에 맞춰 발생하지만 모니터는 보통 60Hz 속도로 화면이 재생됩니다. 따라서 이벤트가 발행(dispatch)되는 시점과 모니터 재생율(refresh rate)이 상이해 비효율을 발생시킵니다.&lt;br&gt;
-이러한 비효율을 피하기 위해 &lt;code&gt;requestAnimationFrame&lt;/code&gt;이 발생하기 직전에 이벤트를 모아 발행해주는 &lt;code&gt;getCoalescedEvents()&lt;/code&gt;에 대해 소개돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;codemods:-a-quick-and-easy-way-to-automate-code-refactoring-—-sitepoint&quot;&gt;Codemods: A Quick and Easy Way to Automate Code Refactoring — SitePoint&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.sitepoint.com/getting-started-with-codemods/&quot; title=&quot;Codemods: A Quick and Easy Way to Automate Code Refactoring — SitePoint&quot;&gt;www.sitepoint.com/getting-started-with-codemods/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;AST&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;codemod를 사용해 리팩터링 도구를 만드는 방법이 소개돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;✨locally-scoped-css-variables:-what,-how,-and-why-|-una-kravets-online✨&quot;&gt;✨Locally Scoped CSS Variables: What, How, and Why | Una Kravets Online✨&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://una.im/local-css-vars/&quot; title=&quot;✨Locally Scoped CSS Variables: What, How, and Why | Una Kravets Online✨&quot;&gt;una.im/local-css-vars/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;CSS Custom Properties에 대한 글입니다.&lt;br&gt;
-사용 방법, 로컬 스코프, 지원 상황 등에 대해 작성돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;슬라이드, 영상&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;high-performance-js-in-v8---google-スライド&quot;&gt;High Performance JS in V8 - Google スライド&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1KCcA-WAyhGs0SEOrfU21fjaTWTxvNxYLwmNlGIbuZFw/edit#slide=id.p&quot; title=&quot;High Performance JS in V8 - Google スライド&quot;&gt;docs.google.com/presentation/d/1KCcA-WAyhGs0SEOrfU21fjaTWTxvNxYLwmNlGIbuZFw/edit#slide&amp;#x3D;id.p&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;V8&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;V8의 ES2015+ 성능에 대한 슬라이드입니다.&lt;br&gt;
-Crankshaft는 ES2015를 최적화 하지 않기 때문에 느렸습니다. 또 try-catch 구문 등이 있으면 최적화를 할 수 없었습니다.&lt;br&gt;
-새로운 pipeline의 Ignition + Turbofan에서는 이러한 부분이 개선되고 있다고 합니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;improve-spa-performance-with-angular-app-//-speaker-deck(일본어)&quot;&gt;Improve SPA Performance with Angular App // Speaker Deck(일본어)&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/manakuro/improve-spa-performance-with-angular-app&quot; title=&quot;Improve SPA Performance with Angular App // Speaker Deck&quot;&gt;speakerdeck.com/manakuro/improve-spa-performance-with-angular-app&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;DOM&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;메모리 릭 패턴, Chrome 개발자 도구를 사용한 측정 방법에 관해 소개돼 있습니다.&lt;br&gt;
-Angular에 의한 의도하지 않은 메모리 릭을 피하는 방법이나 Chnage Detection의 비용을 줄이는 방법 등에 대해서도 이야기합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/mgechev/angular-performance-checklist&quot; title=&quot;mgechev/angular-performance-checklist: Cheatsheet for developing ⚡lightning⚡ fast progressive Angular applications.&quot;&gt;mgechev/angular-performance-checklist: Cheatsheet for developing ⚡lightning⚡ fast progressive Angular applications.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;사이트, 서비스, 문서&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;mgechev/angular-performance-checklist:-cheatsheet-for-developing-⚡lightning⚡-fast-progressive-angular-applications.&quot;&gt;mgechev/angular-performance-checklist: Cheatsheet for developing ⚡lightning⚡ fast progressive Angular applications.&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/mgechev/angular-performance-checklist&quot; title=&quot;mgechev/angular-performance-checklist: Cheatsheet for developing ⚡lightning⚡ fast progressive Angular applications.&quot;&gt;github.com/mgechev/angular-performance-checklist&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Angular 성능 관련 체크 리스트를 작성해 놓은 문서입니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;faceyspacey/redux-first-router:-🎖-seamless-redux-first-routing----just-dispatch-actions&quot;&gt;faceyspacey/redux-first-router: 🎖 seamless redux-first routing -- just dispatch actions&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/faceyspacey/redux-first-router&quot; title=&quot;faceyspacey/redux-first-router: 🎖 seamless redux-first routing -- just dispatch actions&quot;&gt;github.com/faceyspacey/redux-first-router&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Redux 용의 라우터 라이브러리입니다.&lt;br&gt;
-URL 패턴에 매치해 Action을 발행하는 방식으로 라우팅이 이뤄집니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/faceyspacey/pre-release-redux-first-router-a-step-beyond-redux-little-router-cd2716576aea&quot; title=&quot;Pre Release: Redux-First Router — A Step Beyond Redux-Little-Router&quot;&gt;Pre Release: Redux-First Router — A Step Beyond Redux-Little-Router&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;소프트웨어, 도구, 라이브러리&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;sonar,-a-linting-tool-for-the-web&quot;&gt;sonar, a linting tool for the web&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://sonarwhal.com/&quot; title=&quot;sonar, a linting tool for the web&quot;&gt;sonarwhal.com/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ESLint&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;웹사이트(URL)에 대해 Lint할 수 있는 ESLint 같은 도구입니다.&lt;br&gt;
-커스텀 룰을 직접 정의할 수 있고 axe나 SSL Server Test 등 기존 도구를 간단하게 연동하여 사용할 수 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;await-to-js---nmotw&quot;&gt;await-to-js - NMOTW&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nmotw.in/await-to-js/&quot; title=&quot;await-to-js - NMOTW&quot;&gt;https://nmotw.in/await-to-js/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;await와 조합해 사용하여 go 언어 처럼 &lt;code&gt;[error, value]&lt;/code&gt; 형식으로 값을 반환받을 수 있도록 하는 라이브러리입니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;medikoo/date-from-timezone:-construct-dates-with-timezone-context&quot;&gt;medikoo/date-from-timezone: Construct dates with timezone context&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/medikoo/date-from-timezone&quot; title=&quot;medikoo/date-from-timezone: Construct dates with timezone context&quot;&gt;github.com/medikoo/date-from-timezone&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;i18n&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Intl.DateTimeFormat&lt;/code&gt;을 사용하여 JavaScript에 타임존 정보를 부여해 &lt;code&gt;Date&lt;/code&gt; 객체를 생성할 수 있는 라이브러리입니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://esdiscuss.org/topic/add-timezone-data-to-date#content-6&quot; title=&quot;Add timezone data to Date&quot;&gt;Add timezone data to Date&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;optimalbits/redbird:-a-modern-reverse-proxy-for-node&quot;&gt;OptimalBits/redbird: A modern reverse proxy for node&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/OptimalBits/redbird&quot; title=&quot;OptimalBits/redbird: A modern reverse proxy for node&quot;&gt;github.com/OptimalBits/redbird&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proxy&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTPS나 HTTP/2에 대응한 Node.js의 리버스 프록시 라이브러리입니다.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;도서&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;o&amp;#39;reilly-japan---아이소모픽-javascript&quot;&gt;O&amp;#39;Reilly Japan - 아이소모픽 JavaScript&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.oreilly.co.jp/books/9784873118079/&quot; title=&quot;O&amp;#39;Reilly Japan - アイソモーフィックJavaScript&quot;&gt;www.oreilly.co.jp/books/9784873118079/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;2017년 7월 4일에 출간될 Isomorphic JavaScript에 관한 서적입니다.&lt;br&gt;
-실제 구현 방법과 React / Angular / Brisket 프레임워크을 사용한 방법 그리고 케이스 스터디에 대해 작성돼 있습니다.&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Mon, 26 Jun 2017 17:55:22 +0900</pubDate>
-        <link>https://jser.info/ko/2017/06/26/react-sonar-angular-perf/</link>
-        <guid isPermaLink="true">https://jser.info/ko/2017/06/26/react-sonar-angular-perf/</guid>
-        
-        <category>React</category>
-        
-        <category>Lint</category>
-        
-        <category>ESLint</category>
-        
-        <category>Angular</category>
         
         
         <category>_i18n</category>
