@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 02 Jan 2018 21:29:59 +0900</pubDate>
-    <lastBuildDate>Tue, 02 Jan 2018 21:29:59 +0900</lastBuildDate>
+    <pubDate>Tue, 02 Jan 2018 21:34:42 +0900</pubDate>
+    <lastBuildDate>Tue, 02 Jan 2018 21:34:42 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -14,9 +14,9 @@
         <description>&lt;p&gt;JSer.info #364 - &lt;a href=&quot;http://blog.npmjs.org/post/168978377570/new-package-moniker-rules&quot; title=&quot;The npm Blog — New Package Moniker rules&quot;&gt;The npm Blog — New Package Moniker rules&lt;/a&gt;という記事では、npmが受け付けるパッケージ名のルールが変更されたことについて書かれています。&lt;/p&gt;
 
 &lt;p&gt;今までは、パッケージ名の&lt;code&gt;.&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;の違いを区別し、別のパッケージであるものとして受け付けていました。&lt;br&gt;
-しかし、これからは&lt;code&gt;.&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;含められますが、それらの違いを区別しなくなりました&lt;/p&gt;
+しかし、これからは&lt;code&gt;.&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;は含められますが、それらの違いを区別しなくなりました&lt;/p&gt;
 
-&lt;p&gt;これからは&lt;code&gt;react-native&lt;/code&gt;というパッケージが公開されている場合に、次のような名前のパッケージは公開(publish)できなくなります。&lt;/p&gt;
+&lt;p&gt;たとえば、&lt;code&gt;react-native&lt;/code&gt;というパッケージが公開されている場合に、次のような名前のパッケージは公開(publish)できなくなります。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;reactnative&lt;/code&gt;&lt;/li&gt;
