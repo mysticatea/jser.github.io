@@ -1,4 +1,11 @@
 [{
+"title":"2018-01-02のJS: npmのパッケージ名のルール変更、gulp 4.0.0プレリリース、Babel 7の変更予定",
+"url":"https://jser.info/2018/01/02/npm-gulp-4.0.0-babel-7/",
+"date":"2018-01-02T20:38:53+09:00",
+"content":"JSer.info #364 - The npm Blog — New Package Mon...",
+"category":"JSer",
+"tags":["npm","gulp","babel"]
+},{
 "title":"2017-12-26のJS: Service Worker in MSEdge/Safari、Jest 22、jQuery UIとMobileの統合",
 "url":"https://jser.info/2017/12/26/service-worker-in-msedgesafari-jest-22-jquery-uimobile/",
 "date":"2017-12-26T18:55:06+09:00",

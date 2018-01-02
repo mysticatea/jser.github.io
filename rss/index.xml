@@ -5,9 +5,316 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 02 Jan 2018 12:59:21 +0900</pubDate>
-    <lastBuildDate>Tue, 02 Jan 2018 12:59:21 +0900</lastBuildDate>
+    <pubDate>Tue, 02 Jan 2018 21:29:59 +0900</pubDate>
+    <lastBuildDate>Tue, 02 Jan 2018 21:29:59 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2018-01-02のJS: npmのパッケージ名のルール変更、gulp 4.0.0プレリリース、Babel 7の変更予定</title>
+        <description>&lt;p&gt;JSer.info #364 - &lt;a href=&quot;http://blog.npmjs.org/post/168978377570/new-package-moniker-rules&quot; title=&quot;The npm Blog — New Package Moniker rules&quot;&gt;The npm Blog — New Package Moniker rules&lt;/a&gt;という記事では、npmが受け付けるパッケージ名のルールが変更されたことについて書かれています。&lt;/p&gt;
+
+&lt;p&gt;今までは、パッケージ名の&lt;code&gt;.&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;の違いを区別し、別のパッケージであるものとして受け付けていました。&lt;br&gt;
+しかし、これからは&lt;code&gt;.&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;含められますが、それらの違いを区別しなくなりました&lt;/p&gt;
+
+&lt;p&gt;これからは&lt;code&gt;react-native&lt;/code&gt;というパッケージが公開されている場合に、次のような名前のパッケージは公開(publish)できなくなります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;reactnative&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;react_native&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;react.native&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この変更によりパッケージ名に使える名前は減りますが、代わりに現在はScoped module(&lt;code&gt;@user/package&lt;/code&gt;)として名前空間を分けることができます。そのためScoped moduleを使ってパッケージを公開するで、引き続き一意な名前で公開できます。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/releases/tag/v4.0.0&quot; title=&quot;Release v4.0.0 · gulpjs/gulp&quot;&gt;gulp 4.0.0&lt;/a&gt;がプレリリースされています。&lt;br&gt;
+次のように&lt;code&gt;@next&lt;/code&gt;を指定することでインストールできます。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install gulp@next
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/blob/v4.0.0/CHANGELOG.md&quot; title=&quot;gulp/CHANGELOG.md at v4.0.0 · gulpjs/gulp&quot;&gt;gulp/CHANGELOG.md at v4.0.0 · gulpjs/gulp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;gulp.reset&lt;/code&gt;の削除、&lt;code&gt;gulp.task&lt;/code&gt;の引数の変更。&lt;br&gt;
+&lt;code&gt;gulp.series&lt;/code&gt;と&lt;code&gt;gulp.parallel&lt;/code&gt;、&lt;code&gt;gulp.tree&lt;/code&gt;、&lt;code&gt;gulp.registry&lt;/code&gt;の追加。&lt;/p&gt;
+
+&lt;p&gt;今までは、&lt;code&gt;gulp.task&lt;/code&gt;の第二引数で依存のTaskを定義していました。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;del&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// default task code here&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;gulp 4.0.0からは、&lt;code&gt;gulp.series&lt;/code&gt;などを使い依存を含めたTaskを定義します。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;del&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// default task code here&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;詳しくはドキュメントが公開されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/tree/master/docs&quot; title=&quot;gulp/docs at master · gulpjs/gulp&quot;&gt;gulp/docs at master · gulpjs/gulp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;現在このドキュメントの更新なども行われていて、gulp 4の正式リリースはこのドキュメントの修正やマイグレーションガイドなどが用意できたら行うようです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/issues/1486&quot;&gt;[Notice] gulp 4 release process · Issue #1486 · gulpjs/gulp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/milestone/5&quot;&gt;gulp 4 - latest tag Milestone&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://babeljs.io/blog/2017/12/27/nearing-the-7.0-release&quot; title=&quot;Nearing the 7.0 Release · Babel&quot;&gt;Nearing the 7.0 Release · Babel&lt;/a&gt;という記事ではリリースが近づいてきているBabel 7の変更点について書かれています。&lt;/p&gt;
+
+&lt;p&gt;Babelプラグインの最新のECMAScript仕様への追従や&lt;code&gt;@babel/*&lt;/code&gt;へのScoped moduleへの変更、ECMAScript Proposalに関するパッケージ名のルール変更などについて書かれています。&lt;/p&gt;
+
+&lt;p&gt;また、前回の&lt;a href=&quot;https://babeljs.io/blog/2017/09/12/planning-for-7.0&quot; title=&quot;Planning for 7.0 · Babel&quot;&gt;Planning for 7.0 · Babel&lt;/a&gt;から変更点についても書かれています。&lt;br&gt;
+当初は&lt;a href=&quot;https://github.com/babel/babel/issues/5276&quot; title=&quot;Deprecate env option in .babelrc&quot;&gt;Deprecate env option in .babelrc&lt;/a&gt;のように&lt;code&gt;env&lt;/code&gt;オプションを非推奨とする予定でしたが、この変更は撤回されています。&lt;br&gt;
+併せて、今までは&lt;code&gt;class MyArray extends Array{}&lt;/code&gt;のようなビルトインオブジェクトの継承は動かない変換が行われていましたが、&lt;a href=&quot;https://github.com/babel/babel/pull/7020&quot; title=&quot;Add support for extending builtins by nicolo-ribaudo · Pull Request #7020 · babel/babel&quot;&gt;Add support for extending builtins&lt;/a&gt;によってサポートされるようになります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://speakingjs.com/es5/ch28.html&quot; title=&quot;Chapter 28. Subclassing Built-ins&quot;&gt;Chapter 28. Subclassing Built-ins&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ES5ではビルトインオブジェクトの継承について書かれている&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;the-npm-blog-—-new-package-moniker-rules&quot;&gt;The npm Blog — New Package Moniker rules&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.npmjs.org/post/168978377570/new-package-moniker-rules&quot; title=&quot;The npm Blog — New Package Moniker rules&quot;&gt;blog.npmjs.org/post/168978377570/new-package-moniker-rules&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;news&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;security&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;npmにパッケージをpublishする際のルールが変更された。&lt;br&gt;
+パッケージ名に含まれる&lt;code&gt;.&lt;/code&gt;、&lt;code&gt;-&lt;/code&gt;、&lt;code&gt;_&lt;/code&gt;の違いによる区別をしなくなった。&lt;br&gt;
+&lt;code&gt;react-native&lt;/code&gt;と&lt;code&gt;react.native&lt;/code&gt;を同じものとして扱い、タイプミスを狙った類似パッケージの公開を防止する目的。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/validate-npm-package-name&quot; title=&quot;validate-npm-package-name&quot;&gt;validate-npm-package-name&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;introducing-hyperapp-1.0-🎉-–-jorge-bucaran-–-medium&quot;&gt;Introducing Hyperapp 1.0 🎉 – Jorge Bucaran – Medium&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@JorgeBucaran/introducing-hyperapp-1-0-dbf4229abfef&quot; title=&quot;Introducing Hyperapp 1.0 🎉 – Jorge Bucaran – Medium&quot;&gt;medium.com/@JorgeBucaran/introducing-hyperapp-1-0-dbf4229abfef&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;hyperapp 1.0.0リリース。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hyperapp/hyperapp/releases/tag/1.0.0&quot; title=&quot;Release 1.0.0 · hyperapp/hyperapp&quot;&gt;Release 1.0.0 · hyperapp/hyperapp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v4.0.0-·-gulpjs/gulp&quot;&gt;Release v4.0.0 · gulpjs/gulp&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/releases/tag/v4.0.0&quot; title=&quot;Release v4.0.0 · gulpjs/gulp&quot;&gt;github.com/gulpjs/gulp/releases/tag/v4.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;gulp 4.0.0プレリリース。&lt;br&gt;
+&lt;code&gt;npm install gulp@next&lt;/code&gt;でインストールできるように。&lt;br&gt;
+&lt;code&gt;gulp.reset&lt;/code&gt;、&lt;code&gt;gulp.task&lt;/code&gt;の第三引数の削除。&lt;br&gt;
+&lt;code&gt;gulp.series&lt;/code&gt;と&lt;code&gt;gulp.parallel&lt;/code&gt;、&lt;code&gt;gulp.tree&lt;/code&gt;、&lt;code&gt;gulp.registry&lt;/code&gt;の追加。&lt;br&gt;
+&lt;code&gt;gulp&lt;/code&gt;と&lt;code&gt;gulp-cli&lt;/code&gt;の分離など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/blob/v4.0.0/CHANGELOG.md&quot; title=&quot;gulp/CHANGELOG.md at v4.0.0 · gulpjs/gulp&quot;&gt;gulp/CHANGELOG.md at v4.0.0 · gulpjs/gulp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/issues/1486&quot; title=&quot;\[Notice\] gulp 4 release process · Issue #1486 · gulpjs/gulp&quot;&gt;[Notice] gulp 4 release process · Issue #1486 · gulpjs/gulp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;ember.js---ember-2.18-and-3.0-beta-released&quot;&gt;Ember.js - Ember 2.18 and 3.0 Beta Released&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://emberjs.com/blog/2018/01/01/ember-2-18-released.html&quot; title=&quot;Ember.js - Ember 2.18 and 3.0 Beta Released&quot;&gt;emberjs.com/blog/2018/01/01/ember-2-18-released.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Ember&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Ember 2.1.8と3.0βリリース。&lt;br&gt;
+Ember 3.0ではIE 9, 10のサポート終了、2.xで非推奨となった機能の削除され、それらは&lt;code&gt;ember-2-legacy&lt;/code&gt;アドオンにポートされる。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/emberjs/rfcs/blob/master/text/0252-browser-support-changes.md&quot; title=&quot;rfcs/0252-browser-support-changes.md at master · emberjs/rfcs&quot;&gt;rfcs/0252-browser-support-changes.md at master · emberjs/rfcs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.emberjs.com/blog/2017/10/03/the-road-to-ember-3-0.html&quot; title=&quot;Ember.js - The Road to Ember 3.0&quot;&gt;Ember.js - The Road to Ember 3.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/emberjs/ember-2-legacy&quot; title=&quot;emberjs/ember-2-legacy&quot;&gt;emberjs/ember-2-legacy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;neutrino:-releasing-v8-🎉-–-eli-perelman-–-medium&quot;&gt;Neutrino: Releasing v8 🎉 – Eli Perelman – Medium&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@eliperelman/neutrino-releasing-v8-a643f356f410&quot; title=&quot;Neutrino: Releasing v8 🎉 – Eli Perelman – Medium&quot;&gt;medium.com/@eliperelman/neutrino-releasing-v8-a643f356f410&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptの開発環境セットアップツールのNeutrino v8.0.0リリース。&lt;br&gt;
+モジュールを&lt;code&gt;@neutrinojs&lt;/code&gt;のScoped moduleへ移行、&lt;code&gt;@neutrinojs/library&lt;/code&gt;などのコアミドルウェアの追加、複数ページのアプリへの対応など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://neutrino.js.org/migration-guide#neutrino-v7-to-v8&quot; title=&quot;Migration Guide · Neutrino&quot;&gt;Migration Guide · Neutrino&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;performance-calendar-»-performance-insurance&quot;&gt;Performance Calendar » Performance insurance&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://calendar.perfplanet.com/2017/performance-insurance/&quot; title=&quot;Performance Calendar » Performance insurance&quot;&gt;calendar.perfplanet.com/2017/performance-insurance/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;パフォーマンス関係のツール紹介記事。&lt;br&gt;
+ファイルサイズチェック、ファイル分割チェック、LightHouse、モニタリングサービスなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;christmas-gifts-for-your-future-self:-testing-the-web-platform-◆-24-ways&quot;&gt;Christmas Gifts for Your Future Self: Testing the Web Platform ◆ 24 ways&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://24ways.org/2017/testing-the-web-platform/&quot; title=&quot;Christmas Gifts for Your Future Self: Testing the Web Platform ◆ 24 ways&quot;&gt;24ways.org/2017/testing-the-web-platform/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebPlatformAPI&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ウェブ標準におけるテストについて。&lt;br&gt;
+Web Platform Testsでのテストの見かた、コントリビュート方法やテストの書き方についてなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wpt.fyi/&quot; title=&quot;web-platform-tests dashboard&quot;&gt;web-platform-tests dashboard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;nearing-the-7.0-release-·-babel&quot;&gt;Nearing the 7.0 Release · Babel&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://babeljs.io/blog/2017/12/27/nearing-the-7.0-release&quot; title=&quot;Nearing the 7.0 Release · Babel&quot;&gt;babeljs.io/blog/2017/12/27/nearing-the-7.0-release&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;babel&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Babel 7の変更予定について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;resizeobserver-による変更検知と-element-query-|-blog.jxck.io&quot;&gt;ResizeObserver による変更検知と Element Query | blog.jxck.io&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.jxck.io/entries/2017-12-30/resize-observer-and-element-query.html&quot; title=&quot;ResizeObserver による変更検知と Element Query | blog.jxck.io&quot;&gt;blog.jxck.io/entries/2017-12-30/resize-observer-and-element-query.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebPlatformAPI&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ResizeObserverについての解説記事。&lt;br&gt;
+要素のリサイズを監視するObserver API&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;profiling-adventure---qiita&quot;&gt;Profiling adventure - Qiita&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://qiita.com/martinheidegger/items/5a5c40770ef6f47a92b2&quot; title=&quot;Profiling adventure - Qiita&quot;&gt;qiita.com/martinheidegger/items/5a5c40770ef6f47a92b2&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.jsで&lt;code&gt;perf_hooks&lt;/code&gt;を使ったプロファイル、Node.jsの&lt;code&gt;--prof&lt;/code&gt;フラグを使ったより詳細なダンプデータのとり方。&lt;br&gt;
+また&lt;code&gt;--inspect-brk&lt;/code&gt;を使いChromeの開発者ツールを使ってのデバッグについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;javascript-のスレッド並列実行環境&quot;&gt;JavaScript のスレッド並列実行環境&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nhiroki.jp/2017/12/10/javascript-parallel-processing&quot; title=&quot;JavaScript のスレッド並列実行環境&quot;&gt;nhiroki.jp/2017/12/10/javascript-parallel-processing&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webworker&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptにおけるスレッド関係の機構について。&lt;br&gt;
+タスクキュー、Web Workerのモデル、スレッド間のメッセージング、データのコピーと移譲(Transferable)、SharedArrayBuffer、Agentの共有メモリモデル。 Worklet/Tasklet、Web Locks、Thread APIについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;getting-started-with-jest-and-puppeteer-–-noteworthy — the-journal-blog&quot;&gt;Getting Started with Jest and Puppeteer – Noteworthy — The Journal Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.usejournal.com/getting-started-with-jest-and-puppeteer-7cf6c59a2cae&quot; title=&quot;Getting Started with Jest and Puppeteer – Noteworthy — The Journal Blog&quot;&gt;blog.usejournal.com/getting-started-with-jest-and-puppeteer-7cf6c59a2cae&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;E2E&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JestとPuppeteerを使ったテストの設定や書き方について&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;tbfleming/cib:-clang-running-in-browser-(wasm)&quot;&gt;tbfleming/cib: clang running in browser (wasm)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tbfleming/cib/&quot; title=&quot;tbfleming/cib: clang running in browser (wasm)&quot;&gt;github.com/tbfleming/cib/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebAssembly&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Clang&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;C++&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;clang&lt;/code&gt;と&lt;code&gt;clang-format&lt;/code&gt;をJavaScriptにコンパイルし、ブラウザ上で&lt;code&gt;clang&lt;/code&gt;を使ってC++をWebAssemblyへコンパイルして実行するデモ&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;anseki/leader-line:-draw-a-leader-line-in-your-web-page.&quot;&gt;anseki/leader-line: Draw a leader line in your web page.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/anseki/leader-line&quot; title=&quot;anseki/leader-line: Draw a leader line in your web page.&quot;&gt;github.com/anseki/leader-line&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;SVG&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;指定要素同士を矢印で繋いだり、指定要素への矢印とキャプションを描画できるライブラリ。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;whoeverest/wsrun:-command-runner-for-yarn-workspaces.-dependency-aware.&quot;&gt;whoeverest/wsrun: Command runner for Yarn workspaces. Dependency aware.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/whoeverest/wsrun&quot; title=&quot;whoeverest/wsrun: Command runner for Yarn workspaces. Dependency aware.&quot;&gt;github.com/whoeverest/wsrun&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Yarn workspace向けのツール。&lt;br&gt;
+lerna runのようにそれぞれのパッケージに対してコマンドを実行できる&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;keithamus/sort-package-json:-sort-an-object-or-package.json-based-on-the-well-known-package.json-keys&quot;&gt;keithamus/sort-package-json: Sort an Object or package.json based on the well-known package.json keys&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/keithamus/sort-package-json&quot; title=&quot;keithamus/sort-package-json: Sort an Object or package.json based on the well-known package.json keys&quot;&gt;github.com/keithamus/sort-package-json&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;package.json&lt;/code&gt;のフィールドをソートするツール&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;javascript-のスレッド並列実行環境&quot;&gt;JavaScript のスレッド並列実行環境&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nhiroki.jp/2017/12/10/javascript-parallel-processing&quot; title=&quot;JavaScript のスレッド並列実行環境&quot;&gt;nhiroki.jp/2017/12/10/javascript-parallel-processing&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;webworker&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScriptにおけるWebWorkerやSharedWorker、Workletなどのスレッドの仕組みについてや違いについて。&lt;br&gt;
+また検討されているWeb Locks APIやThread APIについて&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Tue, 02 Jan 2018 20:38:53 +0900</pubDate>
+        <link>https://jser.info/2018/01/02/npm-gulp-4.0.0-babel-7/</link>
+        <guid isPermaLink="true">https://jser.info/2018/01/02/npm-gulp-4.0.0-babel-7/</guid>
+        
+        <category>npm</category>
+        
+        <category>gulp</category>
+        
+        <category>babel</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2017-12-26のJS: Service Worker in MSEdge/Safari、Jest 22、jQuery UIとMobileの統合</title>
@@ -3080,279 +3387,6 @@ TypeScriptクックブック&lt;/p&gt;
         <category>Chrome</category>
         
         <category>Testing</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-10-24のJS: CKEditor 5、MDN Web Docsへのドキュメント統合</title>
-        <description>&lt;p&gt;JSer.info #354 - Mozilla、Microsoft、Google、W3Cが協調してウェブ開発のドキュメントを&lt;a href=&quot;https://developer.mozilla.org/&quot; title=&quot;MDN Web Docs&quot;&gt;MDN Web Docs&lt;/a&gt;に集約していくことを発表しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.mozilla.org/blog/2017/10/18/mozilla-brings-microsoft-google-w3c-samsung-together-create-cross-browser-documentation-mdn/&quot; title=&quot;Mozilla brings Microsoft, Google, the W3C, Samsung together to create cross-browser documentation on MDN - The Mozilla Blog&quot;&gt;Mozilla brings Microsoft, Google, the W3C, Samsung together to create cross-browser documentation on MDN - The Mozilla Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;目に見える変化としては、MSDNのドキュメントがMDNにリダイレクトされていきます。&lt;br&gt;
-ブラウザ固有のドキュメントに関しては&lt;a href=&quot;https://docs.microsoft.com/ja-jp/microsoft-edge/&quot; title=&quot;Microsoft Edge documentation - Microsoft Edge Development | Microsoft Docs&quot;&gt;Microsoft Edge documentation - Microsoft Edge Development | Microsoft Docs&lt;/a&gt;などに残ります。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/10/18/documenting-web-together-mdn-web-docs/&quot; title=&quot;Documenting the Web together - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;Documenting the Web together - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;以前、Web Platform APIのドキュメントを統合しようという動きは&lt;a href=&quot;https://webplatform.github.io/&quot; title=&quot;Your Web, documented. · WebPlatform.org&quot;&gt;WebPlatform.org&lt;/a&gt;という試みが行われていましたが、2015年にdiscontinueとなっています。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ckeditor.com/blog/CKEditor-5-A-new-era-for-rich-text-editing/&quot; title=&quot;CKEditor 5: A new era for rich text editing | CKEditor.com&quot;&gt;CKEditor 5: A new era for rich text editing | CKEditor.com&lt;/a&gt;という記事ではリッチエディタライブラリであるCKEditor 5の変更点について書かれています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ckeditor/ckeditor5&quot; title=&quot;ckeditor/ckeditor5: Development environment for CKEditor 5; the best browser-based rich text editor.&quot;&gt;ckeditor/ckeditor5: Development environment for CKEditor 5; the best browser-based rich text editor.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CKEditor 5では内部的にドキュメントモデルを持ち、エディタのインターフェースやAPI経由での変更はこのドキュメントモデルを操作するようになりました。&lt;br&gt;
-今まではContentEditable + プリプロセスで行っていたため、汚いHTMLが生成される場合もあります。ドキュメントモデルから一意なHTMLを出力できるようになっています。また、ドキュメントモデルからの出力先として&lt;a href=&quot;https://docs.ckeditor.com/ckeditor5/latest/features/markdown.html&quot; title=&quot;Markdown&quot;&gt;Markdownへの出力&lt;/a&gt;などもできるようになっています。&lt;/p&gt;
-
-&lt;p&gt;このドキュメントモデルを内部的にもつアプローチは同様のリッチエディタでは採用されることが多くなっています。&lt;br&gt;
-&lt;a href=&quot;https://draftjs.org/&quot; title=&quot;Draft.js&quot;&gt;Draft.js&lt;/a&gt;、&lt;a href=&quot;http://marijnhaverbeke.nl/blog/prosemirror-1.html&quot; title=&quot;ProseMirror&quot;&gt;ProseMirror&lt;/a&gt;、&lt;a href=&quot;https://github.com/quilljs/quill&quot; title=&quot;Quill&quot;&gt;Quill&lt;/a&gt;の&lt;a href=&quot;https://github.com/quilljs/parchment&quot; title=&quot;Parchment&quot;&gt;Parchment&lt;/a&gt;、&lt;a href=&quot;https://github.com/basecamp/trix#understanding-the-document-model&quot; title=&quot;Trix&quot;&gt;Trix&lt;/a&gt;、&lt;a href=&quot;https://github.com/ianstormtaylor/slate&quot; title=&quot;Slate&quot;&gt;Slate&lt;/a&gt;のdata modelなどが似たような仕組みを持っています。&lt;/p&gt;
-
-&lt;p&gt;興味がある人は合わせて見るとよいかもしれません。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;what’s-new-in-microsoft-edge-in-the-windows-10-fall-creators-update---microsoft-edge-dev-blogmicrosoft-edge-dev-blog&quot;&gt;What’s New in Microsoft Edge in the Windows 10 Fall Creators Update - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/10/17/edgehtml-16-fall-creators-update/&quot; title=&quot;What’s New in Microsoft Edge in the Windows 10 Fall Creators Update - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;blogs.windows.com/msedgedev/2017/10/17/edgehtml-16-fall-creators-update/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;MSEdge&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;MSEdge 16の変更点について。&lt;br&gt;
-CSS Grid Layout、object-fit、Payment Request APIのサポート。&lt;br&gt;
-Service Workerの試験的サポート、WebVR対応の改善など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-notes-for-safari-technology-preview-42-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 42 | WebKit&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/8001/release-notes-for-safari-technology-preview-42/&quot; title=&quot;Release Notes for Safari Technology Preview 42 | WebKit&quot;&gt;webkit.org/blog/8001/release-notes-for-safari-technology-preview-42/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Safari Technology Preview 42リリース。&lt;br&gt;
-Payment Requestの機能実装、&lt;code&gt;font-display&lt;/code&gt;の実装、&lt;code&gt;constant()&lt;/code&gt;が&lt;code&gt;env()&lt;/code&gt;にリネーム、&lt;code&gt;link rel=preconnect&lt;/code&gt;、&lt;code&gt;import.meta&lt;/code&gt;のサポート、Web InspectorにCanvasタブを追加など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;mozilla-brings-microsoft,-google,-the-w3c,-samsung-together-to-create-cross-browser-documentation-on-mdn---the-mozilla-blog&quot;&gt;Mozilla brings Microsoft, Google, the W3C, Samsung together to create cross-browser documentation on MDN - The Mozilla Blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.mozilla.org/blog/2017/10/18/mozilla-brings-microsoft-google-w3c-samsung-together-create-cross-browser-documentation-mdn/&quot; title=&quot;Mozilla brings Microsoft, Google, the W3C, Samsung together to create cross-browser documentation on MDN - The Mozilla Blog&quot;&gt;blog.mozilla.org/blog/2017/10/18/mozilla-brings-microsoft-google-w3c-samsung-together-create-cross-browser-documentation-mdn/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Mozilla&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;MS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;google&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;W3C&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;news&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Mozilla、Microsoft、Googleなどがウェブ開発系のドキュメントをMDNへ集約することになった。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/10/18/documenting-web-together-mdn-web-docs/&quot; title=&quot;Documenting the Web together - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;Documenting the Web together - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.chromium.org/2017/10/building-unified-documentation-for-web.html&quot; title=&quot;Chromium Blog: Building unified documentation for the web&quot;&gt;Chromium Blog: Building unified documentation for the web&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.w3.org/blog/2017/10/w3c-to-work-with-mdn-on-web-platform-documentation/&quot; title=&quot;W3C to work with MDN on Web Platform documentation | W3C Blog&quot;&gt;W3C to work with MDN on Web Platform documentation | W3C Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;ckeditor-5:-a-new-era-for-rich-text-editing-|-ckeditor.com&quot;&gt;CKEditor 5: A new era for rich text editing | CKEditor.com&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ckeditor.com/blog/CKEditor-5-A-new-era-for-rich-text-editing/&quot; title=&quot;CKEditor 5: A new era for rich text editing | CKEditor.com&quot;&gt;ckeditor.com/blog/CKEditor-5-A-new-era-for-rich-text-editing/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;editor&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;CKEditor 5の変更点について。&lt;br&gt;
-今までのアーキテクチャを一新し、編集するテキストをデータモデルとしてもつことでContentEditable特有の出力を回避できるように。&lt;br&gt;
-またエディタ共通の問題についてを扱うEditor Recommendationsサイトの公開など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://ckeditor.github.io/editor-recommendations/&quot; title=&quot;Home | editor-recommendations&quot;&gt;Home | editor-recommendations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;new-in-chrome-62- | -web- | -google-developers&quot;&gt;New in Chrome 62  |  Web  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2017/10/nic62&quot; title=&quot;New in Chrome 62  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2017/10/nic62&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Chrome 62の変更点について。&lt;br&gt;
- Network Information API、OpenType Variable Fonts、WebVRのorigin trialの開始など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;the-100%-correct-way-to-structure-a-react-app-(or-why-there’s-no-such-thing)&quot;&gt;The 100% correct way to structure a React app (or why there’s no such thing)&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed&quot; title=&quot;The 100% correct way to structure a React app (or why there’s no such thing)&quot;&gt;hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactアプリケーションのディレクトリ構造について。&lt;br&gt;
-index.js or コンポーネント名.js、階層構造、exportするものについてなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;node.js-security-overview&quot;&gt;Node.js Security Overview&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nemethgergely.com/nodejs-security-overview/&quot; title=&quot;Node.js Security Overview&quot;&gt;nemethgergely.com/nodejs-security-overview/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;security&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node.jsと関連するエコスシステムのセキュリティについてをざっくりと。&lt;br&gt;
-Core、npm、express、security.txt、関連サービスやツールなどについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;introducing-paypal’s-open-source-cross-domain-javascript-suite&quot;&gt;Introducing PayPal’s open-source cross-domain javascript suite&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@bluepnume/introducing-paypals-open-source-cross-domain-javascript-suite-95f991b2731d&quot; title=&quot;Introducing PayPal’s open-source cross-domain javascript suite&quot;&gt;medium.com/@bluepnume/introducing-paypals-open-source-cross-domain-javascript-suite-95f991b2731d&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;PayPalが使ってるクロスドメイン関係のライブラリまとめ。&lt;br&gt;
-&lt;code&gt;postMessage&lt;/code&gt;を使ったやり取り、コンポーネント、Util、同期的なPromiseであるZalgoとsetTimeoutのブロックについて、CORSとiframeについてなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;an-imperative-guide-to-forms-in-vue.js-–-logrocket&quot;&gt;An imperative guide to forms in Vue.js – LogRocket&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.logrocket.com/an-imperative-guide-to-forms-in-vue-js-7536bfa374e0&quot; title=&quot;An imperative guide to forms in Vue.js – LogRocket&quot;&gt;blog.logrocket.com/an-imperative-guide-to-forms-in-vue-js-7536bfa374e0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Vueを使った各種フォーム要素の管理やバリデーションについての紹介記事&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;blinkon-8---tokyo,-japan---youtube&quot;&gt;BlinkOn 8 - Tokyo, Japan - YouTube&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/playlist?list=PL9ioqAuyl6UK7Z0HHswBM5JgAp-izn_3S&quot; title=&quot;BlinkOn 8 - Tokyo, Japan - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PL9ioqAuyl6UK7Z0HHswBM5JgAp-izn_3S&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;blink&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;イベント&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;BlinkOn 8の動画一覧&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/11Y1MK-jVQl_xlhFS8dds_6FsC70jQ_9aOtcWALBiz5k/edit&quot; title=&quot;BlinkOn 8 Information - Google ドキュメント&quot;&gt;BlinkOn 8 Information - Google ドキュメント&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;prantlf/nettime:-prints-timings-of-a-http/s-request,-including-dns-lookup,-tls-handshake-etc.&quot;&gt;prantlf/nettime: Prints timings of a HTTP/S request, including DNS lookup, TLS handshake etc.&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/prantlf/nettime&quot; title=&quot;prantlf/nettime: Prints timings of a HTTP/S request, including DNS lookup, TLS handshake etc.&quot;&gt;github.com/prantlf/nettime&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;network&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;特定のURLに対するDNS LookupやTCPコネクションの時間などネットワークの接続や通信にかかった時間を計測するCLI&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;micro frontends---extending-the-microservice-idea-to-frontend-development&quot;&gt;Micro Frontends - extending the microservice idea to frontend development&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://micro-frontends.org/&quot; title=&quot;Micro Frontends - extending the microservice idea to frontend development&quot;&gt;micro-frontends.org/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;architecture&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;組織&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Micro Frontendsについて。&lt;br&gt;
-マイクロサービスアーキテクチャ的な考えをフロントエンドの中にも適応していく話。&lt;br&gt;
-機能でのチーム分割、独立したコンポーネントとWeb Components、ナビゲーションなど各トピックごとの実現方法についてを書いていくとのこと&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.thoughtworks.com/radar/techniques/micro-frontends&quot; title=&quot;Micro frontends | Technology Radar | ThoughtWorks&quot;&gt;Micro frontends | Technology Radar | ThoughtWorks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;chrome-user-experience-report- | -tools-for-web-developers- | -google-developers&quot;&gt;Chrome User Experience Report  |  Tools for Web Developers  |  Google Developers&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/tools/chrome-user-experience-report/&quot; title=&quot;Chrome User Experience Report  |  Tools for Web Developers  |  Google Developers&quot;&gt;developers.google.com/web/tools/chrome-user-experience-report/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;統計&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Chromeの使用統計データを元にしたoriginごとのRUMを集めたBigQueryのデータセット。&lt;br&gt;
-origin、通信タイプ、デバイスの種類、first_paintのヒストグラムを扱うデータセット。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html&quot; title=&quot;Chromium Blog: Introducing the Chrome User Experience Report&quot;&gt;Chromium Blog: Introducing the Chrome User Experience Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;http-archive-(beta)&quot;&gt;HTTP Archive (beta)&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://beta.httparchive.org/&quot; title=&quot;HTTP Archive (beta)&quot;&gt;beta.httparchive.org/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webservice&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;統計&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;新しいHTTP Archiveのβ版が公開された。&lt;br&gt;
-lighthouseを使ったLoad Speed関連の統計データやDesktopとmobileの比較データなどをみることができる&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://twitter.com/HTTPArchive/status/922582514010488832&quot; title=&quot;HTTP Archive on Twitter: &amp;amp;amp;#34;Excited to share the open beta for the new HTTP Archive. Check it out at https://t.co/MmiFOKXTrM and let us know what you think! 1/3… https://t.co/ycJ03nMkEj&amp;amp;amp;#34;&quot;&gt;HTTP Archive on Twitter: &amp;#34;Excited to share the open beta for the new HTTP Archive. Check it out at https://t.co/MmiFOKXTrM and let us know what you think! 1/3… https://t.co/ycJ03nMkEj&amp;#34;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;dollarshaveclub/es-check:-checks-the-version-of-es-in-javascript-files-with-simple-shell-commands-🏆&quot;&gt;dollarshaveclub/es-check: Checks the version of ES in JavaScript files with simple shell commands 🏆&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/dollarshaveclub/es-check&quot; title=&quot;dollarshaveclub/es-check: Checks the version of ES in JavaScript files with simple shell commands 🏆&quot;&gt;github.com/dollarshaveclub/es-check&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Acornを使って特定のECMAScriptバージョンでパースできるかをテストするツール。&lt;br&gt;
-コードが構文的にそのECMAScriptバージョンをサポートしてるかチェックできる&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;kbrsh/wade:-blazing-fast,-1kb-search-for-javascript&quot;&gt;kbrsh/wade: Blazing fast, 1kb search for Javascript&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/kbrsh/wade&quot; title=&quot;kbrsh/wade: Blazing fast, 1kb search for Javascript&quot;&gt;github.com/kbrsh/wade&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;深さ優先探索で文字列検索を行うライブラリ&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.kabir.ml/posts/inside-wade.html&quot; title=&quot;Inside Wade | Kabir Shah&quot;&gt;Inside Wade | Kabir Shah&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;eyejs---testing-framework&quot;&gt;EyeJS - testing framework&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://eye.js.org/&quot; title=&quot;EyeJS - testing framework&quot;&gt;eye.js.org/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;nodeとbrowserのモードを持ったテストフレームワーク。&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Tue, 24 Oct 2017 19:41:38 +0900</pubDate>
-        <link>https://jser.info/2017/10/24/ckeditor-5-mdn-web-docs/</link>
-        <guid isPermaLink="true">https://jser.info/2017/10/24/ckeditor-5-mdn-web-docs/</guid>
-        
-        <category>MDN</category>
-        
-        <category>CKEditor</category>
-        
-        <category>CORS</category>
-        
-        <category>domain</category>
         
         
         <category>_i18n</category>
