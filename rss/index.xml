@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 10 Jan 2018 11:43:30 +0900</pubDate>
-    <lastBuildDate>Wed, 10 Jan 2018 11:43:30 +0900</lastBuildDate>
+    <pubDate>Wed, 10 Jan 2018 14:05:26 +0900</pubDate>
+    <lastBuildDate>Wed, 10 Jan 2018 14:05:26 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -304,16 +304,6 @@ Node.js 8.0.0未満のサポートを終了。&lt;br&gt;
 
 &lt;p&gt;W3Cのモバイルのウェブアプリに関する仕様のロードマップ。&lt;br&gt;
 それぞれの仕様のジャンルごとのまとめ、ステータス、実装状況について&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;roadmap-of-web-applications-on-mobile&quot;&gt;Roadmap of Web Applications on Mobile&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.w3.org/Mobile/roadmap/&quot; title=&quot;Roadmap of Web Applications on Mobile&quot;&gt;www.w3.org/Mobile/roadmap/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;W3C&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;spec&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;W3Cのモバイルのウェブアプリに関する仕様のステータスページ。&lt;br&gt;
-それぞれのジャンルごとの仕様まとめ、ステータス、実装状況について&lt;/p&gt;
 
 &lt;hr&gt;
 
