@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>2018-01-09のJS: Spectre/Meltdownのブラウザへの影響、FuseBox 3.0、Nuxt.js 1.0 - JSer.info</title>
-    <meta name="description" content="JSer.info #365 - GoogleのProject Zeroチームより、投機的実行と分岐予測を利用したサイドチャネル攻撃に関する脆弱性としてMeltdown and Spectreが公開されました。">
+    <meta name="description" content="JSer.info #365 - GoogleのProject Zeroチームより、投機的実行を利用したサイドチャネル攻撃に関する脆弱性としてMeltdown and Spectreが公開されました。">
     
     <meta name="keywords" content="Security,browser,fusebox,vue" />
     
@@ -56,7 +56,7 @@
     <!-- JavaScript -->
     <script src="/public/js/switch-alt-link.js"></script>
     <!-- Open graph tags -->
-<meta name="twitter:card" content="JSer.info #365 - GoogleのProject Zeroチームより、投機的実行と分岐予測を利用したサイドチャネル攻撃に関する脆弱性としてMeltdown and Spectreが公開されました。" />
+<meta name="twitter:card" content="JSer.info #365 - GoogleのProject Zeroチームより、投機的実行を利用したサイドチャネル攻撃に関する脆弱性としてMeltdown and Spectreが公開されました。" />
 <meta name="twitter:site" content="@jser_info" />
 
 
@@ -65,7 +65,7 @@
 <meta property="og:url" content="https://jser.info/2018/01/10/spectremeltdown-fusebox-3.0-nuxt.js-1.0/">
 <meta property="og:image" content="https://jser.info/media/logo.png">
 
-<meta property="og:description" content="JSer.info #365 - GoogleのProject Zeroチームより、投機的実行と分岐予測を利用したサイドチャネル攻撃に関する脆弱性としてMeltdown and Spectreが公開されました。">
+<meta property="og:description" content="JSer.info #365 - GoogleのProject Zeroチームより、投機的実行を利用したサイドチャネル攻撃に関する脆弱性としてMeltdown and Spectreが公開されました。">
 <meta property="og:site_name" content="JSer.info">
 
 
@@ -193,9 +193,9 @@
         </div>
     </header>
     <article class="post-content">
-        <p>JSer.info #365 - Googleの<a href="https://googleprojectzero.blogspot.jp/2014/07/announcing-project-zero.html" title="Project Zero">Project Zero</a>チームより、投機的実行と分岐予測を利用したサイドチャネル攻撃に関する脆弱性として<a href="https://spectreattack.com/" title="Meltdown and Spectre">Meltdown and Spectre</a>が公開されました。</p>
+        <p>JSer.info #365 - Googleの<a href="https://googleprojectzero.blogspot.jp/2014/07/announcing-project-zero.html" title="Project Zero">Project Zero</a>チームより、投機的実行を利用したサイドチャネル攻撃に関する脆弱性として<a href="https://spectreattack.com/" title="Meltdown and Spectre">Meltdown and Spectre</a>が公開されました。</p>
 
-<p>ブラウザは任意のJavaScriptを実行でき、かつ<code>SharedArrayBuffer</code>や<code>performance.now()</code>など精度の高いタイマーをもつため、このサイドチャネル攻撃の影響受けます。本来は、ブラウザは一種Sandbox内で任意のJavaScriptを独立して実行する仕組みを持ちSandbox外の状態は観測できません。しかし、<a href="https://spectreattack.com/" title="Spectre">Spectre</a>によってSandbox外の状態を観測できる可能性がでてきたためです。</p>
+<p>ブラウザは任意のJavaScriptを実行でき、かつ<code>SharedArrayBuffer</code>や<code>performance.now()</code>など精度の高いタイマーをもつためこのサイドチャネル攻撃の影響受けます。本来は、ブラウザは一種Sandbox内で任意のJavaScriptを独立して実行する仕組みを持ちSandbox外の状態は観測できません。しかし、<a href="https://spectreattack.com/" title="Spectre">Spectre</a>によってSandbox外の状態を観測できる可能性がでてきたためです。</p>
 
 <p>そのためChrome、Firefox、MSEdge、Safariではそれぞれ一時的に<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer" title="SharedArrayBuffer - JavaScript | MDN">SharedArrayBuffer</a>の無効化、<code>performance.now()</code>の精度を下げる軽減策が導入されています。<br>
 (<a href="https://gruss.cc/files/fantastictimers.pdf#page=10" title="fantastictimers.pdf">fantastictimers.pdf</a>では<code>SharedArrayBuffer</code>を高精度のタイマーとして使えることについて書かれています）</p>

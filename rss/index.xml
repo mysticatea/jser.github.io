@@ -5,15 +5,15 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 10 Jan 2018 11:36:06 +0900</pubDate>
-    <lastBuildDate>Wed, 10 Jan 2018 11:36:06 +0900</lastBuildDate>
+    <pubDate>Wed, 10 Jan 2018 11:43:30 +0900</pubDate>
+    <lastBuildDate>Wed, 10 Jan 2018 11:43:30 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>2018-01-09のJS: Spectre/Meltdownのブラウザへの影響、FuseBox 3.0、Nuxt.js 1.0</title>
-        <description>&lt;p&gt;JSer.info #365 - Googleの&lt;a href=&quot;https://googleprojectzero.blogspot.jp/2014/07/announcing-project-zero.html&quot; title=&quot;Project Zero&quot;&gt;Project Zero&lt;/a&gt;チームより、投機的実行と分岐予測を利用したサイドチャネル攻撃に関する脆弱性として&lt;a href=&quot;https://spectreattack.com/&quot; title=&quot;Meltdown and Spectre&quot;&gt;Meltdown and Spectre&lt;/a&gt;が公開されました。&lt;/p&gt;
+        <description>&lt;p&gt;JSer.info #365 - Googleの&lt;a href=&quot;https://googleprojectzero.blogspot.jp/2014/07/announcing-project-zero.html&quot; title=&quot;Project Zero&quot;&gt;Project Zero&lt;/a&gt;チームより、投機的実行を利用したサイドチャネル攻撃に関する脆弱性として&lt;a href=&quot;https://spectreattack.com/&quot; title=&quot;Meltdown and Spectre&quot;&gt;Meltdown and Spectre&lt;/a&gt;が公開されました。&lt;/p&gt;
 
-&lt;p&gt;ブラウザは任意のJavaScriptを実行でき、かつ&lt;code&gt;SharedArrayBuffer&lt;/code&gt;や&lt;code&gt;performance.now()&lt;/code&gt;など精度の高いタイマーをもつため、このサイドチャネル攻撃の影響受けます。本来は、ブラウザは一種Sandbox内で任意のJavaScriptを独立して実行する仕組みを持ちSandbox外の状態は観測できません。しかし、&lt;a href=&quot;https://spectreattack.com/&quot; title=&quot;Spectre&quot;&gt;Spectre&lt;/a&gt;によってSandbox外の状態を観測できる可能性がでてきたためです。&lt;/p&gt;
+&lt;p&gt;ブラウザは任意のJavaScriptを実行でき、かつ&lt;code&gt;SharedArrayBuffer&lt;/code&gt;や&lt;code&gt;performance.now()&lt;/code&gt;など精度の高いタイマーをもつためこのサイドチャネル攻撃の影響受けます。本来は、ブラウザは一種Sandbox内で任意のJavaScriptを独立して実行する仕組みを持ちSandbox外の状態は観測できません。しかし、&lt;a href=&quot;https://spectreattack.com/&quot; title=&quot;Spectre&quot;&gt;Spectre&lt;/a&gt;によってSandbox外の状態を観測できる可能性がでてきたためです。&lt;/p&gt;
 
 &lt;p&gt;そのためChrome、Firefox、MSEdge、Safariではそれぞれ一時的に&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer&quot; title=&quot;SharedArrayBuffer - JavaScript | MDN&quot;&gt;SharedArrayBuffer&lt;/a&gt;の無効化、&lt;code&gt;performance.now()&lt;/code&gt;の精度を下げる軽減策が導入されています。&lt;br&gt;
 (&lt;a href=&quot;https://gruss.cc/files/fantastictimers.pdf#page=10&quot; title=&quot;fantastictimers.pdf&quot;&gt;fantastictimers.pdf&lt;/a&gt;では&lt;code&gt;SharedArrayBuffer&lt;/code&gt;を高精度のタイマーとして使えることについて書かれています）&lt;/p&gt;
