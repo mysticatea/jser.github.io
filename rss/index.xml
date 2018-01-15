@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 Jan 2018 12:46:30 +0900</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 12:46:30 +0900</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 12:51:23 +0900</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 12:51:23 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -153,7 +153,7 @@
 
 &lt;p&gt;「React-compatible API」のように作者が主張している場合も、実際には完全な互換ではなく雰囲気的な互換性であることが多いです。&lt;br&gt;
 この場合は、ちゃんとテストケースもforkしてあるかなど、どこまで本当に互換性を担保しているかは技術的に検証します。&lt;br&gt;
-その結果、完全な互換ではないとわかった場合は「〜ライクなAPI」や「〜総合のAPI」、「〜との互換を目指す」といった表現にしています。&lt;/p&gt;
+その結果、完全な互換ではないとわかった場合は「〜ライクなAPI」や「〜相当のAPI」、「〜との互換を目指す」といった表現にしています。&lt;/p&gt;
 
 &lt;p&gt;たとえば、React-compatibleと説明に書いてある&lt;a href=&quot;https://github.com/NervJS/nerv&quot; title=&quot;Nerv&quot;&gt;Nerv&lt;/a&gt;を例にすると、&lt;br&gt;
 現時点ではReactのテストをパスするわけではないため完全互換ではありません。&lt;br&gt;
