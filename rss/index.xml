@@ -5,9 +5,337 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 Jan 2018 10:50:30 +0900</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 10:50:30 +0900</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 12:27:58 +0900</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 12:27:58 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>JSer.infoを開始してから7年が経ちました</title>
+        <description>&lt;p&gt;2011年1月15日にJSer.infoを開始してから今日でちょうど7年となりました。&lt;br&gt;
+今年は特にイベントもないので簡単にJSer.infoの振り返りを書いてみます。&lt;/p&gt;
+
+&lt;h2 id=&quot;去年の紹介記事&quot;&gt;去年の紹介記事&lt;/h2&gt;
+
+&lt;p&gt;去年一年間に紹介したサイト数は1074でした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jser.info/data-dashboard/&quot;&gt;&lt;img src=&quot;http://jser.info/uploads/media/2018/01/15-1515943367.png&quot; alt=&quot;今年のJSer.info紹介記事数&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、今までのすべての紹介したサイト数の合計は7691でした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jser.info/data-dashboard/&quot;&gt;&lt;img src=&quot;http://jser.info/uploads/media/2018/01/15-1515984870.png&quot; alt=&quot;合計&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;JSer.infoの紹介したサイトデータはすべてデータ化されているので次のページから見れます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jser/jser.info&quot; title=&quot;jser/jser.info&quot;&gt;jser/jser.info&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://jser.info/data-dashboard/&quot; title=&quot;JSer.info Data Dashboard&quot;&gt;JSer.info Data Dashboard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jser.infoのゴール&quot;&gt;JSer.infoのゴール&lt;/h2&gt;
+
+&lt;p&gt;あらためて振り返るとJSer.infoのゴールは次のようなものです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;「JavaScriptに興味がある人にもっとJavaScriptを知ってもらう」&lt;/li&gt;
+&lt;li&gt;「JavaScriptの情報を整理して正確に伝える」&lt;/li&gt;
+&lt;li&gt;「更新コストを小さくして、継続できる形を作る」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- textlint-disable --&gt;
+
+&lt;p&gt;毎年この時期になるとゴールを振り返って、そもそも情報とはなんだっけ?ということを考えています。&lt;/p&gt;
+
+&lt;!-- textlint-enable --&gt;
+
+&lt;p&gt;以前&lt;a href=&quot;http://azu.github.io/slide/2016/jser5years/javascript-information.html&quot; title=&quot;JavaScript情報ってなんだっけ?&quot;&gt;JavaScript情報ってなんだっけ?&lt;/a&gt;という発表でも話していましたが、情報とは誰かの主観が入ったデータだと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://azu.github.io/slide/2016/jser5years/javascript-information.html&quot;&gt;&lt;img src=&quot;http://jser.info/uploads/media/2018/01/15-1515977359.png&quot; alt=&quot;JavaScript情報ってなんだっけ?&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;JSer.infoのゴールには情報を整理(データを加工して)して正確に伝えるというものが含まれています。&lt;br&gt;
+そのため、主観によって誤った情報が伝わることを避けるために、更新までに次のようなプロセスを辿っています。&lt;/p&gt;
+
+&lt;h2 id=&quot;jser.infoのプロセス&quot;&gt;JSer.infoのプロセス&lt;/h2&gt;
+
+&lt;p&gt;JSer.infoの記事が更新されるまでのワークフローについては&lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&quot; title=&quot;JSer.infoの作り方&quot;&gt;JSer.infoの作り方&lt;/a&gt;というスライドで詳しく扱っています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://azu.github.io/slide/2017/jser_info/resources/workflow-jser.png&quot; alt=&quot;JSer.infoのワークフロー&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&quot;&gt;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&lt;/a&gt;より&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;情報を見て調べるプロセスについて書いていますが、見る方法に関しては大きくは変わっていません。&lt;br&gt;
+&lt;a href=&quot;http://reader.livedoor.com/&quot;&gt;LDR&lt;/a&gt;が終了したので&lt;a href=&quot;https://github.com/azu/irodr&quot; title=&quot;Irodr&quot;&gt;Irodr&lt;/a&gt;を作ったりしましたが、&lt;br&gt;
+見る対象が変わっても見る方法にはあまり変化はない気がしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://azu.github.io/slide/2017/jser_info/resources/workflow_watch_search.png&quot; alt=&quot;見る–調べる&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&quot;&gt;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&lt;/a&gt;より&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;しかし、個人サイトからQiitaやMediumへ主軸が移行していった流れやGitHubに集約されていくなど情報の流れ方は変わってきています。&lt;br&gt;
+&lt;a href=&quot;http://azu.github.io/slide/2016/jser5years/javascript-information.html&quot; title=&quot;JavaScript情報ってなんだっけ?&quot;&gt;JavaScript情報ってなんだっけ?&lt;/a&gt;でも触れていますが、情報にも「仕様」といった比較的破壊的な変更が行われないものから、作者の意向によって破壊的な変更が入る「ライブラリ」など粒度はさまざまです。(ここでの壊れやすいというのは一度知った情報の意味が時間などで変化してしまうこと)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://azu.github.io/slide/2016/jser5years/img/library-browser-spec.png&quot; alt=&quot;こわれやすい–こわれにくい&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://azu.github.io/slide/2016/jser5years/javascript-information.html&quot; title=&quot;JavaScript情報ってなんだっけ?&quot;&gt;JavaScript情報ってなんだっけ?&lt;/a&gt;より&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;最近はライブラリもRFCプロセスやLTSによって、壊れにくいプロセスを導入していっていくなどの傾向があります。&lt;br&gt;
+そのため、ライブラリであっても著名で組織的に動いているものは壊れにくくなっています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/emberjs/rfcs&quot;&gt;emberjs/rfcs: RFCs for changes to Ember&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/rfcs&quot;&gt;reactjs/rfcs: RFCs for changes to React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular/blob/master/docs/RELEASE_SCHEDULE.md&quot;&gt;angular/RELEASE_SCHEDULE.md at master · angular/angular&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また今まではライブラリの生死が、単純に作者のモチベーションで決まっていたことが多かったようにも思えます。&lt;br&gt;
+しかし、近年は企業がバックにいるケース、&lt;a href=&quot;https://opencollective.com/&quot; title=&quot;OpenCollective - A New Form of Association, Transparent by Design&quot;&gt;OpenCollective&lt;/a&gt;や&lt;a href=&quot;https://www.patreon.com/&quot; title=&quot;Patreon&quot;&gt;Patreon&lt;/a&gt;などによる支援、&lt;a href=&quot;https://github.com/JSFoundation/TAC&quot; title=&quot;JS Foundation&quot;&gt;JS Foundation&lt;/a&gt;による組織的なサポートなど色々な形が増えています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://js.foundation/community/projects&quot; title=&quot;Projects - JS Foundation&quot;&gt;Projects - JS Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また単純なStar数やGitHub Pluseなどのリポジトリとしての情報だけではなく、コミュニティや組織と言った関連情報も見ないとそのライブラリを正しく評価できないと思います。&lt;/p&gt;
+
+&lt;p&gt;ライブラリを取り巻く状況は複雑化しているので、情報を伝える場合はこれを意識する必要があります。&lt;/p&gt;
+
+&lt;h2 id=&quot;検証と説明&quot;&gt;検証と説明&lt;/h2&gt;
+
+&lt;p&gt;単純に情報を紹介するだけなら、そのサイト/リポジトリの情報をコピペすればよいのですが、JSer.infoの目的には「JavaScriptの情報を整理して正確に伝える」が含まれています。(元の言語が英語の場合、そもそもコピペできないですが…)&lt;/p&gt;
+
+&lt;p&gt;そのため、できるだけ「正確に」説明するには「検証」する必要になってきます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://azu.github.io/slide/2017/jser_info/resources/workflow_verify_explain.png&quot; alt=&quot;検証 - 説明&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&quot; title=&quot;JSer.infoの作り方&quot;&gt;JSer.infoの作り方&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;JSer.infoでは、単純にまとめるならば嘘を書いてないか軸に検証しています。&lt;/p&gt;
+
+&lt;p&gt;この問題は難しいですが、色々なパターンの嘘があります。&lt;br&gt;
+完全な事実誤認から誇張表現、言葉（解釈）の問題などさまざまです。&lt;/p&gt;
+
+&lt;p&gt;JSer.infoでは主張が中心のものはあまり取り上げない(コードがでてこない記事など)ので、&lt;br&gt;
+完全な事実誤認かどうかは実際に動かすなどして技術的に検証することで大体解決します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiita.com/azu/items/bacd146ed2e26980b9b0&quot; title=&quot;JavaScriptのトレンドを素振りして確認する方法 - Qiita&quot;&gt;JavaScriptのトレンドを素振りして確認する方法 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;難しいのは誇張表現などの言葉の問題です。&lt;/p&gt;
+
+&lt;p&gt;誇張表現もさまざまで、紹介候補のサイトが必要ではない強い言葉を使っている場合は誤解を生む可能性が高いため慎重になります。&lt;br&gt;
+たとえば、強い言葉としては次のようなものがあります。（いわゆるFUDや過度な誇張表現は避けましょうというハナシです）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Blazing fast&lt;/li&gt;
+&lt;li&gt;is Dead&lt;/li&gt;
+&lt;li&gt;最速&lt;/li&gt;
+&lt;li&gt;最強&lt;/li&gt;
+&lt;li&gt;熱い&lt;/li&gt;
+&lt;li&gt;常識&lt;/li&gt;
+&lt;li&gt;終了&lt;/li&gt;
+&lt;li&gt;これだけ知って(おけ|れば)&lt;/li&gt;
+&lt;li&gt;これがベスト/もっとも優れた&lt;/li&gt;
+&lt;li&gt;xxx時代の終わり&lt;/li&gt;
+&lt;li&gt;yyy時代のはじまり&lt;/li&gt;
+&lt;li&gt;消耗&lt;/li&gt;
+&lt;li&gt;ベストプラクティス&lt;/li&gt;
+&lt;li&gt;カオス&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また、誇張表現になりやすいものの一種として「〜互換」という言葉があります。&lt;/p&gt;
+
+&lt;p&gt;「React-compatible API」のように作者が主張している場合も、実際には完全な互換ではなく雰囲気的な互換性であることが多いです。&lt;br&gt;
+この場合は、ちゃんとテストケースもforkしてあるかなど、どこまで本当に互換性を担保しているかは技術的に検証します。&lt;br&gt;
+その結果、完全な互換ではないとわかった場合は「〜ライクなAPI」や「〜総合のAPI」、「〜との互換を目指す」といった表現にしています。&lt;/p&gt;
+
+&lt;p&gt;たとえば、React-compatibleと説明に書いてある&lt;a href=&quot;https://github.com/NervJS/nerv&quot; title=&quot;Nerv&quot;&gt;Nerv&lt;/a&gt;を例にすると、&lt;br&gt;
+現時点ではReactのテストをパスするわけではないため完全互換ではありません。&lt;br&gt;
+しかし、&lt;a href=&quot;https://github.com/NervJS/nerv/issues/10#issuecomment-356913486&quot;&gt;作者のコメント&lt;/a&gt;も考慮すると、Reactとの互換性が目的の１つとなります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/NervJS/nerv&quot; title=&quot;NervJS/nerv: A blazing fast React alternative, compatible with IE8 and React 16.&quot;&gt;NervJS/nerv: A blazing fast React alternative, compatible with IE8 and React 16.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/NervJS/nerv/issues/10#issuecomment-356913486&quot; title=&quot;What&amp;amp;#39;s the tradeoff? · Issue #10 · NervJS/nerv&quot;&gt;What&amp;#39;s the tradeoff? · Issue #10 · NervJS/nerv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;そのため、JSer.infoでの説明文は次のようになっています。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ReactライクなAPIをもつライブラリ。ファイルサイズや小さくしつつReactとの互換性をもつことを目的にしている。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;また、自分自身が知らない分野を扱うときにも色々と注意が必要です。&lt;/p&gt;
+
+&lt;p&gt;最近ではJavaScriptといっても、&lt;a href=&quot;http://webassembly.org/&quot; title=&quot;WebAssembly&quot;&gt;WebAssembly&lt;/a&gt;や&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL&quot; title=&quot;WebGL&quot;&gt;WebGL&lt;/a&gt;、&lt;a href=&quot;https://webrtc.org/&quot; title=&quot;WebRTC&quot;&gt;WebRTC&lt;/a&gt;といったその領域だけで専門分野が成立するものなどさまざまです。&lt;br&gt;
+今年の始めにあった&lt;a href=&quot;https://spectreattack.com/&quot; title=&quot;Meltdown and Spectre&quot;&gt;Meltdown and Spectre&lt;/a&gt;などセキュリティなども専門知識がないと正確な現状は把握することが難しいです。&lt;br&gt;
+JSer.infoではできる限り元をたどって把握しようとしますが、不確実性が含まれるなら無理に解釈して伝えることよりも伝えないことを選びます。&lt;br&gt;
+(代わりに元のデータがあるならば、そこへのリンクを貼る)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jser.info/2018/01/10/spectremeltdown-fusebox-3.0-nuxt.js-1.0/&quot; title=&quot;2018-01-09のJS: Spectre/Meltdownのブラウザへの影響、FuseBox 3.0、Nuxt.js 1.0 - JSer.info&quot;&gt;2018-01-09のJS: Spectre/Meltdownのブラウザへの影響、FuseBox 3.0、Nuxt.js 1.0 - JSer.info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;JavaScriptがあらゆるものと関連している現在において、JavaScriptのすべて知っている人などいないため、すべてを正確に伝えることは難しいと思います。&lt;/p&gt;
+
+&lt;h3 id=&quot;説明する&quot;&gt;説明する&lt;/h3&gt;
+
+&lt;p&gt;また、JSer.infoでの説明文にも言葉を使っているので、この言葉のチェックも必要です。&lt;br&gt;
+誤った説明をして間違って伝わるのは自明ですが、正しいことを言っても正しくは伝わないことがあるためです。&lt;/p&gt;
+
+&lt;p&gt;たとえば、npmの&lt;a href=&quot;http://blog.npmjs.org/post/167963735925/v560-2017-11-27&quot; title=&quot;The npm Blog — v5.6.0 (2017-11-27)&quot;&gt;The npm Blog — v5.6.0 (2017-11-27)&lt;/a&gt;のようにまだStableでリリースしていないのにリリース記事を公開する場合があります。&lt;br&gt;
+この記事を紹介するのに、&amp;quot;npm 5.6.0リリース&amp;quot;と書いてしまうとStableで公開されたようにも見えてしまいます。(&lt;strong&gt;pre&lt;/strong&gt;リリースはされているのでリリース自体はあっているが、Stableではないので誤解を生みそう)&lt;/p&gt;
+
+&lt;p&gt;そのため、このような場合は元の記事には書いてないですが&amp;quot;npm 5.6.0(beta)が公開された&amp;quot;のように補足を追加しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jser.info/2017/12/05/npm-5.6.0beta-react-16.2.0-new-ecmascript-proposals/&quot; title=&quot;2017-12-05のJS: npm 5.6.0(beta)、React 16.2.0、New ECMAScript Proposals - JSer.info&quot;&gt;2017-12-05のJS: npm 5.6.0(beta)、React 16.2.0、New ECMAScript Proposals - JSer.info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/textlint/textlint&quot;&gt;textlint&lt;/a&gt;という自然言語のLintツールを作ったのも、元をたどればJSer.infoの紹介文をチェックする辞書を作るためです。(現在は自作の&lt;a href=&quot;https://proofdict.github.io/&quot; title=&quot;proofdict&quot;&gt;proofdict&lt;/a&gt;を辞書として使っています)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/azu/postem&quot; title=&quot;postem&quot;&gt;postem&lt;/a&gt;という投稿ツールでリアルタイムチェックや&lt;a href=&quot;https://github.com/jser/jser.github.io&quot; title=&quot;jser/jser.github.io&quot;&gt;jser/jser.github.io&lt;/a&gt;のCIでLintなどが走っています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/azu/postem&quot;&gt;&lt;img src=&quot;https://azu.github.io/slide/2017/jser_info/resources/postem.png&quot; alt=&quot;postem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;正確さに協力する&quot;&gt;正確さに協力する&lt;/h3&gt;
+
+&lt;p&gt;紹介したいサイトの一部が間違っているからとそこで止まっていてはもったないです。&lt;br&gt;
+何かおかしなところがあるなら聞いてみたり修正PRを出してみたりすれば解決することもあります。&lt;/p&gt;
+
+&lt;p&gt;そのため、ここが何か変だなーというところは修正Pull Requestを出したりしています。&lt;br&gt;
+些細なことだと記事内のリンク切れや間違っている部分の訂正などをしています。&lt;br&gt;
+新しくでてきたプロジェクトなら簡単な修正を送ってみて、どのようなコミュニティなのかという雰囲気をつかむことも紹介文を書くのに役立ちます。&lt;br&gt;
+（たとえば単純に社内のものをオープンソースにしてみただけなのか、コントビュートは歓迎されるのか、どのようなスピード感かなど）&lt;/p&gt;
+
+&lt;h2 id=&quot;記事を投稿する&quot;&gt;記事を投稿する&lt;/h2&gt;
+
+&lt;p&gt;紹介記事ごとにこれを繰り返してある程度数が溜まったら記事にしています。&lt;br&gt;
+目安はBotが教えてくれます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://jser.info/uploads/media/2018/01/15-1515972040.png&quot; alt=&quot;bot&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/azu_re?ref_src=twsrc%5Etfw&quot;&gt;@azu_re&lt;/a&gt; 今の投稿ステータスです！&lt;br&gt;平均値: 21.03013698630137&lt;br&gt;中央値: 21&lt;br&gt;現在値: 15&lt;/p&gt;&amp;mdash; JSer.info (@jser_info) &lt;a href=&quot;https://twitter.com/jser_info/status/952681063968485377?ref_src=twsrc%5Etfw&quot;&gt;January 14, 2018&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;また、紹介記事を1つ追加するたびにCI/CD経由で公開する記事のベースとなるブランチを更新するようになっています。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 今の週刊ではなく、紹介記事を1つ追加するたびにそれを見たい人は&lt;a href=&quot;https://realtime.jser.info/&quot;&gt;Realtime版&lt;/a&gt;がみれます。&lt;br&gt;
+CI/CD経由のブランチ更新と同じデータを使っているので、同じタイミングで更新されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://realtime.jser.info/&quot; title=&quot;Realtime JSer.info&quot;&gt;Realtime JSer.info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;実際に記事を公開するときは&lt;a href=&quot;https://github.com/jser/jser.github.io/compare/jser-week-366?expand=1&quot;&gt;github.com/jser/jser.github.io/compare/jser-week-366?expand=1&lt;/a&gt;のような作っておいたブランチからPull Requestを出す形になるので、基本的にGitHub Web UIだけで記事公開までできるようになっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://jser.info/uploads/media/2018/01/15-1515972306.png&quot; alt=&quot;記事がたまったブランチ&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;記事がたまったブランチ – これをPRにして直接Webで編集してマージする&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;JSer.infoとして紹介する際にはカテゴリ(&lt;em&gt;アーティクル&lt;/em&gt;とか)で分けていますが、&lt;a href=&quot;https://github.com/jser/jser.info&quot; title=&quot;jser/jser.info&quot;&gt;過去のデータ&lt;/a&gt;を元にカテゴリを&lt;a href=&quot;https://github.com/jser/classifier-item-category&quot;&gt;ベイズ推定するライブラリ&lt;/a&gt;とかを書いたので、カテゴリ分類なども今は自動化されています。&lt;br&gt;
+そのため、現在はヘッドラインの説明を追加するだけになっています。&lt;/p&gt;
+
+&lt;p&gt;JSer.infoの記事が更新されるまでにはこのようなサイクルを辿っています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://azu.github.io/slide/2017/jser_info/resources/workflow_around_jser.png&quot; alt=&quot;1サイクル&quot;&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;イテレーション&quot;&gt;イテレーション&lt;/h2&gt;
+
+&lt;p&gt;これらのイテレーションは、1週間程度の短いサイクルで行えるようにしています。&lt;br&gt;
+一度に遠くのゴールを目指すより、短い目標をちょっとづつクリアした方が継続できるためです。&lt;br&gt;
+(失敗した時に立て直しがしやすいという理由もあります)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://azu.github.io/slide/2017/jser_info/resources/workflow-week.png&quot; alt=&quot;イテレーション&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://azu.github.io/slide/2017/jser_info/how_to_make_jser_info.html&quot; title=&quot;JSer.infoの作り方&quot;&gt;JSer.infoの作り方&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1紹介記事 = 1コミットというように小さく分散して更新していくのは、更新のコストを小さくするための一種の工夫です。&lt;/p&gt;
+
+&lt;p&gt;このようなサイクルを繰り返し大体ほど1週間に1度更新して、今365週間(7年)が経ちました。&lt;/p&gt;
+
+&lt;h2 id=&quot;今後&quot;&gt;今後&lt;/h2&gt;
+
+&lt;p&gt;個人でやっているので情報に偏りがでやすいのは課題です。&lt;/p&gt;
+
+&lt;p&gt;そのため、他の人がJSer.info上で記事を投稿できるようにしたい。&lt;br&gt;
+現時点でもPull Requestを送ればできますが、あまりに広範囲に「寄稿募集しています」といっても成立するわけではないと思います。&lt;/p&gt;
+
+&lt;p&gt;先ほども書いたようにJavaScriptといっても分野はさまざまです。&lt;br&gt;
+何か特定の分野(ライブラリや技術、コミュニティなど)の状況についての記事を投稿してみたい人がいたら、そのようなところに限定してみるのが良さそうなです。JSer.infoに載せる場合は客観的な評価と主観的な感想の分離は必要なので、その辺の体裁は整える必要があると思いますが。&lt;/p&gt;
+
+&lt;p&gt;雰囲気的にはレポート系の記事とか、ロードマップに関連するIssueの状況のまとめなど、ちょっと踏み込まないと分かりにくい部分についてをまとめたい。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jser.info/2017/01/31/bundler-testing-framework-report/&quot; title=&quot;JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状 - JSer.info&quot;&gt;JSerレポート #1 Bundlerの未来、テスティングフレームワークの現状 - JSer.info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;たとえば、Babel 7の進捗についてまとめてみたり、ReactやAngularのIssueやロードマップの状況（定期的な状態）、&lt;a href=&quot;https://spectreattack.com/&quot; title=&quot;Meltdown and Spectre&quot;&gt;Meltdown and Spectre&lt;/a&gt;の各ブラウザの対応と方針など色々です。&lt;br&gt;
+最近ならばやっとすべてのモダンブラウザで有効化されそうなModuleの状況をまとめるなども面白そうです。&lt;/p&gt;
+
+&lt;p&gt;少なくてもPull Requestされた記事は自分がレビューするので、ダブルチェックがあることでより正確になるはずです。&lt;/p&gt;
+
+&lt;p&gt;また、この考えの背景には、◯◯の最新情報をまとめるブログやサイトは大体数ヶ月から2年ぐらいで途切れてしまってることがあります。&lt;br&gt;
+&lt;a href=&quot;http://azu.github.io/Meta-Weekly/&quot; title=&quot;Meta Weekly&quot;&gt;Meta Weekly&lt;/a&gt;にあるサイトが半分ぐらいは更新が止まっていると思います。&lt;/p&gt;
+
+&lt;p&gt;コミュニティベースのEchoJSや企業としてやっている&lt;a href=&quot;http://javascriptweekly.com/&quot; title=&quot;JavaScript Weekly&quot;&gt;JavaScript Weekly&lt;/a&gt;などはちゃんと継続していますが、個人でやっている場合には一度止まると再開はされにくい気がします。&lt;br&gt;
+個人で最新情報を継続的にまとめるには恐らくコストが高く、一度止まると復帰が難しい問題という問題があるのだと思います。&lt;/p&gt;
+
+&lt;p&gt;JSer.infoはその辺を徹底的に仕組化やイテレーションコストを小さくすることで対処しています。&lt;br&gt;
+また止まることは想定し、再開のしやすさに重きをおいています。&lt;/p&gt;
+
+&lt;p&gt;その辺を協力してやっていけるとJSer.infoとしても情報の偏りがバラけて、&lt;br&gt;
+かつ情報サイトをやりたい人はすでにあるJSer.infoに乗っかれる双方のメリットがあっていいのかなと思いました。&lt;/p&gt;
+
+&lt;p&gt;何かやってみたいことがある人は&lt;a href=&quot;https://gitter.im/jser/jser.info&quot;&gt;&lt;img src=&quot;https://badges.gitter.im/jser/jser.info.svg&quot; alt=&quot;Gitter&quot;&gt;&lt;/a&gt;や&lt;a href=&quot;https://twitter.com/search?f=tweets&amp;amp;vertical=default&amp;amp;q=%23jserinfo&amp;amp;src=typd&quot; title=&quot;#jserinfo&quot;&gt;#jserinfo&lt;/a&gt;、&lt;a href=&quot;https://twitter.com/azu_re&quot; title=&quot;@azu_re&quot;&gt;@azu_re&lt;/a&gt;にお知らせください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gitter.im/jser/jser.info&quot; title=&quot;jser/jser.info - Gitter&quot;&gt;jser/jser.info - Gitter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;おわりに&quot;&gt;おわりに&lt;/h2&gt;
+
+&lt;p&gt;先週が&lt;a href=&quot;https://jser.info/2018/01/10/spectremeltdown-fusebox-3.0-nuxt.js-1.0/&quot; title=&quot;JSer.info #365&quot;&gt;#jserinfo 365回目&lt;/a&gt;なので、&lt;br&gt;
+週一回の更新が7年間継続できているのだと思います。(&lt;code&gt;7 * 365 / 7; // =&amp;gt; 365&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;JSer.info が何かの助けになっていれば幸いです。&lt;/p&gt;
+
+&lt;p&gt;意見や感想などがありましたら、&lt;a href=&quot;https://twitter.com/search?f=tweets&amp;amp;vertical=default&amp;amp;q=%23jserinfo&amp;amp;src=typd&quot; title=&quot;#jserinfo&quot;&gt;#jserinfo&lt;/a&gt;のハッシュタグに投稿してください。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jser.info/ko/&quot;&gt;JSer.infoの韓国語翻訳&lt;/a&gt;を継続的に行っていただいている&lt;a href=&quot;https://github.com/UYEONG&quot; title=&quot;U-Yeong Ju&quot;&gt;U-Yeong Ju&lt;/a&gt;さんにも感謝を&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Mon, 15 Jan 2018 09:00:00 +0900</pubDate>
+        <link>https://jser.info/2018/01/15/jser-info-7years/</link>
+        <guid isPermaLink="true">https://jser.info/2018/01/15/jser-info-7years/</guid>
+        
+        <category>JSer</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>雑記</category>
+        
+      </item>
     
       <item>
         <title>2018-01-09のJS: Spectre/Meltdownのブラウザへの影響、FuseBox 3.0、Nuxt.js 1.0</title>
@@ -3024,353 +3352,6 @@ Reactを使ったカスタマイズ、翻訳への対応、ブログ機能やalg
         <category>Firefox</category>
         
         <category>Tool</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-11-07のJS: TypeScript 2.6.、Node.js 8.9.0 LTS、Angular 5.0.0</title>
-        <description>&lt;p&gt;JSer.info #356 - TypeScript 2.6が正式にリリースされました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/typescript/2017/10/31/announcing-typescript-2-6/&quot; title=&quot;Announcing TypeScript 2.6 | TypeScript&quot;&gt;Announcing TypeScript 2.6 | TypeScript&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;strictFunctionTypes&lt;/code&gt;オプションが有効時は、関数の引数がBivariantではなくContravariantとして扱われるようになりました。以前のTypeScriptはFlowとは異なり関数の引数の不整合をコンパイルエラーとしませんでしたが、今回の&lt;code&gt;strictFunctionTypes&lt;/code&gt;オプションでその不整合をコンパイルエラーにできます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiita.com/na-o-ys/items/aa56d678cdf0de2bdd79&quot; title=&quot;なぜ TypeScript の型システムが健全性を諦めているか - Qiita&quot;&gt;なぜ TypeScript の型システムが健全性を諦めているか - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;また&lt;code&gt;--locale&lt;/code&gt;でのCLIやエラーメッセージの多言語化、&lt;code&gt;--watch&lt;/code&gt;の改善、&lt;code&gt;// ts-ignore&lt;/code&gt;のサポート。&lt;br&gt;
-languageserviceの改善でVSCodeなどでJSDocから型をQuickfixできるように、&lt;code&gt;@types&lt;/code&gt;の自動インストール対応などが行われています。&lt;/p&gt;
-
-&lt;p&gt;詳しくは次の記事でも解説されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://abcdef.gets.b6n.ch/entry/2017/11/01/101358&quot;&gt;TypeScript 2.6 変更点と注意点 - abcdefGets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiita.com/vvakame/items/d2c7cf142fa0af39d2d5&quot;&gt;TypeScript 2.6.1 変更点 - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Node.js 8.9.0と9.0.0がリリースされました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v8.9.0/&quot;&gt;Node v8.9.0 (LTS) | Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Node.js 8.9.0では、npm 5.5.1へのアップデート、&lt;code&gt;require.resolve()&lt;/code&gt;に指定パスを基準に探索するオプションが追加、&lt;code&gt;util.TextEncoder&lt;/code&gt;と&lt;code&gt;util.TextDecoder&lt;/code&gt;の実験フラグが外れています。&lt;br&gt;
-また、Node.js 8.9.0は8.x系のLong-Term Supported (LTS)となりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cdn.rawgit.com/nodejs/Release/05e27d38230ae5077a3bb463933f5c2eeb33f981/schedule.png&quot; alt=&quot;LTS&quot;&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/nodejs/Release&quot; title=&quot;nodejs/Release: Node.js Foundation Release Working Group&quot;&gt;nodejs/Release: Node.js Foundation Release Working Group&lt;/a&gt;より&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;次の記事で詳細が書かれていますが、Node.js 4.xと6.xからのマイグレーションが推奨されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/the-node-js-collection/news-node-js-8-moves-into-long-term-support-and-node-js-9-becomes-the-new-current-release-line-74cf754a10a0&quot; title=&quot;NEWS: Node.js 8 Moves into Long-Term Support and Node.js 9 Becomes the New Current Release Line&quot;&gt;NEWS: Node.js 8 Moves into Long-Term Support and Node.js 9 Becomes the New Current Release Line&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;また、同時にNode.js 9.0.0がリリースされています。&lt;br&gt;
-Node.js 9.0.0では、さまざまなBreaking Changeが含まれています。&lt;/p&gt;
-
-&lt;p&gt;Error codeの対応、&lt;code&gt;assert.deepStrictEqual&lt;/code&gt;がSameValueZeroのロジックで比較するようになり、&lt;code&gt;Intl.v8BreakIterator&lt;/code&gt;や&lt;code&gt;domain&lt;/code&gt;から&lt;code&gt;.dispose()&lt;/code&gt;の削除などが行われています。&lt;/p&gt;
-
-&lt;p&gt;機能追加として、&lt;code&gt;assert&lt;/code&gt;のメソッドがカスタムエラーをサポート、&lt;code&gt;util.callbackify&lt;/code&gt;、&lt;code&gt;util.isDeepStrictEqual&lt;/code&gt;の追加などが行われています。&lt;/p&gt;
-
-&lt;p&gt;詳細は次の記事を参照してください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v9.0.0/&quot;&gt;Node v9.0.0 (Current) | Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Angular 5.0.0がリリースされました。&lt;br&gt;
-また同時に&lt;a href=&quot;https://github.com/angular/angular-cli&quot; title=&quot;angular-cli&quot;&gt;angular-cli&lt;/a&gt; 1.5.0がリリースされています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.angular.io/version-5-0-0-of-angular-now-available-37e414935ced&quot;&gt;Version 5.0.0 of Angular Now Available – Angular Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular/blob/master/CHANGELOG.md#500-pentagonal-donut-2017-11-01&quot;&gt;angular/CHANGELOG.md at master · angular/angular&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular-cli/releases/tag/v1.5.0&quot;&gt;Release 1.5 – Turing · angular/angular-cli&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CLIでのビルドにBuild Optimizerがデフォルトで適応され、Decoratorなどランタイムでは不要なものを削除できるようになっています。&lt;br&gt;
-破壊的な変更としてi18n pipesのデフォルト挙動の変更やDateFormatがCLDRに合わせた書式へと変更されています。&lt;br&gt;
-偶然、同じ時期にCLDRの最新版であるCLDR 32もリリースされています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/12iygt-_cakNP1VO7MV9g4lq9NsxVWG4tSfc98HpHb0k/edit#gid=0&quot; title=&quot;Date formats - Google spread sheet&quot;&gt;Date formats - Google spread sheet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://cldr.unicode.org/index/downloads/cldr-32&quot; title=&quot;CLDR 32 Release Note - CLDR - Unicode Common Locale Data Repository&quot;&gt;CLDR 32 Release Note - CLDR - Unicode Common Locale Data Repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;RxJS 5.5へのアップデート、Routerのライフサイクルの追加なども行われています。&lt;/p&gt;
-
-&lt;p&gt;AngularではLTSとして&lt;code&gt;4.x&lt;/code&gt;系が公開されていて、&lt;code&gt;4.x&lt;/code&gt;は2017年10月から2018年10月までのサポートとなっています。&lt;br&gt;
-詳細は次のページに公開されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular/blob/master/docs/RELEASE_SCHEDULE.md#long-term-supported-lts-versions&quot; title=&quot;Long-Term Supported (LTS) Versions&quot;&gt;Long-Term Supported (LTS) Versions&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;announcing-typescript-2.6-|-typescript&quot;&gt;Announcing TypeScript 2.6 | TypeScript&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/typescript/2017/10/31/announcing-typescript-2-6/&quot; title=&quot;Announcing TypeScript 2.6 | TypeScript&quot;&gt;blogs.msdn.microsoft.com/typescript/2017/10/31/announcing-typescript-2-6/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;TypeScript 2.6リリース。&lt;br&gt;
-&lt;code&gt;strictFunctionTypes&lt;/code&gt;のサポート、&lt;code&gt;--locale&lt;/code&gt;での多言語化、&lt;code&gt;--watch&lt;/code&gt;の改善、&lt;code&gt;// ts-ignore&lt;/code&gt;のサポート。&lt;br&gt;
-VSCodeなどでJSDocから型をQuickfixできるように、&lt;code&gt;@types&lt;/code&gt;の自動インストール対応など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://abcdef.gets.b6n.ch/entry/2017/11/01/101358&quot; title=&quot;TypeScript 2.6 変更点と注意点 - abcdefGets&quot;&gt;TypeScript 2.6 変更点と注意点 - abcdefGets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiita.com/vvakame/items/d2c7cf142fa0af39d2d5&quot; title=&quot;TypeScript 2.6.1 変更点 - Qiita&quot;&gt;TypeScript 2.6.1 変更点 - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;news:-node.js-8-moves-into-long-term-support-and-node.js-9-becomes-the-new-current-release-line&quot;&gt;NEWS: Node.js 8 Moves into Long-Term Support and Node.js 9 Becomes the New Current Release Line&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/the-node-js-collection/news-node-js-8-moves-into-long-term-support-and-node-js-9-becomes-the-new-current-release-line-74cf754a10a0&quot; title=&quot;NEWS: Node.js 8 Moves into Long-Term Support and Node.js 9 Becomes the New Current Release Line&quot;&gt;medium.com/the-node-js-collection/news-node-js-8-moves-into-long-term-support-and-node-js-9-becomes-the-new-current-release-line-74cf754a10a0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node.js 8.9.0がリリースされ8.xのLong-Term Support(LTS)となった。また同時に開発バージョンである9.xが公開された。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v8.9.0/&quot; title=&quot;Node v8.9.0 (LTS) | Node.js&quot;&gt;Node v8.9.0 (LTS) | Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v9.0.0/&quot; title=&quot;Node v9.0.0 (Current) | Node.js&quot;&gt;Node v9.0.0 (Current) | Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;node-v8.9.0-(lts)-|-node.js&quot;&gt;Node v8.9.0 (LTS) | Node.js&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v8.9.0/&quot; title=&quot;Node v8.9.0 (LTS) | Node.js&quot;&gt;nodejs.org/en/blog/release/v8.9.0/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node.js 8.9.0リリース。8.x系のLTSとして公開された。&lt;br&gt;
-npm 5.5.1へのアップデート、&lt;code&gt;require.resolve()&lt;/code&gt;に指定パスを探索するオプションが追加、&lt;code&gt;util.TextEncoder&lt;/code&gt;と&lt;code&gt;util.TextDecoder&lt;/code&gt;のフラグが外れるなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;node-v9.0.0-(current)-|-node.js&quot;&gt;Node v9.0.0 (Current) | Node.js&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v9.0.0/&quot; title=&quot;Node v9.0.0 (Current) | Node.js&quot;&gt;nodejs.org/en/blog/release/v9.0.0/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node.js 9.0.0リリース。&lt;br&gt;
-Error codeの対応、&lt;code&gt;assert.deepStrictEqual&lt;/code&gt;がSameValueZeroのロジックで比較するように、&lt;code&gt;assert&lt;/code&gt;のメソッドがカスタムエラーをサポート、&lt;code&gt;util.callbackify&lt;/code&gt;、&lt;code&gt;util.isDeepStrictEqual&lt;/code&gt;の追加など。&lt;br&gt;
-また&lt;code&gt;Intl.v8BreakIterator&lt;/code&gt;の削除されている。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://nemethgergely.com/what-is-new-in-nodejs-9/&quot; title=&quot;What&amp;amp;amp;#39;s new in Node.js 9?&quot;&gt;What&amp;#39;s new in Node.js 9?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;version-5.0.0-of-angular-now-available-–-angular-blog&quot;&gt;Version 5.0.0 of Angular Now Available – Angular Blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.angular.io/version-5-0-0-of-angular-now-available-37e414935ced&quot; title=&quot;Version 5.0.0 of Angular Now Available – Angular Blog&quot;&gt;blog.angular.io/version-5-0-0-of-angular-now-available-37e414935ced&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Angular 5.0.0リリース。&lt;br&gt;
-CLIにBuild Optimizerがデフォルトで適応され、Decoratorなどランタイムでは不要なものを削除できるように。&lt;br&gt;
-i18n pipesのデフォルト挙動の変更やDateFormatの変更。&lt;br&gt;
-RxJS 5.5へのアップデート、Routerのライフサイクルの追加など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular/blob/master/CHANGELOG.md#500-pentagonal-donut-2017-11-01&quot; title=&quot;angular/CHANGELOG.md at master · angular/angular&quot;&gt;angular/CHANGELOG.md at master · angular/angular&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/angular/angular-cli/releases/tag/v1.5.0&quot; title=&quot;Release 1.5 – Turing · angular/angular-cli&quot;&gt;Release 1.5 – Turing · angular/angular-cli&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://angular-update-guide.firebaseapp.com/&quot; title=&quot;Angular Update Guide - Beta&quot;&gt;Angular Update Guide - Beta&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-notes-for-safari-technology-preview 43-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 43 | WebKit&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/8016/release-notes-for-safari-technology-preview-43/&quot; title=&quot;Release Notes for Safari Technology Preview 43 | WebKit&quot;&gt;webkit.org/blog/8016/release-notes-for-safari-technology-preview-43/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Safari Technology Preview Release 43リリース。&lt;br&gt;
-Cache Storage APIがデフォルトで有効化、&lt;code&gt;createImageBitmap&lt;/code&gt;と&lt;code&gt;drawImage(imageBitmap)&lt;/code&gt;のサポート。&lt;br&gt;
-Web Inspectorで新しいネットワークタブ、Canvasタブの有効化、HARエクスポートに対応など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage&quot; title=&quot;CacheStorage - Web APIs | MDN&quot;&gt;CacheStorage - Web APIs | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/docs/Web/API/ImageBitmap&quot; title=&quot;ImageBitmap - Web API インターフェイス | MDN&quot;&gt;ImageBitmap - Web API インターフェイス | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;element-2.0-is-here-–-eleme-frontend-engineering-–-medium&quot;&gt;Element 2.0 is here – ELEME Frontend Engineering – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/elemefe/element-2-0-is-here-71bfa217e269&quot; title=&quot;Element 2.0 is here – ELEME Frontend Engineering – Medium&quot;&gt;medium.com/elemefe/element-2-0-is-here-71bfa217e269&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Vue向けのUIフレームワークのElement 2.0リリース&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;introducing-new-javascript-optimizations,-webassembly,-sharedarraybuffer,-and-atomics-in-edgehtml-16---microsoft-edge-dev-blogmicrosoft-edge-dev-blog&quot;&gt;Introducing new JavaScript optimizations, WebAssembly, SharedArrayBuffer, and Atomics in EdgeHTML 16 - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.windows.com/msedgedev/2017/10/31/optimizations-webassembly-sharedarraybuffer-atomics-edgehtml-16/&quot; title=&quot;Introducing new JavaScript optimizations, WebAssembly, SharedArrayBuffer, and Atomics in EdgeHTML 16 - Microsoft Edge Dev BlogMicrosoft Edge Dev Blog&quot;&gt;blogs.windows.com/msedgedev/2017/10/31/optimizations-webassembly-sharedarraybuffer-atomics-edgehtml-16/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;MSEdge&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;MSEdge 16の変更点について。&lt;br&gt;
-特定のスコープの関数を遅延実行できるようにしパフォーマンスの改善、try-catch-finallyの最適化、&lt;br&gt;
-WebAssemblyとSharedArrayBufferをデフォルトで有効化など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;common-typescript-error-messages---blog-|-sitepen&quot;&gt;Common TypeScript Error Messages - Blog | SitePen&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.sitepen.com/blog/2017/11/01/common-typescript-error-messages/&quot; title=&quot;Common TypeScript Error Messages - Blog | SitePen&quot;&gt;www.sitepen.com/blog/2017/11/01/common-typescript-error-messages/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;TypeScriptのよく見るエラーとその解決方法について&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;houdini-paint-api-|-blog.jxck.io&quot;&gt;Houdini Paint API | blog.jxck.io&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.jxck.io/entries/2017-10-31/houdini-paint-api.html&quot; title=&quot;Houdini Paint API | blog.jxck.io&quot;&gt;blog.jxck.io/entries/2017-10-31/houdini-paint-api.html&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;CSS Paint APIについての解説とデモ&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;how-to-debug-front-end:-console-–-pragmatists&quot;&gt;How to debug Front-end: Console – Pragmatists&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.pragmatists.com/how-to-debug-front-end-console-3456e4ee5504&quot; title=&quot;How to debug Front-end: Console – Pragmatists&quot;&gt;blog.pragmatists.com/how-to-debug-front-end-console-3456e4ee5504&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debiug&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ブラウザの開発者ツールのConsole APIの紹介&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;put-your-webpack-bundle-on-a-diet---part-1&quot;&gt;Put Your Webpack Bundle On A Diet - Part 1&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.contentful.com/blog/2017/10/10/put-your-webpack-on-a-diet-part-1/&quot; title=&quot;Put Your Webpack Bundle On A Diet - Part 1&quot;&gt;www.contentful.com/blog/2017/10/10/put-your-webpack-on-a-diet-part-1/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;webpack&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;webpackでbundleファイルサイズの最適化についての連載。&lt;br&gt;
-Part 1ではminify、production buildなどの基本的なことを扱っている。&lt;br&gt;
-tree shaking、momentやlodashなどから不要なものを削除、babel-preset-env でのpolyfillの最適化など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.contentful.com/blog/2017/10/19/put-your-webpack-bundle-on-a-diet-part-2/&quot; title=&quot;Put Your Webpack Bundle On A Diet - Part 2&quot;&gt;Put Your Webpack Bundle On A Diet - Part 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.contentful.com/blog/2017/10/27/put-your-webpack-bundle-on-a-diet-part-3/&quot; title=&quot;Put Your Webpack Bundle On A Diet - Part 3&quot;&gt;Put Your Webpack Bundle On A Diet - Part 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;tracing-method-calls-via-proxies&quot;&gt;Tracing method calls via Proxies&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://2ality.com/2017/11/proxy-method-calls.html&quot; title=&quot;Tracing method calls via Proxies&quot;&gt;2ality.com/2017/11/proxy-method-calls.html&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;proxy&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ES proxyを使ったメソッド呼び出しのロギングについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;node.jsのパフォーマンスチューニングのtips---技術探し&quot;&gt;Node.jsのパフォーマンスチューニングのtips - 技術探し&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://abouthiroppy.hatenablog.jp/entry/2017/11/06/095943&quot; title=&quot;Node.jsのパフォーマンスチューニングのtips - 技術探し&quot;&gt;abouthiroppy.hatenablog.jp/entry/2017/11/06/095943&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node.jsのデバッグ、Trace系オプション紹介&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;プロダクトに-1-から-vue.js-を導入した話&quot;&gt;プロダクトに 1 から Vue.js を導入した話&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/ShoheiOkada/1-vuejs&quot; title=&quot;プロダクトに 1 から Vue.js を導入した話&quot;&gt;www.slideshare.net/ShoheiOkada/1-vuejs&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;jQueryベースだったシステムに、Vueを導入してみての話。&lt;br&gt;
-チームへの導入や導入前後での違いについてなど&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;server.js---server.js&quot;&gt;Server.js - server.js&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://serverjs.io/&quot; title=&quot;Server.js - server.js&quot;&gt;serverjs.io/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;シンプルなNode.jsのサーバライブラリ&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;atomic-css&quot;&gt;Atomic CSS&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://acss.io/&quot; title=&quot;Atomic CSS&quot;&gt;acss.io/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;宣言したクラスを元にCSSを作成するフレームワーク/ツール。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;raphamorim/react-tv:-[wip]-react-development-for-tv-(renderer-for-low-memory-applications-and-packager-for-webos,-tizen,-orsay)-📺&quot;&gt;raphamorim/react-tv: [WIP] React development for TV (Renderer for low memory applications and Packager for WebOS, Tizen, Orsay) 📺&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/raphamorim/react-tv&quot; title=&quot;raphamorim/react-tv: \[WIP\] React development for TV (Renderer for low memory applications and Packager for WebOS, Tizen, Orsay) 📺&quot;&gt;github.com/raphamorim/react-tv&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TV&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;WebOSなどのTV向けのReactツールキット。&lt;br&gt;
-Rendererや開発環境、ツールなどをまとめたもの&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;react-bits-·-gitbook&quot;&gt;React Bits · GitBook&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.gitbook.com/book/vasanthk/react-bits/details&quot; title=&quot;React Bits · GitBook&quot;&gt;www.gitbook.com/book/vasanthk/react-bits/details&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ReactのパターンやTips、アンチパターンについてまとめられた電子書籍&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Tue, 07 Nov 2017 10:13:49 +0900</pubDate>
-        <link>https://jser.info/2017/11/07/typescript-2.6.-node.js-8.9.0-lts-angular-5.0.0/</link>
-        <guid isPermaLink="true">https://jser.info/2017/11/07/typescript-2.6.-node.js-8.9.0-lts-angular-5.0.0/</guid>
-        
-        <category>TypeScript</category>
-        
-        <category>Node.js</category>
-        
-        <category>Angular</category>
         
         
         <category>_i18n</category>
