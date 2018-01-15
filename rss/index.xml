@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 Jan 2018 12:38:25 +0900</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 12:38:25 +0900</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 12:46:30 +0900</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 12:46:30 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -49,7 +49,7 @@
 
 &lt;p&gt;以前&lt;a href=&quot;http://azu.github.io/slide/2016/jser5years/javascript-information.html&quot; title=&quot;JavaScript情報ってなんだっけ?&quot;&gt;JavaScript情報ってなんだっけ?&lt;/a&gt;という発表でも話していましたが、情報とは誰かの主観が入ったデータだと思います。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://azu.github.io/slide/2016/jser5years/javascript-information.html&quot;&gt;&lt;img src=&quot;http://jser.info/uploads/media/2018/01/15-1515977359.png&quot; alt=&quot;JavaScript情報ってなんだっけ?&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://azu.github.io/slide/2016/jser5years/javascript-information.html&quot;&gt;&lt;img src=&quot;https://jser.info/uploads/media/2018/01/15-1515977359.png&quot; alt=&quot;JavaScript情報ってなんだっけ?&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;JSer.infoのゴールには情報を整理(データを加工して)して正確に伝えるというものが含まれています。&lt;br&gt;
 そのため、主観によって誤った情報が伝わることを避けるために、更新までに次のようなプロセスを辿っています。&lt;/p&gt;
@@ -218,7 +218,7 @@ JSer.infoではできる限り元をたどって把握しようとしますが�
 &lt;p&gt;紹介記事ごとにこれを繰り返してある程度数が溜まったら記事にしています。&lt;br&gt;
 目安はBotが教えてくれます。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://jser.info/uploads/media/2018/01/15-1515972040.png&quot; alt=&quot;bot&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jser.info/uploads/media/2018/01/15-1515972040.png&quot; alt=&quot;bot&quot;&gt;&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/azu_re?ref_src=twsrc%5Etfw&quot;&gt;@azu_re&lt;/a&gt; 今の投稿ステータスです！&lt;br&gt;平均値: 21.03013698630137&lt;br&gt;中央値: 21&lt;br&gt;現在値: 15&lt;/p&gt;&amp;mdash; JSer.info (@jser_info) &lt;a href=&quot;https://twitter.com/jser_info/status/952681063968485377?ref_src=twsrc%5Etfw&quot;&gt;January 14, 2018&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -239,7 +239,7 @@ CI/CD経由のブランチ更新と同じデータを使っているので、同
 
 &lt;p&gt;実際に記事を公開するときは&lt;a href=&quot;https://github.com/jser/jser.github.io/compare/jser-week-366?expand=1&quot;&gt;github.com/jser/jser.github.io/compare/jser-week-366?expand=1&lt;/a&gt;のような作っておいたブランチからPull Requestを出す形になるので、基本的にGitHub Web UIだけで記事公開までできるようになっています。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://jser.info/uploads/media/2018/01/15-1515972306.png&quot; alt=&quot;記事がたまったブランチ&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jser.info/uploads/media/2018/01/15-1515972306.png&quot; alt=&quot;記事がたまったブランチ&quot;&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;記事がたまったブランチ – これをPRにして直接Webで編集してマージする&lt;/p&gt;
