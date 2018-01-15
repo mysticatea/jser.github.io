@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 10 Jan 2018 14:05:26 +0900</pubDate>
-    <lastBuildDate>Wed, 10 Jan 2018 14:05:26 +0900</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 10:28:20 +0900</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 10:28:20 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -1677,7 +1677,11 @@ Wasmのコンパイルと実行、wast/wasmのダウンロードができる。&
         <description>&lt;p&gt;JSer.info #360 - npm 5.6.0(beta)が公開されています。&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.npmjs.org/post/167963735925/v560-2017-11-27&quot; title=&quot;The npm Blog — v5.6.0 (2017-11-27)&quot;&gt;The npm Blog — v5.6.0 (2017-11-27)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.npmjs.org/post/167963735925/v560-2017-11-27&quot; title=&quot;The npm Blog — v5.6.0 (2017-11-27)&quot;&gt;The npm Blog — v5.6.0 (2017-11-27)&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2017-11-27時点ではβリリース&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
