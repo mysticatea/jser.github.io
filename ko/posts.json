@@ -1,4 +1,11 @@
 [{
+"title":"2018-01-02 JS: npm의 패키지 명 규칙 변경, gulp 4.0.0 프리릴리즈, Babel 7의 변경 예정 사항",
+"url":"https://jser.info/ko/2018/01/02/npm-gulp-4.0.0-babel-7/",
+"date":"2018-01-02T20:38:53+09:00",
+"content":"JSer.info #364 - The npm Blog — New Package Mon...",
+"category":"JSer",
+"tags":["npm","gulp","babel"]
+},{
 "title":"2017-12-26 JS: Service Worker in MSEdge/Safari, Jest 22, jQuery UI와 Mobile 통합",
 "url":"https://jser.info/ko/2017/12/26/service-worker-in-msedgesafari-jest-22-jquery-uimobile/",
 "date":"2017-12-26T18:55:06+09:00",
