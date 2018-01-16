@@ -1,4 +1,11 @@
 [{
+"title":"2018-01-16のJS: Prettier 1.10、Secure Contexts、TDD in Framework",
+"url":"https://jser.info/2018/01/16/prettier-1.10-secure-contexts-tdd-in-framework/",
+"date":"2018-01-16T10:50:34+09:00",
+"content":"JSer.info #366 - コード整形ツールのPrettier 1.10がリリースされま...",
+"category":"JSer",
+"tags":["prettier","https","TDD"]
+},{
 "title":"JSer.infoを開始してから7年が経ちました",
 "url":"https://jser.info/2018/01/15/jser-info-7years/",
 "date":"2018-01-15T09:00:00+09:00",
