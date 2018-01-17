@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 16 Jan 2018 11:35:43 +0900</pubDate>
-    <lastBuildDate>Tue, 16 Jan 2018 11:35:43 +0900</lastBuildDate>
+    <pubDate>Wed, 17 Jan 2018 13:37:26 +0900</pubDate>
+    <lastBuildDate>Wed, 17 Jan 2018 13:37:26 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -173,7 +173,7 @@ ifとthrowを使ったものから&lt;code&gt;assert&lt;/code&gt;を使ったも
 &lt;p&gt;&lt;a href=&quot;https://medium.com/@mweststrate/introducing-immer-immutability-the-easy-way-9d73d8f71cb3&quot; title=&quot;Introducing Immer: Immutability the easy way – Michel Weststrate – Medium&quot;&gt;medium.com/@mweststrate/introducing-immer-immutability-the-easy-way-9d73d8f71cb3&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;Immmutableにオブジェクトを更新する&lt;code&gt;immer&lt;/code&gt;について。&lt;br&gt;
+&lt;p&gt;Immutableにオブジェクトを更新する&lt;code&gt;immer&lt;/code&gt;について。&lt;br&gt;
 Proxyなどを使い実際に変更された場合にのみ、オブジェクト自身を更新する仕組みをもち、また開発中は自動で&lt;code&gt;Object.freeze&lt;/code&gt;を適応する&lt;br&gt;
 ReduxのReducerのようなパターンをMutableなAPIで書ける。&lt;/p&gt;
 
