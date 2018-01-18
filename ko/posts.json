@@ -1,4 +1,11 @@
 [{
+"title":"2018-01-16 JS: Prettier 1.10, Secure Contexts, TDD in Framework",
+"url":"https://jser.info/ko/2018/01/16/prettier-1.10-secure-contexts-tdd-in-framework/",
+"date":"2018-01-16T10:50:34+09:00",
+"content":"JSer.info #366 - 코드 포맷팅 도구 Prettier 1.10이 릴리스됐습...",
+"category":"JSer",
+"tags":["prettier","https","TDD"]
+},{
 "title":"2018-01-02 JS: npm의 패키지 명 규칙 변경, gulp 4.0.0 프리릴리즈, Babel 7의 변경 예정 사항",
 "url":"https://jser.info/ko/2018/01/02/npm-gulp-4.0.0-babel-7/",
 "date":"2018-01-02T20:38:53+09:00",
