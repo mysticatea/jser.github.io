@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 23 Jan 2018 12:35:20 +0900</pubDate>
-    <lastBuildDate>Tue, 23 Jan 2018 12:35:20 +0900</lastBuildDate>
+    <pubDate>Tue, 23 Jan 2018 13:20:35 +0900</pubDate>
+    <lastBuildDate>Tue, 23 Jan 2018 13:20:35 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -253,8 +253,8 @@ redux-devtoolsのようにブラウザに拡張をインストールし、Redux�
 &lt;p&gt;&lt;a href=&quot;https://nodesecroadmap.fyi/&quot; title=&quot;Introduction · A Roadmap for Node.js Security&quot;&gt;nodesecroadmap.fyi/&lt;/a&gt;&lt;br&gt;
 &lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;security&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;p&gt;Node.jsのセキュリティに関するドキュメント。Node.jsにおけてセキュリティ的な問題が起きる項目について。&lt;br&gt;
-またDynamic requireなどコードレ別の問題などについて&lt;/p&gt;
+&lt;p&gt;Node.jsのセキュリティに関するドキュメント。Node.jsにおいてセキュリティ的な問題が起きる項目について。&lt;br&gt;
+またDynamic requireなどコード別の問題などについて&lt;/p&gt;
 
 &lt;hr&gt;
 
