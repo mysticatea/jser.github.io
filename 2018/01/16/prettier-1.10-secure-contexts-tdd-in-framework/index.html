@@ -215,7 +215,8 @@
 
 <p><a href="https://blog.mozilla.org/security/2018/01/15/secure-contexts-everywhere/" title="Secure Contexts Everywhere | Mozilla Security Blog">Secure Contexts Everywhere | Mozilla Security Blog</a>という記事では、今後のFirefoxでサポートする新しいウェブプラットフォームAPIなどはSecure Contextsでのみ動作する方針について書かれています。</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="Secure contexts">Secure contexts</a>は大雑把にいうとHTTPS/TLSで配信されているコンテンツの実行コンテキストのことで、<code>window.isSecureContext</code>で判定できます。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts" title="Secure contexts">Secure contexts</a>は大雑把にいうとHTTPS/TLSで配信されているコンテンツの実行コンテキストのことで、<code>window.isSecureContext</code>で判定できます。<br>
+(localhostもSecure Contextなので開発時は問題ありません)</p>
 
 <p>たとえば、このサイトはHTTPSで配信しているのでSecure Contextsでのコンテンツと判断されます。</p>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">);</span> <span class="c1">// =&gt; &quot;https://jser.info/&quot;</span>

@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 18 Jan 2018 12:32:07 +0900</pubDate>
-    <lastBuildDate>Thu, 18 Jan 2018 12:32:07 +0900</lastBuildDate>
+    <pubDate>Tue, 23 Jan 2018 09:08:49 +0900</pubDate>
+    <lastBuildDate>Tue, 23 Jan 2018 09:08:49 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -37,7 +37,8 @@
 
 &lt;p&gt;&lt;a href=&quot;https://blog.mozilla.org/security/2018/01/15/secure-contexts-everywhere/&quot; title=&quot;Secure Contexts Everywhere | Mozilla Security Blog&quot;&gt;Secure Contexts Everywhere | Mozilla Security Blog&lt;/a&gt;という記事では、今後のFirefoxでサポートする新しいウェブプラットフォームAPIなどはSecure Contextsでのみ動作する方針について書かれています。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts&quot; title=&quot;Secure contexts&quot;&gt;Secure contexts&lt;/a&gt;は大雑把にいうとHTTPS/TLSで配信されているコンテンツの実行コンテキストのことで、&lt;code&gt;window.isSecureContext&lt;/code&gt;で判定できます。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts&quot; title=&quot;Secure contexts&quot;&gt;Secure contexts&lt;/a&gt;は大雑把にいうとHTTPS/TLSで配信されているコンテンツの実行コンテキストのことで、&lt;code&gt;window.isSecureContext&lt;/code&gt;で判定できます。&lt;br&gt;
+(localhostもSecure Contextなので開発時は問題ありません)&lt;/p&gt;
 
 &lt;p&gt;たとえば、このサイトはHTTPSで配信しているのでSecure Contextsでのコンテンツと判断されます。&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; &amp;quot;https://jser.info/&amp;quot;&lt;/span&gt;
