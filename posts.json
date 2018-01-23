@@ -1,4 +1,11 @@
 [{
+"title":"2018-01-23のJS: 2018-01-23のJS: Bootstrap 4、create-react-app 1.1.0と2.0、kuker",
+"url":"https://jser.info/2018/01/23/2018-01-23js-bootstrap-4-create-react-app-1.1.02.0-kuker/",
+"date":"2018-01-23T12:05:24+09:00",
+"content":"JSer.info #367 - CSSフレームワークのBootstrap 4が正式リリースさ...",
+"category":"JSer",
+"tags":["CSS","React","debug","browser"]
+},{
 "title":"2018-01-16のJS: Prettier 1.10、Secure Contexts、TDD in Framework",
 "url":"https://jser.info/2018/01/16/prettier-1.10-secure-contexts-tdd-in-framework/",
 "date":"2018-01-16T10:50:34+09:00",

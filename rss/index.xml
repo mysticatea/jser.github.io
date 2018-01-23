@@ -5,9 +5,346 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 23 Jan 2018 09:08:49 +0900</pubDate>
-    <lastBuildDate>Tue, 23 Jan 2018 09:08:49 +0900</lastBuildDate>
+    <pubDate>Tue, 23 Jan 2018 12:35:20 +0900</pubDate>
+    <lastBuildDate>Tue, 23 Jan 2018 12:35:20 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>2018-01-23のJS: 2018-01-23のJS: Bootstrap 4、create-react-app 1.1.0と2.0、kuker</title>
+        <description>&lt;p&gt;JSer.info #367 - CSSフレームワークのBootstrap 4が正式リリースされました。&lt;br&gt;
+&lt;a href=&quot;http://blog.getbootstrap.com/2014/10/29/bootstrap-3-3-0-released/&quot; title=&quot;Bootstrap 3.3.0&quot;&gt;Bootstrap 3.3.0&lt;/a&gt;から約3年ぶりのメジャーアップデートとなります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.getbootstrap.com/2018/01/18/bootstrap-4/&quot;&gt;Bootstrap 4 · Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;4.0では実装をLessからSassへ変更、GridシステムにFlexboxを利用、Panelsやthumbnailsを廃止しCardsへの移行などの変更が行なわれています。そのため、コンポーネントへ指定するクラス名のリネームも行われています。&lt;br&gt;
+詳しい変更点とv3からの違いについてはマイグレーションガイドを参照してください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://getbootstrap.com/docs/4.0/migration/&quot;&gt;Migrating to v4 · Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また、IE 8、9のサポート終了し、v4からはIE10+、iOS 7+、Android 5.0+が対象となっています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/&quot; title=&quot;Browsers and devices · Bootstrap&quot;&gt;Browsers and devices · Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Reactの開発ツールである&lt;a href=&quot;https://github.com/facebook/create-react-app&quot; title=&quot;create-react-app&quot;&gt;create-react-app&lt;/a&gt; 1.1.0がリリースされました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/create-react-app/releases/tag/v1.1.0&quot; title=&quot;Release v1.1.0 · facebook/create-react-app&quot;&gt;Release v1.1.0 · facebook/create-react-app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;--use-npm&lt;/code&gt;の追加、&lt;code&gt;--scripts-version&lt;/code&gt;で&lt;code&gt;.tar.gz&lt;/code&gt;や&lt;code&gt;file:&lt;/code&gt;のサポートなどが行われています。&lt;br&gt;
+また、このリリースが1.x系の最後となり、次のメジャーアップデート候補である2.0に含める機能についての議論が行われています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/create-react-app/issues/3815&quot; title=&quot;Roadmap for react-scripts@2.0 · Issue #3815 · facebook/create-react-app&quot;&gt;Roadmap for react-scripts@2.0 · Issue #3815 · facebook/create-react-app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/krasimir/kuker&quot; title=&quot;kuker&quot;&gt;kuker&lt;/a&gt;というReact、Angular、Vue、Redux、MobX、HTMLなどに対応したデバッグツールが公開されています。&lt;br&gt;
+kukerは、ライブラリの状態やイベントのログを&lt;code&gt;postMessage&lt;/code&gt;で送り、そのログを表示できるブラウザ拡張となっています。&lt;/p&gt;
+
+&lt;p&gt;たとえば、Reduxならばコンポーネントのライフサイクルログを表示し、ReduxならReduxからdispatchされたActionとその時点でのStateを表示できるようになります。&lt;/p&gt;
+
+&lt;p&gt;同じ系統のデバッグブラウザ拡張として&lt;a href=&quot;https://github.com/gaearon/redux-devtools&quot; title=&quot;Redux DevTools&quot;&gt;Redux DevTools&lt;/a&gt;があります。&lt;br&gt;
+&lt;a href=&quot;https://almin.js.org/&quot; title=&quot;Almin&quot;&gt;Almin&lt;/a&gt;というライブラリ向けに、&lt;a href=&quot;https://github.com/almin/almin-devtools&quot;&gt;Redux DevToolsに対応したもの&lt;/a&gt;と&lt;a href=&quot;https://github.com/almin/almin-kuker-devtools&quot;&gt;kukerに対応したもの&lt;/a&gt;をそれぞれ書いてみました。&lt;br&gt;
+どちらも任意のデータを送る仕組みを持っていますが、kukerは単純に&lt;code&gt;postMessage&lt;/code&gt;でイベントやStateを送るだけなので特別な仕組みは必要ありません。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sendToDevTools&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;postMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;kuker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Almin&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;fa-money&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#bada55&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;詳しくは作者のブログで必要となった理由や仕組みについて書かれているので見てみると良さそうです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://krasimirtsonev.com/blog/article/debugging-your-front-end-like-is-2019&quot; title=&quot;Debugging your front-end like it&amp;amp;#39;s 2019&quot;&gt;Debugging your front-end like it&amp;#39;s 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v1.0.0-·-googlechrome/puppeteer&quot;&gt;Release v1.0.0 · GoogleChrome/puppeteer&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/GoogleChrome/puppeteer/releases/tag/v1.0.0&quot; title=&quot;Release v1.0.0 · GoogleChrome/puppeteer&quot;&gt;github.com/GoogleChrome/puppeteer/releases/tag/v1.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Puppeteer 1.0.0リリース。&lt;br&gt;
+コードカバレッジAPIのサポート、PDFのカスタマイズ、XPathのサポートなど&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/tools/puppeteer/&quot; title=&quot;Puppeteer  |  Tools for Web Developers  |  Google Developers&quot;&gt;Puppeteer  |  Tools for Web Developers  |  Google Developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;announcing-typescript-2.7-rc-|-typescript&quot;&gt;Announcing TypeScript 2.7 RC | TypeScript&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/typescript/2018/01/17/announcing-typescript-2-7-rc/&quot; title=&quot;Announcing TypeScript 2.7 RC | TypeScript&quot;&gt;blogs.msdn.microsoft.com/typescript/2018/01/17/announcing-typescript-2-7-rc/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;TypeScript 2.7RCリリース&lt;/p&gt;
+
+&lt;p&gt;クラスプロパティへの代入忘れをチェックする&lt;code&gt;--strictPropertyInitialization&lt;/code&gt;の追加、Tupleの扱いの変更、&lt;code&gt;in&lt;/code&gt;と&lt;code&gt;instanceof&lt;/code&gt;の改善など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;bootstrap-4-·-bootstrap&quot;&gt;Bootstrap 4 · Bootstrap&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.getbootstrap.com/2018/01/18/bootstrap-4/&quot; title=&quot;Bootstrap 4 · Bootstrap&quot;&gt;blog.getbootstrap.com/2018/01/18/bootstrap-4/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Bootstrap 4リリース。&lt;br&gt;
+4.0ではLessからSassへ、Flexboxの利用、Cardsへの移行、IE 8、9などのサポート終了など。&lt;br&gt;
+β3からの変更として、printのスタイルの更新サンプル、ドキュメントの追加など&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.getbootstrap.com/2017/08/10/bootstrap-4-beta/&quot; title=&quot;Bootstrap 4 Beta · Bootstrap&quot;&gt;Bootstrap 4 Beta · Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://getbootstrap.com/docs/4.0/migration/&quot; title=&quot;Migrating to v4 · Bootstrap&quot;&gt;Migrating to v4 · Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v5.0.0-·-mochajs/mocha&quot;&gt;Release v5.0.0 · mochajs/mocha&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mochajs/mocha/releases/tag/v5.0.0&quot; title=&quot;Release v5.0.0 · mochajs/mocha&quot;&gt;github.com/mochajs/mocha/releases/tag/v5.0.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Mocha 5.0.0リリース。&lt;br&gt;
+IE 9、10のサポート終了、テストファイルを追加指定する&lt;code&gt;--file&lt;/code&gt;オプションの追加など&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;polymer-3.0:-new-year,-new-preview---polymer-project&quot;&gt;Polymer 3.0: New Year, New Preview - Polymer Project&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.polymer-project.org/blog/2018-01-18-polymer-3-new-preview&quot; title=&quot;Polymer 3.0: New Year, New Preview - Polymer Project&quot;&gt;www.polymer-project.org/blog/2018-01-18-polymer-3-new-preview&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebComponents&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Polymer 3.0-pre.4リリース。&lt;br&gt;
+&lt;code&gt;PropertiesMixin&lt;/code&gt;の追加、&lt;code&gt;html&lt;/code&gt;タグ関数の改善。&lt;br&gt;
+Stableリリースは2018年Q1末を予定&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;jquery-3.3.0-–-a-fragrant-bouquet-of-deprecations-and…is-that-a-new-feature?-|-official-jquery-blog&quot;&gt;jQuery 3.3.0 – A fragrant bouquet of deprecations and…is that a new feature? | Official jQuery Blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.jquery.com/2018/01/19/jquery-3-3-0-a-fragrant-bouquet-of-deprecations-and-is-that-a-new-feature/&quot; title=&quot;jQuery 3.3.0 – A fragrant bouquet of deprecations and…is that a new feature? | Official jQuery Blog&quot;&gt;blog.jquery.com/2018/01/19/jquery-3-3-0-a-fragrant-bouquet-of-deprecations-and-is-that-a-new-feature/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;jQuery&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;jQuery 3.3.0リリース。&lt;br&gt;
+&lt;code&gt;.addClass()&lt;/code&gt;、&lt;code&gt;.removeClass()&lt;/code&gt;、&lt;code&gt;.toggleClass()&lt;/code&gt;が配列を受け取れるように。&lt;br&gt;
+&lt;code&gt;jQuery.now&lt;/code&gt;や&lt;code&gt;jQuery.isFunction&lt;/code&gt;などが非推奨になるなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;release-v1.1.0-·-facebookincubator/create-react-app&quot;&gt;Release v1.1.0 · facebookincubator/create-react-app&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/facebookincubator/create-react-app/releases/tag/v1.1.0&quot; title=&quot;Release v1.1.0 · facebookincubator/create-react-app&quot;&gt;github.com/facebookincubator/create-react-app/releases/tag/v1.1.0&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;create-react-app 1.1.0リリース。&lt;br&gt;
+&lt;code&gt;--use-npm&lt;/code&gt;の追加、&lt;code&gt;--scripts-version&lt;/code&gt;で&lt;code&gt;.tar.gz&lt;/code&gt;や&lt;code&gt;file:&lt;/code&gt;のサポートなど。&lt;br&gt;
+2.0のα版もリリースされ、2.0に含める機能についてはIssueで議論している。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebookincubator/create-react-app/issues/3815&quot; title=&quot;Roadmap for react-scripts@2.0 · Issue #3815 · facebookincubator/create-react-app&quot;&gt;Roadmap for react-scripts@2.0 · Issue #3815 · facebookincubator/create-react-app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;understanding-svg-coordinate-systems-and-transformations-(part-1)-—-the-viewport,-viewbox,-and-preserveaspectratio&quot;&gt;Understanding SVG Coordinate Systems and Transformations (Part 1) — The viewport, viewBox, and preserveAspectRatio&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.sarasoueidan.com/blog/svg-coordinate-systems/&quot; title=&quot;Understanding SVG Coordinate Systems and Transformations (Part 1) — The viewport, viewBox, and preserveAspectRatio&quot;&gt;www.sarasoueidan.com/blog/svg-coordinate-systems/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;SVG&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;SVGのviewport、viewBox、preserveAspectRatioについての詳しい解説&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;oxidizing-source-maps-with-rust-and-webassembly-–-mozilla-hacks-–-the-web-developer-blog&quot;&gt;Oxidizing Source Maps with Rust and WebAssembly – Mozilla Hacks – the Web developer blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hacks.mozilla.org/2018/01/oxidizing-source-maps-with-rust-and-webassembly/&quot; title=&quot;Oxidizing Source Maps with Rust and WebAssembly – Mozilla Hacks – the Web developer blog&quot;&gt;hacks.mozilla.org/2018/01/oxidizing-source-maps-with-rust-and-webassembly/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;sourcemap&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;WebAssembly&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Rust&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Source Mapパーサ、ジェネレーターをRust + WebAssemblyに書き換えた話。&lt;br&gt;
+Rustで書いてwasmに変換して使うことで、JavaScriptの実装に比べて処理時間や処理の安定性が向上したという話&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mozilla/source-map/pull/306&quot; title=&quot;Use WebAssembly to speed up SourceMapConsumer by fitzgen · Pull Request #306 · mozilla/source-map&quot;&gt;Use WebAssembly to speed up SourceMapConsumer by fitzgen · Pull Request #306 · mozilla/source-map&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;what&amp;#39;s-new-in-devtools-(chrome-65)- | -web- | -google-developers&quot;&gt;What&amp;#39;s New In DevTools (Chrome 65)  |  Web  |  Google Developers&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2018/01/devtools&quot; title=&quot;What&amp;#39;s New In DevTools (Chrome 65)  |  Web  |  Google Developers&quot;&gt;developers.google.com/web/updates/2018/01/devtools&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome 65での開発者ツールの変更点について。&lt;br&gt;
+Local Overrides、アクセシビリティツール、カラーピッカーにコンストラスト情報の表示、ステップ実行でWorkerやsetTimeoutなどの非同期処理のサポート。&lt;br&gt;
+パフォーマンスパネルで複数の記録を保存できるようになるなど&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;debugging-your-front-end-like-it&amp;#39;s-2019&quot;&gt;Debugging your front-end like it&amp;#39;s 2019&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://krasimirtsonev.com/blog/article/debugging-your-front-end-like-is-2019&quot; title=&quot;Debugging your front-end like it&amp;#39;s 2019&quot;&gt;krasimirtsonev.com/blog/article/debugging-your-front-end-like-is-2019&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Flux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Angular&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Extension&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;kukerという開発者ツールについて。&lt;br&gt;
+redux-devtoolsのようにブラウザに拡張をインストールし、ReduxやReact、Angularなどライブラリのログを見ることができる。&lt;br&gt;
+ログを投げる側は&lt;code&gt;postMessage&lt;/code&gt;を送ることで記録できる。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/krasimir/kuker&quot; title=&quot;krasimir/kuker: Kick-ass browser extension to debug your apps&quot;&gt;krasimir/kuker: Kick-ass browser extension to debug your apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;css-grid-—-learn-all-about-css-grid-with-wes-bos-in-this-free-video-series!&quot;&gt;CSS Grid — Learn all about CSS Grid with Wes Bos in this free video series!&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cssgrid.io/&quot; title=&quot;CSS Grid — Learn all about CSS Grid with Wes Bos in this free video series!&quot;&gt;cssgrid.io/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;CSS Grid講座&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;render-props---react&quot;&gt;Render Props - React&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://reactjs.org/docs/render-props.html&quot; title=&quot;Render Props - React&quot;&gt;reactjs.org/docs/render-props.html&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;ReactのRender Propsのパターンについてのドキュメント&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;introduction-·-a-roadmap-for-node.js-security&quot;&gt;Introduction · A Roadmap for Node.js Security&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nodesecroadmap.fyi/&quot; title=&quot;Introduction · A Roadmap for Node.js Security&quot;&gt;nodesecroadmap.fyi/&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;security&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;document&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Node.jsのセキュリティに関するドキュメント。Node.jsにおけてセキュリティ的な問題が起きる項目について。&lt;br&gt;
+またDynamic requireなどコードレ別の問題などについて&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;krasimir/kuker:-kick-ass-browser-extension-to-debug-your-apps&quot;&gt;krasimir/kuker: Kick-ass browser extension to debug your apps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/krasimir/kuker&quot; title=&quot;krasimir/kuker: Kick-ass browser extension to debug your apps&quot;&gt;github.com/krasimir/kuker&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Extension&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;クライアントから&lt;code&gt;postMessage&lt;/code&gt;で投げたログとStateを表示できるビューアのブラウザ拡張。&lt;br&gt;
+React、Redux、Angular、Vue、HTMLなどに対応したデバッグツール。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;skerit/json-dry:-json-dry-allows-you-to-serialize-&amp;amp;-revive-objects-containing-circular-references,-dates,-regexes,-class-instances,...&quot;&gt;skerit/json-dry: JSON-dry allows you to serialize &amp;amp; revive objects containing circular references, dates, regexes, class instances,...&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/skerit/json-dry&quot; title=&quot;skerit/json-dry: JSON-dry allows you to serialize &amp;amp; revive objects containing circular references, dates, regexes, class instances,...&quot;&gt;github.com/skerit/json-dry&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JSON&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;正規表現や循環参照に対応したJSONシリアライズ/デシリアライズライブラリ。&lt;br&gt;
+オブジェクトのクローンも行える。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;boltpkg/bolt:-⚡️-super-powered-javascript-project-management&quot;&gt;boltpkg/bolt: ⚡️ Super-powered JavaScript project management&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/boltpkg/bolt&quot; title=&quot;boltpkg/bolt: ⚡️ Super-powered JavaScript project management&quot;&gt;github.com/boltpkg/bolt&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;lerna/yarn workspaceのようなmonorepo管理ツール。&lt;br&gt;
+buildやtestなどにデフォルト設定があり、monorepoの環境構築を簡単にできるようにすることが目的&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;functional-light…-by-kyle-simpson-[leanpub-pdf/ipad/kindle]&quot;&gt;Functional-Light… by Kyle Simpson [Leanpub PDF/iPad/Kindle]&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leanpub.com/fljs&quot; title=&quot;Functional-Light… by Kyle Simpson \[Leanpub PDF/iPad/Kindle\]&quot;&gt;leanpub.com/fljs&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;関数型プログラミング&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Functional programming (FP)のアプローチをJavaScriptに適応してFPについて学ぶ書籍&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;simplifying-javascript:-writing-modern-javascript-with-es5,-es6,-and-beyond-by-joe-morgan-|-the-pragmatic-bookshelf&quot;&gt;Simplifying JavaScript: Writing Modern JavaScript with ES5, ES6, and Beyond by Joe Morgan | The Pragmatic Bookshelf&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pragprog.com/book/es6tips/simplifying-javascript&quot; title=&quot;Simplifying JavaScript: Writing Modern JavaScript with ES5, ES6, and Beyond by Joe Morgan | The Pragmatic Bookshelf&quot;&gt;pragprog.com/book/es6tips/simplifying-javascript&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;2018年5月10日発売&lt;br&gt;
+ES2015以降の新しい構文を学び、読みやすく拡張し易いコードを書く方法についてを学ぶ書籍。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;testing-vue.js-applications:-edd-yerburgh:-9781617295249:-amazon.com:-books&quot;&gt;Testing Vue.js Applications: Edd Yerburgh: 9781617295249: Amazon.com: Books&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Testing-Vue-Js-Applications/dp/1617295248&quot; title=&quot;Testing Vue.js Applications: Edd Yerburgh: 9781617295249: Amazon.com: Books&quot;&gt;www.amazon.com/Testing-Vue-Js-Applications/dp/1617295248&lt;/a&gt;&lt;br&gt;
+&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;2017年7月30日発売&lt;br&gt;
+Vueアプリケーションのテストについての書籍&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Tue, 23 Jan 2018 12:05:24 +0900</pubDate>
+        <link>https://jser.info/2018/01/23/2018-01-23js-bootstrap-4-create-react-app-1.1.02.0-kuker/</link>
+        <guid isPermaLink="true">https://jser.info/2018/01/23/2018-01-23js-bootstrap-4-create-react-app-1.1.02.0-kuker/</guid>
+        
+        <category>CSS</category>
+        
+        <category>React</category>
+        
+        <category>debug</category>
+        
+        <category>browser</category>
+        
+        
+        <category>_i18n</category>
+        
+        <category>ja</category>
+        
+        <category>jser</category>
+        
+      </item>
     
       <item>
         <title>2018-01-16のJS: Prettier 1.10、Secure Contexts、TDD in Framework</title>
@@ -2976,396 +3313,6 @@ C3.jsをforkしたライブラリで、D3.js v4を使いC3.jsとの互換性を�
         <category>webassembly</category>
         
         <category>emscripten</category>
-        
-        
-        <category>_i18n</category>
-        
-        <category>ja</category>
-        
-        <category>jser</category>
-        
-      </item>
-    
-      <item>
-        <title>2017-11-19のJS: Firefox 57、JavaScriptのコスト、momentとLuxon</title>
-        <description>&lt;p&gt;JSer.info #358 - Firefox 57がリリースされました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/57.0/releasenotes/&quot;&gt;Firefox — Notes (57.0) — Mozilla&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.mozilla.org/blog/2017/11/14/introducing-firefox-quantum/&quot;&gt;Introducing the New Firefox: Firefox Quantum - The Mozilla Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/mozilla-tech/a-quantum-leap-for-the-web-a3b7174b3c12&quot; title=&quot;Project Quantum&quot;&gt;Project Quantum&lt;/a&gt;と呼ばれていたFirefoxの大規模書き換えの初回のリリースとなっています。&lt;br&gt;
-新たに書き直されたQuantum CSS(Stylo)と呼ばれるCSSエンジンが含まれるリリースであるため、既存のCSSとの挙動にさまざまな違い(バグ修正も含む)があります。&lt;/p&gt;
-
-&lt;p&gt;詳しくは次の記事を読むと良さそうです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/&quot; title=&quot;Inside a super fast CSS engine: Quantum CSS (aka Stylo) – Mozilla Hacks – the Web developer blog&quot;&gt;Inside a super fast CSS engine: Quantum CSS (aka Stylo) – Mozilla Hacks – the Web developer blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/Firefox/Releases/57&quot; title=&quot;Firefox Quantum 57 for developers - Mozilla | MDN&quot;&gt;Firefox Quantum 57 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;PerformanceObserver&lt;/code&gt;の有効化、Fetchのabortを行える&lt;a href=&quot;https://developer.mozilla.org/ja/docs/Web/API/AbortController&quot; title=&quot;AbortController&quot;&gt;AbortController&lt;/a&gt;に対応しています。&lt;br&gt;
-また、WindowsのFirefoxにおいてデフォルトのフォントが変更されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/ja/docs/2017/japanese-default-fonts-have-been-changed/&quot; title=&quot;日本語の既定フォントが変更されました | Firefox サイト互換性情報&quot;&gt;日本語の既定フォントが変更されました | Firefox サイト互換性情報&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e&quot; title=&quot;The Cost Of JavaScript – Dev Channel – Medium&quot;&gt;The Cost Of JavaScript – Dev Channel – Medium&lt;/a&gt;という記事ではJavaScriptのコストについて書かれています。&lt;/p&gt;
-
-&lt;p&gt;JavaScriptのコストとはネットワークからのロード、パース、コンパイル、実行から構成されています。&lt;br&gt;
-このパースとコンパイルが低スペックのデバイスでは大きな割合となることがあります。&lt;br&gt;
-そのため、同じサイズのJavaScriptと画像ファイルでは、実行 or 描画までの時間は異なります。&lt;/p&gt;
-
-&lt;p&gt;これらのコストについての解説や対策方法の一つとしてのPRPLパターンやPerformance Budgetについて書かれています。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/moment/luxon&quot; title=&quot;moment/luxon: A library for working with dates and times in JS&quot;&gt;moment/luxon: A library for working with dates and times in JS&lt;/a&gt;という日付周りのライブラリがαリリースされています。&lt;/p&gt;
-
-&lt;p&gt;元々、&lt;a href=&quot;https://github.com/moment/moment&quot; title=&quot;moment&quot;&gt;moment&lt;/a&gt;-labプロジェクトから始まったライブラリで、momentの問題点である&lt;a href=&quot;https://github.com/moment/moment-rfcs/pull/2&quot;&gt;mutable&lt;/a&gt;である点などを解決しています。&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Wondering about the future of Moment, modularization, etc? We have what we&amp;#39;ll call a &amp;#39;moment-labs&amp;#39; project here: &lt;a href=&quot;https://t.co/tFxIq9lEjm&quot;&gt;https://t.co/tFxIq9lEjm&lt;/a&gt;&lt;/p&gt;&amp;mdash; moment.js (@momentjs) &lt;a href=&quot;https://twitter.com/momentjs/status/918264220663214081?ref_src=twsrc%5Etfw&quot;&gt;October 11, 2017&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Want a smaller, immutable date library for modern browsers? Luxon has officially joined the family! &lt;a href=&quot;https://t.co/HSjRuRuZG1&quot;&gt;https://t.co/HSjRuRuZG1&lt;/a&gt;&lt;/p&gt;&amp;mdash; moment.js (@momentjs) &lt;a href=&quot;https://twitter.com/momentjs/status/923982141704192000?ref_src=twsrc%5Etfw&quot;&gt;October 27, 2017&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://moment.github.io/luxon/docs/manual/faq/moment.html&quot; title=&quot;For Moment users&quot;&gt;For Moment users&lt;/a&gt;にも書かれていますが、MomentとAPIの互換性はありません。&lt;/p&gt;
-
-&lt;p&gt;特徴としては、日付/時間/インターバルの操作/パース/フォーマットを行うことができ、momentとは異なりImmutableなAPIとなっています。また、TimeZoneやIntlを使った国際化に対応しています。&lt;/p&gt;
-
-&lt;p&gt;そして、LuxonはネイティブのDate、Moment、Date-fnsとは異なりmonthを&lt;code&gt;1-indexed&lt;/code&gt;な値として扱います。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// 2017-01-01&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;date20170101&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;2017-01-01T00:00:00.000Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Luxon - 1-index&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;luxon&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Luxon:get:&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fromJSDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;date20170101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 1&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Luxon:set:&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fromJSDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;date20170101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 1&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// date-fns - 0-indexed&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getMonth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setMonth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;date-fns&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;date-fns:get:&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getMonth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;date20170101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 0&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;date-fns:set:&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getMonth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setMonth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2017&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 0&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// moment - 0-indexed&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;moment&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;moment:get:&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;date20170101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 0&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;moment:set:&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;date20170101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://runkit.com/azu/5a117a65dcefad0012187983&quot; title=&quot;Luxon - data-fns - moment | RunKit&quot;&gt;Luxon - data-fns - moment | RunKit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ヘッドライン&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-v0.59.0-·-facebook/flow&quot;&gt;Release v0.59.0 · facebook/flow&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/flow/releases/tag/v0.59.0&quot; title=&quot;Release v0.59.0 · facebook/flow&quot;&gt;github.com/facebook/flow/releases/tag/v0.59.0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;flowtype&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Flow 0.59.0リリース。&lt;br&gt;
-&lt;code&gt;$ReadOnly&amp;lt;T&amp;gt;&lt;/code&gt; utility typeの追加、パフォーマンスの改善、&lt;code&gt;/* flowlint sketchy-null:error */&lt;/code&gt;のようなコメントでLintを有効化できるように&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;node-v9.2.0-(current)-|-node.js&quot;&gt;Node v9.2.0 (Current) | Node.js&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/blog/release/v9.2.0/&quot; title=&quot;Node v9.2.0 (Current) | Node.js&quot;&gt;nodejs.org/en/blog/release/v9.2.0/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;node.js&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Node.js 9.2.0リリース。&lt;br&gt;
-&lt;code&gt;fs.realpathSync.native&lt;/code&gt;、&lt;code&gt;fs.realpath.native&lt;/code&gt;、&lt;code&gt;process.ppid&lt;/code&gt;がexposeされた&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-notes-for-safari-technology-preview 44-|-webkit&quot;&gt;Release Notes for Safari Technology Preview 44 | WebKit&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkit.org/blog/8035/release-notes-for-safari-technology-preview-44/&quot; title=&quot;Release Notes for Safari Technology Preview 44 | WebKit&quot;&gt;webkit.org/blog/8035/release-notes-for-safari-technology-preview-44/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;safari&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Safari Technology Preview 44リリース。&lt;br&gt;
-Payment Requestがデフォルトで有効化、&lt;code&gt;createImageBitmap()&lt;/code&gt;の実装、OffscreenCanvasのIDLを追加など&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;introducing-security-alerts-on-github&quot;&gt;Introducing security alerts on GitHub&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/blog/2470-introducing-security-alerts-on-github&quot; title=&quot;Introducing security alerts on GitHub&quot;&gt;github.com/blog/2470-introducing-security-alerts-on-github&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;github&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;security&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;news&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;GitHubリポジトリにnpmやgemのセキュリティアラート機能が追加された。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-v4.0.0-beta.1-·-reactjs/redux&quot;&gt;Release v4.0.0-beta.1 · reactjs/redux&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/reactjs/redux/releases/tag/v4.0.0-beta.1&quot; title=&quot;Release v4.0.0-beta.1 · reactjs/redux&quot;&gt;github.com/reactjs/redux/releases/tag/v4.0.0-beta.1&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;TypeScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Redux v4.0.0-beta.1リリース。&lt;br&gt;
-TypeScriptの更新、&lt;code&gt;INIT&lt;/code&gt;をランダムな値に変更、IE11未満のサポートを終了、Dispatchのパフォーマンス改善など&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/redux/issues/1342&quot; title=&quot;Redux 4 breaking changes · Issue #1342 · reactjs/redux&quot;&gt;Redux 4 breaking changes · Issue #1342 · reactjs/redux&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;firefox-—-notes-(57.0)-—-mozilla&quot;&gt;Firefox — Notes (57.0) — Mozilla&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/57.0/releasenotes/&quot; title=&quot;Firefox — Notes (57.0) — Mozilla&quot;&gt;www.mozilla.org/en-US/firefox/57.0/releasenotes/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;firefox&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Firefox 57リリース。&lt;br&gt;
-CSSエンジンの書き直しが行われ挙動の変更とパフォーマンスの改善、&lt;code&gt;watch&lt;/code&gt;/&lt;code&gt;unwatch&lt;/code&gt;メソッドが非推奨化、&lt;code&gt;PerformanceObserver&lt;/code&gt;の有効化、Fetchのabortに対応。&lt;br&gt;
-WebRTCの&lt;code&gt;RTCDataChannel&lt;/code&gt;のメッセージファイルサイズを指定できるように&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.mozilla.org/blog/2017/11/14/introducing-firefox-quantum/&quot; title=&quot;Introducing the New Firefox: Firefox Quantum - The Mozilla Blog&quot;&gt;Introducing the New Firefox: Firefox Quantum - The Mozilla Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ja/Firefox/Releases/57&quot; title=&quot;Firefox Quantum 57 for developers - Mozilla | MDN&quot;&gt;Firefox Quantum 57 for developers - Mozilla | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.fxsitecompat.com/ja/versions/57/&quot; title=&quot;Firefox 57 サイト互換性情報 | Firefox サイト互換性情報&quot;&gt;Firefox 57 サイト互換性情報 | Firefox サイト互換性情報&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels#Understanding_message_size_limits&quot; title=&quot;Using WebRTC data channels - Web APIs | MDN&quot;&gt;Using WebRTC data channels - Web APIs | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;release-2.6.0-·-googlechrome/lighthouse&quot;&gt;Release 2.6.0 · GoogleChrome/lighthouse&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/GoogleChrome/lighthouse/releases/tag/v2.6.0&quot; title=&quot;Release 2.6.0 · GoogleChrome/lighthouse&quot;&gt;github.com/GoogleChrome/lighthouse/releases/tag/v2.6.0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Chrome&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ReleaseNote&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;lighthouse 2.6.0リリース。&lt;br&gt;
-&lt;code&gt;redirects&lt;/code&gt;などのチェックツールの追加。&lt;br&gt;
-各スクリプトの起動時間を計測する&lt;code&gt;bootup-time&lt;/code&gt;、ページの実行時間を計測する&lt;code&gt;mainthread-work-breakdown&lt;/code&gt;などのAuditを追加&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;アーティクル&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;refactoring-react-components-with-jest’s-snapshot-–-michael-romani-–-medium&quot;&gt;Refactoring React Components with Jest’s Snapshot – Michael Romani – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@mr4227/refactoring-react-components-with-jests-snapshot-7ed1b9d332cc&quot; title=&quot;Refactoring React Components with Jest’s Snapshot – Michael Romani – Medium&quot;&gt;medium.com/@mr4227/refactoring-react-components-with-jests-snapshot-7ed1b9d332cc&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;testing&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Jestのsnapshotテストを使ったReactコンポーネントのリファクタリングについての記事。&lt;br&gt;
-スナップショットを取ってから、でかいコンポーネントの細分化をテストしながら行う話&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;how-redux-works:-a-counter-example&quot;&gt;How Redux Works: A Counter-Example&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://daveceddia.com/how-does-redux-work/&quot; title=&quot;How Redux Works: A Counter-Example&quot;&gt;daveceddia.com/how-does-redux-work/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reduxでカウンターアプリを作りながらReduxの使い方や仕組みについてを学ぶチュートリアル。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;the-cost-of-javascript-–-dev-channel-–-medium&quot;&gt;The Cost Of JavaScript – Dev Channel – Medium&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e&quot; title=&quot;The Cost Of JavaScript – Dev Channel – Medium&quot;&gt;medium.com/dev-channel/the-cost-of-javascript-84009f51e99e&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScriptの実行までのコストについてを解説した記事。&lt;br&gt;
-ダウンロード、パース、実行のステップを踏む。同じサイズのJSと画像のコストは異なる点。&lt;br&gt;
-PRPLパターン、Performance Budgetについて。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;javascript.-the-core:-2nd-edition-–-ds.laboratory&quot;&gt;JavaScript. The Core: 2nd Edition – ds.laboratory&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dmitrysoshnikov.com/ecmascript/javascript-the-core-2nd-edition/&quot; title=&quot;JavaScript. The Core: 2nd Edition – ds.laboratory&quot;&gt;dmitrysoshnikov.com/ecmascript/javascript-the-core-2nd-edition/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;ECMAScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ECMAScript/JavaScriptにおける用語の定義やその概念の解説。&lt;br&gt;
-ECMAScriptの仕様に近いコアな内容。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;clean-code-vs.-dirty-code:-react-best-practices---american-express-engineering-blog&quot;&gt;Clean Code vs. Dirty Code: React Best Practices - American Express Engineering Blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://americanexpress.io/clean-code-dirty-code/&quot; title=&quot;Clean Code vs. Dirty Code: React Best Practices - American Express Engineering Blog&quot;&gt;americanexpress.io/clean-code-dirty-code/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;opinion&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;article&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactを題材にしたクリーンなコードについて。&lt;br&gt;
-ネーミングやコンポーネントの分割、デフォルト値の扱いなど良くない例とそれを改善した例を元に解説している。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;スライド、動画関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;react-redux-を用いた-spa-新規サービスを運用して得た知見と実装例---ランサーズ（lancers）エンジニアブログ&quot;&gt;React Redux を用いた SPA 新規サービスを運用して得た知見と実装例 - ランサーズ（Lancers）エンジニアブログ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://engineer.blog.lancers.jp/2017/11/react-redux-spa-manage-tips/&quot; title=&quot;React Redux を用いた SPA 新規サービスを運用して得た知見と実装例 - ランサーズ（Lancers）エンジニアブログ&quot;&gt;engineer.blog.lancers.jp/2017/11/react-redux-spa-manage-tips/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;redux&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;slide&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;React+Redux+Sagaを使ったプロジェクトについてのスライド。&lt;br&gt;
-ディレクトリ構成や基本的な処理の流れ、HOCを使ったコンポーネントの拡張、ダイアログやストレージへの保存などユースケース毎の実装方法について。&lt;br&gt;
-またテスト、Sentryを使ったエラー解析、SEO、APIの管理についてなどについて&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;js-kongress-2017---youtube&quot;&gt;JS Kongress 2017 - YouTube&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/playlist?list=PL8ajgHZ7PoCt3l5RXoyqVu_r7gYJU0dMx&quot; title=&quot;JS Kongress 2017 - YouTube&quot;&gt;www.youtube.com/playlist?list&amp;#x3D;PL8ajgHZ7PoCt3l5RXoyqVu_r7gYJU0dMx&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;イベント&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;video&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;JS Kongress 2017の動画一覧&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://2017.js-kongress.de/&quot; title=&quot;JS Kongress 2017 💻 - The Future of JavaScript, Nov 13-14 2017, Munich&quot;&gt;JS Kongress 2017 💻 - The Future of JavaScript, Nov 13-14 2017, Munich&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;サイト、サービス、ドキュメント&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;what-web-can-do-today&quot;&gt;What Web Can Do Today&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://whatwebcando.today/&quot; title=&quot;What Web Can Do Today&quot;&gt;whatwebcando.today/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;WebPlatformAPI&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;アクセスしているブラウザでさまざまなWeb Platform APIが利用できるかを表示してくれるサイト&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;`performance.mark`-with-metadata-is-useful-for-real-user-monitoring&quot;&gt;`performance.mark` with metadata is useful for Real user monitoring&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dev.to/ben/we-welcome-a-wonderful-influx-of-new-members-from-japan-1k0&quot; title=&quot;\`performance.mark\` with metadata is useful for Real user monitoring&quot;&gt;dev.to/ben/we-welcome-a-wonderful-influx-of-new-members-from-japan-1k0&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;performance.mark&lt;/code&gt;にメタデータとしてFPSを付加して計測して、ボトルネックになっている行動をログから解析、可視化する方法について&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/azu/performance-mark-metadata&quot; title=&quot;azu/performance-mark-metadata: \&amp;amp;#x60;performance.mark\&amp;amp;#x60; with custom meta data.&quot;&gt;azu/performance-mark-metadata: `performance.mark` with custom meta data.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://efcl.info/2017/11/15/performance.mark-metadata/&quot; title=&quot;performance.markにメタデータを紐付けできるライブラリを書いた | Web Scratch&quot;&gt;performance.markにメタデータを紐付けできるライブラリを書いた | Web Scratch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;stereobooster/react-snap:-a-zero-configuration-static-pre-renderer-for-single-page-applications&quot;&gt;stereobooster/react-snap: A zero-configuration static pre-renderer for Single Page Applications&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/stereobooster/react-snap&quot; title=&quot;stereobooster/react-snap: A zero-configuration static pre-renderer for Single Page Applications&quot;&gt;github.com/stereobooster/react-snap&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;server&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactをprerenderして静的なHTMLにできるライブラリ。&lt;br&gt;
-設定なしでcreate-react-appと協調して動作することを目標にしている。SSRで扱うことが難しい3rdパーティスクリプトやWebGLなどがオプションで対処できる。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;ソフトウェア、ツール、ライブラリ関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;moment/luxon:-a-library-for-working-with-dates-and-times-in-js&quot;&gt;moment/luxon: A library for working with dates and times in JS&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/moment/luxon&quot; title=&quot;moment/luxon: A library for working with dates and times in JS&quot;&gt;github.com/moment/luxon&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;日付や時間、インターバルを扱うライブラリ。 日付操作やパース、フォーマットを行える。Immutableであり、TimeZoneやIntlを使った国際化に対応している。 Momentとの違いをまとめたドキュメントも公開されている。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;jaredpalmer/react-fns:-browser-api&amp;#39;s-turned-into-declarative-react-components-and-hoc&amp;#39;s&quot;&gt;jaredpalmer/react-fns: Browser API&amp;#39;s turned into declarative React components and HoC&amp;#39;s&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jaredpalmer/react-fns&quot; title=&quot;jaredpalmer/react-fns: Browser API&amp;#39;s turned into declarative React components and HoC&amp;#39;s&quot;&gt;github.com/jaredpalmer/react-fns&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;library&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;ReactのHigh Order Componentのコレクションライブラリ。&lt;br&gt;
-デバイスの回転や動作、オンライン/オフライン、Geo、メディアクエリー、スクロール、ロケールを扱えるコンポーネントなどが用意されている&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;goto-bus-stop/tinyify:-a-browserify-plugin-that-runs-various-optimizations,-so-you-don&amp;#39;t-have-to-install-them-all-manually.-makes-your-bundles-tiny!&quot;&gt;goto-bus-stop/tinyify: a browserify plugin that runs various optimizations, so you don&amp;#39;t have to install them all manually. makes your bundles tiny!&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/goto-bus-stop/tinyify&quot; title=&quot;goto-bus-stop/tinyify: a browserify plugin that runs various optimizations, so you don&amp;#39;t have to install them all manually. makes your bundles tiny!&quot;&gt;github.com/goto-bus-stop/tinyify&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browserify&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Browserifyでフラットbundle、unassert、productionビルド、minifyなどをまとめて行うプラグイン&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;jaredpalmer/razzle:-✨-create-server-rendered-universal-javascript-applications-with-no-configuration&quot;&gt;jaredpalmer/razzle: ✨ Create server-rendered universal JavaScript applications with no configuration&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jaredpalmer/razzle&quot; title=&quot;jaredpalmer/razzle: ✨ Create server-rendered universal JavaScript applications with no configuration&quot;&gt;github.com/jaredpalmer/razzle&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;isomorphic&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;UniversalなJavaScriptアプリケーションを設定なしで書き始められる開発環境ツール。&lt;br&gt;
-&lt;code&gt;create-react-app&lt;/code&gt;のようなツールだが、React以外でも利用できる。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1 class=&quot;site-genre&quot;&gt;書籍関係&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;pure-react&quot;&gt;Pure React&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://daveceddia.com/pure-react/&quot; title=&quot;Pure React&quot;&gt;daveceddia.com/pure-react/&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactについてステップバイステップで学べるサンプルを中心にした書籍。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;manning-|-vue.js-in-action&quot;&gt;Manning | Vue.js in Action&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.manning.com/books/vue-js-in-action&quot; title=&quot;Manning | Vue.js in Action&quot;&gt;www.manning.com/books/vue-js-in-action&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;Vue&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;2018年5月30日発売&lt;br&gt;
-Vueについての書籍&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;超速！-webページ速度改善ガイド-──-使いやすさは「速さ」から始まる（web+db-press-plusシリーズ）｜gihyo.jp-…-技術評論社&quot;&gt;超速！ Webページ速度改善ガイド ── 使いやすさは「速さ」から始まる（WEB+DB PRESS plusシリーズ）｜gihyo.jp … 技術評論社&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://gihyo.jp/magazine/wdpress/plus/978-4-7741-9400-4&quot; title=&quot;超速！ Webページ速度改善ガイド ── 使いやすさは「速さ」から始まる（WEB+DB PRESS plusシリーズ）｜gihyo.jp … 技術評論社&quot;&gt;gihyo.jp/magazine/wdpress/plus/978-4-7741-9400-4&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;browser&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;performance&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;2017年11月23日発売&lt;br&gt;
-ウェブページのパフォーマンス改善についての書籍。&lt;br&gt;
-ネットワーク、レンダリング、スクリプトの項目ごとに測定方法や改善方法についてを扱う。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&quot;manning-|-react-native-in-action&quot;&gt;Manning | React Native in Action&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.manning.com/books/react-native-in-action&quot; title=&quot;Manning | React Native in Action&quot;&gt;www.manning.com/books/react-native-in-action&lt;/a&gt;&lt;br&gt;
-&lt;p class=&quot;jser-tags jser-tag-icon&quot;&gt;&lt;span class=&quot;jser-tag&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;jser-tag&quot;&gt;book&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;2018年4月30日発売&lt;br&gt;
-React Nativeについての書籍&lt;/p&gt;
-
-&lt;hr&gt;
-</description>
-        <pubDate>Sun, 19 Nov 2017 19:51:22 +0900</pubDate>
-        <link>https://jser.info/2017/11/19/firefox-57-javascript-momentluxon/</link>
-        <guid isPermaLink="true">https://jser.info/2017/11/19/firefox-57-javascript-momentluxon/</guid>
-        
-        <category>Firefox</category>
-        
-        <category>Performance</category>
-        
-        <category>Date</category>
-        
-        <category>Moment</category>
-        
-        <category>i18n</category>
         
         
         <category>_i18n</category>
