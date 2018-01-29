@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Jan 2018 22:22:02 +0900</pubDate>
-    <lastBuildDate>Mon, 29 Jan 2018 22:22:02 +0900</lastBuildDate>
+    <pubDate>Mon, 29 Jan 2018 22:23:45 +0900</pubDate>
+    <lastBuildDate>Mon, 29 Jan 2018 22:23:45 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -114,10 +114,11 @@ ECMAScriptは毎年6月ごろにリリースされるため、これから新し
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Proposalの詳しい解説は次の記事にまとめられています。&lt;/p&gt;
+&lt;p&gt;Proposalの解説は次の記事にまとめられています。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://2ality.com/2017/02/ecmascript-2018.html&quot;&gt;ECMAScript 2018: the final feature set&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arui.tech/es2018-new-features/&quot; title=&quot;ECMAScript 2018（ES2018）の新機能まとめ | あるいてっく&quot;&gt;ECMAScript 2018（ES2018）の新機能まとめ | あるいてっく&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;今回のTC39ミーティングで変化があったProposalは次のページにまとめてあります。&lt;/p&gt;
