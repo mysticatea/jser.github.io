@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Jan 2018 22:23:45 +0900</pubDate>
-    <lastBuildDate>Mon, 29 Jan 2018 22:23:45 +0900</lastBuildDate>
+    <pubDate>Mon, 29 Jan 2018 22:25:33 +0900</pubDate>
+    <lastBuildDate>Mon, 29 Jan 2018 22:25:33 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -125,7 +125,6 @@ ECMAScriptは毎年6月ごろにリリースされるため、これから新し
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://ecmascript-daily.github.io/ecmascript/2018/01/28/ecmascript-proposal-updates&quot;&gt;ECMAScript proposal updates at 2018-01 | ECMAScript Daily&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://2ality.com/2017/02/ecmascript-2018.html&quot;&gt;ECMAScript 2018: the final feature set&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
