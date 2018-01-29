@@ -1,4 +1,11 @@
 [{
+"title":"2018-01-29のJS: Firefox 58、Safari 11.1(β)、Parcel 1.5.0、webpack 4(β)、ES 2018の機能が決定",
+"url":"https://jser.info/2018/01/30/firefox-58-safari-11.1b-parcel-1.5.0-webpack-4b-es-2018/",
+"date":"2018-01-30T06:51:02+09:00",
+"content":"JSer.info #368 - Firefox 58.0がリリースされました。Firefox...",
+"category":"JSer",
+"tags":["firefox","Safari","Bundler","webpack","parcel"]
+},{
 "title":"2018-01-23のJS: 2018-01-23のJS: Bootstrap 4、create-react-app 1.1.0と2.0、kuker",
 "url":"https://jser.info/2018/01/23/2018-01-23js-bootstrap-4-create-react-app-1.1.02.0-kuker/",
 "date":"2018-01-23T12:05:24+09:00",

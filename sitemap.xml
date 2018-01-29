@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jser.info/2018/01/30/firefox-58-safari-11.1b-parcel-1.5.0-webpack-4b-es-2018/</loc>
+    <lastmod>2018-01-30T06:51:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jser.info/2018/01/23/2018-01-23js-bootstrap-4-create-react-app-1.1.02.0-kuker/</loc>
     <lastmod>2018-01-23T12:05:24+09:00</lastmod>
     <priority>0.8</priority>
@@ -2062,23 +2067,23 @@
   </url>
   <url>
     <loc>https://jser.info/</loc>
-    <lastmod>2018-01-23T13:20:35+09:00</lastmod>
+    <lastmod>2018-01-29T22:07:50+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jser.info/404.html</loc>
-    <lastmod>2018-01-23T13:19:00+09:00</lastmod>
+    <lastmod>2018-01-29T22:06:06+09:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jser.info/public/event/textillate/index.html</loc>
-    <lastmod>2018-01-23T13:19:00+09:00</lastmod>
+    <lastmod>2018-01-29T22:06:06+09:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jser.info/public/svg/test.html</loc>
-    <lastmod>2018-01-23T13:19:00+09:00</lastmod>
+    <lastmod>2018-01-29T22:06:06+09:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
