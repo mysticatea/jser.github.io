@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Jan 2018 22:16:27 +0900</pubDate>
-    <lastBuildDate>Mon, 29 Jan 2018 22:16:27 +0900</lastBuildDate>
+    <pubDate>Mon, 29 Jan 2018 22:21:25 +0900</pubDate>
+    <lastBuildDate>Mon, 29 Jan 2018 22:21:25 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -105,7 +105,7 @@ ECMAScriptは毎年6月ごろにリリースされるため、これから新し
 &lt;li&gt;&lt;a href=&quot;https://github.com/tc39/proposal-promise-finally&quot;&gt;tc39/proposal-promise-finally: ECMAScript Proposal, specs, and reference implementation for Promise.prototype.finally&lt;/a&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Promiseチェーンの最後に必ず実行されるコールバックを指定できる&lt;code&gt;Promise.prototype.finally&lt;/code&gt;のサポート&lt;/li&gt;
+&lt;li&gt;resolve、rejectどちらの場合でも実行されるコールバックを指定できる&lt;code&gt;Promise.prototype.finally&lt;/code&gt;のサポート&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tc39/proposal-async-iteration&quot;&gt;tc39/proposal-async-iteration: Asynchronous iteration for JavaScript&lt;/a&gt;
 
