@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Jan 2018 22:21:25 +0900</pubDate>
-    <lastBuildDate>Mon, 29 Jan 2018 22:21:25 +0900</lastBuildDate>
+    <pubDate>Mon, 29 Jan 2018 22:22:02 +0900</pubDate>
+    <lastBuildDate>Mon, 29 Jan 2018 22:22:02 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -90,7 +90,7 @@ ECMAScriptは毎年6月ごろにリリースされるため、これから新し
 &lt;li&gt;&lt;a href=&quot;https://github.com/tc39/proposal-regexp-lookbehind&quot;&gt;tc39/proposal-regexp-lookbehind: RegExp lookbehind assertions&lt;/a&gt;
 
 &lt;ul&gt;
-&lt;li&gt;正規表現の後読みのサポート&lt;/li&gt;
+&lt;li&gt;正規表現の肯定後読みのサポート&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tc39/proposal-regexp-unicode-property-escapes&quot;&gt;tc39/proposal-regexp-unicode-property-escapes: Proposal to add Unicode property escapes &lt;code&gt;\p{…}&lt;/code&gt; and &lt;code&gt;\P{…}&lt;/code&gt; to regular expressions in ECMAScript.&lt;/a&gt;
 
