@@ -5,8 +5,8 @@
     <description>JavaScriptの最新情報を紹介する週刊ブログ</description>
     <link>https://jser.info/</link>
     <atom:link href="https://jser.info/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Jan 2018 22:25:33 +0900</pubDate>
-    <lastBuildDate>Mon, 29 Jan 2018 22:25:33 +0900</lastBuildDate>
+    <pubDate>Tue, 30 Jan 2018 12:25:08 +0900</pubDate>
+    <lastBuildDate>Tue, 30 Jan 2018 12:25:08 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -46,14 +46,14 @@ Source Mapsの対応や、WebAssemblyなどAssertsの対応が追加されてい
 &lt;/ul&gt;
 
 &lt;p&gt;また、webpack 4(β)もリリースされています。&lt;br&gt;
-&lt;code&gt;--mode&lt;/code&gt;オプションが必須となり、典型的な設定は&lt;code&gt;mode: development&lt;/code&gt;または&lt;code&gt;mode: production&lt;/code&gt;で行われてるようになっています。デフォルトでは&lt;code&gt;src&lt;/code&gt;をソースディレクトリにし、&lt;code&gt;dist&lt;/code&gt;ディレクトリに出力するといった設定ファイルなしでの利用改善が図られています。&lt;/p&gt;
+&lt;code&gt;--mode&lt;/code&gt;オプションが必須となり、典型的な設定は&lt;code&gt;mode: development&lt;/code&gt;または&lt;code&gt;mode: production&lt;/code&gt;で行うようになっています。デフォルトでは&lt;code&gt;src&lt;/code&gt;をソースディレクトリにし、&lt;code&gt;dist&lt;/code&gt;ディレクトリに出力するといった設定ファイルなしでの利用改善が図られています。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/webpack/webpack-4-beta-try-it-today-6b1d27d7d7e2&quot;&gt;🚀webpack 4 beta — try it today!🚀 – webpack – Medium&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/webpack/webpack/releases/tag/v4.0.0-beta.0&quot;&gt;Release v4.0.0-beta.0 · webpack/webpack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;また&lt;code&gt;CommonsChunkPlugin&lt;/code&gt;などの一部プラグインを削除され、代わりに&lt;code&gt;optimization&lt;/code&gt;のオプションで設定できるようになるといった変更なども含まれています。&lt;/p&gt;
+&lt;p&gt;また&lt;code&gt;CommonsChunkPlugin&lt;/code&gt;などの一部プラグインが削除され、代わりに&lt;code&gt;optimization&lt;/code&gt;のオプションで設定できるようになるといった変更なども含まれています。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693&quot; title=&quot;RIP CommonsChunkPlugin.md&quot;&gt;RIP CommonsChunkPlugin.md&lt;/a&gt;&lt;/li&gt;
